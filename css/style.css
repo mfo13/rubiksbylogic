@@ -1,0 +1,368 @@
+/* corpo geral */
+body{
+    padding-bottom: 40px;
+    margin:0;
+    font-family: 'Inter', sans-serif;;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* barra superior */
+.topbar {
+    background:#ffffff;
+    height:50px;
+    display:flex;
+    align-items:center;
+    padding: 10px;
+}
+
+.topbar .logo{
+    color: rgb(0, 0, 0);
+}
+
+/* botão do menu */
+#menuBtn{
+    background:none;
+    border:none;
+    color:rgb(0, 0, 0);
+    font-size:22px;
+    cursor:pointer;
+    margin-right:10px;
+}
+
+/* botão fechar menu */
+#closeBtn{
+    position:absolute;
+    top:10px;
+    left:10px;
+    background:none;
+    border:none;
+    color:rgb(255, 255, 255);
+    font-size:22px;
+    cursor:pointer;
+}
+
+/* barra lateral */
+#sidebar{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    position:fixed;
+    top:0;
+    left:0; /* ou pode remover */
+    width:280px;
+    height:100%;
+    background:#000;
+    color:white;
+    transform:translateX(-280px);
+    transition:transform 0.3s ease;
+    padding-top:50px;
+    z-index:1000;
+    overflow-y:auto;
+    overflow-x:hidden;
+    scrollbar-width: auto;
+    scrollbar-color: #888 #111;
+    -webkit-overflow-scrolling: touch; /* ESSENCIAL no mobile */
+}
+
+#sidebar::-webkit-scrollbar{
+    width:10px;
+}
+#sidebar::-webkit-scrollbar-track{
+    background:#111;
+}
+
+#sidebar::-webkit-scrollbar-thumb{
+    background:#888;
+    border-radius:5px;
+}
+#sidebar::-webkit-scrollbar-thumb:hover{
+    background:#bbb;
+}
+
+#sidebar.open{
+    transform:translateX(0);
+}
+
+.sidebar-header{
+    padding:15px 20px;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: +0.5px;
+    font-size:22px;
+    border-bottom:1px solid #222;
+}
+
+.sidebar-header .logo{
+    color: white;
+}
+
+/* celular → esconde header na sidebar */
+.sidebar-header{
+    display:none;
+}
+
+/* modo desktop */
+@media (min-width:1200px){
+    body {
+        margin-left:280px;
+    }
+    .topbar{
+        display:none;
+    }
+    .layout {
+        display: flex;
+    }
+    main {
+        flex: 1;
+        padding: 20px;
+    }
+    #sidebar{
+        transform:translateX(0); /* ESSENCIAL */
+    }
+    /* desktop → mostra header na sidebar */
+    .sidebar-header{
+        display:block;
+    }
+    #overlay{
+        display:none !important;
+    }
+    #menuBtn,
+    #closeBtn{
+        display:none;
+    }
+}
+
+/* overlay do menu*/
+#overlay{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.5);
+    display:none;
+    z-index:900;
+}
+
+
+/* menu */
+.menu{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+/* item ativo */
+.menu a.active,
+.menu a.hover {
+    color:#c084fc;
+    font-weight:bold;
+}
+
+.menu-link{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:6px 18px;
+    cursor:pointer;
+    line-height:1.2;
+}
+
+.menu-link a{
+    color:white;
+    text-decoration:none;
+    flex: 1;
+    display: block;
+    width: 100%;
+}
+
+/* seta */
+.arrow{
+    /* seta tradicional */
+    /*width:8px;
+    height:8px;
+    min-width:8px;
+    border-right:3px solid white;
+    border-bottom:3px solid white;
+    transform:rotate(45deg); */
+
+    /* seta nova */
+    font-weight:bold;
+    font-size: 17px;
+    transform: rotate(-180deg);
+
+    transition:transform 0.25s, border-color 0.25s;
+    cursor:pointer;
+}
+
+/* hover */
+.menu-link:hover a,
+.menu-link:hover .arrow{
+    color:#c084fc;
+    border-color:#c084fc;
+}
+
+/* itens sem submenu */
+.arrow.empty{
+    border: none;
+    visibility: hidden;
+}
+
+/* seta drop aberto */
+.menu-item.open > .menu-link > .arrow{
+    transform:rotate(0deg);
+    font-size: 17px;
+}
+
+/* submenus */
+.submenu{
+    font-size: 15px;
+    padding-left: 30px;
+    max-height: 0;
+    overflow:hidden;
+    transition:max-height 0.3s ease;
+}
+
+/* abrir */
+.menu-item.open > .submenu{
+    max-height: 2000px;
+    margin-bottom: 10px;
+}
+
+.no-link{
+    cursor:pointer;
+}
+
+/* títulos das páginas */
+h1 {
+    font-size: 2rem;
+    letter-spacing: +0.5px;
+    font-weight: 300;
+    color: #9c22c2; /* roxo (combina com seu hover) */
+    margin-top: 20px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* subtítuloas das páginas */
+h1 {
+    letter-spacing: +0.5px;
+    color: #9c22c2; /* roxo (combina com seu hover) */
+    margin-top: 20px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* subtítulos das páginas */
+h2 {
+    font-size: 1.5rem;
+    font-weight: 100;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* títulos do texto */
+h3 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+/* seta do menu da página*/
+.toggle-arrow {
+    transform: rotate(-180deg);
+    transition: transform 0.3s;
+    font-size: 18px;
+    font-weight: bolder;
+    color:#9c22c2;
+}
+
+/* menu aberto */
+[aria-expanded="true"] .toggle-arrow {
+    transform: rotate(0deg);
+}
+
+.toggle-arrow:hover {
+    font-size: 20px;
+}
+
+/* item do menu da página */
+.titulo_assunto{
+    color: #9c22c2;
+    cursor: pointer;
+    user-select: none;
+}
+
+.titulo_assunto:hover {
+    font-weight: bold;
+}
+
+/* links do menu da página */
+.link_assunto{
+    font-size: 14px;
+    color:#9c22c2;
+    text-decoration: none;
+}
+
+.link_assunto:hover{
+    font-weight: bold;
+}
+
+/* links para mudar de página */
+.virapagina{
+    font-size: 28px;
+    font-weight: bold;
+    color:#9c22c2;
+    text-decoration: none;
+}
+
+.virapagina:hover{
+    color:#9c22c2;
+    font-size: 30px;
+}
+
+/* links gerais */
+a {
+    color:#9c22c2;
+    text-decoration: none;
+}
+
+a:hover {
+    font-weight: bold;
+}
+
+/* rodapé das páginas */
+#footer{
+    font-family: 'Inter', sans-serif;
+    font-size: small;
+}
+
+/* manter proporação das imagens dos cubos geradas por js */
+.img-cubo {
+  width: 100%;
+  aspect-ratio: 1 / 1.42;
+  overflow: hidden;
+}
+
+.img-cubo > * {
+  width: 100%;
+  height: 100%;
+}
+
+/* Parágrafos com abas retráteis */
+.toggle-icon {
+    display: inline-block;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    font-size: 20px;
+    transform: rotate(-180deg);
+    font-weight: bold;
+}
+
+.toggle-icon.rotate {
+    transform: rotate(0deg);
+}
+
+.toggle-icon:hover {
+    color:#9c22c2;
+}
+
