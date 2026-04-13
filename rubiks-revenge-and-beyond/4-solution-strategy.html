@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="icon" href="favicon.ico">
+
+    <title>Cubo Mágico sem Decoreba | Cubos grandes - Estratégia de solução</title>
+    <meta name="description" content="Aprenda o passo a passo da estratégia para resolver cubos grandes como 4x4x4, baseada em lógica, etapas simples e sem decoreba.">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="banner"></div>
+    <div id="menu"></div>
+    
+    <main class="container mb-0">
+        
+        <h1>Cubo 4x4x4 e maiores</h1>
+        <h2>Resolvendo Cubos Grandes Sem Decorar</h2>
+
+        <div class="row align-items-start">
+
+            <div class="container px-3">
+                <h3>4. Estratégia de solução</h3>
+                <p>
+                A estratégia desse guia se baseia na idéia do método de Frey e Singmaster para o 3x3x3, já apresentada no guia <a href="cubo-3x3x3/1-introducao.html">“Entendendo e Resolvendo o Cubo de Rubik sem Decorar”</a>.
+                </p>
+                <p>
+                Vamos deixar sempre algum “espaço livre” para evitarmos ao máximo a necessidade do uso de comutadores, dando preferência ao movimento mais simples de “vai, troca e volta”. A estratégia tem pequenas diferenças para cubos pares ou ímpares e que serão apresentadas oportunamente. O esquema geral é:
+                </p>
+                <style>
+                    /* Aplica negrito apenas ao marcador (::marker) */
+                    ol li::marker {
+                        font-weight: bold;
+                    }
+                </style>
+                <ol type="a">
+                    <li>Resolver todos os centros de uma das faces, que farão parte da primeira camada.</li>
+                    <li>Resolver os <i>edges</i> de 3 arestas dessa primeira camada deixando uma aresta “livre”. Obs.: se o cubo for par convém antes resolver dois cantos vizinhos da primeira camada que servirão como guias.</li>
+                    <li>Com a primeira camada para baixo, resolver todos os centros de 3 faces laterais fazendo uso das “camadas livres”.</li>
+                    <li>Resolver os centros das duas últimas faces (com comutadores).</li>
+                    <li>Resolver os <i>edges</i> restantes da primeira camada fazendo uso do “espaço livre”.</li>
+                    <li>Resolver 3 cantos da primeira camada deixando um “canto livre”. Obs.: se o cubo for par será apenas mais um canto a ser resolvido.</li>
+                    <li>Resolver os <i>edges</i> de 3 arestas das camadas intermediárias fazendo uso do “espaço livre”.</li>
+                    <li>Se for um cubo ímpar resolver todos os <i>edges</i> centrais que faltam.</li>
+                    <li>Resolver todos os 5 cantos restantes (com comutadores).</li>
+                    <li>Resolver os <i>edges</i> restantes (com comutadores).</li>
+                    <li>Se houver, resolver os erros de paridade.</li>
+                </ol>
+            </div>           
+        </div>
+
+        <nav class="nav nav-justified my-0">
+            <a class="nav-link virapagina" href="cubo-4x4x4-e-maiores/3-notacao-de-movimentos-em-cubos-grandes.html">⇦</a>
+            <a class="nav-link virapagina" href="cubo-4x4x4-e-maiores/4-estrategia-de-solucao/4-a-resolvendo-os-centros-da-primeira-face.html">⇨</a>
+        </nav>
+        
+    </main>
+        
+    <div id="footer"></div>
+    
+    <script src="js/load-components.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+</body>
+
+</html>

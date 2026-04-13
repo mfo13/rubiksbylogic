@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="icon" href="favicon.ico">
+
+    <title>Cubo Mágico sem Decoreba | Cubos grandes - Os últimos lados</title>
+    <meta name="description" content="Passo a passo para finalizar os últimos edges em cubos grandes, utilizando comutadores e lógica em vez de algoritmos decorados.">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <script src="js/AnimCube5.js"></script>
+
+</head>
+
+<body>
+    <div id="banner"></div>
+    <div id="menu"></div>
+    
+    <main class="container mb-0">
+        
+        <h1>Cubo 4x4x4 e maiores</h1>
+        <h2>Resolvendo Cubos Grandes Sem Decorar</h2>
+
+        <div class="row align-items-start">
+
+            <div class="container px-3">
+                <h3>4.j. Resolvendo os últimos <i>edges</i></h3>
+                <p>
+                A solução dos últimos <i>edges</i> exige o uso de comutadores. Você pode montar os comutadores que quiser, mas a dica desse guia é usar os <i>edges</i> da “aresta livre” em comutadores montados com 2 <i>edges</i> da última camada. Os <i>edges</i> da “aresta livre” podem ser facilmente reposicionados com movimentos das camadas intermediárias e paralelas à camada final. Veja um exemplo na Figura 4.14 clicando em <i>play</i> (▷).
+                </p>
+                                     
+                <div class="row justify-content-center">
+                    <div class="col-md-4 text-center mt-3 mb-3 px-3">
+                        <div class="img-wrapper img-cubo">
+                            <script>
+                                var movimento="{Figura 4.14}{Figura 4.14: Reposicionamento Dn'}Dn'.{Figura 4.14: Vai R'}R'.{Figura 4.14: Troca Dn}Dn.{Figura 4.14: Volta R}R.{Figura 4.14: Troca U'}U'.{Figura 4.14: Vai R'}R'.{Figura 4.14: Destroca Dn'}Dn'.{Figura 4.14: Volta R}R.{Figura 4.14: Destroca U}U.{Figura 4.14: Desfaz reposicionamento Dn}Dn";
+                                AnimCube5("initmove=y x2 Dn' U' R' Dn R U R' Dn' R Dn &move="+movimento+
+                                            "&movetext=1\
+                                            &yz=1\
+                                            &fonttype=0\
+                                            &textsize=12\
+                                            &facelets=\
+                                            &buttonheight=20\
+                                            &bgcolor=f0f0f0\
+                                            &butbgcolor=009999\
+                                            &snap=0\
+                                            &repeat=0\
+                                            &edit=0\
+                                            &speed=0\
+                                            &gabbacolors=1")
+                            </script>
+                        </div>
+                    </div>
+                </div>
+       
+            </div>           
+        </div>
+
+        <nav class="nav nav-justified my-0">
+            <a class="nav-link virapagina" href="cubo-4x4x4-e-maiores/4-estrategia-de-solucao/4-i-resolvendo-os-5-cantos-restantes.html">⇦</a>
+            <a class="nav-link virapagina" href="cubo-4x4x4-e-maiores/4-estrategia-de-solucao/4-k-resolvendo-os-erros-de-paridade.html">⇨</a>
+        </nav>
+        
+    </main>
+        
+    <div id="footer"></div>
+    
+    <script src="js/load-components.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+</body>
+
+</html>

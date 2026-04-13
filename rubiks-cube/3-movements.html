@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="icon" href="favicon.ico">
+
+    <title>Rubik's Cube by Logic | Rubik's Cube - Movements</title>
+    <meta name="description" content="Understand the movements of the 3x3x3 Rubik’s Cube: rotations, axes, and layers. Learn how the pieces move on the Rubik’s Cube in a logical way.">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <script src="js/AnimCube3.js"></script>
+
+</head>
+
+<body>
+    <div id="banner"></div>
+    <div id="menu"></div>
+    
+    <main class="container mb-0">
+        
+        <h1>Rubik's Cube</h1>
+        <h2>Understanding and Solving the Rubik's Cube Without Algorithms</h2>
+
+        <div class="row align-items-start">
+
+            <h3>3. Cube Movements</h3>
+            <p>
+            Every movement of the Rubik's Cube involves rotating multiple pieces together, forming a set of 9 or 8 pieces. These movements always occur as rotations around an axis.
+            </p>
+            <p>
+            When facing the cube and looking directly at one of its faces, you can imagine three axes of rotation: the x-axis entering the right face and exiting the left, the y-axis entering the top face and exiting the bottom, and the z-axis entering the front face and exiting at the back.
+            </p>
+            <p>
+            The cube can be "sliced" into layers along these axes. Slicing the cube along the x-axis results in three layers: the right layer (R layer), the left layer (L layer), and the middle layer (M layer). Please refer to Figures 3.1, 3.2, and 3.3 for visual representations of these layers. You can observe the rotation of the cube along the x-axis by clicking the play button (▷).
+            </p>
+                            
+            <div class="col-md-3 text-center my-3 px-3">
+                <p>
+                Rotation axis: x
+                </p>
+            </div>
+
+            <div class="col-md-3 text-center mt-3 mb-3 px-3">
+                <div class="img-wrapper img-cubo">
+                    <script>
+                        var movimento="{Figure 3.1: R layer (Right)}x";
+                        AnimCube3("initmove=x2 &move="+movimento+
+                                    "&movetext=5\
+                                    &fonttype=0\
+                                    &textsize=15\
+                                    &facelets=llwllwllwLLLLLLYYYlllllloooRRRLLLLLLlllllllllBBBBBBBBB\
+                                    &buttonheight=20\
+                                    &bgcolor=f0f0f0\
+                                    &butbgcolor=009999\
+                                    &snap=0\
+                                    &repeat=0\
+                                    &edit=0\
+                                    &speed=0\
+                                    &gabbacolors=1")
+                    </script>
+                </div>
+            </div>
+
+            <div class="col-md-3 text-center my-3 px-3">    
+                <div class="img-wrapper img-cubo">
+                    <script>
+                        var movimento="{Figure 3.2: M layer (Middle)}x";
+                        AnimCube3("initmove=x2 &move="+movimento+
+                                    "&movetext=5\
+                                    &fonttype=0\
+                                    &textsize=15\
+                                    &facelets=lwllwllwlLLLYYYLLLlllooolllLLLRRRLLLlllllllllLLLLLLLLL\
+                                    &buttonheight=20\
+                                    &bgcolor=f0f0f0\
+                                    &butbgcolor=009999\
+                                    &snap=0\
+                                    &repeat=0\
+                                    &edit=0\
+                                    &speed=0\
+                                    &gabbacolors=1")
+                    </script>
+                </div>
+            </div> 
+                
+            <div class="col-md-3 text-center my-3 px-3">
+                <div class="img-wrapper img-cubo">
+                    <script>
+                        var movimento="{Figure 3.3: L layer (Left)}x";
+                        AnimCube3("initmove=x2 &move="+movimento+
+                                    "&movetext=5\
+                                    &fonttype=0\
+                                    &textsize=15\
+                                    &facelets=wllwllwllYYYLLLLLLooollllllLLLLLLRRRgggggggggLLLLLLLLL\
+                                    &buttonheight=20\
+                                    &bgcolor=f0f0f0\
+                                    &butbgcolor=009999\
+                                    &snap=0\
+                                    &repeat=0\
+                                    &edit=0\
+                                    &speed=0\
+                                    &gabbacolors=1")
+                    </script>
+                </div>
+            </div>
+             
+        </div>
+
+        <nav class="nav nav-justified my-0">
+            <a class="nav-link virapagina" href="rubiks-cube/2-cube-parts.html">⇦</a>
+            <a class="nav-link virapagina" href="rubiks-cube/3-movements/rotations.html">⇨</a>
+        </nav>
+        
+    </main>
+        
+    <div id="footer"></div>
+    
+    <script src="js/load-components.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+</body>
+
+</html>

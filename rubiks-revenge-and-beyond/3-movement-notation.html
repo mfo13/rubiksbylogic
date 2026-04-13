@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="icon" href="favicon.ico">
+
+    <title>Cubo Mágico sem Decoreba | Cubos grandes - Notação de movimentos</title>
+    <meta name="description" content="Entenda a notação de movimentos em cubos grandes como 4x4x4 e superiores, com exemplos práticos e adaptações do padrão do 3x3x3.">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <script src="js/AnimCube6.js"></script>
+
+</head>
+
+<body>
+    <div id="banner"></div>
+    <div id="menu"></div>
+    
+    <main class="container mb-0">
+        
+        <h1>Cubo 4x4x4 e maiores</h1>
+        <h2>Resolvendo Cubos Grandes Sem Decorar</h2>
+
+        <div class="row align-items-start">
+
+            <div class="container px-3">
+                <h3>3. Notação de movimentos em cubos grandes</h3>
+                <p>
+                Segundo a WCA (<i>World Cube Association</i>) a notação de movimentos segue o padrão já empregado para o 3x3x3. A única diferença é que para girar mais do que 2 camadas simultaneamente coloca-se o número de camadas na frente da notação. Por exemplo, para movimentar as 3 camadas da direita no sentido de R usa-se 3Rw. Para duas camadas o uso do número 2 é opcional mas desnecessário.
+                </p>
+                <p>
+                O sentido de rotação continua empregando a mesma notação usada para o 3x3x3, com o uso de apóstrofo (') quando é contrário à regra da mão direita. O número 2 após cada tipo de movimento continua indicando um giro de 180<sup>o</sup>. A tabela abaixo mostra as notações utilizadas para todos os movimentos possíveis de acordo com a posição relativa das camadas.
+                </p>
+                <p>
+                As notações usadas para girar todo o cubo também são indicadas na tabela. É importante saber que depois de girar todo o cubo a notação dos movimentos das camadas continua a mesma, como se o cubo não tivesse sofrido qualquer rotação.
+                </p>
+                
+                <div class="row justify-content-center">
+                    <div class="col-md-6 text-center mt-3 mb-3 px-3">
+                        <p>
+                        Tabela de notação de movimentos segundo a WCA.
+                        </p>
+                        <div class="img-wrapper">
+                            <img src="img/tabela_notacao.png" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+
+                <p class="mt-3">
+                Assim, como no 3x3x3, a movimentação isolada de camadas internas exige o uso de duas notações.
+                </p>
+                <p>
+                Por exemplo, para movimentar somente a camada indicada nos cubos 6x6x6 e 7x7x7 na Figura 3.1, no mesmo sentido de R, é preciso escrever: 3Rw Rw’ ou 3Rw 2Rw'
+                </p>
+                
+                <div class="row justify-content-center">
+                    <div class="col-md-4 mt-3 mb-3 px-3">
+                        <p>
+                        <b><span style="font-size: 13px;">Figura 3.1</span></b>
+                        </p>
+                        <div class="img-wrapper">
+                            <img src="img/camadas_internas.png" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+
+                <p class="mt-3">
+                Por questões de clareza, os exemplos usados neste guia farão uso do sistema de notação padrão R, L, U, D, F, B com os modificadores n, m e c:
+                </p>
+                <ul>
+                    <li>n significa que só a camada adjacente à externa indicada é que se movimenta</li>
+                    <li>m significa que só a camada do meio e mais próxima à externa indicada é que se movimenta</li>
+                    <li>c significa que todo o cubo se movimenta no sentido da camada indicada</li>
+                </ul>
+                <p>
+                Este sistema permite que só um movimento seja realizado para a rotação de qualquer camada interna, tornando as animações dos exemplos deste guia mais simples. Veja o exemplo da Figura 3.2.
+                </p>
+                
+                <div class="row justify-content-center">
+                    <div class="col-md-4 text-center mt-3 mb-3 px-3">
+                        <div class="img-wrapper img-cubo">
+                            <script>
+                                var movimento="{Figura 3.2}R.Rn.Rm.Lm'.Ln'.L'.Rc";
+                                AnimCube6("initmove=x2 &move="+movimento+
+                                            "&movetext=1\
+                                            &yz=1\
+                                            &fonttype=0\
+                                            &textsize=12\
+                                            &facelets=*\
+                                            &buttonheight=20\
+                                            &bgcolor=f0f0f0\
+                                            &butbgcolor=009999\
+                                            &snap=0\
+                                            &repeat=0\
+                                            &edit=0\
+                                            &speed=10\
+                                            &gabbacolors=1")
+                            </script>
+                        </div>
+                    </div>
+                </div>            
+               
+            </div>           
+        </div>
+
+        <nav class="nav nav-justified my-0">
+            <a class="nav-link virapagina" href="cubo-4x4x4-e-maiores/2-estrutura-dos-cubos-grandes.html">⇦</a>
+            <a class="nav-link virapagina" href="cubo-4x4x4-e-maiores/4-estrategia-de-solucao.html">⇨</a>
+        </nav>
+        
+    </main>
+        
+    <div id="footer"></div>
+    
+    <script src="js/load-components.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+</body>
+
+</html>

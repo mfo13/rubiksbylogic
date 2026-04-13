@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="icon" href="favicon.ico">
+
+    <title>Cubo Mágico sem Decoreba | Cubos grandes - Estrutura</title>
+    <meta name="description" content="Aprenda como funcionam as peças e a simetria dos cubos grandes, como 4x4x4 e superiores, base para resolução sem decoreba.">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <script src="js/AnimCube4.js"></script>
+    <script src="js/AnimCube5.js"></script>
+    <script src="js/AnimCube6.js"></script>
+    <script src="js/AnimCube7.js"></script>
+
+</head>
+
+<body>
+    <div id="banner"></div>
+    <div id="menu"></div>
+    
+    <main class="container mb-0">
+        
+        <h1>Cubo 4x4x4 e maiores</h1>
+        <h2>Resolvendo Cubos Grandes Sem Decorar</h2>
+
+        <div class="row align-items-start">
+
+            <div class="container px-3">
+                <h3>2. Estrutura dos cubos grandes</h3>
+                <p>
+                Existem dois tipos de cubos, os cubos ímpares e os cubos pares. Os cubos ímpares são formados por um número ímpar de peças na aresta, por exemplo, 3x3x3, 5x5x5, 7x7x7. Os cubos pares são formados por um número par de peças na aresta, 4x4x4, 6x6x6, 8x8x8.
+                </p>
+                <p>
+                Assim como no cubo 3x3x3 nem todas as peças são intercambiáveis. Nos cubos ímpares, assim como no 3x3x3, as peças dos centros das faces sempre mantêm sua posição relativa no espaço, o que facilita a montagem desses cubos.
+                </p>
+                <p>
+                Nos cubos pares, por outro lado, nenhum dos centros mantém suas posições relativas. Além disso, em ambos os casos, cubos ímpares ou pares, nem sempre todas as peças dos centros são intercambiáveis. No caso dos cubos ímpares, ainda, os edges que ficam no centro das arestas só são intercambiáveis entre si.
+                </p>
+                <p>
+                As Figuras de 1.1 a 1.4 mostram as peças que são intercambiáveis nos cubos 4x4x4, 5x5x5, 6x6x6 e 7x7x7, pintadas com a mesma cor. Note que os centros dos cubos ímpares estão sem cor (pretos) porque preservam sua posição relativa no espaço e não são intercambiáveis. Como todas as peças intercambiáveis possuem a mesma cor nas Figura 1.1 a 1.4, perceba que você não consegue embaralhar os cubos, por mais que você gire suas camadas aleatoriamente.
+                </p>
+
+                <div class="row justify-content-center">
+                    <div class="col-md-4 text-center mt-3 mb-3 px-3">
+                        <div class="img-wrapper img-cubo">
+                            <script>
+                                var movimento="{Figura 1.1}x2 y'";
+                                AnimCube4("initmove=x2 &move="+movimento+
+                                            "&movetext=0\
+                                            &yz=1\
+                                            &fonttype=0\
+                                            &textsize=12\
+                                            &facelets=yrryrggrrggryrryYRRYRGGRRGGRYRRYyrryrggrrggryrryYRRYRGGRRGGRYRRYyrryrggrrggryrryYRRYRGGRRGGRYRRY\
+                                            &buttonheight=20\
+                                            &bgcolor=f0f0f0\
+                                            &butbgcolor=009999\
+                                            &snap=0\
+                                            &repeat=0\
+                                            &edit=1\
+                                            &speed=0\
+                                            &gabbacolors=1")
+                            </script>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center mt-3 mb-3 px-3">
+                        <div class="img-wrapper img-cubo">
+                            <script>
+                                var movimento="{Figura 1.2}x2 y'";
+                                AnimCube5("initmove=x2 &move="+movimento+
+                                            "&movetext=0\
+                                            &yz=1\
+                                            &fonttype=0\
+                                            &textsize=12\
+                                            &facelets=yroryrgwgrowkworgwgryroryYRORYRGWGROWKWORGWGRYRORYyroryrgwgrowkworgwgryroryYRORYRGWGROWKWORGWGRYRORYyroryrgwgrowkworgwgryroryYRORYRGWGROWKWORGWGRYRORY\
+                                            &buttonheight=20\
+                                            &bgcolor=f0f0f0\
+                                            &butbgcolor=009999\
+                                            &snap=0\
+                                            &repeat=0\
+                                            &edit=1\
+                                            &speed=0\
+                                            &gabbacolors=1")
+                            </script>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row justify-content-center">
+                    <div class="col-md-4 text-center mt-3 mb-3 px-3">
+                        <div class="img-wrapper img-cubo">
+                            <script>
+                                var movimento="{Figura 1.3}x2 y'";
+                                AnimCube6("initmove=x2 &move="+movimento+
+                                            "&movetext=0\
+                                            &yz=1\
+                                            &fonttype=0\
+                                            &textsize=12\
+                                            &facelets=yrooryrgpwgrowbbpoopbbworgwpgryrooryYROORYRGPWGROWBBPOOPBBWORGWPGRYROORYyrooryrgpwgrowbbpoopbbworgwpgryrooryYROORYRGPWGROWBBPOOPBBWORGWPGRYROORYyrooryrgpwgrowbbpoopbbworgwpgryrooryYROORYRGPWGROWBBPOOPBBWORGWPGRYROORY\
+                                            &buttonheight=20\
+                                            &bgcolor=f0f0f0\
+                                            &butbgcolor=009999\
+                                            &snap=0\
+                                            &repeat=0\
+                                            &edit=1\
+                                            &speed=0\
+                                            &gabbacolors=1")
+                            </script>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center mt-3 mb-3 px-3">
+                        <div class="img-wrapper img-cubo">
+                            <script>
+                                var movimento="{Figura 1.4}x2 y'";
+                                AnimCube7("initmove=x2 &move="+movimento+
+                                            "&movetext=0\
+                                            &yz=1\
+                                            &fonttype=0\
+                                            &textsize=12\
+                                            &facelets=yromoryrgpbwgrowncnpombckcbmopncnworgwbpgryromoryYROMORYRGPBWGROWNCNPOMBCKCBMOPNCNWORGWBPGRYROMORYyromoryrgpbwgrowncnpombckcbmopncnworgwbpgryromoryYROMORYRGPBWGROWNCNPOMBCKCBMOPNCNWORGWBPGRYROMORYyromoryrgpbwgrowncnpombckcbmopncnworgwbpgryromoryYROMORYRGPBWGROWNCNPOMBCKCBMOPNCNWORGWBPGRYROMORY\
+                                            &buttonheight=20\
+                                            &bgcolor=f0f0f0\
+                                            &butbgcolor=009999\
+                                            &snap=0\
+                                            &repeat=0\
+                                            &edit=1\
+                                            &speed=0\
+                                            &gabbacolors=1")
+                            </script>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="mt-3">
+                Parece confuso, principalmente para os cubos maiores, mas é só uma questão de simetria.
+                </p>
+                <p>
+                Vamos dizer que as peças intercambiáveis entre si pertencem a uma mesma “família”.
+                </p>
+                <p>
+                Perceba que para os cantos (<i>corners</i>), não importa o tamanho do cubo, só existe uma família. Para os lados (<i>edges</i>), todas as peças eqüidistantes do centro da aresta pertencem a uma mesma família. No caso de cubos ímpares os <i>edges</i> no centro das arestas pertencem à mesma família.
+                </p>
+                
+                <div class="row justify-content-center">
+                    <div class="col-md-9 px-3">
+                        <p>
+                        O caso das peças centrais é só um pouco mais complicado. Considere uma face. Pertence à mesma família, o conjunto de quatro facetas que possui um <b>eixo quádruplo de simetria rotacional</b>. Todos os conjuntos com essa mesma configuração nas outras faces pertencerão à mesma família desta face.
+                        </p>
+                        <p>
+                        Mas, o quê é eixo quádruplo de simetria rotacional?!
+                        </p>
+                        <p>
+                        Grosso modo, dizemos que um conjunto de objetos iguais, distribuídos no espaço, possui um eixo quádruplo de simetria rotacional quando um giro de 90<sup>o</sup> ao redor desse eixo produz a mesma imagem. Veja o exemplo na Figura 1.5.
+                        </p>
+                    </div>
+                    <div class="col-md-3 mb-3 px-3">
+                        <p>
+                        <b><span style="font-size: 13px;">Figura 1.5</span></b>
+                        </p>
+                        <div class="img-fluid text-center">
+                            <div class="img-wrapper">
+                                <img src="img/eixo_quadruplo.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <p>
+                Se girarmos o conjunto de objetos desta figura em 90<sup>o</sup> ao redor do eixo imaginário que fura a tela no ponto central veremos exatamente a mesma imagem. Repetindo esse giro por quatro vezes fechamos um ciclo ao redor desse eixo. O conjunto da Figura 1.5, portanto, possui um eixo quádruplo de simetria rotacional.
+                </p>
+                <p>
+                Veja abaixo as famílias de peças centrais em cubos grandes que seguem esse princípio.
+                </p>
+
+                <div class="row justify-content-center">
+                    <div class="col-md-3 my-3 px-3">
+                        <p class="text-center">
+                        O 4x4x4 só possui 1 família de peças centrais.
+                        </p>
+                        <div class="text-center my-3">
+                            <div class="img-wrapper">
+                                <img src="img/familias_4x4x4.png" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 my-3 px-3">
+                        <p class="text-center">
+                        O 5x5x5 possui 2 famílias de peças centrais.
+                        </p>
+                        <div class="text-center my-3">
+                            <div class="img-wrapper">
+                                <img src="img/familias_5x5x5.png" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-md-12 my-3 px-3">
+                        <p class="text-center">
+                        O 6x6x6 possui 4 famílias de peças centrais.
+                        </p>
+                        <div class="text-center my-3">
+                            <div class="img-wrapper">
+                                <img src="img/familias_6x6x6.png" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row justify-content-center">
+                    <div class="col-md-12 my-3 px-3">
+                        <p class="text-center">
+                        O 7x7x7 possui 6 famílias de peças centrais.
+                        </p>
+                        <div class="text-center my-3">
+                            <div class="img-wrapper">
+                                <img src="img/familias_7x7x7.png" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <p class="text-center">
+                A tabela abaixo mostra o número de famílias existentes para cada tipo de peça e em qualquer cubo.
+                </p>
+                <div class="row justify-content-center">
+                    <div class="col-md-5 text-center">
+                        <div class="img-wrapper">
+                            <img src="img/tabela_familias.png" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+
+                <b>
+                <p class="bg-warning mt-3 mb-0 px-2 py-2">
+                <u>Conhecimentos Importantes:</u>
+                </p>
+                <ul class="bg-warning mt-0 py-2">
+                    <li>Os centros dos cubos ímpares não são intercambiáveis e sempre mantêm sua posição relativa no espaço.</li>
+                    <li>Todos os lados (<i>edges</i>) eqüidistantes do centro das arestas pertencem à mesma família.</li>
+                    <li>O grupo de quatro centros numa face com um eixo quádruplo de simetria rotacional pertence à mesma família, em conjunto com os grupos similares nas outras faces.</li>
+                </ul>
+                </b>
+
+                <p class="mt-4">
+                Não é preciso decorar nada disso, basta ficar atento à simetria, nas arestas e nas faces, e você sempre saberá quais peças são intercambiáveis.
+                </p>
+                <p>
+                O mínimo intercâmbio possível é a comutação de três peças da mesma família, como ocorre no 3x3x3. A exceção, claro, são os centros dos cubos ímpares que não são intercambiáveis.
+                </p>
+
+            </div>           
+        </div>
+
+        <nav class="nav nav-justified my-0">
+            <a class="nav-link virapagina" href="cubo-4x4x4-e-maiores/1-introducao.html">⇦</a>
+            <a class="nav-link virapagina" href="cubo-4x4x4-e-maiores/3-notacao-de-movimentos-em-cubos-grandes.html">⇨</a>
+        </nav>
+        
+    </main>
+        
+    <div id="footer"></div>
+    
+    <script src="js/load-components.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+</body>
+
+</html>

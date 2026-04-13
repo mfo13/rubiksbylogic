@@ -1,0 +1,2745 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="icon" href="favicon.ico">
+
+    <title>Cubo Mágico sem Decoreba | Notações WCA</title>
+    <meta name="description" content="Aprenda as notações WCA para cubo mágico: sistema atual e antigo, significados dos movimentos (R, U, F, etc.) e como interpretar algoritmos com facilidade.">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="banner"></div>
+    <div id="menu"></div>
+    
+    <main class="container mb-0">
+        
+        <h1>Notações WCA</h1>
+        
+        <div class="row align-items-start">
+
+            <div class="container px-3">
+                <h3>Inclui o sistema antigo e o novo de notações.</h3>
+                <hr class="border-primary">
+                <div class="row text-center">
+                    <h2>WCA 2x2x2</h2>
+                    <table xmlns="https://www.w3.org/1999/xhtml" cellpadding="2" cellspacing="0" width="600" data-table-local-id="table-2">
+                    <tbody>
+                        <tr>
+                        <th width="100">Move</th>
+                        <th width="80">Right</th>
+                        <th width="80">Up</th>
+                        <th width="80">Front</th>
+                        <th width="80">Left</th>
+                        <th width="80">Down</th>
+                        <th width="80">Back</th>
+                        </tr>
+                        <tr>
+                        <td width="100">○● +90°</td>
+                        <td width="80">
+                            <code>R</code>
+                        </td>
+                        <td width="80">
+                            <code>U</code>
+                        </td>
+                        <td width="80">
+                            <code>F</code>
+                        </td>
+                        <td width="80">
+                            <code>L</code>
+                        </td>
+                        <td width="80">
+                            <code>D</code>
+                        </td>
+                        <td width="80">
+                            <code>B</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○● -90°</td>
+                        <td width="80">
+                            <code>R'</code>
+                        </td>
+                        <td width="80">
+                            <code>U'</code>
+                        </td>
+                        <td width="80">
+                            <code>F'</code>
+                        </td>
+                        <td width="80">
+                            <code>L'</code>
+                        </td>
+                        <td width="80">
+                            <code>D'</code>
+                        </td>
+                        <td width="80">
+                            <code>B'</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○● +180°</td>
+                        <td width="80">
+                            <code>R2</code>
+                        </td>
+                        <td width="80">
+                            <code>U2</code>
+                        </td>
+                        <td width="80">
+                            <code>F2</code>
+                        </td>
+                        <td width="80">
+                            <code>L2</code>
+                        </td>
+                        <td width="80">
+                            <code>D2</code>
+                        </td>
+                        <td width="80">
+                            <code>B2</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○● -180°</td>
+                        <td width="80">
+                            <br />
+                        </td>
+                        <td width="80">
+                            <br />
+                        </td>
+                        <td width="80">
+                            <br />
+                        </td>
+                        <td width="80">
+                            <br />
+                        </td>
+                        <td width="80">
+                            <br />
+                        </td>
+                        <td width="80">
+                            <br />
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">●● +90°</td>
+                        <td width="80">
+                            <code>x [r] [l']</code>
+                        </td>
+                        <td width="80">
+                            <code>y [u] [d']</code>
+                        </td>
+                        <td width="80">
+                            <code>z [f] [b']</code>
+                        </td>
+                        <td width="80">
+                            <code>x' [r'] [l]</code>
+                        </td>
+                        <td width="80">
+                            <code>y' [u'] [d]</code>
+                        </td>
+                        <td width="80">
+                            <code>z' [f'] [b]</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">●● +180°</td>
+                        <td width="80">
+                            <code>x2 [r2] [l2]</code>
+                        </td>
+                        <td width="80">
+                            <code>y2 [u2] [d2]</code>
+                        </td>
+                        <td width="80">
+                            <code>z2 [f2] [b2]</code>
+                        </td>
+                        <td width="80">
+                            <br />
+                        </td>
+                        <td width="80">
+                            <br />
+                        </td>
+                        <td width="80">
+                            <br />
+                        </td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>
+
+                <hr class="border-primary">
+                
+                <div class="row text-center">
+                    <h2>WCA 3x3x3</h2>
+                    <table xmlns="https://www.w3.org/1999/xhtml" cellpadding="2" cellspacing="0" width="600" data-table-local-id="table-3">
+                    <tbody>
+                        <tr>
+                        <th width="100">Move</th>
+                        <th width="80">Right</th>
+                        <th width="80">Up</th>
+                        <th width="80">Front</th>
+                        <th width="80">Left</th>
+                        <th width="80">Down</th>
+                        <th width="80">Back</th>
+                        </tr>
+                        <tr>
+                        <td width="100">○○● +90°</td>
+                        <td width="80">
+                            <code>R</code>
+                        </td>
+                        <td width="80">
+                            <code>U</code>
+                        </td>
+                        <td width="80">
+                            <code>F</code>
+                        </td>
+                        <td width="80">
+                            <code>L</code>
+                        </td>
+                        <td width="80">
+                            <code>D</code>
+                        </td>
+                        <td width="80">
+                            <code>B</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○○● -90°</td>
+                        <td width="80">
+                            <code>R'</code>
+                        </td>
+                        <td width="80">
+                            <code>U'</code>
+                        </td>
+                        <td width="80">
+                            <code>F'</code>
+                        </td>
+                        <td width="80">
+                            <code>L'</code>
+                        </td>
+                        <td width="80">
+                            <code>D'</code>
+                        </td>
+                        <td width="80">
+                            <code>B'</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○○● +180°</td>
+                        <td width="80">
+                            <code>R2</code>
+                        </td>
+                        <td width="80">
+                            <code>U2</code>
+                        </td>
+                        <td width="80">
+                            <code>F2</code>
+                        </td>
+                        <td width="80">
+                            <code>L2</code>
+                        </td>
+                        <td width="80">
+                            <code>D2</code>
+                        </td>
+                        <td width="80">
+                            <code>B2</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○○● -180°</td>
+                        <td width="80">
+                            <code>R2'</code>
+                        </td>
+                        <td width="80">
+                            <code>U2'</code>
+                        </td>
+                        <td width="80">
+                            <code>F2'</code>
+                        </td>
+                        <td width="80">
+                            <code>L2'</code>
+                        </td>
+                        <td width="80">
+                            <code>D2'</code>
+                        </td>
+                        <td width="80">
+                            <code>B2'</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○●● +90°</td>
+                        <td width="80">
+                            <code>Rw</code>
+                        </td>
+                        <td width="80">
+                            <code>Uw</code>
+                        </td>
+                        <td width="80">
+                            <code>Fw</code>
+                        </td>
+                        <td width="80">
+                            <code>Lw</code>
+                        </td>
+                        <td width="80">
+                            <code>Dw</code>
+                        </td>
+                        <td width="80">
+                            <code>Bw</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○●● -90°</td>
+                        <td width="80">
+                            <code>Rw'</code>
+                        </td>
+                        <td width="80">
+                            <code>Uw'</code>
+                        </td>
+                        <td width="80">
+                            <code>Fw'</code>
+                        </td>
+                        <td width="80">
+                            <code>Lw'</code>
+                        </td>
+                        <td width="80">
+                            <code>Dw'</code>
+                        </td>
+                        <td width="80">
+                            <code>Bw'</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○●● +180°</td>
+                        <td width="80">
+                            <code>Rw2</code>
+                        </td>
+                        <td width="80">
+                            <code>Uw2</code>
+                        </td>
+                        <td width="80">
+                            <code>Fw2</code>
+                        </td>
+                        <td width="80">
+                            <code>Lw2</code>
+                        </td>
+                        <td width="80">
+                            <code>Dw2</code>
+                        </td>
+                        <td width="80">
+                            <code>Bw2</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○●● -180°</td>
+                        <td width="80">
+                            <code>Rw2'</code>
+                        </td>
+                        <td width="80">
+                            <code>Uw2'</code>
+                        </td>
+                        <td width="80">
+                            <code>Fw2'</code>
+                        </td>
+                        <td width="80">
+                            <code>Lw2'</code>
+                        </td>
+                        <td width="80">
+                            <code>Dw2'</code>
+                        </td>
+                        <td width="80">
+                            <code>Bw2'</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">●●● +90°</td>
+                        <td width="80">
+                            <code>[r] [l'] x</code>
+                        </td>
+                        <td width="80">
+                            <code>[u] [d'] y</code>
+                        </td>
+                        <td width="80">
+                            <code>[f] [b'] z</code>
+                        </td>
+                        <td width="80">
+                            <code>[l] [r'] x'</code>
+                        </td>
+                        <td width="80">
+                            <code>[d] [u'] y'</code>
+                        </td>
+                        <td width="80">
+                            <code>[b] [f'] z'</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">●●● +180°</td>
+                        <td width="80">
+                            <code>[r2] [l2'] x2</code>
+                        </td>
+                        <td width="80">
+                            <code>[u2] [d2'] y2</code>
+                        </td>
+                        <td width="80">
+                            <code>[f2] [b2'] z2</code>
+                        </td>
+                        <td width="80">
+                            <code>[l2] [r2'] x2'</code>
+                        </td>
+                        <td width="80">
+                            <code>[d2] [u2'] y2'</code>
+                        </td>
+                        <td width="80">
+                            <code>[b2] [f2'] z2'</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○●○ +90°</td>
+                        <td width="80">
+                            <code>M'</code>
+                        </td>
+                        <td width="80">
+                            <code>E'</code>
+                        </td>
+                        <td width="80">
+                            <code>S</code>
+                        </td>
+                        <td width="80">
+                            <code>M</code>
+                        </td>
+                        <td width="80">
+                            <code>E</code>
+                        </td>
+                        <td width="80">
+                            <code>S'</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○●○ +180°</td>
+                        <td width="80">
+                            <code>M2'</code>
+                        </td>
+                        <td width="80">
+                            <code>E2'</code>
+                        </td>
+                        <td width="80">
+                            <code>S2</code>
+                        </td>
+                        <td width="80">
+                            <code>M2</code>
+                        </td>
+                        <td width="80">
+                            <code>E2</code>
+                        </td>
+                        <td width="80">
+                            <code>S2'</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">●○● +90°</td>
+                        <td width="80">
+                            <br />
+                        </td>
+                        <td width="80">
+                            <br />
+                        </td>
+                        <td width="80">
+                            <br />
+                        </td>
+                        <td width="80">
+                            <br />
+                        </td>
+                        <td width="80">
+                            <br />
+                        </td>
+                        <td width="80">
+                            <br />
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">●○● +180°</td>
+                        <td width="80">
+                            <br />
+                        </td>
+                        <td width="80">
+                            <br />
+                        </td>
+                        <td width="80">
+                            <br />
+                        </td>
+                        <td width="80">
+                            <br />
+                        </td>
+                        <td width="80">
+                            <br />
+                        </td>
+                        <td width="80">
+                            <br />
+                        </td>
+                        </tr>
+                        <tr>
+                        <td colspan="7"> </td>
+                        </tr>
+                        <tr>
+                        <th colspan="7">Grouping</th>
+                        </tr>
+                        <tr>
+                        <td width="100">Grouping</td>
+                        <td colspan="2">Begin:</td>
+                        <td width="80">
+                            <code>(</code>
+                        </td>
+                        <td colspan="2">End:</td>
+                        <td width="80">
+                            <code>)</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td colspan="7"> </td>
+                        </tr>
+                        <tr>
+                        <th colspan="7">Comment</th>
+                        </tr>
+                        <tr>
+                        <td width="100">Multi-Line</td>
+                        <td colspan="2">Begin:</td>
+                        <td width="80">
+                            <code>"</code>
+                        </td>
+                        <td colspan="2">End:</td>
+                        <td width="80">
+                            <code>"</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">Single-Line</td>
+                        <td colspan="2">Begin:</td>
+                        <td width="80">
+                            <code>/</code>
+                        </td>
+                        <td colspan="3">
+                            <br />
+                        </td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>
+
+                <hr class="border-primary">
+
+                <div class="row text-center">
+                    <h2>WCA 4x4x4</h2>
+                    <table xmlns="https://www.w3.org/1999/xhtml" cellpadding="2" cellspacing="0" width="600" data-table-local-id="table-4">
+                    <tbody>
+                        <tr>
+                        <th width="100">Move</th>
+                        <th width="80">Right</th>
+                        <th width="80">Up</th>
+                        <th width="80">Front</th>
+                        <th width="80">Left</th>
+                        <th width="80">Down</th>
+                        <th width="80">Back</th>
+                        </tr>
+                        <tr>
+                        <td width="100">○○○● +90°</td>
+                        <td width="80">
+                            <code>R</code>
+                        </td>
+                        <td width="80">
+                            <code>U</code>
+                        </td>
+                        <td width="80">
+                            <code>F</code>
+                        </td>
+                        <td width="80">
+                            <code>L</code>
+                        </td>
+                        <td width="80">
+                            <code>D</code>
+                        </td>
+                        <td width="80">
+                            <code>B</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○○○● -90°</td>
+                        <td width="80">
+                            <code>R'</code>
+                        </td>
+                        <td width="80">
+                            <code>U'</code>
+                        </td>
+                        <td width="80">
+                            <code>F'</code>
+                        </td>
+                        <td width="80">
+                            <code>L'</code>
+                        </td>
+                        <td width="80">
+                            <code>D'</code>
+                        </td>
+                        <td width="80">
+                            <code>B'</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○○○● +180°</td>
+                        <td width="80">
+                            <code>R2</code>
+                        </td>
+                        <td width="80">
+                            <code>U2</code>
+                        </td>
+                        <td width="80">
+                            <code>F2</code>
+                        </td>
+                        <td width="80">
+                            <code>L2</code>
+                        </td>
+                        <td width="80">
+                            <code>D2</code>
+                        </td>
+                        <td width="80">
+                            <code>B2</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○○○● -180°</td>
+                        <td width="80">
+                            <code>R2'</code>
+                        </td>
+                        <td width="80">
+                            <code>U2'</code>
+                        </td>
+                        <td width="80">
+                            <code>F2'</code>
+                        </td>
+                        <td width="80">
+                            <code>L2'</code>
+                        </td>
+                        <td width="80">
+                            <code>D2'</code>
+                        </td>
+                        <td width="80">
+                            <code>B2'</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○○●● +90°</td>
+                        <td width="80">
+                            <code>Rw</code>
+                        </td>
+                        <td width="80">
+                            <code>Uw</code>
+                        </td>
+                        <td width="80">
+                            <code>Fw</code>
+                        </td>
+                        <td width="80">
+                            <code>Lw</code>
+                        </td>
+                        <td width="80">
+                            <code>Dw</code>
+                        </td>
+                        <td width="80">
+                            <code>Bw</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○○●● -90°</td>
+                        <td width="80">
+                            <code>Rw'</code>
+                        </td>
+                        <td width="80">
+                            <code>Uw'</code>
+                        </td>
+                        <td width="80">
+                            <code>Fw'</code>
+                        </td>
+                        <td width="80">
+                            <code>Lw'</code>
+                        </td>
+                        <td width="80">
+                            <code>Dw'</code>
+                        </td>
+                        <td width="80">
+                            <code>Bw'</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○○●● +180°</td>
+                        <td width="80">
+                            <code>Rw2</code>
+                        </td>
+                        <td width="80">
+                            <code>Uw2</code>
+                        </td>
+                        <td width="80">
+                            <code>Fw2</code>
+                        </td>
+                        <td width="80">
+                            <code>Lw2</code>
+                        </td>
+                        <td width="80">
+                            <code>Dw2</code>
+                        </td>
+                        <td width="80">
+                            <code>Bw2</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○○●● -180°</td>
+                        <td width="80">
+                            <code>Rw2'</code>
+                        </td>
+                        <td width="80">
+                            <code>Uw2'</code>
+                        </td>
+                        <td width="80">
+                            <code>Fw2'</code>
+                        </td>
+                        <td width="80">
+                            <code>Lw2'</code>
+                        </td>
+                        <td width="80">
+                            <code>Dw2'</code>
+                        </td>
+                        <td width="80">
+                            <code>Bw2'</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○●●● +90°</td>
+                        <td width="80">
+                            <code>3Rw</code>
+                        </td>
+                        <td width="80">
+                            <code>3Uw</code>
+                        </td>
+                        <td width="80">
+                            <code>3Fw</code>
+                        </td>
+                        <td width="80">
+                            <code>3Lw</code>
+                        </td>
+                        <td width="80">
+                            <code>3Dw</code>
+                        </td>
+                        <td width="80">
+                            <code>3Bw</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○●●● -90°</td>
+                        <td width="80">
+                            <code>3Rw'</code>
+                        </td>
+                        <td width="80">
+                            <code>3Uw'</code>
+                        </td>
+                        <td width="80">
+                            <code>3Fw'</code>
+                        </td>
+                        <td width="80">
+                            <code>3Lw'</code>
+                        </td>
+                        <td width="80">
+                            <code>3Dw'</code>
+                        </td>
+                        <td width="80">
+                            <code>3Bw'</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○●●● +180°</td>
+                        <td width="80">
+                            <code>3Rw2</code>
+                        </td>
+                        <td width="80">
+                            <code>3Uw2</code>
+                        </td>
+                        <td width="80">
+                            <code>3Fw2</code>
+                        </td>
+                        <td width="80">
+                            <code>3Lw2</code>
+                        </td>
+                        <td width="80">
+                            <code>3Dw2</code>
+                        </td>
+                        <td width="80">
+                            <code>3Bw2</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">●●●● +90°</td>
+                        <td width="80">
+                            <code>[r] [l'] x</code>
+                        </td>
+                        <td width="80">
+                            <code>[u] [d'] y</code>
+                        </td>
+                        <td width="80">
+                            <code>[f] [b'] z</code>
+                        </td>
+                        <td width="80">
+                            <code>[l] [r'] x'</code>
+                        </td>
+                        <td width="80">
+                            <code>[d] [u'] y'</code>
+                        </td>
+                        <td width="80">
+                            <code>[b] [f'] z'</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">●●●● +180°</td>
+                        <td width="80">
+                            <code>[r2] [l2'] x2</code>
+                        </td>
+                        <td width="80">
+                            <code>[u2] [d2'] y2</code>
+                        </td>
+                        <td width="80">
+                            <code>[f2] [b2'] z2</code>
+                        </td>
+                        <td width="80">
+                            <code>[l2] [r2'] x2'</code>
+                        </td>
+                        <td width="80">
+                            <code>[d2] [u2'] y2'</code>
+                        </td>
+                        <td width="80">
+                            <code>[b2] [f2'] z2'</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○○●○ +90°</td>
+                        <td width="80">
+                            <code>r</code>
+                        </td>
+                        <td width="80">
+                            <code>u</code>
+                        </td>
+                        <td width="80">
+                            <code>f</code>
+                        </td>
+                        <td width="80">
+                            <code>l</code>
+                        </td>
+                        <td width="80">
+                            <code>d</code>
+                        </td>
+                        <td width="80">
+                            <code>b</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○○●○ -90°</td>
+                        <td width="80">
+                            <code>r'</code>
+                        </td>
+                        <td width="80">
+                            <code>u'</code>
+                        </td>
+                        <td width="80">
+                            <code>f'</code>
+                        </td>
+                        <td width="80">
+                            <code>l'</code>
+                        </td>
+                        <td width="80">
+                            <code>d'</code>
+                        </td>
+                        <td width="80">
+                            <code>b'</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○○●○ +180°</td>
+                        <td width="80">
+                            <code>r2</code>
+                        </td>
+                        <td width="80">
+                            <code>u2</code>
+                        </td>
+                        <td width="80">
+                            <code>f2</code>
+                        </td>
+                        <td width="80">
+                            <code>l2</code>
+                        </td>
+                        <td width="80">
+                            <code>d2</code>
+                        </td>
+                        <td width="80">
+                            <code>b2</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○○●○ -180°</td>
+                        <td width="80">
+                            <code>r2'</code>
+                        </td>
+                        <td width="80">
+                            <code>u2'</code>
+                        </td>
+                        <td width="80">
+                            <code>f2'</code>
+                        </td>
+                        <td width="80">
+                            <code>l2'</code>
+                        </td>
+                        <td width="80">
+                            <code>d2'</code>
+                        </td>
+                        <td width="80">
+                            <code>b2'</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○●●○ +90°</td>
+                        <td width="80">
+                            <code>M'</code>
+                        </td>
+                        <td width="80">
+                            <code>E'</code>
+                        </td>
+                        <td width="80">
+                            <code>S</code>
+                        </td>
+                        <td width="80">
+                            <code>M</code>
+                        </td>
+                        <td width="80">
+                            <code>E</code>
+                        </td>
+                        <td width="80">
+                            <code>S'</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○●●○ +180°</td>
+                        <td width="80">
+                            <code>M2'</code>
+                        </td>
+                        <td width="80">
+                            <code>E2'</code>
+                        </td>
+                        <td width="80">
+                            <code>S2</code>
+                        </td>
+                        <td width="80">
+                            <code>M2</code>
+                        </td>
+                        <td width="80">
+                            <code>E2</code>
+                        </td>
+                        <td width="80">
+                            <code>S2'</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td colspan="7"> </td>
+                        </tr>
+                        <tr>
+                        <th colspan="7">Comment</th>
+                        </tr>
+                        <tr>
+                        <td width="100">Multi-Line</td>
+                        <td colspan="2">Begin:</td>
+                        <td width="80">
+                            <code>"</code>
+                        </td>
+                        <td colspan="2">End:</td>
+                        <td width="80">
+                            <code>"</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">Single-Line</td>
+                        <td colspan="2">Begin:</td>
+                        <td width="80">
+                            <code>/</code>
+                        </td>
+                        <td colspan="3"></td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>
+
+                <hr class="border-primary">
+
+                <div class="row text-center">
+                    <h2>WCA 5x5x5</h2>
+                    <table xmlns="https://www.w3.org/1999/xhtml" cellpadding="2" cellspacing="0" width="600" data-table-local-id="table-5">
+                    <tbody>
+                        <tr>
+                        <th width="100">Move</th>
+                        <th width="80">Right</th>
+                        <th width="80">Up</th>
+                        <th width="80">Front</th>
+                        <th width="80">Left</th>
+                        <th width="80">Down</th>
+                        <th width="80">Back</th>
+                        </tr>
+                        <tr>
+                        <td width="100">○○○○● +90°</td>
+                        <td width="80">
+                            <code>R</code>
+                        </td>
+                        <td width="80">
+                            <code>U</code>
+                        </td>
+                        <td width="80">
+                            <code>F</code>
+                        </td>
+                        <td width="80">
+                            <code>L</code>
+                        </td>
+                        <td width="80">
+                            <code>D</code>
+                        </td>
+                        <td width="80">
+                            <code>B</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○○○○● -90°</td>
+                        <td width="80">
+                            <code>R'</code>
+                        </td>
+                        <td width="80">
+                            <code>U'</code>
+                        </td>
+                        <td width="80">
+                            <code>F'</code>
+                        </td>
+                        <td width="80">
+                            <code>L'</code>
+                        </td>
+                        <td width="80">
+                            <code>D'</code>
+                        </td>
+                        <td width="80">
+                            <code>B'</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○○○○● +180°</td>
+                        <td width="80">
+                            <code>R2</code>
+                        </td>
+                        <td width="80">
+                            <code>U2</code>
+                        </td>
+                        <td width="80">
+                            <code>F2</code>
+                        </td>
+                        <td width="80">
+                            <code>L2</code>
+                        </td>
+                        <td width="80">
+                            <code>D2</code>
+                        </td>
+                        <td width="80">
+                            <code>B2</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○○○○● -180°</td>
+                        <td width="80">
+                            <code>R2'</code>
+                        </td>
+                        <td width="80">
+                            <code>U2'</code>
+                        </td>
+                        <td width="80">
+                            <code>F2'</code>
+                        </td>
+                        <td width="80">
+                            <code>L2'</code>
+                        </td>
+                        <td width="80">
+                            <code>D2'</code>
+                        </td>
+                        <td width="80">
+                            <code>B2'</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○○○●● +90°</td>
+                        <td width="80">
+                            <code>Rw</code>
+                        </td>
+                        <td width="80">
+                            <code>Uw</code>
+                        </td>
+                        <td width="80">
+                            <code>Fw</code>
+                        </td>
+                        <td width="80">
+                            <code>Lw</code>
+                        </td>
+                        <td width="80">
+                            <code>Dw</code>
+                        </td>
+                        <td width="80">
+                            <code>Bw</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○○○●● -90°</td>
+                        <td width="80">
+                            <code>Rw'</code>
+                        </td>
+                        <td width="80">
+                            <code>Uw'</code>
+                        </td>
+                        <td width="80">
+                            <code>Fw'</code>
+                        </td>
+                        <td width="80">
+                            <code>Lw'</code>
+                        </td>
+                        <td width="80">
+                            <code>Dw'</code>
+                        </td>
+                        <td width="80">
+                            <code>Bw'</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○○○●● +180°</td>
+                        <td width="80">
+                            <code>Rw2</code>
+                        </td>
+                        <td width="80">
+                            <code>Uw2</code>
+                        </td>
+                        <td width="80">
+                            <code>Fw2</code>
+                        </td>
+                        <td width="80">
+                            <code>Lw2</code>
+                        </td>
+                        <td width="80">
+                            <code>Dw2</code>
+                        </td>
+                        <td width="80">
+                            <code>Bw2</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○○○●● -180°</td>
+                        <td width="80">
+                            <code>Rw2'</code>
+                        </td>
+                        <td width="80">
+                            <code>Uw2'</code>
+                        </td>
+                        <td width="80">
+                            <code>Fw2'</code>
+                        </td>
+                        <td width="80">
+                            <code>Lw2'</code>
+                        </td>
+                        <td width="80">
+                            <code>Dw2'</code>
+                        </td>
+                        <td width="80">
+                            <code>Bw2'</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○○●●● +90°</td>
+                        <td width="80">
+                            <code>3Rw</code>
+                        </td>
+                        <td width="80">
+                            <code>3Uw</code>
+                        </td>
+                        <td width="80">
+                            <code>3Fw</code>
+                        </td>
+                        <td width="80">
+                            <code>3Lw</code>
+                        </td>
+                        <td width="80">
+                            <code>3Dw</code>
+                        </td>
+                        <td width="80">
+                            <code>3Bw</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○○●●● -90°</td>
+                        <td width="80">
+                            <code>3Rw'</code>
+                        </td>
+                        <td width="80">
+                            <code>3Uw'</code>
+                        </td>
+                        <td width="80">
+                            <code>3Fw'</code>
+                        </td>
+                        <td width="80">
+                            <code>3Lw'</code>
+                        </td>
+                        <td width="80">
+                            <code>3Dw'</code>
+                        </td>
+                        <td width="80">
+                            <code>3Bw'</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○○●●● +180°</td>
+                        <td width="80">
+                            <code>3Rw2</code>
+                        </td>
+                        <td width="80">
+                            <code>3Uw2</code>
+                        </td>
+                        <td width="80">
+                            <code>3Fw2</code>
+                        </td>
+                        <td width="80">
+                            <code>3Lw2</code>
+                        </td>
+                        <td width="80">
+                            <code>3Dw2</code>
+                        </td>
+                        <td width="80">
+                            <code>3Bw2</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○●●●● +90°</td>
+                        <td width="80">
+                            <code>4Rw</code>
+                        </td>
+                        <td width="80">
+                            <code>4Uw</code>
+                        </td>
+                        <td width="80">
+                            <code>4Fw</code>
+                        </td>
+                        <td width="80">
+                            <code>4Lw</code>
+                        </td>
+                        <td width="80">
+                            <code>4Dw</code>
+                        </td>
+                        <td width="80">
+                            <code>4Bw</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○●●●● -90°</td>
+                        <td width="80">
+                            <code>4Rw'</code>
+                        </td>
+                        <td width="80">
+                            <code>4Uw'</code>
+                        </td>
+                        <td width="80">
+                            <code>4Fw'</code>
+                        </td>
+                        <td width="80">
+                            <code>4Lw'</code>
+                        </td>
+                        <td width="80">
+                            <code>4Dw'</code>
+                        </td>
+                        <td width="80">
+                            <code>4Bw'</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○●●●● +180°</td>
+                        <td width="80">
+                            <code>4Rw2</code>
+                        </td>
+                        <td width="80">
+                            <code>4Uw2</code>
+                        </td>
+                        <td width="80">
+                            <code>4Fw2</code>
+                        </td>
+                        <td width="80">
+                            <code>4Lw2</code>
+                        </td>
+                        <td width="80">
+                            <code>4Dw2</code>
+                        </td>
+                        <td width="80">
+                            <code>4Bw2</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">●●●●● +90°</td>
+                        <td width="80">
+                            <code>[r] [l'] x</code>
+                        </td>
+                        <td width="80">
+                            <code>[u] [d'] y</code>
+                        </td>
+                        <td width="80">
+                            <code>[f] [b'] z</code>
+                        </td>
+                        <td width="80">
+                            <code>[l] [r'] x'</code>
+                        </td>
+                        <td width="80">
+                            <code>[d] [u'] y'</code>
+                        </td>
+                        <td width="80">
+                            <code>[b] [f'] z'</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">●●●●● +180°</td>
+                        <td width="80">
+                            <code>[r2] [l2'] x2</code>
+                        </td>
+                        <td width="80">
+                            <code>[u2] [d2'] y2</code>
+                        </td>
+                        <td width="80">
+                            <code>[f2] [b2'] z2</code>
+                        </td>
+                        <td width="80">
+                            <code>[l2] [r2'] x2'</code>
+                        </td>
+                        <td width="80">
+                            <code>[d2] [u2'] y2'</code>
+                        </td>
+                        <td width="80">
+                            <code>[b2] [f2'] z2'</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○○○●○ +90°</td>
+                        <td width="80">
+                            <code>r</code>
+                        </td>
+                        <td width="80">
+                            <code>u</code>
+                        </td>
+                        <td width="80">
+                            <code>f</code>
+                        </td>
+                        <td width="80">
+                            <code>l</code>
+                        </td>
+                        <td width="80">
+                            <code>d</code>
+                        </td>
+                        <td width="80">
+                            <code>b</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○○○●○ -90°</td>
+                        <td width="80">
+                            <code>r'</code>
+                        </td>
+                        <td width="80">
+                            <code>u'</code>
+                        </td>
+                        <td width="80">
+                            <code>f'</code>
+                        </td>
+                        <td width="80">
+                            <code>l'</code>
+                        </td>
+                        <td width="80">
+                            <code>d'</code>
+                        </td>
+                        <td width="80">
+                            <code>b'</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○○○●○ +180°</td>
+                        <td width="80">
+                            <code>r2</code>
+                        </td>
+                        <td width="80">
+                            <code>u2</code>
+                        </td>
+                        <td width="80">
+                            <code>f2</code>
+                        </td>
+                        <td width="80">
+                            <code>l2</code>
+                        </td>
+                        <td width="80">
+                            <code>d2</code>
+                        </td>
+                        <td width="80">
+                            <code>b2</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○○○●○ -180°</td>
+                        <td width="80">
+                            <code>r2'</code>
+                        </td>
+                        <td width="80">
+                            <code>u2'</code>
+                        </td>
+                        <td width="80">
+                            <code>f2'</code>
+                        </td>
+                        <td width="80">
+                            <code>l2'</code>
+                        </td>
+                        <td width="80">
+                            <code>d2'</code>
+                        </td>
+                        <td width="80">
+                            <code>b2'</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○○●○○ +90°</td>
+                        <td width="80">
+                            <code>M'</code>
+                        </td>
+                        <td width="80">
+                            <code>E'</code>
+                        </td>
+                        <td width="80">
+                            <code>S</code>
+                        </td>
+                        <td width="80">
+                            <code>M</code>
+                        </td>
+                        <td width="80">
+                            <code>E</code>
+                        </td>
+                        <td width="80">
+                            <code>S'</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○○●○○ +180°</td>
+                        <td width="80">
+                            <code>M2'</code>
+                        </td>
+                        <td width="80">
+                            <code>E2'</code>
+                        </td>
+                        <td width="80">
+                            <code>S2</code>
+                        </td>
+                        <td width="80">
+                            <code>M2</code>
+                        </td>
+                        <td width="80">
+                            <code>E2</code>
+                        </td>
+                        <td width="80">
+                            <code>S2'</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td colspan="7"> </td>
+                        </tr>
+                        <tr>
+                        <th colspan="7">Comment</th>
+                        </tr>
+                        <tr>
+                        <td width="100">Multi-Line</td>
+                        <td colspan="2">Begin:</td>
+                        <td width="80">
+                            <code>"</code>
+                        </td>
+                        <td colspan="2">End:</td>
+                        <td width="80">
+                            <code>"</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">Single-Line</td>
+                        <td colspan="2">Begin:</td>
+                        <td width="80">
+                            <code>/</code>
+                        </td>
+                        <td colspan="3"></td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>
+
+                <hr class="border-primary">
+
+                <div class="row text-center">
+                    <h2>WCA 6x6x6</h2>
+                    <table xmlns="https://www.w3.org/1999/xhtml" cellpadding="2" cellspacing="0" width="600" data-table-local-id="table-6">
+                    <tbody>
+                        <tr>
+                        <th width="100">Move</th>
+                        <th width="80">Right</th>
+                        <th width="80">Up</th>
+                        <th width="80">Front</th>
+                        <th width="80">Left</th>
+                        <th width="80">Down</th>
+                        <th width="80">Back</th>
+                        </tr>
+                        <tr>
+                        <td width="100">○○○○○● +90°</td>
+                        <td width="80">
+                            <code>R</code>
+                        </td>
+                        <td width="80">
+                            <code>U</code>
+                        </td>
+                        <td width="80">
+                            <code>F</code>
+                        </td>
+                        <td width="80">
+                            <code>L</code>
+                        </td>
+                        <td width="80">
+                            <code>D</code>
+                        </td>
+                        <td width="80">
+                            <code>B</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○○○○○● -90°</td>
+                        <td width="80">
+                            <code>R'</code>
+                        </td>
+                        <td width="80">
+                            <code>U'</code>
+                        </td>
+                        <td width="80">
+                            <code>F'</code>
+                        </td>
+                        <td width="80">
+                            <code>L'</code>
+                        </td>
+                        <td width="80">
+                            <code>D'</code>
+                        </td>
+                        <td width="80">
+                            <code>B'</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○○○○○● +180°</td>
+                        <td width="80">
+                            <code>R2</code>
+                        </td>
+                        <td width="80">
+                            <code>U2</code>
+                        </td>
+                        <td width="80">
+                            <code>F2</code>
+                        </td>
+                        <td width="80">
+                            <code>L2</code>
+                        </td>
+                        <td width="80">
+                            <code>D2</code>
+                        </td>
+                        <td width="80">
+                            <code>B2</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○○○○○● -180°</td>
+                        <td width="80">
+                            <code>R2'</code>
+                        </td>
+                        <td width="80">
+                            <code>U2'</code>
+                        </td>
+                        <td width="80">
+                            <code>F2'</code>
+                        </td>
+                        <td width="80">
+                            <code>L2'</code>
+                        </td>
+                        <td width="80">
+                            <code>D2'</code>
+                        </td>
+                        <td width="80">
+                            <code>B2'</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○○○○●● +90°</td>
+                        <td width="80">
+                            <code>Rw 2R</code>
+                        </td>
+                        <td width="80">
+                            <code>Uw 2U</code>
+                        </td>
+                        <td width="80">
+                            <code>Fw 2F</code>
+                        </td>
+                        <td width="80">
+                            <code>Lw 2L</code>
+                        </td>
+                        <td width="80">
+                            <code>Dw 2D</code>
+                        </td>
+                        <td width="80">
+                            <code>Bw 2B</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○○○○●● -90°</td>
+                        <td width="80">
+                            <code>Rw' 2R'</code>
+                        </td>
+                        <td width="80">
+                            <code>Uw' 2U'</code>
+                        </td>
+                        <td width="80">
+                            <code>Fw' 2F'</code>
+                        </td>
+                        <td width="80">
+                            <code>Lw' 2L'</code>
+                        </td>
+                        <td width="80">
+                            <code>Dw' 2D'</code>
+                        </td>
+                        <td width="80">
+                            <code>Bw' 2B'</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○○○○●● +180°</td>
+                        <td width="80">
+                            <code>Rw2 2R2</code>
+                        </td>
+                        <td width="80">
+                            <code>Uw2 2U2</code>
+                        </td>
+                        <td width="80">
+                            <code>Fw2 2F2</code>
+                        </td>
+                        <td width="80">
+                            <code>Lw2 2L2</code>
+                        </td>
+                        <td width="80">
+                            <code>Dw2 2D2</code>
+                        </td>
+                        <td width="80">
+                            <code>Bw2 2B2</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○○○○●● -180°</td>
+                        <td width="80">
+                            <code>Rw2' 2R2'</code>
+                        </td>
+                        <td width="80">
+                            <code>Uw2' 2U2'</code>
+                        </td>
+                        <td width="80">
+                            <code>Fw2' 2F2'</code>
+                        </td>
+                        <td width="80">
+                            <code>Lw2' 2L2'</code>
+                        </td>
+                        <td width="80">
+                            <code>Dw2' 2D2'</code>
+                        </td>
+                        <td width="80">
+                            <code>Bw2' 2B2'</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○○○●●● +90°</td>
+                        <td width="80">
+                            <code>3R 3Rw</code>
+                        </td>
+                        <td width="80">
+                            <code>3U 3Uw</code>
+                        </td>
+                        <td width="80">
+                            <code>3F 3Fw</code>
+                        </td>
+                        <td width="80">
+                            <code>3L 3Lw</code>
+                        </td>
+                        <td width="80">
+                            <code>3D 3Dw</code>
+                        </td>
+                        <td width="80">
+                            <code>3B 3Bw</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○○○●●● -90°</td>
+                        <td width="80">
+                            <code>3R' 3Rw'</code>
+                        </td>
+                        <td width="80">
+                            <code>3U' 3Uw'</code>
+                        </td>
+                        <td width="80">
+                            <code>3F' 3Fw'</code>
+                        </td>
+                        <td width="80">
+                            <code>3L' 3Lw'</code>
+                        </td>
+                        <td width="80">
+                            <code>3D' 3Dw'</code>
+                        </td>
+                        <td width="80">
+                            <code>3B' 3Bw'</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○○○●●● +180°</td>
+                        <td width="80">
+                            <code>3R2 3Rw2</code>
+                        </td>
+                        <td width="80">
+                            <code>3U2 3Uw2</code>
+                        </td>
+                        <td width="80">
+                            <code>3F2 3Fw2</code>
+                        </td>
+                        <td width="80">
+                            <code>3L2 3Lw2</code>
+                        </td>
+                        <td width="80">
+                            <code>3D2 3Dw2</code>
+                        </td>
+                        <td width="80">
+                            <code>3B2 3Bw2</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○○○●●● -180°</td>
+                        <td width="80">
+                            <code>3R2'</code>
+                        </td>
+                        <td width="80">
+                            <code>3U2'</code>
+                        </td>
+                        <td width="80">
+                            <code>3F2'</code>
+                        </td>
+                        <td width="80">
+                            <code>3L2'</code>
+                        </td>
+                        <td width="80">
+                            <code>3D2'</code>
+                        </td>
+                        <td width="80">
+                            <code>3B2'</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○○●●●● +90°</td>
+                        <td width="80">
+                            <code>4Rw</code>
+                        </td>
+                        <td width="80">
+                            <code>4Uw</code>
+                        </td>
+                        <td width="80">
+                            <code>4Fw</code>
+                        </td>
+                        <td width="80">
+                            <code>4Lw</code>
+                        </td>
+                        <td width="80">
+                            <code>4Dw</code>
+                        </td>
+                        <td width="80">
+                            <code>4Bw</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○○●●●● -90°</td>
+                        <td width="80">
+                            <code>4Rw'</code>
+                        </td>
+                        <td width="80">
+                            <code>4Uw'</code>
+                        </td>
+                        <td width="80">
+                            <code>4Fw'</code>
+                        </td>
+                        <td width="80">
+                            <code>4Lw'</code>
+                        </td>
+                        <td width="80">
+                            <code>4Dw'</code>
+                        </td>
+                        <td width="80">
+                            <code>4Bw'</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○○●●●● +180°</td>
+                        <td width="80">
+                            <code>4Rw2</code>
+                        </td>
+                        <td width="80">
+                            <code>4Uw2</code>
+                        </td>
+                        <td width="80">
+                            <code>4Fw2</code>
+                        </td>
+                        <td width="80">
+                            <code>4Lw2</code>
+                        </td>
+                        <td width="80">
+                            <code>4Dw2</code>
+                        </td>
+                        <td width="80">
+                            <code>4Bw2</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○●●●●● +90°</td>
+                        <td width="80">
+                            <code>5Rw</code>
+                        </td>
+                        <td width="80">
+                            <code>5Uw</code>
+                        </td>
+                        <td width="80">
+                            <code>5Fw</code>
+                        </td>
+                        <td width="80">
+                            <code>5Lw</code>
+                        </td>
+                        <td width="80">
+                            <code>5Dw</code>
+                        </td>
+                        <td width="80">
+                            <code>5Bw</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○●●●●● -90°</td>
+                        <td width="80">
+                            <code>5Rw'</code>
+                        </td>
+                        <td width="80">
+                            <code>5Uw'</code>
+                        </td>
+                        <td width="80">
+                            <code>5Fw'</code>
+                        </td>
+                        <td width="80">
+                            <code>5Lw'</code>
+                        </td>
+                        <td width="80">
+                            <code>5Dw'</code>
+                        </td>
+                        <td width="80">
+                            <code>5Bw'</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○●●●●● +180°</td>
+                        <td width="80">
+                            <code>5Rw2</code>
+                        </td>
+                        <td width="80">
+                            <code>5Uw2</code>
+                        </td>
+                        <td width="80">
+                            <code>5Fw2</code>
+                        </td>
+                        <td width="80">
+                            <code>5Lw2</code>
+                        </td>
+                        <td width="80">
+                            <code>5Dw2</code>
+                        </td>
+                        <td width="80">
+                            <code>5Bw2</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">●●●●●● +90°</td>
+                        <td width="80">
+                            <code>[r] [l'] x</code>
+                        </td>
+                        <td width="80">
+                            <code>[u] [d'] y</code>
+                        </td>
+                        <td width="80">
+                            <code>[f] [b'] z</code>
+                        </td>
+                        <td width="80">
+                            <code>[l] [r'] x'</code>
+                        </td>
+                        <td width="80">
+                            <code>[d] [u'] y'</code>
+                        </td>
+                        <td width="80">
+                            <code>[b] [f'] z'</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">●●●●●● +180°</td>
+                        <td width="80">
+                            <code>[r2] [l2'] x2</code>
+                        </td>
+                        <td width="80">
+                            <code>[u2] [d2'] y2</code>
+                        </td>
+                        <td width="80">
+                            <code>[f2] [b2'] z2</code>
+                        </td>
+                        <td width="80">
+                            <code>[l2] [r2'] x2'</code>
+                        </td>
+                        <td width="80">
+                            <code>[d2] [u2'] y2'</code>
+                        </td>
+                        <td width="80">
+                            <code>[b2] [f2'] z2'</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○○○○●○ +90°</td>
+                        <td width="80">
+                            <code>r</code>
+                        </td>
+                        <td width="80">
+                            <code>u</code>
+                        </td>
+                        <td width="80">
+                            <code>f</code>
+                        </td>
+                        <td width="80">
+                            <code>l</code>
+                        </td>
+                        <td width="80">
+                            <code>d</code>
+                        </td>
+                        <td width="80">
+                            <code>b</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○○○○●○ -90°</td>
+                        <td width="80">
+                            <code>r'</code>
+                        </td>
+                        <td width="80">
+                            <code>u'</code>
+                        </td>
+                        <td width="80">
+                            <code>f'</code>
+                        </td>
+                        <td width="80">
+                            <code>l'</code>
+                        </td>
+                        <td width="80">
+                            <code>d'</code>
+                        </td>
+                        <td width="80">
+                            <code>b'</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○○○○●○ +180°</td>
+                        <td width="80">
+                            <code>r2</code>
+                        </td>
+                        <td width="80">
+                            <code>u2</code>
+                        </td>
+                        <td width="80">
+                            <code>f2</code>
+                        </td>
+                        <td width="80">
+                            <code>l2</code>
+                        </td>
+                        <td width="80">
+                            <code>d2</code>
+                        </td>
+                        <td width="80">
+                            <code>b2</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○○○○●○ -180°</td>
+                        <td width="80">
+                            <code>r2'</code>
+                        </td>
+                        <td width="80">
+                            <code>u2'</code>
+                        </td>
+                        <td width="80">
+                            <code>f2'</code>
+                        </td>
+                        <td width="80">
+                            <code>l2'</code>
+                        </td>
+                        <td width="80">
+                            <code>d2'</code>
+                        </td>
+                        <td width="80">
+                            <code>b2'</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○○●●○○ +90°</td>
+                        <td width="80">
+                            <code>M'</code>
+                        </td>
+                        <td width="80">
+                            <code>E'</code>
+                        </td>
+                        <td width="80">
+                            <code>S</code>
+                        </td>
+                        <td width="80">
+                            <code>M</code>
+                        </td>
+                        <td width="80">
+                            <code>E</code>
+                        </td>
+                        <td width="80">
+                            <code>S'</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○○●●○○ +180°</td>
+                        <td width="80">
+                            <code>M2'</code>
+                        </td>
+                        <td width="80">
+                            <code>E2'</code>
+                        </td>
+                        <td width="80">
+                            <code>S2</code>
+                        </td>
+                        <td width="80">
+                            <code>M2</code>
+                        </td>
+                        <td width="80">
+                            <code>E2</code>
+                        </td>
+                        <td width="80">
+                            <code>S2'</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td colspan="7"> </td>
+                        </tr>
+                        <tr>
+                        <th colspan="7">Comment</th>
+                        </tr>
+                        <tr>
+                        <td width="100">Multi-Line</td>
+                        <td colspan="2">Begin:</td>
+                        <td width="80">
+                            <code>"</code>
+                        </td>
+                        <td colspan="2">End:</td>
+                        <td width="80">
+                            <code>"</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">Single-Line</td>
+                        <td colspan="2">Begin:</td>
+                        <td width="80">
+                            <code>/</code>
+                        </td>
+                        <td colspan="3"></td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>
+
+                <hr class="border-primary">
+
+                <div class="row text-center">
+                    <h2>WCA 7x7x7</h2>
+                    <table xmlns="https://www.w3.org/1999/xhtml" cellpadding="2" cellspacing="0" width="600" data-table-local-id="table-7">
+                    <tbody>
+                        <tr>
+                        <th width="100">Move</th>
+                        <th width="80">Right</th>
+                        <th width="80">Up</th>
+                        <th width="80">Front</th>
+                        <th width="80">Left</th>
+                        <th width="80">Down</th>
+                        <th width="80">Back</th>
+                        </tr>
+                        <tr>
+                        <td width="100">○○○○○○● +90°</td>
+                        <td width="80">
+                            <code>R</code>
+                        </td>
+                        <td width="80">
+                            <code>U</code>
+                        </td>
+                        <td width="80">
+                            <code>F</code>
+                        </td>
+                        <td width="80">
+                            <code>L</code>
+                        </td>
+                        <td width="80">
+                            <code>D</code>
+                        </td>
+                        <td width="80">
+                            <code>B</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○○○○○○● -90°</td>
+                        <td width="80">
+                            <code>R'</code>
+                        </td>
+                        <td width="80">
+                            <code>U'</code>
+                        </td>
+                        <td width="80">
+                            <code>F'</code>
+                        </td>
+                        <td width="80">
+                            <code>L'</code>
+                        </td>
+                        <td width="80">
+                            <code>D'</code>
+                        </td>
+                        <td width="80">
+                            <code>B'</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○○○○○○● +180°</td>
+                        <td width="80">
+                            <code>R2</code>
+                        </td>
+                        <td width="80">
+                            <code>U2</code>
+                        </td>
+                        <td width="80">
+                            <code>F2</code>
+                        </td>
+                        <td width="80">
+                            <code>L2</code>
+                        </td>
+                        <td width="80">
+                            <code>D2</code>
+                        </td>
+                        <td width="80">
+                            <code>B2</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○○○○○○● -180°</td>
+                        <td width="80">
+                            <code>R2'</code>
+                        </td>
+                        <td width="80">
+                            <code>U2'</code>
+                        </td>
+                        <td width="80">
+                            <code>F2'</code>
+                        </td>
+                        <td width="80">
+                            <code>L2'</code>
+                        </td>
+                        <td width="80">
+                            <code>D2'</code>
+                        </td>
+                        <td width="80">
+                            <code>B2'</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○○○○○●● +90°</td>
+                        <td width="80">
+                            <code>Rw 2R</code>
+                        </td>
+                        <td width="80">
+                            <code>Uw 2U</code>
+                        </td>
+                        <td width="80">
+                            <code>Fw 2F</code>
+                        </td>
+                        <td width="80">
+                            <code>Lw 2L</code>
+                        </td>
+                        <td width="80">
+                            <code>Dw 2D</code>
+                        </td>
+                        <td width="80">
+                            <code>Bw 2B</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○○○○○●● -90°</td>
+                        <td width="80">
+                            <code>Rw' 2R'</code>
+                        </td>
+                        <td width="80">
+                            <code>Uw' 2U'</code>
+                        </td>
+                        <td width="80">
+                            <code>Fw' 2F'</code>
+                        </td>
+                        <td width="80">
+                            <code>Lw' 2L'</code>
+                        </td>
+                        <td width="80">
+                            <code>Dw' 2D'</code>
+                        </td>
+                        <td width="80">
+                            <code>Bw' 2B'</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○○○○○●● +180°</td>
+                        <td width="80">
+                            <code>Rw2 2R2</code>
+                        </td>
+                        <td width="80">
+                            <code>Uw2 2U2</code>
+                        </td>
+                        <td width="80">
+                            <code>Fw2 2F2</code>
+                        </td>
+                        <td width="80">
+                            <code>Lw2 2L2</code>
+                        </td>
+                        <td width="80">
+                            <code>Dw2 2D2</code>
+                        </td>
+                        <td width="80">
+                            <code>Bw2 2B2</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○○○○○●● -180°</td>
+                        <td width="80">
+                            <code>Rw2' 2R2'</code>
+                        </td>
+                        <td width="80">
+                            <code>Uw2' 2U2'</code>
+                        </td>
+                        <td width="80">
+                            <code>Fw2' 2F2'</code>
+                        </td>
+                        <td width="80">
+                            <code>Lw2' 2L2'</code>
+                        </td>
+                        <td width="80">
+                            <code>Dw2' 2D2'</code>
+                        </td>
+                        <td width="80">
+                            <code>Bw2' 2B2'</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○○○○●●● +90°</td>
+                        <td width="80">
+                            <code>3R 3Rw</code>
+                        </td>
+                        <td width="80">
+                            <code>3U 3Uw</code>
+                        </td>
+                        <td width="80">
+                            <code>3F 3Fw</code>
+                        </td>
+                        <td width="80">
+                            <code>3L 3Lw</code>
+                        </td>
+                        <td width="80">
+                            <code>3D 3Dw</code>
+                        </td>
+                        <td width="80">
+                            <code>3B 3Bw</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○○○○●●● -90°</td>
+                        <td width="80">
+                            <code>3R' 3Rw'</code>
+                        </td>
+                        <td width="80">
+                            <code>3U' 3Uw'</code>
+                        </td>
+                        <td width="80">
+                            <code>3F' 3Fw'</code>
+                        </td>
+                        <td width="80">
+                            <code>3L' 3Lw'</code>
+                        </td>
+                        <td width="80">
+                            <code>3D' 3Dw'</code>
+                        </td>
+                        <td width="80">
+                            <code>3B' 3Bw'</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○○○○●●● +180°</td>
+                        <td width="80">
+                            <code>3R2 3Rw2</code>
+                        </td>
+                        <td width="80">
+                            <code>3U2 3Uw2</code>
+                        </td>
+                        <td width="80">
+                            <code>3F2 3Fw2</code>
+                        </td>
+                        <td width="80">
+                            <code>3L2 3Lw2</code>
+                        </td>
+                        <td width="80">
+                            <code>3D2 3Dw2</code>
+                        </td>
+                        <td width="80">
+                            <code>3B2 3Bw2</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○○○○●●● -180°</td>
+                        <td width="80">
+                            <code>3R2'</code>
+                        </td>
+                        <td width="80">
+                            <code>3U2'</code>
+                        </td>
+                        <td width="80">
+                            <code>3F2'</code>
+                        </td>
+                        <td width="80">
+                            <code>3L2'</code>
+                        </td>
+                        <td width="80">
+                            <code>3D2'</code>
+                        </td>
+                        <td width="80">
+                            <code>3B2'</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○○○●●●● +90°</td>
+                        <td width="80">
+                            <code>4Rw</code>
+                        </td>
+                        <td width="80">
+                            <code>4Uw</code>
+                        </td>
+                        <td width="80">
+                            <code>4Fw</code>
+                        </td>
+                        <td width="80">
+                            <code>4Lw</code>
+                        </td>
+                        <td width="80">
+                            <code>4Dw</code>
+                        </td>
+                        <td width="80">
+                            <code>4Bw</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○○○●●●● -90°</td>
+                        <td width="80">
+                            <code>4Rw'</code>
+                        </td>
+                        <td width="80">
+                            <code>4Uw'</code>
+                        </td>
+                        <td width="80">
+                            <code>4Fw'</code>
+                        </td>
+                        <td width="80">
+                            <code>4Lw'</code>
+                        </td>
+                        <td width="80">
+                            <code>4Dw'</code>
+                        </td>
+                        <td width="80">
+                            <code>4Bw'</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○○○●●●● +180°</td>
+                        <td width="80">
+                            <code>4Rw2</code>
+                        </td>
+                        <td width="80">
+                            <code>4Uw2</code>
+                        </td>
+                        <td width="80">
+                            <code>4Fw2</code>
+                        </td>
+                        <td width="80">
+                            <code>4Lw2</code>
+                        </td>
+                        <td width="80">
+                            <code>4Dw2</code>
+                        </td>
+                        <td width="80">
+                            <code>4Bw2</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○○●●●●● +90°</td>
+                        <td width="80">
+                            <code>5Rw</code>
+                        </td>
+                        <td width="80">
+                            <code>5Uw</code>
+                        </td>
+                        <td width="80">
+                            <code>5Fw</code>
+                        </td>
+                        <td width="80">
+                            <code>5Lw</code>
+                        </td>
+                        <td width="80">
+                            <code>5Dw</code>
+                        </td>
+                        <td width="80">
+                            <code>5Bw</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○○●●●●● -90°</td>
+                        <td width="80">
+                            <code>5Rw'</code>
+                        </td>
+                        <td width="80">
+                            <code>5Uw'</code>
+                        </td>
+                        <td width="80">
+                            <code>5Fw'</code>
+                        </td>
+                        <td width="80">
+                            <code>5Lw'</code>
+                        </td>
+                        <td width="80">
+                            <code>5Dw'</code>
+                        </td>
+                        <td width="80">
+                            <code>5Bw'</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○○●●●●● +180°</td>
+                        <td width="80">
+                            <code>5Rw2</code>
+                        </td>
+                        <td width="80">
+                            <code>5Uw2</code>
+                        </td>
+                        <td width="80">
+                            <code>5Fw2</code>
+                        </td>
+                        <td width="80">
+                            <code>5Lw2</code>
+                        </td>
+                        <td width="80">
+                            <code>5Dw2</code>
+                        </td>
+                        <td width="80">
+                            <code>5Bw2</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○●●●●●● +90°</td>
+                        <td width="80">
+                            <code>6Rw</code>
+                        </td>
+                        <td width="80">
+                            <code>6Uw</code>
+                        </td>
+                        <td width="80">
+                            <code>6Fw</code>
+                        </td>
+                        <td width="80">
+                            <code>6Lw</code>
+                        </td>
+                        <td width="80">
+                            <code>6Dw</code>
+                        </td>
+                        <td width="80">
+                            <code>6Bw</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○●●●●●● -90°</td>
+                        <td width="80">
+                            <code>6Rw'</code>
+                        </td>
+                        <td width="80">
+                            <code>6Uw'</code>
+                        </td>
+                        <td width="80">
+                            <code>6Fw'</code>
+                        </td>
+                        <td width="80">
+                            <code>6Lw'</code>
+                        </td>
+                        <td width="80">
+                            <code>6Dw'</code>
+                        </td>
+                        <td width="80">
+                            <code>6Bw'</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○●●●●●● +180°</td>
+                        <td width="80">
+                            <code>6Rw2</code>
+                        </td>
+                        <td width="80">
+                            <code>6Uw2</code>
+                        </td>
+                        <td width="80">
+                            <code>6Fw2</code>
+                        </td>
+                        <td width="80">
+                            <code>6Lw2</code>
+                        </td>
+                        <td width="80">
+                            <code>6Dw2</code>
+                        </td>
+                        <td width="80">
+                            <code>6Bw2</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">●●●●●●● +90°</td>
+                        <td width="80">
+                            <code>[r] [l'] x</code>
+                        </td>
+                        <td width="80">
+                            <code>[u] [d'] y</code>
+                        </td>
+                        <td width="80">
+                            <code>[f] [b'] z</code>
+                        </td>
+                        <td width="80">
+                            <code>[l] [r'] x'</code>
+                        </td>
+                        <td width="80">
+                            <code>[d] [u'] y'</code>
+                        </td>
+                        <td width="80">
+                            <code>[b] [f'] z'</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">●●●●●●● +180°</td>
+                        <td width="80">
+                            <code>[r2] [l2'] x2</code>
+                        </td>
+                        <td width="80">
+                            <code>[u2] [d2'] y2</code>
+                        </td>
+                        <td width="80">
+                            <code>[f2] [b2'] z2</code>
+                        </td>
+                        <td width="80">
+                            <code>[l2] [r2'] x2'</code>
+                        </td>
+                        <td width="80">
+                            <code>[d2] [u2'] y2'</code>
+                        </td>
+                        <td width="80">
+                            <code>[b2] [f2'] z2'</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○○○○○●○ +90°</td>
+                        <td width="80">
+                            <code>r</code>
+                        </td>
+                        <td width="80">
+                            <code>u</code>
+                        </td>
+                        <td width="80">
+                            <code>f</code>
+                        </td>
+                        <td width="80">
+                            <code>l</code>
+                        </td>
+                        <td width="80">
+                            <code>d</code>
+                        </td>
+                        <td width="80">
+                            <code>b</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○○○○○●○ -90°</td>
+                        <td width="80">
+                            <code>r'</code>
+                        </td>
+                        <td width="80">
+                            <code>u'</code>
+                        </td>
+                        <td width="80">
+                            <code>f'</code>
+                        </td>
+                        <td width="80">
+                            <code>l'</code>
+                        </td>
+                        <td width="80">
+                            <code>d'</code>
+                        </td>
+                        <td width="80">
+                            <code>b'</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○○○○○●○ +180°</td>
+                        <td width="80">
+                            <code>r2</code>
+                        </td>
+                        <td width="80">
+                            <code>u2</code>
+                        </td>
+                        <td width="80">
+                            <code>f2</code>
+                        </td>
+                        <td width="80">
+                            <code>l2</code>
+                        </td>
+                        <td width="80">
+                            <code>d2</code>
+                        </td>
+                        <td width="80">
+                            <code>b2</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○○○○○●○ -180°</td>
+                        <td width="80">
+                            <code>r2'</code>
+                        </td>
+                        <td width="80">
+                            <code>u2'</code>
+                        </td>
+                        <td width="80">
+                            <code>f2'</code>
+                        </td>
+                        <td width="80">
+                            <code>l2'</code>
+                        </td>
+                        <td width="80">
+                            <code>d2'</code>
+                        </td>
+                        <td width="80">
+                            <code>b2'</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○○○●○○○ +90°</td>
+                        <td width="80">
+                            <code>M'</code>
+                        </td>
+                        <td width="80">
+                            <code>E'</code>
+                        </td>
+                        <td width="80">
+                            <code>S</code>
+                        </td>
+                        <td width="80">
+                            <code>M</code>
+                        </td>
+                        <td width="80">
+                            <code>E</code>
+                        </td>
+                        <td width="80">
+                            <code>S'</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">○○○●○○○ +180°</td>
+                        <td width="80">
+                            <code>M2'</code>
+                        </td>
+                        <td width="80">
+                            <code>E2'</code>
+                        </td>
+                        <td width="80">
+                            <code>S2</code>
+                        </td>
+                        <td width="80">
+                            <code>M2</code>
+                        </td>
+                        <td width="80">
+                            <code>E2</code>
+                        </td>
+                        <td width="80">
+                            <code>S2'</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td colspan="7"> </td>
+                        </tr>
+                        <tr>
+                        <th colspan="7">Comment</th>
+                        </tr>
+                        <tr>
+                        <td width="100">Multi-Line</td>
+                        <td colspan="2">Begin:</td>
+                        <td width="80">
+                            <code>"</code>
+                        </td>
+                        <td colspan="2">End:</td>
+                        <td width="80">
+                            <code>"</code>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td width="100">Single-Line</td>
+                        <td colspan="2">Begin:</td>
+                        <td width="80">
+                            <code>/</code>
+                        </td>
+                        <td colspan="3"></td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>
+
+                <hr class="border-primary">
+
+            </div>           
+        </div>
+
+        <!--
+        <nav class="nav nav-justified my-0">
+            <a class="nav-link virapagina" href="cubo-4x4x4-e-maiores/4-estrategia-de-solucao/4-k-resolvendo-os-erros-de-paridade.html">⇦</a>
+            <a class="nav-link virapagina" href="cubo-4x4x4-e-maiores/erros-de-paridade/1-introducao.html">⇨</a>
+        </nav>
+        -->
+        
+    </main>
+        
+    <div id="footer"></div>
+    
+    <script src="js/load-components.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+</body>
+
+</html>

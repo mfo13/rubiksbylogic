@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="icon" href="favicon.ico">
+
+    <title>Cubo Mágico sem Decoreba | Cubo 3x3x3 - Os lados da última camada</title>
+    <meta name="description" content="Resolva os edges da última camada do cubo mágico com lógica e movimentos simples, usando o método de vai, troca e volta.">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <script src="js/AnimCube3.js"></script>
+
+</head>
+
+<body>
+    <div id="banner"></div>
+    <div id="menu"></div>
+    
+    <main class="container mb-0">
+        
+        <h1>Cubo 3x3x3</h1>
+        <h2>Entendendo e Resolvendo o Cubo de Rubik sem Decorar</h2>
+
+        <div class="row align-items-start">
+
+            <div class="container px-3">
+                <h3>8. Resolvendo os lados da última camada</h3>
+                <p>
+                Nessa fase resolveremos todos os lados (<i>edges</i>) restantes usando o mesmo princípio visto no <a href="cubo-3x3x3/5-o-movimento-de-vai-troca-e-volta.html">capítulo 5</a>. A diferença é que agora a camada do meio deve ser preservada e, portanto, não sofrerá qualquer rotação. Apenas faremos o movimento de “vai e volta” da coluna auxiliar (R e R’ ou F’ e F) para trocar o seu lado (<i>edge</i>) com a camada superior. O objetivo é resolver todos os lados (<i>edges</i>) da camada superior, quando isso for feito o lado (<i>edge</i>) que faltava na camada do meio estará automaticamente resolvido. (obs.: o cubo não pode ter todos os <i>edges</i> resolvidos e só um deles com a orientação errada das cores, é matematicamente impossível.)
+                </p>
+                <p>
+                Dois cuidados devem ser tomados nessa fase:
+                </p>
+                <ol>
+                    <li>Sempre que se faz o movimento de “vai” da coluna vertical é obrigatório fazer o movimento de “volta”.</li>
+                    <li>Como o movimento de “volta” é obrigatório deve-se evitar a troca, na camada superior, com uma peça que já estava resolvida.</li>
+                </ol>
+                               
+                <div class="row justify-content-center">
+                    <div class="col-md-7 my-3 px-3">
+                        <p>
+                        Como nenhum <i>edge</i> da camada superior está no lugar podemos começar com qualquer um deles. Nesse caso temos um deles na coluna vertical usada para o “vai e volta”. A única opção que temos é fazer R, “trocar” e “voltar”.
+                        </p>
+                        <p>
+                        Por exemplo: R ("vai") U' ("troca") R' ("volta")
+                        </p>
+                        <p>
+                        Clique em <i>play</i> (▷) na Figura 8.1 e veja.
+                        </p>
+                        <p>
+                        Note que a troca foi feita com qualquer outro <i>edge</i> com a cor amarela, a dica é justamente trocar com um <i>edge</i> com a cor amarela, apenas um deles não tem a face amarela, se você trocar com ele terá que trocar novamente para poder deixar um edge amarelo na coluna de “vai e volta”.
+                        </p>
+                    </div>
+                    <div class="col-md-4 text-center my-3 px-3">
+                        <div class="img-wrapper img-cubo">
+                            <script>
+                                var movimento="{Figura 8.1}{Figura 8.1:   (vai) R}R.{Figura 8.1:   (troca) U'}U'.{Figura 8.1:   (volta) R'}R'";
+                                    setup="x2 F' U' F U2 R U' R' U F' U' F U' F' U F U2 R U R'",
+                                AnimCube3("initmove="+setup+"&move="+movimento+
+                                            "&movetext=1\
+                                            &yz=1\
+                                            &fonttype=0\
+                                            &textsize=12\
+                                            &facelets=wwwwwwwwlLYLYYYLYLoolooooolLRLRRRRRLgggggglglBBLBBBLBL\
+                                            &buttonheight=20\
+                                            &bgcolor=f0f0f0\
+                                            &butbgcolor=009999\
+                                            &snap=0\
+                                            &repeat=0\
+                                            &edit=0\
+                                            &speed=0\
+                                            &gabbacolors=1")
+                            </script>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row justify-content-center">
+                    <div class="col-md-4 my-3 px-3">
+                        <p>
+                        Agora é só girar a camada superior para que fique na posição correta e facilite a decidir a próxima troca. Neste caso, U2.
+                        </p>
+                        <p>
+                        Clique em <i>play</i> (▷) na Figura 8.2 e veja.
+                        </p>
+                    </div>
+                    <div class="col-md-4 text-center my-3 px-3">
+                        <div class="img-wrapper img-cubo">
+                            <script>
+                                var movimento="{Figura 8.2}U2";
+                                    setup="x2 F' U' F U2 R U' R' U F' U' F U' F' U F U2",
+                                AnimCube3("initmove="+setup+"&move="+movimento+
+                                            "&movetext=1\
+                                            &yz=1\
+                                            &fonttype=0\
+                                            &textsize=12\
+                                            &facelets=wwwwwwwwlLYLYYYLYLoolooooolLRLRRRRRLgggggglglBBLBBBLBL\
+                                            &buttonheight=20\
+                                            &bgcolor=f0f0f0\
+                                            &butbgcolor=009999\
+                                            &snap=0\
+                                            &repeat=0\
+                                            &edit=0\
+                                            &speed=0\
+                                            &gabbacolors=1")
+                            </script>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row justify-content-center">
+                    <div class="col-md-7 my-3 px-3">
+                        <p>
+                        Dessa maneira é possível decidir o posicionamento da camada superior para o próximo movimento de “vai, troca e volta”. No nosso exemplo, como o <i>edge</i> na coluna de “vai e volta” tem uma face laranja significa que ele é oposto ao <i>edge</i> que já foi resolvido (no cubo a face laranja é oposta à vermelha). Assim fazemos U2 antes do próximo “vai, troca e volta”.
+                       </p>
+                       <p>
+                        Clique em avançar (<span style="font-size: 25px;">⧐</span>) na Figura 8.3 e veja.
+                       </p>
+                       <p>
+                        Agora basta fazer o “vai, troca e volta”, escolhendo outro edge com a face amarela para trocar, nesse caso escolhemos o edge amarelo/azul. Fazemos F' ("vai) U' ("troca") F ("volta").
+                       </p>
+                       <p>
+                        Clique 3 vezes em avançar (<span style="font-size: 25px;">⧐</span>) na Figura 8.3 e veja.
+                       </p>
+                       <p>
+                        De novo colocamos a camada superior na posição correta para decidir a próxima troca. Neste caso aplicamos U'.
+                       </p>
+                       <p>
+                        Clique novamente em avançar (<span style="font-size: 25px;">⧐</span>) na Figura 8.3 e veja.
+                       </p>
+                    </div>
+                    <div class="col-md-4 text-center my-3 px-3">
+                        <div class="img-wrapper img-cubo">
+                            <script>
+                                var movimento="{Figura 8.3}{Figura 8.3:   (reposiciona) U2}U2.{Figura 8.3:   (vai) F'}F'.{Figura 8.3:   (troca) U'}U'.{Figura 8.3:   (volta) F}F.{Figura 8.3:   (reposiciona) U'}U'";
+                                    setup="x2 F' U' F U2 R U' R' U F' U' F U' F' U F",
+                                AnimCube3("initmove="+setup+"&move="+movimento+
+                                            "&movetext=1\
+                                            &yz=1\
+                                            &fonttype=0\
+                                            &textsize=12\
+                                            &facelets=wwwwwwwwlLYLYYYLYLoolooooolLRLRRRRRLgggggglglBBLBBBLBL\
+                                            &buttonheight=20\
+                                            &bgcolor=f0f0f0\
+                                            &butbgcolor=009999\
+                                            &snap=0\
+                                            &repeat=0\
+                                            &edit=0\
+                                            &speed=0\
+                                            &gabbacolors=1")
+                            </script>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="mt-3">
+                O processo se repete até restar apenas um <i>edge</i> de face amarela para resolver. Lembre-se sempre de não usar os <i>edges</i> já resolvidos para a fazer a troca.
+                </p>
+                <p>
+                No final teremos 3 possibilidades:
+                </p>
+                <ol type="a">
+                    <li>você teve sorte e a última troca já deixa tudo certo (caso raro)</li>
+                    <li>você termina com 2 <i>edges</i> amarelos corretos e um deles com a face amarela para cima, mas em lugar errado, e o último deles na coluna de “vai e volta”</li>
+                    <li>você termina com 3 <i>edges</i> amarelos nos lugares corretos e nas orientações corretas e só o último deles na coluna de “vai e volta”</li>
+                </ol>
+                <p>
+                Veja abaixo, as possibilidades b e c:
+                </p>
+
+                <div class="row justify-content-center">
+                    <div class="col-md-7 my-3 px-3">
+                        <p>
+                        Para o caso b basta proceder como antes, reposicionar a camada superior e fazer o “vai, troca e volta”. A única opção de troca será o <i>edge</i> sem a face amarela porque os outros já foram resolvidos antes. Assim, neste caso, faremos:
+                        </p>
+                        <p>
+                        U' ("reposicionamento")
+                        </p>
+                        <p>
+                        R ("vai")
+                        </p>
+                        <p>
+                        U ("troca")
+                        </p>
+                        <p>
+                        R' ("volta")
+                        </p>
+                        <p>
+                        Clique em <i>play</i> (▷) na Figura 8.4 e veja.
+                        </p>
+                        <p>
+                        Terminado o movimento de “vai, troca e volta” todos os <i>edges</i> amarelos estarão corretos, juntamente com o <i>edge</i> da coluna de “vai e volta”. Talvez seja necessário, apenas, girar a camada superior para a posição correta.
+                        </p>
+                    </div>
+                    <div class="col-md-4 text-center my-3 px-3">
+                        <div class="img-wrapper img-cubo">
+                            <script>
+                                var movimento="{Figura 8.4: Caso b}{Figura 8.4: Caso b   (reposiciona) U'}U'.{Figura 8.4: Caso b   (vai) R}R.{Figura 8.4: Caso b   (troca) U}U.{Figura 8.4: Caso b   (volta) R'}R'";
+                                    setup="x2 R U' R' U",
+                                AnimCube3("initmove="+setup+"&move="+movimento+
+                                            "&movetext=1\
+                                            &yz=1\
+                                            &fonttype=0\
+                                            &textsize=12\
+                                            &facelets=wwwwwwwwlLYLYYYLYLoolooooolLRLRRRRRLgggggglglBBLBBBLBL\
+                                            &buttonheight=20\
+                                            &bgcolor=f0f0f0\
+                                            &butbgcolor=009999\
+                                            &snap=0\
+                                            &repeat=0\
+                                            &edit=0\
+                                            &speed=0\
+                                            &gabbacolors=1")
+                            </script>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-md-7 my-3 px-3">
+                        <p>
+                        Para o caso c fica uma dúvida, assim que você fizer o movimento de “vai” todos os <i>edges</i> amarelos estarão corretos mas você é obrigado a fazer a troca e voltar, então o que fazer?
+                        </p>
+                        <p>
+                        Vamos aplicar o conhecimento do <a href="cubo-3x3x3/7-um-pouco-sobre-ciclos.html">capítulo 7</a>, sobre ciclos. Sabemos que fazendo repetidamente um movimento tudo voltará à condição original. Nesse caso, como temos 4 lados, o ciclo deve envolver os quatro <i>edges</i> superiores. Podemos fazer a troca inicial com U ou U’ e depois da “volta” terminar com um giro da camada superior <u>na mesma direção</u> usada na troca. Basta depois ficar repetindo o mesmo procedimento de “vai, troca e volta” com um giro no final. Antes que tudo volte à condição original haverá um momento em que teremos todos <i>edges</i> amarelos resolvidos, basta parar nesse ponto e girar a camada superior para a posição correta, se for necessário.
+                        </p>
+                        <p>
+                        Para o nosso exemplo, do caso c, basta aplicar R U' R' U' por 3 vezes ou então R U R' U, também por três vezes. Você verá que no final, quando fizer a terceira repetição, não será necessário terminá-la pois o movimento R U' R' ou R U R' irá resolver tudo.
+                        </p>
+                        <p>
+                        Clique em <i>play</i> (▷) na Figura 8.5 e veja.
+                        </p>
+                    </div>
+                    <div class="col-md-4 text-center my-3 px-3">
+                        <div class="img-wrapper img-cubo">
+                            <script>
+                                var movimento="{Figura 8.5: Caso c}{Figura 8.5: Caso c  (vai-troca-volta) R U' R'}R U' R'.{Figura 8.5: Caso c  (reposiciona) U'}U'.{Figura 8.5: Caso c  (vai-troca-volta) R U' R'}R U' R'.{Figura 8.5: Caso c  (reposiciona) U'}U'.{Figura 8.5: Caso c  (vai-troca-volta) R U' R'}R U' R'";
+                                    setup="x2 R U' R' U' R U' R' U' R U' R'",
+                                AnimCube3("initmove="+setup+"&move="+movimento+
+                                            "&movetext=1\
+                                            &yz=1\
+                                            &fonttype=0\
+                                            &textsize=12\
+                                            &facelets=wwwwwwwwlLYLYYYLYLoolooooolLRLRRRRRLgggggglglBBLBBBLBL\
+                                            &buttonheight=20\
+                                            &bgcolor=f0f0f0\
+                                            &butbgcolor=009999\
+                                            &snap=0\
+                                            &repeat=0\
+                                            &edit=0\
+                                            &speed=0\
+                                            &gabbacolors=1")
+                            </script>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="mt-3">
+                Nesse ponto você já resolveu 80% do cubo! O mais interessante: apenas conhecendo algumas “leis” do cubo e usando raciocínio lógico com movimentos simples, sem ter que decorar qualquer seqüência complexa de movimentos.
+                </p>
+                <p>
+                Restam agora os 5 últimos cantos. Como os movimentos ficam muito restritos é preciso conhecer dois conceitos importantes para resolvê-los, que são os conceitos de movimentos <i>comutadores</i> e de movimentos <i>conjugados</i>.
+                </p>
+                
+            </div>
+
+            </div>           
+        </div>
+
+        <nav class="nav nav-justified my-0">
+            <a class="nav-link virapagina" href="cubo-3x3x3/7-um-pouco-sobre-ciclos.html">⇦</a>
+            <a class="nav-link virapagina" href="cubo-3x3x3/9-comutadores-e-conjugados-e-so-o-que-voce-precisa.html">⇨</a>
+        </nav>
+        
+    </main>
+        
+    <div id="footer"></div>
+    
+    <script src="js/load-components.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+</body>
+
+</html>

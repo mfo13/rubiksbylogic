@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="icon" href="favicon.ico">
+
+    <title>Rubik's Cube by Logic | Rubik's Cube - Swap and orient</title>
+    <meta name="description" content="Discover how to position pieces with the correct colors on the Rubik’s Cube using the 'go, swap, and back', choosing the best repositioning.">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <script src="js/AnimCube3.js"></script>
+
+</head>
+
+<body>
+    <div id="banner"></div>
+    <div id="menu"></div>
+    
+    <main class="container mb-0">
+        
+        <h1>Rubik's Cube</h1>
+        <h2>Understanding and Solving the Rubik's Cube Without Algorithms</h2>
+
+        <div class="row align-items-start">
+
+            <p>
+            In the previous cited example, it is not only possible to perform the swap but also to place the desired cubelet with its colors in the correct orientation. Refer to Figure 5.7, where the corner with the correct colors to replace the green cubelet is in position.
+            </p>
+            <p>
+            To proceed, we need to do a "setup" move. The question is, which setup option is better: D or D'? Let's test both cases to see what happens.
+            </p>
+                                 
+            <div class="row justify-content-center">
+                <div class="col-md-5 my-3 px-3">
+                    <p>
+                    First, let's use the D move for the setup. Click forward (<span style="font-size: 25px;">⧐</span>) in Figure 5.7. Notice that the only option remaining for the "go, swap and back" sequence is to use the F layer as the back and forth layer:
+                    </p>
+                    <p>
+                    F ("go")
+                    </p>
+                    <p>
+                    D' ("swap")
+                    </p>
+                    <p>
+                    F' ("back")
+                    </p>
+                    <p>
+                    Click play (▷) in Figure 5.7 to see the result. 
+                    </p>
+                    <p>
+                    The desired corner has gone to the correct place but is twisted, meaning the colors are not in the correct orientation. This indicates that using D for the setup is not a good choice.
+                    </p>
+                </div>
+                <div class="col-md-4 text-center my-3 px-3">
+                    <div class="img-wrapper img-cubo">
+                        <script>
+                            var movimento="{Figure 5.7}{Figure 5.7:   D (setup)}D.{Figure 5.7:   F (go)}F {Figure 5.7:   D' (swap)}D' {Figure 5.7:   F' (back)}F'";
+                                setup="x2 R' D' R D"
+                            AnimCube3("initmove="+setup+"&move="+movimento+
+                                        "&movetext=5\
+                                        &yz=1\
+                                        &fonttype=0\
+                                        &textsize=15\
+                                        &facelets=llllllllnYYYYYYYYYllollolloNLRLLRLLRllllllgggLLBLLBnLB\
+                                        &buttonheight=20\
+                                        &bgcolor=f0f0f0\
+                                        &butbgcolor=009999\
+                                        &snap=0\
+                                        &repeat=0\
+                                        &edit=0\
+                                        &speed=0\
+                                        &gabbacolors=1")
+                        </script>
+                    </div>
+                </div>
+                                
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-md-5 my-3 px-3">
+                    <p>
+                    Let's go back to the initial condition and try D' for the setup instead. Click forward (<span style="font-size: 25px;">⧐</span>) in Figure 5.8. Again, notice that there is only one option left for the back and forth movement, using the R layer:
+                    </p>
+                    <p>
+                    R' ("go")
+                    </p>
+                    <p>
+                    D ("swap")
+                    </p>
+                    <p>
+                    R' ("back")
+                    </p>
+                    <p>
+                    Click play (▷) in Figure 5.8 to see the result. 
+                    </p>
+                    <p>
+                    This time, not only did we get the corner in the correct place, but it is also oriented correctly with its colors.
+                    </p>
+                </div>
+
+                <div class="col-md-4 text-center my-3 px-3">
+                    <div class="img-wrapper img-cubo">
+                        <script>
+                            var movimento="{Figure 5.8}{Figure 5.8:   D' (setup)}D'.{Figure 5.8:   R' (go)}R' {Figure 5.8:   D (swap)}D {Figure 5.8:   R (back)}R";
+                                setup="x2 R' D' R D"
+                            AnimCube3("initmove="+setup+"&move="+movimento+
+                                        "&movetext=5\
+                                        &yz=1\
+                                        &fonttype=0\
+                                        &textsize=15\
+                                        &facelets=llllllllnYYYYYYYYYllollolloNLRLLRLLRllllllgggLLBLLBNLB\
+                                        &buttonheight=20\
+                                        &bgcolor=f0f0f0\
+                                        &butbgcolor=009999\
+                                        &snap=0\
+                                        &repeat=0\
+                                        &edit=0\
+                                        &speed=0\
+                                        &gabbacolors=1")
+                        </script>
+                    </div>
+                </div>
+            </div>
+
+            <p class="mt-3">
+            When considering the back and forth layer, in this example, there are two options: F or R layer. If we want to use the F layer, we remove the desired cubelet from that layer during the setup. On the other hand, if we want to use the R layer, we remove the desired cubelet from that layer during the setup.
+            </p>
+
+            <div class="row justify-content-center">
+                <div class="col-md-4 my-3 px-3">
+                    <p>
+                    Click play (▷) in Figure 5.9 to see the "setup" for the F layer (marked in pink) selected as the back and forth option.
+                    </p>
+                                                    
+                    <div class="img-wrapper img-cubo">
+                        <script>
+                            var movimento="{Figure 5.9}{Figure 5.9:   D (setup)}D";
+                                setup="x2 R' D' R D"
+                            AnimCube3("initmove="+setup+"&move="+movimento+
+                                        "&movetext=5\
+                                        &yz=1\
+                                        &fonttype=0\
+                                        &textsize=15\
+                                        &facelets=lllllllllYYYYYYYYYllollolloLLRLmRLLRllllllgggLLBLLBLLB\
+                                        &buttonheight=20\
+                                        &bgcolor=f0f0f0\
+                                        &butbgcolor=009999\
+                                        &snap=0\
+                                        &repeat=0\
+                                        &edit=0\
+                                        &speed=0\
+                                        &gabbacolors=1")
+                        </script>
+                    </div>
+                </div>
+
+                <div class="col-md-1"></div>
+
+                <div class="col-md-4 my-3 px-3">
+                    <p>
+                    Similarly, click play (▷) in Figure 5.10 to see the "setup" for the R layer (marked in pink) as the back and forth option.
+                    </p>
+                                                    
+                    <div class="img-wrapper img-cubo">
+                        <script>
+                            var movimento="{Figure 5.10}{Figure 5.10:   D' (setup)}D'";
+                                setup="x2 R' D' R D"
+                            AnimCube3("initmove="+setup+"&move="+movimento+
+                                        "&movetext=5\
+                                        &yz=1\
+                                        &fonttype=0\
+                                        &textsize=15\
+                                        &facelets=lllllllllYYYYYYYYYllollolloLLRLLRLLRllllllgggLLBLmBLLB\
+                                        &buttonheight=20\
+                                        &bgcolor=f0f0f0\
+                                        &butbgcolor=009999\
+                                        &snap=0\
+                                        &repeat=0\
+                                        &edit=0\
+                                        &speed=0\
+                                        &gabbacolors=1")
+                        </script>
+                    </div>
+                </div>
+            </div>
+            
+            <p class="mt-3">
+            Note that having the desired corner right under the place where we want to place it allows us to decide the best setup. The "back and forth" with the F layer will bring the yellow face up, while the "back and forth" with the R layer will bring the blue face up. In this case, the best option is to use the R layer for the back and forth move. Therefore, the best setup is D'. By foreseeing what the "back" movement will produce, you'll know what to do.
+            </p>
+            
+            <div class="col-md-12">
+                <p class="bg-warning py-2 px-2 mb-0">
+                <b>
+                <u>Before proceeding with "go, swap and back" moves, consider the following tips:</u>
+                </b>
+                </p>
+                <ul class="bg-warning mt-0">
+                    <li>Bring the desired cubelet right under where it should be placed.</li>
+                    <li>This will help you make a decision on the best setup.</li>
+                    <li>The final result will be a cubelet in the correct place and correct orientation.</li>
+                </ul>
+
+                <div class="bg-info py-2 px-2 mb-0">
+                    <p>
+                    Now it's your turn to practice. Try performing "go, swap and back" moves, swapping pieces, and observing how the colors of the desired cubelets change orientation. With observation and practice, you will not only be able to make the swaps but also place the swapped cubelet with its colors correctly oriented.
+                    </p>
+                    <p>
+                    To enhance your training, scramble the cube and attempt to solve a single layer without worrying about the rest of the cube, applying the principles learned so far. You can use the virtual cube below or by clicking <a href="virtual-cubes/3x3x3.html">here</a>.
+                    </p>
+                </div>  
+            </div>
+        </div>
+
+        <div class="row justify-content-center my-3">
+            <div class="col-md-4 text-center">
+                <table width="100%" height="100%">
+                    <tr>
+                        <td colspan="2" width="100%" height="100%">
+                            <div id="treino" class="img-wrapper img-cubo"></div>
+                        </td>
+                    </tr>
+                    <tr class="text-center">
+                        <td>
+                            <button style="font-size: 15px;" onclick="newCube(1)">Scramble</button>
+                        </td>
+                        <td>
+                            <button style="font-size: 15px;" onclick="newCube(0)">Reset</button>
+                        </td>
+                    </tr>
+                </table>
+                <script>
+                    var params = 'id=treino&position=RRRRRRRRRRDD&buttonbar=0&bgcolor=f0f0f0&edit=1&snap=0&gabbacolors=1';
+                    var rand = '&initmove=random';
+                    var acjs_removeListeners = [];
+                    AnimCube3(params);
+                    function newCube(cmd) {
+                        var src = params;
+                        if (cmd == 1)
+                            src += rand;
+                        // Remove listeners antigos antes de recriar
+                        if (acjs_removeListeners['treino']) {
+                            acjs_removeListeners['treino']();
+                        }
+                        AnimCube3(src);
+                    }
+                </script>
+            </div>
+        </div>
+        
+        <nav class="nav nav-justified my-0">
+            <a class="nav-link virapagina" href="rubiks-cube/5-go-swap-and-back/examples-of-go-swap-and-back.html">⇦</a>
+            <a class="nav-link virapagina" href="rubiks-cube/6-frey-and-singmasters-strategy.html">⇨</a>
+        </nav>
+        
+    </main>
+        
+    <div id="footer"></div>
+    
+    <script src="js/load-components.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+</body>
+
+</html>

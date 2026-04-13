@@ -1,102 +1,102 @@
 [
 {"title":"Home", "link":"index.html"},
-{"title":"Cubo 3x3x3", "link":"cubo-3x3x3.html",
+{"title":"Rubik's Cube", "link":"rubiks-cube.html",
     "children":[
-    {"title":"1. Introdução", "link":"cubo-3x3x3/1-introducao.html"},
-    {"title":"2. Partes do cubo", "link":"cubo-3x3x3/2-partes-do-cubo.html"},
-    {"title":"3. Movimentos no cubo", "link":"cubo-3x3x3/3-movimentos-no-cubo.html", 
+    {"title":"1. Introduction", "link":"rubiks-cube/1-introduction.html"},
+    {"title":"2. Cube parts", "link":"rubiks-cube/2-cube-parts.html"},
+    {"title":"3. Movements", "link":"rubiks-cube/3-movements.html", 
         "children":[
-        {"title":"Eixos de rotação", "link":"cubo-3x3x3/3-movimentos-no-cubo/eixos-de-rotacao.html"},
-        {"title":"Rotações padrões", "link":"cubo-3x3x3/3-movimentos-no-cubo/rotacoes-padroes.html"},
-        {"title":"Rotações internas", "link":"cubo-3x3x3/3-movimentos-no-cubo/rotacoes-internas.html"},
-        {"title":"Rotações paralelas", "link":"cubo-3x3x3/3-movimentos-no-cubo/rotacoes-paralelas.html"}
+        {"title":"Rotations", "link":"rubiks-cube/3-movements/rotations.html"},
+        {"title":"Standard rotations", "link":"rubiks-cube/3-movements/standard-rotations.html"},
+        {"title":"Inner rotations", "link":"rubiks-cube/3-movements/inner-rotations.html"},
+        {"title":"Parallel rotations", "link":"rubiks-cube/3-movements/parallalel-rotations.html"}
         ]
     },
-    {"title":"4. O Movimento de \"Vai e Volta\"", "link":"cubo-3x3x3/4-o-movimento-de-vai-e-volta.html" },
-    {"title":"5. O Movimento de \"Vai, Troca e Volta\"", "link":"cubo-3x3x3/5-o-movimento-de-vai-troca-e-volta.html",
+    {"title":"4. Back and Forth", "link":"rubiks-cube/4-back-and-forth.html" },
+    {"title":"5. Go, Swap and Back", "link":"rubiks-cube/5-go-swap-and-back.html",
         "children":[
-        {"title":"Exemplos de vai troca e volta", "link":"cubo-3x3x3/5-o-movimento-de-vai-troca-e-volta/exemplos-de-vai-troca-e-volta.html"},
-        {"title":"Troca com cores corretas", "link":"cubo-3x3x3/5-o-movimento-de-vai-troca-e-volta/troca-com-cores-corretas.html"}
+        {"title":"Examples of Go, Swap and Back", "link":"rubiks-cube/5-go-swap-and-back/examples-of-go-swap-and-back.html"},
+        {"title":"Swap and orient", "link":"rubiks-cube/5-go-swap-and-back/swap-and-orient.html"}
         ]
     },
-    {"title":"6. O método de Frey e Singmaster", "link":"cubo-3x3x3/6-o-metodo-de-frey-e-singmaster.html",
+    {"title":"6. Frey and Singmaster's strategy", "link":"rubiks-cube/6-frey-and-singmasters-strategy.html",
         "children":[
-        {"title":"6.a. Fazendo a cruz", "link":"cubo-3x3x3/6-o-metodo-de-frey-e-singmaster/6-a-fazendo-a-cruz.html"},
-        {"title":"6.b. Os 3 primeiros cantos", "link":"cubo-3x3x3/6-o-metodo-de-frey-e-singmaster/6-b-os-3-primeiros-cantos.html"},
-        {"title":"6.c. Os 3 lados da camada central", "link":"cubo-3x3x3/6-o-metodo-de-frey-e-singmaster/6-c-os-3-lados-da-camada-central.html"}
+        {"title":"6.a. Making the cross", "link":"rubiks-cube/6-frey-and-singmasters-strategy/6-a-making-the-cross.html"},
+        {"title":"6.b. Solving 3 corners of the 1st layer", "link":"rubiks-cube/6-frey-and-singmasters-strategy/6-b-solving-3-corners-of-the-1st-layer.html"},
+        {"title":"6.c. Solving 3 edges of the 2nd layer", "link":"rubiks-cube/6-frey-and-singmasters-strategy/6-c-solving-3-edges-of-the-2nd-layer.html"}
     ]
     },
-    {"title":"7. Um pouco sobre ciclos", "link":"cubo-3x3x3/7-um-pouco-sobre-ciclos.html" },
-    {"title":"8. Resolvendo os lados da última camada", "link":"cubo-3x3x3/8-resolvendo-os-lados-da-ultima-camada.html"},
-    {"title":"9. Comutadores e conjugados (É só o que você precisa!)", "link":"cubo-3x3x3/9-comutadores-e-conjugados-e-so-o-que-voce-precisa.html",
+    {"title":"7. A bit about cicles", "link":"rubiks-cube/7-a-bit-about-cicles.html" },
+    {"title":"8. Solving the edges of the last layer", "link":"rubiks-cube/8-solving-the-edges-of-the-last-layer.html"},
+    {"title":"9. Commutators and Conjugates (That's all you need!)", "link":"rubiks-cube/9-commutators-and-conjugates-thats-all-you-need.html",
         "children":[
-        {"title":"Exercícios com comutadores", "link":"cubo-3x3x3/9-comutadores-e-conjugados-e-so-o-que-voce-precisa/exercicios-com-comutadores.html"},
-        {"title":"Conjugados", "link":"cubo-3x3x3/9-comutadores-e-conjugados-e-so-o-que-voce-precisa/conjugados.html"}
+        {"title":"Commutators exercises", "link":"rubiks-cube/9-commutators-and-conjugates-thats-all-you-need/commutators-exercises.html"},
+        {"title":"Conjugates", "link":"rubiks-cube/9-commutators-and-conjugates-thats-all-you-need/conjugates.html"}
         ]
     },
-    {"title":"10. Resolvendo os últimos cinco cantos", "link":"cubo-3x3x3/10-resolvendo-os-ultimos-cinco-cantos.html",
+    {"title":"10. Solving the last 5 corners", "link":"rubiks-cube/10-solving-the-last-5-corners.html",
         "children":[
-        {"title":"Estratégia para virar os cantos (1)", "link":"cubo-3x3x3/10-resolvendo-os-ultimos-cinco-cantos/estrategia-para-virar-os-cantos-1.html"},
-        {"title":"Estratégia para virar os cantos (2)", "link":"cubo-3x3x3/10-resolvendo-os-ultimos-cinco-cantos/estrategia-para-virar-os-cantos-2.html"}
+        {"title":"Strategy to twist (1)", "link":"rubiks-cube/10-solving-the-last-5-corners/strategy-to-twist-1.html"},
+        {"title":"Strategy to twist (2)", "link":"rubiks-cube/10-solving-the-last-5-corners/strategy-to-twist-2.html"}
         ]
     },
-    {"title":"11. Referências", "link":"cubo-3x3x3/11-referencias.html" }
+    {"title":"11. References", "link":"rubiks-cube/11-references.html" }
     ]
 },
-{"title":"Cubo 4x4x4 e Maiores", "link":"cubo-4x4x4-e-maiores.html",
+{"title":"Rubik's Revenge and beyond", "link":"rubiks-revenge-and-beyond.html",
     "children":[
-    {"title":"Resolvendo sem decorar",
+    {"title":"Solving Big Cubes by Logic",
         "children":[
-        {"title":"1. Introdução", "link":"cubo-4x4x4-e-maiores/1-introducao.html"},
-        {"title":"2. Estrutura dos cubos grandes", "link":"cubo-4x4x4-e-maiores/2-estrutura-dos-cubos-grandes.html"},
-        {"title":"3. Notação de movimentos em cubos grandes", "link":"cubo-4x4x4-e-maiores/3-notacao-de-movimentos-em-cubos-grandes.html"},
-        {"title":"4. Estratégia de solução", "link":"cubo-4x4x4-e-maiores/4-estrategia-de-solucao.html",
+        {"title":"1. Introduction", "link":"solving-big-cubes-by-logic/1-introduction.html"},
+        {"title":"2. Big cubes' structure", "link":"solving-big-cubes-by-logic/2-big-cubes-structure.html"},
+        {"title":"3. Movement notation", "link":"solving-big-cubes-by-logic/3-movement-notation.html"},
+        {"title":"4. Solution strategy", "link":"solving-big-cubes-by-logic/4-solution-strategy.html",
             "children":[
-            {"title":"4.a. Resolvendo os centros da primeira face", "link":"cubo-4x4x4-e-maiores/4-estrategia-de-solucao/4-a-resolvendo-os-centros-da-primeira-face.html"},
-            {"title":"4.b. Resolvendo os edges de 3 arestas da primeira camada", "link":"cubo-4x4x4-e-maiores/4-estrategia-de-solucao/4-b-resolvendo-os-edges-de-3-arestas-da-primeira-camada.html"},
-            {"title":"4.c. Resolvendo os centros de 3 faces laterais", "link":"cubo-4x4x4-e-maiores/4-estrategia-de-solucao/4-c-resolvendo-os-centros-de-3-faces-laterais.html"},
-            {"title":"4.d. Resolvendo os centros das 2 últimas faces", "link":"cubo-4x4x4-e-maiores/4-estrategia-de-solucao/4-d-resolvendo-os-centros-das-2-ultimas-faces.html"},
-            {"title":"4.e. Resolvendo os edges que faltam na primeira camada", "link":"cubo-4x4x4-e-maiores/4-estrategia-de-solucao/4-e-resolvendo-os-edges-que-faltam-na-primeira-camada.html"},
-            {"title":"4.f. Resolvendo até 3 cantos da primeira camada deixando um \"livre\"", "link":"cubo-4x4x4-e-maiores/4-estrategia-de-solucao/4-f-resolvendo-ate-3-cantos-da-primeira-camada-deixando-um-livre.html"},
-            {"title":"4.g. Usando a \"aresta livre\" com os edges das camadas intermediárias", "link":"cubo-4x4x4-e-maiores/4-estrategia-de-solucao/4-g-usando-a-aresta-livre-com-os-edges-das-camadas-intermediarias.html"},
-            {"title":"4.h. Resolvendo os edges dos centros das arestas restantes", "link":"cubo-4x4x4-e-maiores/4-estrategia-de-solucao/4-h-resolvendo-os-edges-dos-centros-das-arestas-restantes.html"},
-            {"title":"4.i. Resolvendo os 5 cantos restantes", "link":"cubo-4x4x4-e-maiores/4-estrategia-de-solucao/4-i-resolvendo-os-5-cantos-restantes.html"},
-            {"title":"4.j. Resolvendo os últimos edges", "link":"cubo-4x4x4-e-maiores/4-estrategia-de-solucao/4-j-resolvendo-os-ultimos-edges.html"},
-            {"title":"4.k. Resolvendo os erros de paridade", "link":"cubo-4x4x4-e-maiores/4-estrategia-de-solucao/4-k-resolvendo-os-erros-de-paridade.html"}
+            {"title":"4.a. Solving the first face centers", "link":"solving-big-cubes-by-logic/4-solution-strategy/4-a-solving-the-first-face-centers.html"},
+            {"title":"4.b. Solving the edges of 3 sides in the first layer", "link":"solving-big-cubes-by-logic/4-solution-strategy/4-b-solving-the-edges-of-3-sides-in-the-first-layer.html"},
+            {"title":"4.c. Solving the centers of 3 side faces", "link":"solving-big-cubes-by-logic/4-solution-strategy/4-c-solving-the-centers-of-3-side-faces.html"},
+            {"title":"4.d. Solving the centers of the last 2 faces", "link":"solving-big-cubes-by-logic/4-solution-strategy/4-d-solving-the-centers-of-the-last-2-faces.html"},
+            {"title":"4.e. Solving the remaining edges of the first layer", "link":"solving-big-cubes-by-logic/4-solution-strategy/4-e-solving-the-remaining-edges-of-the-first-layer.html"},
+            {"title":"4.f. Solving up to 3 corners of the first layer and leaving one \"free\"", "link":"solving-big-cubes-by-logic/4-solution-strategy/4-f-solving-up-to-3-corners-of-the-first-layer-and-leaving-one-free.html"},
+            {"title":"4.g. Solving the edges of the middle layers by means of the \"free column\"", "link":"solving-big-cubes-by-logic/4-solution-strategy/4-g-solving-the-edges-of-the-middle-layers-by-means-of-the-free-column.html"},
+            {"title":"4.h. Solving the center edges of the remaining borders", "link":"solving-big-cubes-by-logic/4-solution-strategy/4-h-solving-the-center-edges-of-the-remaining-borders.html"},
+            {"title":"4.i. Solving the remaining 5 corners", "link":"solving-big-cubes-by-logic/4-solution-strategy/4-i-solving-the-remaining-5-corners.html"},
+            {"title":"4.j. Solving the last edges", "link":"solving-big-cubes-by-logic/4-solution-strategy/4-j-solving-the-last-edges.html"},
+            {"title":"4.k. Solving the parity errors", "link":"solving-big-cubes-by-logic/4-solution-strategy/4-k-solving-the-parity-errors.html"}
             ]
         },
-        {"title":"5. Referências", "link":"cubo-4x4x4-e-maiores/5-referencias.html" }
+        {"title":"5. References", "link":"solving-big-cubes-by-logic/5-references.html" }
         ]
     },
-    {"title":"Erros de paridade",
+    {"title":"Parity Errors",
         "children":[
-        {"title":"1. Introdução", "link":"cubo-4x4x4-e-maiores/erros-de-paridade/1-introducao.html"},
-        {"title":"2. Caso 1: Erro de paridade PLL (permutação de pares de edges)", "link":"cubo-4x4x4-e-maiores/erros-de-paridade/2-caso-1-erro-de-paridade-pll-permutacao-de-pares-de-edges.html"},
-        {"title":"3. Caso 2: Erro de paridade PLL (permutação de dois cantos)", "link":"cubo-4x4x4-e-maiores/erros-de-paridade/3-caso-2-erro-de-paridade-pll-permutacao-de-dois-cantos.html"},
-        {"title":"4. Caso 4: Erro de paridade OLL (desorientação de dois edges)",
+        {"title":"1. Introduction", "link":"solving-big-cubes-by-logic/parity-errors/1-introduction.html"},
+        {"title":"2. Case 1: PLL Parity Error (permutation of edge pairs)", "link":"solving-big-cubes-by-logic/parity-errors/2-case-1-pll-parity-error-permutation-of-edge-pairs.html"},
+        {"title":"3. Case 2: PLL Parity Error (2-corner permutation)", "link":"solving-big-cubes-by-logic/parity-errors/3-case-2-pll-parity-error-2-corner-permutation.html"},
+        {"title":"4. Case 4: OLL Parity Error (misorientation of two edges)",
             "children":[
-            {"title":"Parte 1", "link":"cubo-4x4x4-e-maiores/erros-de-paridade/4-caso-4-erro-de-paridade-oll-desorientacao-de-dois-edges-parte-1.html"},
-            {"title":"Parte 2", "link":"cubo-4x4x4-e-maiores/erros-de-paridade/4-caso-4-erro-de-paridade-oll-desorientacao-de-dois-edges-parte-2.html"}
+            {"title":"Part 1", "link":"solving-big-cubes-by-logic/parity-errors/4-case-4-oll-parity-error-misorientation-of-two-edges-part-1.html"},
+            {"title":"Part 2", "link":"solving-big-cubes-by-logic/parity-errors/4-case-4-oll-parity-error-misorientation-of-two-edges-part-2.html"}
             ]
         },
-        {"title":"5. Interessado em Speedcubing?", "link":"cubo-4x4x4-e-maiores/erros-de-paridade/5-interessado-em-speedcubing.html"},
-        {"title":"6. Referências", "link":"cubo-4x4x4-e-maiores/erros-de-paridade/6-referencias.html"}
+        {"title":"5. Interested in speedcubing?", "link":"solving-big-cubes-by-logic/parity-errors/5-interested-in-speedcubing.html"},
+        {"title":"6. References", "link":"solving-big-cubes-by-logic/parity-errors/6-references.html"}
         ]
     }
     ]
 },
-{"title":"Comutadores e Conjugados", "link":"comutadores-e-conjugados.html" },
-{"title":"Cubos Virtuais",
+{"title":"Commutators and conjugates", "link":"commutators-and-conjugates.html" },
+{"title":"Virtual Cubes",
     "children":[
-    {"title":"2x2x2", "link":"cubos-virtuais/2x2x2.html" },
-    {"title":"3x3x3", "link":"cubos-virtuais/3x3x3.html" },
-    {"title":"4x4x4", "link":"cubos-virtuais/4x4x4.html" },
-    {"title":"5x5x5", "link":"cubos-virtuais/5x5x5.html" },
-    {"title":"6x6x6", "link":"cubos-virtuais/6x6x6.html" },
-    {"title":"7x7x7", "link":"cubos-virtuais/7x7x7.html" }
+    {"title":"2x2x2", "link":"virtual-cubes/2x2x2.html" },
+    {"title":"3x3x3", "link":"virtual-cubes/3x3x3.html" },
+    {"title":"4x4x4", "link":"virtual-cubes/4x4x4.html" },
+    {"title":"5x5x5", "link":"virtual-cubes/5x5x5.html" },
+    {"title":"6x6x6", "link":"virtual-cubes/6x6x6.html" },
+    {"title":"7x7x7", "link":"virtual-cubes/7x7x7.html" }
     ]
 },
-{"title":"Notações WCA", "link":"notacoes-wca.html"},
-{"title":"Links interessantes", "link":"links-interessantes.html"},
-{"title":"English version", "link":"https://www.rubiksbylogic.com/"}
+{"title":"WCA notations", "link":"wca-notations.html"},
+{"title":"Nice links", "link":"nice-links.html"},
+{"title":"Brazilian version", "link":"https://www.cubomagicosemdecoreba.com.br/"}
 ]

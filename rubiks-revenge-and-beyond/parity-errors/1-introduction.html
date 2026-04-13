@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="icon" href="favicon.ico">
+
+    <title>Cubo Mágico sem Decoreba | Cubos grandes - Erros de paridade</title>
+    <meta name="description" content="Guia introdutório sobre erros de paridade em cubos grandes, explicando causas, tipos (PLL e OLL) e como resolver sem algoritmos decorados.">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <script src="js/AnimCube4.js"></script>
+
+</head>
+
+<body>
+    <div id="banner"></div>
+    <div id="menu"></div>
+    
+    <main class="container mb-0">
+        
+        <h1>Cubo 4x4x4 e maiores</h1>
+        <h2>Entendendo a Origem dos Erros de Paridade e Resolvendo sem Decorar</h2>
+
+        <div class="row align-items-start">
+
+            <div class="container px-3">
+                <h3>1. Introdução</h3>
+                <p>
+                Esse guia tem como objetivo principal mostrar as origens dos erros de paridade que ocorrem em cubos 4x4x4 ou maiores. Dessa maneira uma pessoa habituada a usar comutadores e conjugados poderá resolvê-los sem a necessidade de decorar qualquer algoritmo.
+                </p>
+                <p>
+                Embora sejam apresentadas aqui algumas soluções elas servem apenas como exemplos para que você encontre os seus próprios caminhos, não são as soluções mais curtas ou inteligentes. Isso significa que elas não servem para cubo velocidade. Contudo, é possível, a partir desse guia, entender como os algoritmos rápidos são construídos. Oportunamente serão indicados links que mostram a construção desses algoritmos consagrados, o que dará a você uma visão lógica dos mesmos, facilitando o processo de decorá-los caso esteja interessado em cubo velocidade.
+                </p>
+                <p class="bg-warning px-2 py-2">
+                <b>Importante:</b> Esse guia só é útil para quem já conhece bem o uso de comutadores e conjugados e saiba como resolver o 3x3x3 sem a necessidade de algoritmos. Veja antes o guia: <a href="cubo-3x3x3/1-introducao.html">“Entendendo e Resolvendo o Cubo de Rubik sem Decorar”</a>
+                </p>
+                <p>
+                Esse guia também assume que você já conheça a estrutura dos cubos 4x4x4, ou maiores, e a nomenclatura de movimentos de acordo com o padrão adotado pela <a href="https://www.worldcubeassociation.org/" target="_blank" rel="noopener noreferrer">WCA</a> (World Cube Association) bem como a notação mais antiga, que adota o uso de modificadores, n, m e c, veja antes o guia <a href="cubo-4x4x4-e-maiores/1-introducao.html">"Resolvendo Cubos Grandes Sem Decorar"</a>.
+                </p>
+                <p>
+                Mas, se você conhece muito bem comutadores e conjugados porque precisaria de um guia para ajudar a resolver o 4x4x4 ou cubos maiores? Bem, é perfeitamente possível encontrar seu próprio caminho para resolver qualquer cubo NxNxN. Contudo, acontecem situações, ou configurações, no final da solução, que aparentemente são impossíveis. Essas configurações são conhecidas como erros de paridade e acontecem devido a combinações de erros que, parcialmente “anulados”, dão a ilusão de uma configuração absurda. Veja a seguir os casos que serão tratados nesse guia:
+                </p>
+                <ul>
+                    <li>Caso 1 na Figura 1.1: Erro de paridade PLL (<i>Permutation of Last Layer</i>) com a "permutação de pares de edges".</li>
+                    <li>Caso 2 na Figura 1.2: Erro de paridade PLL (<i>Permutation of Last Layer</i>) com a "permutação de 2 cantos".</li>
+                    <li>Caso 3 na Figura 1.3: Erro de paridade PLL (<i>Permutation of Last Layer</i>) com a "permutação de 2 edges".</li>
+                    <li>Caso 4 na Figura 1.4: Erro de paridade OLL (<i>Orientation of Last Layer</i>) com a "desorientação de 2 edges".</li>
+                </ul>
+                <p class="bg-warning px-2 py-2">
+                <b>Importante:</b> Não se engane com as denominações, elas não se referem às origens dos erros, mas ao que eles aparentam.
+                </p>
+
+                <div class="row justify-content-center">
+                    <div class="col-md-4 text-center mt-3 mb-3 px-3">
+                        <div class="img-wrapper img-cubo">
+                            <script>
+                                var movimento="{Figura 1.1: Caso 1}";
+                                AnimCube4("initmove=F2 Bm Fm D Fm' U2 Fm D' Fm' U2 Bm' Fm' y' Rm' D' Rm U2 Rm' D Rm U2 y Fm F2 &move="+movimento+
+                                            "&movetext=0\
+                                            &yz=1\
+                                            &fonttype=0\
+                                            &textsize=12\
+                                            &facelets=bbbbbbbbbbbbbbbbGGGGGGGGGGGGGGGGrrrrrrrrrrrrrrrrOOOOOOOOOOOOOOOOwwwwwwwwwwwwwwwwYYYYYYYYYYYYYYYY\
+                                            &buttonbar=2\
+                                            &buttonheight=20\
+                                            &bgcolor=f0f0f0\
+                                            &butbgcolor=009999\
+                                            &snap=0\
+                                            &repeat=0\
+                                            &edit=0\
+                                            &speed=20\
+                                            &gabbacolors=1")
+                            </script>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center mt-3 mb-3 px-3">
+                        <div class="img-wrapper img-cubo">
+                            <script>
+                                var movimento="{Figura 1.2: Caso 2}";
+                                AnimCube4("initmove=L F' L' B L F L' B' y. F' L F L' F' L F R' F' L' F L F' L' F R Dt' Um. Fm Bm' Lm Rm' D' Lm' Rm U2 Lm Rm' D Lm' Rm U2 Fm' Bm y2. F2 Bm Fm D Fm' U2 Fm D' Fm' U2 Bm' Fm' y' Rm' D' Rm U2 Rm' D Rm U2 y Fm F2 &move="+movimento+
+                                            "&movetext=0\
+                                            &yz=1\
+                                            &fonttype=0\
+                                            &textsize=12\
+                                            &facelets=bbbbbbbbbbbbbbbbGGGGGGGGGGGGGGGGrrrrrrrrrrrrrrrrOOOOOOOOOOOOOOOOwwwwwwwwwwwwwwwwYYYYYYYYYYYYYYYY\
+                                            &buttonbar=2\
+                                            &buttonheight=20\
+                                            &bgcolor=f0f0f0\
+                                            &butbgcolor=009999\
+                                            &snap=0\
+                                            &repeat=0\
+                                            &edit=0\
+                                            &speed=20\
+                                            &gabbacolors=1")
+                            </script>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-md-4 text-center mt-3 mb-3 px-3">
+                        <div class="img-wrapper img-cubo">
+                            <script>
+                                var movimento="{Figura 1.3: Caso 3}"
+                                AnimCube4("initmove=Rm2 B2 U2 Lm U2 Rm' U2 Rm U2 F2 Rm F2 Lm' B2 Rm2. Lm Rm2 D2 Rm' U2 Rm D2 Rm' U2 Rm' Lm' &move="+movimento+
+                                            "&movetext=0\
+                                            &yz=1\
+                                            &fonttype=0\
+                                            &textsize=12\
+                                            &facelets=bbbbbbbbbbbbbbbbGGGGGGGGGGGGGGGGrrrrrrrrrrrrrrrrOOOOOOOOOOOOOOOOwwwwwwwwwwwwwwwwYYYYYYYYYYYYYYYY\
+                                            &buttonbar=2\
+                                            &buttonheight=20\
+                                            &bgcolor=f0f0f0\
+                                            &butbgcolor=009999\
+                                            &snap=0\
+                                            &repeat=0\
+                                            &edit=0\
+                                            &speed=20\
+                                            &gabbacolors=1")
+                            </script>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center mt-3 mb-3 px-3">
+                        <div class="img-wrapper img-cubo">
+                            <script>
+                                var movimento="{Figura 1.4: Caso 4}";
+                                AnimCube4("initmove=Rm2 B2 U2 Lm U2 Rm' U2 Rm U2 F2 Rm F2 Lm' B2 Rm2&move="+movimento+
+                                            "&movetext=0\
+                                            &yz=1\
+                                            &fonttype=0\
+                                            &textsize=12\
+                                            &facelets=bbbbbbbbbbbbbbbbGGGGGGGGGGGGGGGGrrrrrrrrrrrrrrrrOOOOOOOOOOOOOOOOwwwwwwwwwwwwwwwwYYYYYYYYYYYYYYYY\
+                                            &buttonbar=2\
+                                            &buttonheight=20\
+                                            &bgcolor=f0f0f0\
+                                            &butbgcolor=009999\
+                                            &snap=0\
+                                            &repeat=0\
+                                            &edit=0\
+                                            &speed=20\
+                                            &gabbacolors=1")
+                            </script>
+                        </div>
+                    </div>
+                </div>
+
+            </div>           
+        </div>
+
+        <nav class="nav nav-justified my-0">
+            <a class="nav-link virapagina" href="cubo-4x4x4-e-maiores/5-referencias.html">⇦</a>
+            <a class="nav-link virapagina" href="cubo-4x4x4-e-maiores/erros-de-paridade/2-caso-1-erro-de-paridade-pll-permutacao-de-pares-de-edges.html">⇨</a>
+        </nav>
+        
+    </main>
+        
+    <div id="footer"></div>
+    
+    <script src="js/load-components.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+</body>
+
+</html>

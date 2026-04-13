@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="icon" href="favicon.ico">
+
+    <title>Rubik’s Cube by Logic | Rubik's Cube - Examples of "go, swap and back"</title>
+    <meta name="description" content="Explore examples of the go, swap, and back movement on the Rubik’s Cube, including repositioning and practical application to correctly swap pieces.">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <script src="js/AnimCube3.js"></script>
+
+</head>
+
+<body>
+    <div id="banner"></div>
+    <div id="menu"></div>
+    
+    <main class="container mb-0">
+        
+        <h1>Rubik's Cube</h1>
+        <h2>Understanding and Solving the Rubik's Cube Without Algorithms</h2>
+
+        <div class="row align-items-start">
+
+            <p>
+            Observe three additional examples in Figures 5.3, 5.4, and 5.5, where we aim to place the orange cubelet in the position of the green cubelet while preserving the upper layer's colored cubelets. Click the play button (▷) to see the sequences.
+            </p>
+                     
+            <div class="row justify-content-center">
+                <div class="col-md-4 text-center my-3 px-3">
+                    <div class="img-wrapper img-cubo">
+                        <script>
+                            var movimento="{Figure 5.3}{Figure 5.3:   R' (go)}R'.{Figure 5.3:   D (swap)}D.{Figure 5.3:   R (back)}R";
+                            AnimCube3("initmove=x2 &move="+movimento+
+                                        "&movetext=5\
+                                        &yz=1\
+                                        &fonttype=0\
+                                        &textsize=15\
+                                        &facelets=llllll0llYYYYYYYYnllollolloLLnLLR0LRll0lllgggLLBLLBLLn\
+                                        &buttonheight=20\
+                                        &bgcolor=f0f0f0\
+                                        &butbgcolor=009999\
+                                        &snap=0\
+                                        &repeat=0\
+                                        &edit=0\
+                                        &speed=0\
+                                        &gabbacolors=1")
+                        </script>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center my-3 px-3">
+                    <div class="img-wrapper img-cubo">
+                        <script>
+                            var movimento="{Figure 5.4}{Figure 5.4:   F (go)}F.{Figure 5.4:   E' (swap)}E'.{Figure 5.4:   F' (back)}F'";
+                            AnimCube3("initmove=x2 &move="+movimento+
+                                        "&movetext=5\
+                                        &yz=1\
+                                        &fonttype=0\
+                                        &textsize=15\
+                                        &facelets=lllllllllYYYYYnYYYllollol0oLLRLLnLLRllllllgggL0BLLBLLB\
+                                        &buttonheight=20\
+                                        &bgcolor=f0f0f0\
+                                        &butbgcolor=009999\
+                                        &snap=0\
+                                        &repeat=0\
+                                        &edit=0\
+                                        &speed=0\
+                                        &gabbacolors=1")
+                        </script>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center my-3 px-3">
+                    <div class="img-wrapper img-cubo">
+                        <script>
+                            var movimento="{Figure 5.5}{Figure 5.5:   M (go)}M.{Figure 5.5:   D' (swap)}D'.{Figure 5.5:   M' (back)}M'";
+                            AnimCube3("initmove=x2 &move="+movimento+
+                                        "&movetext=5\
+                                        &yz=1\
+                                        &fonttype=0\
+                                        &textsize=15\
+                                        &facelets=lllll0lllYYYYYnYYYllollolloLLRLLnLLRllllllgggLLB0LBLLB\
+                                        &buttonheight=20\
+                                        &bgcolor=f0f0f0\
+                                        &butbgcolor=009999\
+                                        &snap=0\
+                                        &repeat=0\
+                                        &edit=0\
+                                        &speed=0\
+                                        &gabbacolors=1")
+                        </script>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-md-8 my-3 px-3">
+                    <p>
+                    In some cases, the desired cubelet may be positioned in a way that restricts the availability of a free layer for the "back and forth" movement, without necessarily moving the desired cubelet itself. In such cases, there are two possibilities:
+                    </p>
+                    <ol>
+                        <li>The "go" movement can move the desired cubelet without removing it from the original layer. In this scenario, the "swap" can be performed as usual.</li>
+                        <li>The "go" movement may take the desired cubelet out of its original layer, making the subsequent swap impossible. In this case, a preliminary "setup" move is necessary before executing the "go, swap and back" movement.</li>
+                    </ol>
+                    <p>
+                    To perform the "setup", rotate the layer containing the desired cubelet, ensuring it is parallel to the layer you intend to preserve. Alternatively, you can rotate the entire layer that needs to be preserved.
+                    </p>
+                    <p>
+                    Take a look at the example in Figure 5.6 by clicking the play button (▷). Once again, the goal is to move the orange corner to the position of the green corner without altering the U layer. First, we execute the "setup" move with the D' movement, and then we apply the familiar "go, swap and back" movement seen in Figure 5.3.
+                    </p>
+                </div>
+
+                <div class="col-md-4 text-center my-3 px-3">
+                    <div class="img-wrapper img-cubo">
+                        <script>
+                            var movimento="{Figure 5.6}{Figure 5.6:   D' (setup)}D'.{Figure 5.6:   R' (go)}R' {Figure 5.6:   D (swap)}D {Figure 5.6:   R (back)}R";
+                            AnimCube3("initmove=x2 &move="+movimento+
+                                        "&movetext=5\
+                                        &yz=1\
+                                        &fonttype=0\
+                                        &textsize=15\
+                                        &facelets=llllllll0YYYYYYYYnllollollo0LnLLRLLRllllllgggLLBLLB0Ln\
+                                        &buttonheight=20\
+                                        &bgcolor=f0f0f0\
+                                        &butbgcolor=009999\
+                                        &snap=0\
+                                        &repeat=0\
+                                        &edit=0\
+                                        &speed=0\
+                                        &gabbacolors=1")
+                        </script>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <nav class="nav nav-justified my-0">
+            <a class="nav-link virapagina" href="rubiks-cube/5-go-swap-and-back.html">⇦</a>
+            <a class="nav-link virapagina" href="rubiks-cube/5-go-swap-and-back/swap-and-orient.html">⇨</a>
+        </nav>
+        
+    </main>
+        
+    <div id="footer"></div>
+    
+    <script src="js/load-components.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+</body>
+
+</html>

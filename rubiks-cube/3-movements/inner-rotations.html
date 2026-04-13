@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="icon" href="favicon.ico">
+
+    <title>Rubik's Cube by Logic | Rubik's Cube - Inner rotations</title>
+    <meta name="description" content="Understand the rotations of inner layers in the Rubik’s Cube and their notations.">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <script src="js/AnimCube3wca.js"></script>
+
+</head>
+
+<body>
+    <div id="banner"></div>
+    <div id="menu"></div>
+    
+    <main class="container mb-0">
+        
+        <h1>Rubik's Cube</h1>
+        <h2>Understanding and Solving the Rubik's Cube Without Algorithms</h2>
+
+        <div class="row align-items-start">
+
+            <p>
+            For rotations of the inner layers (M, E, and S), the WCA used to use the same letters, but now it only uses the notation to rotate two layers simultaneously. The letter 'w' is always added in front of the desired outer layer letter, indicating that this layer and the inner layer are rotated simultaneously. For example, Rw indicates that the R layer and the M layer are rotated in the direction of R.
+            </p>
+            <p>
+            This means that to indicate the rotation of only one inner layer, such as M, it is necessary to use two notations: one indicating the rotation of two layers and the other indicating the rotation of the outer layer back to its original position. Suppose you want to indicate the rotation of the M layer alone in the direction of R, then you would need to write: Rw R'. That is, both layers (R and M) are rotated in the direction of R, and then only layer R returns to the original position. Thus, there are equivalent notations. For example, M' is equivalent to Rw R' or Lw' L, as exemplified in Figures 3.15, 3.16, and 3.17. Again, you can click on play (▷) to see them in action.
+            </p>
+        
+            <div class="col-md-4 text-center my-3 px-3">
+                <div class="img-wrapper img-cubo">
+                    <script>
+                        var movimento="{Figure 3.15}M'";
+                        AnimCube3("initmove=x2 &move="+movimento+
+                                    "&movetext=5\
+                                    &yz=1\
+                                    &fonttype=0\
+                                    &textsize=15\
+                                    &buttonheight=20\
+                                    &bgcolor=f0f0f0\
+                                    &butbgcolor=009999\
+                                    &snap=0\
+                                    &repeat=0\
+                                    &edit=0\
+                                    &speed=0\
+                                    &gabbacolors=1")
+                    </script>
+                </div>
+            </div>
+            <div class="col-md-4 text-center my-3 px-3">
+                <div class="img-wrapper img-cubo">
+                    <script>
+                        var movimento="{Figure 3.16}Rw R'";
+                        AnimCube3("initmove=x2 &move="+movimento+
+                                    "&movetext=1\
+                                    &yz=1\
+                                    &fonttype=0\
+                                    &textsize=15\
+                                    &buttonheight=20\
+                                    &bgcolor=f0f0f0\
+                                    &butbgcolor=009999\
+                                    &snap=0\
+                                    &repeat=0\
+                                    &edit=0\
+                                    &speed=0\
+                                    &gabbacolors=1")
+                    </script>
+                </div>
+            </div>
+            <div class="col-md-4 text-center my-3 px-3">    
+                <div class="img-wrapper img-cubo">
+                    <script>
+                        var movimento="{Figure 3.17}Lw' L";
+                        AnimCube3("initmove=x2 &move="+movimento+
+                                    "&movetext=1\
+                                    &yz=1\
+                                    &fonttype=0\
+                                    &textsize=15\
+                                    &buttonheight=20\
+                                    &bgcolor=f0f0f0\
+                                    &butbgcolor=009999\
+                                    &snap=0\
+                                    &repeat=0\
+                                    &edit=0\
+                                    &speed=0\
+                                    &gabbacolors=1")
+                    </script>
+                </div>
+            </div>       
+            <p class="mt-3">
+            <u>Note</u>: In old notations, M followed the direction of L, S followed the direction of F, and E followed the direction of U.
+            </p>  
+        </div>
+
+        <nav class="nav nav-justified my-0">
+            <a class="nav-link virapagina" href="rubiks-cube/3-movements/standard-rotations.html">⇦</a>
+            <a class="nav-link virapagina" href="rubiks-cube/3-movements/parallalel-rotations.html">⇨</a>
+        </nav>
+        
+    </main>
+        
+    <div id="footer"></div>
+    
+    <script src="js/load-components.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+</body>
+
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="icon" href="favicon.ico">
+
+    <title>Cubo Mágico sem Decoreba | Cubo 3x3x3 - Virando os cantos (1)</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <script src="js/AnimCube3.js"></script>
+
+</head>
+
+<body>
+    <div id="banner"></div>
+    <div id="menu"></div>
+    
+    <main class="container mb-0">
+        
+        <h1>Cubo 3x3x3</h1>
+        <h2>Entendendo e Resolvendo o Cubo de Rubik sem Decorar</h2>
+
+        <div class="row align-items-start">
+
+            <div class="container px-3">
+                                                               
+                <div class="row justify-content-center">
+                    <div class="col-md-8 my-3 px-3">
+                        <p>
+                        A outra possibilidade que tínhamos na primeira “troca” era tirar o canto da camada do “vai e volta”, lembra-se? Nesse caso há duas opções, B ou B2, vamos ficar com a mais simples, B:
+                        </p>
+                        <p>
+                        Clique em avançar (<span style="font-size: 25px;">⧐</span>) na Figura 10.9.
+                        </p>
+                        <p>
+                        Observe que o canto é mantido fora da camada do "vai e volta".
+                        </p>
+                        <p>
+                        Terminando o primeiro “vai, troca e volta” fazemos R'. Clique novamente em avançar (<span style="font-size: 25px;">⧐</span>) na Figura 10.9.
+                        </p>
+                        <p>
+                        Só nos resta mais um movimento de “vai, troca e volta”, mas veja que se o canto for mantido no lugar ele voltará exatamente com a mesma orientação que tinha. Precisamos fazer um reposicionamento de tal maneira que ele gire durante o movimento de “vai”. Só há uma opção, reposicioná-lo na camada do “vai e volta” e de tal maneira que ele continue na camada de “troca” depois do movimento de “vai”.
+                        </p>
+                        <p>
+                        A única possibilidade é fazer B'. Clique mais uma vez em avançar (<span style="font-size: 25px;">⧐</span>) na Figura 10.9.
+                        </p>
+                        <p>
+                        Note que o reposicionamento forçará o canto a girar no próximo movimento de "vai".
+                        </p>
+                        <p>
+                        Fazendo o último “vai e troca", R B, clique duas vezes em avançar (<span style="font-size: 25px;">⧐</span>) na Figura 10.9.
+                        </p>
+                        <p>
+                        Veja! Após o último movimento de “troca” a face que ficou para cima é a azul, isso significa que essa face ficará na frente do cubo depois da “volta”: R'. Clique uma última vez em avançar (<span style="font-size: 25px;">⧐</span>) na Figura 10.9 e observe.
+                        </p>
+                    </div>
+                    <div class="col-md-4 my-3 px-3">
+                        <div class="img-wrapper img-cubo">
+                            <script>
+                                var movimento="{Figura 10.9}{Figura 10.9:   B(troca)}B.{Figura 10.9:   R'(volta)}R'.{Figura 10.9:   B'(resposiciona)}B'.{Figura 10.9:   R(vai)}R.{Figura 10.9:   B(troca)}B.{Figura 10.9:   R'(volta)}R'";
+                                    setup="x2 R"
+                                AnimCube3("initmove="+setup+"&move="+movimento+
+                                            "&movetext=5\
+                                            &yz=1\
+                                            &fonttype=0\
+                                            &textsize=12\
+                                            &facelets=llllllwwwLLYLLYLLYlllllllllRRRRRRRRRllgllgllgLLLLLLBBB\
+                                            &buttonheight=20\
+                                            &bgcolor=f0f0f0\
+                                            &butbgcolor=009999\
+                                            &snap=0\
+                                            &repeat=0\
+                                            &edit=0\
+                                            &speed=0\
+                                            &gabbacolors=1")
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            
+                <p>
+                Conseguimos um giro no sentido contrário ao anterior! Isso significa que, para esse caso, no primeiro movimento de “vai” a cor que está do lado direito do cubo é que acabará virada para cima antes do último movimento de “volta” e, conseqüentemente, terminará na face da frente. Novamente, você <b>não precisa decorar isso! Basta observar o que acontecerá com os movimentos.</b>
+                </p>
+                <p>
+                Uma maneira particular para se pensar nesse exemplo é:
+                </p>
+                <p>
+                Pergunta: Qual a cor que eu quero que termine na frente?
+                </p>
+                <p>
+                Resposta: Se no primeiro movimento de “vai” ela estiver atrás do cubo reposiciono o canto na parte de baixo. Se a cor estiver na lateral direita do cubo reposiciono o canto à esquerda.
+                </p>
+                <p>
+                <b>Novamente: Você não precisa decorar isso! Apenas observe os movimentos para saber o que fazer!</b>
+                </p>
+                <p>
+                Vamos anotar a seqüência completa de movimentos que giraram o canto no sentido contrário: 
+                </p>
+                <p>
+                R B R' B' R B R'
+                </p>
+                <p>
+                Agora vamos comparar as duas seqüências de movimentos:
+                </p>
+                <p>
+                1<sup>o</sup> caso: R B' R' B R B' R'
+                </p>
+                <p>
+                2<sup>o</sup> caso: R B R' B' R B R'
+                </p>
+                <p>
+                Perceba que uma é exatamente o inverso da outra! Para conferir isso basta pegar uma delas, da direita para a esquerda, e inverter os movimentos, por exemplo, R passa a ser R' e R' passa a ser R.
+                </p>
+                <p>
+                Para o primeiro caso teremos: R B' R' B R B' R' >> invertendo >> R B R' B' R B R' que é justamente o segundo caso!
+                </p>
+                <p>
+                Tente fazer com o segundo caso e você verá que a inversão será igual ao primeiro. É justamente isso que queríamos! Que um procedimento de girar o canto num sentido fosse o inverso do procedimento de girar o canto no sentido contrário! Conforme a estratégia proposta.
+                </p>
+                <p>
+                <b>Lembre que essa é a solução escolhida para esse guia.</b> Você poderia usar, por exemplo, B2 para o reposicionamento na camada de trás, o que daria procedimentos diferentes, mas no final eles teriam que se cancelar mutuamente. Da mesma maneira, não é necessário que você use a camada R para o “vai, troca e volta”, você escolhe aquela que mais lhe agradar. A camada a ser preservada também não precisa ser a da frente, você escolhe!
+                </p>
+                <p>
+                A dica é lembrar sempre das “leis” do cubo e da estratégia geral apresentada no <a href="cubo-3x3x3/10-resolvendo-os-ultimos-cinco-cantos/estrategia-para-virar-os-cantos-1.html">quadro resumo da estratégia para virar os cantos</a>. O resto é com você!
+                </p>
+                <p>
+                Caso os cantos não estejam numa mesma camada você já sabe o que fazer, <i>reposicionamento</i>; gire os cantos normalmente e depois desfaça o reposicionamento inicial, ou seja, use um conjugado.
+                </p>
+                <p>
+                A título de comparação veja os algoritmos que você deveria decorar para girar os cantos, só para o caso do exemplo aqui apresentado:
+                </p>
+                <p>
+                R B' R' B R B' R' F R B R' B' R B R' F' para girar os cantos num sentido e
+                </p>
+                <p>
+                R B R' B' R B R' F R B' R' B R B' R' F' para girar os cantos no outro sentido.
+                </p>
+                <p>
+                E isso entendendo pouco ou não fazendo a mínima idéia do que está acontecendo e nem o porquê de cada passo dessas seqüências.
+                </p>
+                <p class="bg-info px-2 py-2">
+                Para terminar esse capítulo, aí vai um desafio. Usando a estratégia geral de virar os cantos encontre uma maneira de resolver o cubo abaixo, invertendo as cores dos dois lados (<i>edges</i>) que estão virados. Dica: é possível virar um lado somente com dois movimentos de “vai, troca e volta” e mais um reposicionamento.
+                </p>
+
+                <div class="row justify-content-center">
+                    <div class="col-md-6 my-3 px-3">
+                        <p>
+                        Você pode interagir com a imagem girando o cubo e as camadas. Se precisar recomeçar basta clicar em iniciar (|◁).
+                        </p>
+                        <p>
+                        Para ver uma possível solução exponha a aba oculta, clicando na seta.
+                        </p>
+                        <hr class="my-0 border-primary">
+                        <p class="my-0 text-center">
+                        <span class="toggle-icon" data-bs-toggle="collapse" data-bs-target="#extra1">↻</span>
+                        </p>
+                        <div class="collapse" id="extra1">
+                            <p>
+                            <b>(x' z') (M' B2 M B' M' B M) F' (M' B' M B M' B2 M) F (z x)</b>
+                            </p>
+                            <p>
+                            Os parênteses servem apenas para destacar os conjugados. Note dentro do segundo e terceiro parênteses os 2 movimentos de "vai, troca e volta" intercalados por um reposicionamento. Note também que esses dois parênteses são inversos um do outro.
+                            </p>
+                            <p>
+                            Obs.: O primeiro e último parênteses são apenas giros do cubo inteiro no espaço.
+                            </p>
+                            <p>
+                            Clique em em iniciar (|◁) e depois em play (▷) para ver essa seqüência.
+                            </p>
+                            <p>
+                            Lembre-se, essa é só uma possível solução. Se você encontrou outra, parabéns!
+                            </p>
+                        </div>
+                        <hr class="my-0 border-primary">                          
+                    </div>
+                    <div class="col-md-4 text-center my-3 px-3">
+                        <div class="img-wrapper img-cubo">
+                            <script>
+                                var movimento="{Desafio final}{Desafio final: Reposiciona o cubo (x' z')}(x' z').{Desafio final: vai-troca-volta (M' B2 M)}(M' B2 M).{Desafio final: reposiciona (B')}B'.{Desafio final: vai-troca-volta (M' B M)}(M' B M).{Desafio final: reposiciona (F')}F'.{Desafio final: inverte (M' B' M).B.(M' B2 M)}(M' B' M).B.(M' B2 M).{Desafio final: desfaz reposicionamento (F)}F.{Desafio final: Desfaz giro do cubo (z x)}(z x)";
+                                    setup="x2 (x' z').((M' B2 M).B'.(M' B M)).F'.((M' B' M).B.(M' B2 M)).F.(z x)"
+                                AnimCube3("initmove="+setup+"&move="+movimento+
+                                            "&movetext=0\
+                                            &yz=1\
+                                            &fonttype=0\
+                                            &textsize=12\
+                                            &facelets=\
+                                            &buttonheight=20\
+                                            &bgcolor=f0f0f0\
+                                            &butbgcolor=009999\
+                                            &snap=0\
+                                            &repeat=0\
+                                            &edit=1\
+                                            &speed=0\
+                                            &gabbacolors=1")
+                            </script>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="mt-3">
+                Se você terminou esse capítulo na prática, parabéns! Você resolveu o cubo de Rubik sem decorar qualquer algoritmo, apenas usando a lógica!
+                </p>
+                <p>
+                Mesmo que você fique muito tempo sem resolver o cubo e se esqueça da execução de alguns movimentos, basta se lembrar das “leis” do cubo, das estratégias gerais e usar seu raciocínio lógico. No final das contas tudo se resume à combinação adequada de movimentos bem simples como o “vai, troca e volta”.
+                </p>
+                               
+            </div>
+        
+        </div>
+
+        <nav class="nav nav-justified my-0">
+            <a class="nav-link virapagina" href="cubo-3x3x3/10-resolvendo-os-ultimos-cinco-cantos/estrategia-para-virar-os-cantos-1.html">⇦</a>
+            <a class="nav-link virapagina" href="cubo-3x3x3/11-referencias.html">⇨</a>
+        </nav>
+        
+    </main>
+        
+    <div id="footer"></div>
+    
+    <script src="js/load-components.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+</body>
+
+</html>

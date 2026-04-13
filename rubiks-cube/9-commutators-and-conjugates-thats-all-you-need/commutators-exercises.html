@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="icon" href="favicon.ico">
+
+    <title>Cubo Mágico sem Decoreba | Cubo 3x3x3 - Exercícios com comutadores</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <script src="js/AnimCube3wca.js"></script>
+    <script src="js/abamovel.js"></script>
+
+</head>
+
+<body>
+    <div id="banner"></div>
+    <div id="menu"></div>
+    
+    <main class="container mb-0">
+        
+        <h1>Cubo 3x3x3</h1>
+        <h2>Entendendo e Resolvendo o Cubo de Rubik sem Decorar</h2>
+
+        <div class="row align-items-start">
+
+            <div class="container px-3">
+
+                <div class="bg-info py-2 px-2 mb-3">
+                    <p>
+                    Agora é sua vez de treinar, faça movimentos comutadores com os exercícios propostos abaixo.
+                    </p>
+                    <p>
+                    Com um pouco de observação e prática você será capaz de efetuar qualquer troca entre 3 cantos ou entre 3 lados (edges), não importando a posição deles no cubo!
+                    </p>
+                    <p>
+                    Para facilitar você pode girar todo o cubo, sempre mantendo as camadas de troca numa orientação mais confortável, por exemplo, superior e inferior.
+                    </p>
+                </div>
+                                                             
+                <div class="row justify-content-center">
+                    <div class="col-md-6 my-3 px-3">
+                        <p>
+                        <b>Exercício (a)</b>
+                        </p>
+                        <p>
+                        Coloque o canto rosa no lugar do ciano, o ciano no lugar do verde e o verde no lugar do rosa.
+                        </p>
+                        <p>
+                        Você pode interagir com a imagem girando o cubo e as camadas. Se precisar recomeçar basta clicar em iniciar (|◁).
+                        </p>
+                        <p>
+                        Para ver uma possível solução exponha a aba oculta, clicando na seta.
+                        </p>
+                        <hr class="my-0 border-primary">
+                        <p class="my-0 text-center">
+                        <span class="toggle-icon" data-bs-toggle="collapse" data-bs-target="#extra1">↻</span>
+                        </p>
+                        <div class="collapse" id="extra1">
+                            <p>
+                            <b>B' D B U' B' D' B U</b>
+                            </p>
+                            <p>
+                            Clique em iniciar (|◁) e depois em <i>play</i> (▷) para ver essa seqüência.
+                            </p>
+                            <p>
+                            Lembre-se, essa é só uma possível solução. Se você encontrou outra, parabéns!
+                            </p>
+                        </div>
+                        <hr class="my-0 border-primary">                          
+                    </div>
+                    <div class="col-md-4 text-center my-3 px-3">
+                        <div class="img-wrapper img-cubo">
+                            <script>
+                                var movimento="{Exerc\u00edcio (a)}{Exerc\u00edcio (a): (vai) B'}B'.{Exerc\u00edcio (a): (troca) D}D.{Exerc\u00edcio (a): (volta) B}B.{Exerc\u00edcio (a): (troca) U'}U'.{Exerc\u00edcio (a): (vai) B'}B'.{Exerc\u00edcio (a): (destroca) D'}D'.{Exerc\u00edcio (a): (volta) B}B.{Exerc\u00edcio (a): (destroca) U}U";
+                                    setup="x2";
+                                AnimCube3("initmove="+setup+"&move="+movimento+
+                                            "&movetext=0\
+                                            &yz=1\
+                                            &fonttype=0\
+                                            &textsize=12\
+                                            &facelets=wwwwwwwwCYYYYYYNYMoooooomonCRMRRRRRRgggggggggBBNBBBCBM\
+                                            &buttonheight=20\
+                                            &bgcolor=f0f0f0\
+                                            &butbgcolor=009999\
+                                            &snap=0\
+                                            &repeat=0\
+                                            &edit=1\
+                                            &speed=0\
+                                            &gabbacolors=1")
+                            </script>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-md-6 my-3 px-3">
+                        <p>
+                        <b>Exercício (b)</b>
+                        </p>
+                        <p>
+                        Coloque o canto rosa no lugar do verde, o verde no lugar do ciano e o ciano no lugar do rosa.
+                        </p>
+                        <p>
+                        Você pode interagir com a imagem girando o cubo e as camadas. Se precisar recomeçar basta clicar em iniciar (|◁).
+                        </p>
+                        <p>
+                        Para ver uma possível solução exponha a aba oculta, clicando na seta.
+                        </p>
+                        <hr class="my-0 border-primary">
+                        <p class="my-0 text-center">
+                        <span class="toggle-icon" data-bs-toggle="collapse" data-bs-target="#extra2">↻</span>
+                        </p>
+                        <div class="collapse" id="extra2">
+                            <p>
+                            <b>B L' B' R2 B L B' R2</b>
+                            </p>
+                            <p>
+                            Clique em iniciar (|◁) e depois em <i>play</i> (▷) para ver essa seqüência.
+                            </p>
+                            <p>
+                            Lembre-se, essa é só uma possível solução. Se você encontrou outra, parabéns!
+                            </p>
+                        </div>
+                        <hr class="my-0 border-primary">                          
+                    </div>
+                    <div class="col-md-4 text-center my-3 px-3">
+                        <div class="img-wrapper img-cubo">
+                            <script>
+                                var movimento="{Exerc\u00edcio (b)}{Exerc\u00edcio (b): (vai) B}B.{Exerc\u00edcio (b): (troca) L'}L'.{Exerc\u00edcio (b): (volta) B'}B'.{Exerc\u00edcio (b): (troca) R2}R2.{Exerc\u00edcio (b): (vai) B}B.{Exerc\u00edcio (b): (destroca) L}L.{Exerc\u00edcio (b): (volta) B'}B'.{Exerc\u00edcio (b): (destroca) R2}R2";
+                                    setup="x2";
+                                AnimCube3("initmove="+setup+"&move="+movimento+
+                                            "&movetext=0\
+                                            &yz=1\
+                                            &fonttype=0\
+                                            &textsize=12\
+                                            &facelets=wwwwwwwwcYYMYYYNYYoooooooonCRRRRRRRMggggggggmBBNBBBCBB\
+                                            &buttonheight=20\
+                                            &bgcolor=f0f0f0\
+                                            &butbgcolor=009999\
+                                            &snap=0\
+                                            &repeat=0\
+                                            &edit=1\
+                                            &speed=0\
+                                            &gabbacolors=1")
+                            </script>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row justify-content-center">
+                    <div class="col-md-6 my-3 px-3">
+                        <p>
+                        <b>Exercício (c)</b>
+                        </p>
+                        <p>
+                        Coloque o canto rosa no lugar do ciano, o ciano no lugar do verde e o verde no lugar do rosa.
+                        </p>
+                        <p>
+                        Você pode interagir com a imagem girando o cubo e as camadas. Se precisar recomeçar basta clicar em iniciar (|◁).
+                        </p>
+                        <p>
+                        Para ver uma possível solução exponha a aba oculta, clicando na seta.
+                        </p>
+                        <hr class="my-0 border-primary">
+                        <p class="my-0 text-center">
+                        <span class="toggle-icon" data-bs-toggle="collapse" data-bs-target="#extra3">↻</span>
+                        </p>
+                        <div class="collapse" id="extra3">
+                            <p>
+                            <b>L' B L F2 L' B' L F2</b>
+                            </p>
+                            <p>
+                            Clique em iniciar (|◁) e depois em <i>play</i> (▷) para ver essa seqüência.
+                            </p>
+                            <p>
+                            Lembre-se, essa é só uma possível solução. Se você encontrou outra, parabéns!
+                            </p>
+                        </div>
+                        <hr class="my-0 border-primary">                          
+                    </div>
+                    <div class="col-md-4 text-center my-3 px-3">
+                        <div class="img-wrapper img-cubo">
+                            <script>
+                                var movimento="{Exerc\u00edcio (c)}{Exerc\u00edcio (c): (vai) L'}L'.{Exerc\u00edcio (c): (troca) B}B.{Exerc\u00edcio (c): (volta) L}L.{Exerc\u00edcio (c): (troca) F2}F2.{Exerc\u00edcio (c): (vai) L'}L'.{Exerc\u00edcio (c): (destroca) B'}B'.{Exerc\u00edcio (c): (volta) L}L.{Exerc\u00edcio (c): (destroca) F2}F2";
+                                    setup="x2";
+                                AnimCube3("initmove="+setup+"&move="+movimento+
+                                            "&movetext=0\
+                                            &yz=1\
+                                            &fonttype=0\
+                                            &textsize=12\
+                                            &facelets=wwwwwwwwcYYMYYYNYYoooooooonCRRRRRRRMggggggggmBBNBBBCBB\
+                                            &buttonheight=20\
+                                            &bgcolor=f0f0f0\
+                                            &butbgcolor=009999\
+                                            &snap=0\
+                                            &repeat=0\
+                                            &edit=1\
+                                            &speed=0\
+                                            &gabbacolors=1")
+                            </script>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-md-6 mt-3 mb-3 px-3">
+                        <p>
+                        <b>Exercício (d)</b>
+                        </p>
+                        <p>
+                        Coloque o <i>edge</i> rosa no lugar do verde, o verde no lugar do ciano e o ciano no lugar do rosa.
+                        </p>
+                        <p>
+                        Você pode interagir com a imagem girando o cubo e as camadas. Se precisar recomeçar basta clicar em iniciar (|◁).
+                        </p>
+                        <p>
+                        Para ver uma possível solução exponha a aba oculta, clicando na seta.
+                        </p>
+                        <hr class="my-0 border-primary">
+                        <p class="my-0 text-center">
+                        <span class="toggle-icon" data-bs-toggle="collapse" data-bs-target="#extra4">↻</span>
+                        </p>
+                        <div class="collapse" id="extra4">
+                            <p>
+                            <b>M D' M' U M D M' U'</b>
+                            </p>
+                            <p>
+                            Clique em iniciar (|◁) e depois em <i>play</i> (▷) para ver essa seqüência.
+                            </p>
+                            <p>
+                            Lembre-se, essa é só uma possível solução. Se você encontrou outra, parabéns!
+                            </p>
+                        </div>
+                        <hr class="my-0 border-primary">                          
+                    </div>
+                    <div class="col-md-4 text-center my-3 px-3">
+                        <div class="img-wrapper img-cubo">
+                            <script>
+                                var movimento="{Exerc\u00edcio (d)}{Exerc\u00edcio (d): (vai) M}M.{Exerc\u00edcio (d): (troca) D'}D'.{Exerc\u00edcio (d): (volta) M'}M'.{Exerc\u00edcio (d): (troca) U}U.{Exerc\u00edcio (d): (vai) M}M.{Exerc\u00edcio (d): (destroca) D}D.{Exerc\u00edcio (d): (volta) M'}M'.{Exerc\u00edcio (d): (destroca) U'}U'";
+                                    setup="x2";
+                                AnimCube3("initmove="+setup+"&move="+movimento+
+                                            "&movetext=0\
+                                            &yz=1\
+                                            &fonttype=0\
+                                            &textsize=12\
+                                            &facelets=wwwwwcwwwYYYYYMYNYoooooooooRRRRRMRRRgggggggggBBBCBNBBB\
+                                            &buttonheight=20\
+                                            &bgcolor=f0f0f0\
+                                            &butbgcolor=009999\
+                                            &snap=0\
+                                            &repeat=0\
+                                            &edit=1\
+                                            &speed=0\
+                                            &gabbacolors=1")
+                            </script>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        
+        </div>
+
+        <nav class="nav nav-justified my-0">
+            <a class="nav-link virapagina" href="cubo-3x3x3/9-comutadores-e-conjugados-e-so-o-que-voce-precisa.html">⇦</a>
+            <a class="nav-link virapagina" href="cubo-3x3x3/9-comutadores-e-conjugados-e-so-o-que-voce-precisa/conjugados.html">⇨</a>
+        </nav>
+        
+    </main>
+        
+    <div id="footer"></div>
+    
+    <script src="js/load-components.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+</body>
+
+</html>

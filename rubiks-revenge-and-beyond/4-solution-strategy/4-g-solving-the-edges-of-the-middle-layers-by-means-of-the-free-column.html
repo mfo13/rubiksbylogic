@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="icon" href="favicon.ico">
+
+    <title>Cubo Mágico sem Decoreba | Cubos grandes - Lados das camadas intermediárias</title>
+    <meta name="description" content="Passo a passo para montar os edges das camadas intermediárias em cubos grandes, aplicando a estratégia da aresta livre com lógica e sem decoreba.">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <script src="js/AnimCube5.js"></script>
+
+</head>
+
+<body>
+    <div id="banner"></div>
+    <div id="menu"></div>
+    
+    <main class="container mb-0">
+        
+        <h1>Cubo 4x4x4 e maiores</h1>
+        <h2>Resolvendo Cubos Grandes Sem Decorar</h2>
+
+        <div class="row align-items-start">
+
+            <div class="container px-3">
+                <h3>4.g. Resolvendo os <i>edges</i> das camadas intermediárias com o uso da “aresta livre”</h3>
+                <p>
+                O procedimento é exatamente o mesmo já visto na etapa “4.e” e conhecido da solução do 3x3x3. Veja mais um exemplo na Figura 4.13 clicando em <i>play</i> (▷).
+                </p>
+                                     
+                <div class="row justify-content-center">
+                    <div class="col-md-4 text-center mt-3 mb-3 px-3">
+                        <div class="img-wrapper img-cubo">
+                            <script>
+                                var movimento="{Figura 4.13}{Figura 4.13: Reposicionamento Dm'}Dm'.{Figura 4.13: Vai F'}F'.{Figura 4.13: Troca U}U.{Figura 4.13: Volta F}F.{Figura 4.13: Desfaz reposicionamento Dm}Dm";
+                                AnimCube5("initmove=y x2 &move="+movimento+
+                                            "&movetext=1\
+                                            &yz=1\
+                                            &fonttype=0\
+                                            &textsize=12\
+                                            &facelets=wwwwwwwwwwwwwwwwwwwwzwwwwZZZZZZYYYZZYYYBZYYYZZZZZZrrrrzrrrrzrrrrzrrrrzrrrrzOOPOZOOOOZOOOOOOOOOZZZZZZggggzggggzggggzggggzzzzzzBBBBZBBBBZBBBBZBBBBZBBPBZ\
+                                            &buttonheight=20\
+                                            &bgcolor=f0f0f0\
+                                            &butbgcolor=009999\
+                                            &snap=0\
+                                            &repeat=0\
+                                            &edit=0\
+                                            &speed=0\
+                                            &gabbacolors=1")
+                            </script>
+                        </div>
+                    </div>
+                </div>
+       
+            </div>           
+        </div>
+
+        <nav class="nav nav-justified my-0">
+            <a class="nav-link virapagina" href="cubo-4x4x4-e-maiores/4-estrategia-de-solucao/4-f-resolvendo-ate-3-cantos-da-primeira-camada-deixando-um-livre.html">⇦</a>
+            <a class="nav-link virapagina" href="cubo-4x4x4-e-maiores/4-estrategia-de-solucao/4-h-resolvendo-os-edges-dos-centros-das-arestas-restantes.html">⇨</a>
+        </nav>
+        
+    </main>
+        
+    <div id="footer"></div>
+    
+    <script src="js/load-components.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+</body>
+
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="icon" href="favicon.ico">
+
+    <title>Cubo Mágico sem Decoreba | Cubos virtuais - 2x2x2</title>
+    <meta name="description" content="Explore o cubo mágico 2x2x2 (cubo de bolso): história, curiosidades e um simulador interativo para praticar movimentos e resolver online.">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <script src="js/AnimCube2.js"></script>
+
+</head>
+
+<body>
+    <div id="banner"></div>
+    <div id="menu"></div>
+    
+    <main class="container mb-0">
+        
+        <h1>
+        Cubo de bolso<br>
+        (Minicubo) 2x2x2
+        </h1>
+
+        <div class="row align-items-start">
+
+            <p>
+            <b>Inventor: <a href="https://en.wikipedia.org/wiki/Larry_D._Nichols" target="_blank" rel="noopener noreferrer">Larry D. Nichols</a> em 1968.</b>
+            </p>
+            <p>
+            <b>Lançamento: 1981 (<a href="https://en.wikipedia.org/wiki/Ideal_Toy_Company" target="_blank" rel="noopener noreferrer">Ideal Toy Company</a>, Estados Unidos)</b>
+            </p>
+            <p>
+            Combinações possíveis: 3.674.160
+            </p>
+            <div class="col-md-12 mt-3">
+                <b>Intruções:</b>
+                <ul>
+                    <li>Para girar todo o cubo no espaço arraste com o <i>mouse</i> (ou o dedo) começando no fundo cinza.</li>
+                    <li>Para girar as camadas basta arrastar com o <i>mouse</i> (ou o dedo) sobre as peças na direção desejada.</li>
+                </ul>
+            </div>        
+            
+        </div>
+
+        <div class="row justify-content-center my-3">
+            <div class="col-md-4">
+                <table width="100%" height="100%">
+                    <tr>
+                        <td colspan="2" width="100%" height="100%">
+                            <div id="cube" class="img-wrapper img-cubo"></div>
+                        </td>
+                    </tr>
+                    <tr class="text-center">
+                        <td>
+                            <button style="font-size: 15px;" onclick="newCube(1)">Embaralhar</button>
+                        </td>
+                        <td>
+                            <button style="font-size: 15px;" onclick="newCube(0)">Arrumar</button>
+                        </td>
+                    </tr>
+                </table>
+                <script>
+                    var params = 'id=cube&position=RRRRRRRRRRDD&buttonbar=0&bgcolor=f0f0f0&edit=1&snap=0&gabbacolors=1';
+                    var rand = '&initmove=random';
+                    var acjs_removeListeners = [];
+                    AnimCube2(params);
+                    function newCube(cmd) {
+                        var src = params;
+                        if (cmd == 1)
+                            src += rand;
+                        // Remove listeners antigos antes de recriar
+                        if (acjs_removeListeners['cube']) {
+                            acjs_removeListeners['cube']();
+                        }
+                        AnimCube2(src);
+                    }
+                </script>
+            </div>
+        </div>
+                
+        <!--
+        <nav class="nav nav-justified my-0">
+            <a class="nav-link virapagina" href="cubo-3x3x3/5-o-movimento-de-vai-troca-e-volta/exemplos-de-vai-troca-e-volta.html">⇦</a>
+            <a class="nav-link virapagina" href="cubo-3x3x3/6-o-metodo-de-frey-e-singmaster.html">⇨</a>
+        </nav>
+        -->
+        
+    </main>
+        
+    <div id="footer"></div>
+    
+    <script src="js/load-components.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+</body>
+
+</html>

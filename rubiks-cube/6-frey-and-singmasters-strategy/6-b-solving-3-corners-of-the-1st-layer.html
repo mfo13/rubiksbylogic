@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="icon" href="favicon.ico">
+
+    <title>Rubik's Cube by Logic | Rubik's Cube - Solving 3 corners of the first layer</title>
+    <meta name="description" content="See how to position 3 corners of the first layer on the Rubik’s Cube and prepare the free space for the next steps.">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <script src="js/AnimCube3.js"></script>
+
+</head>
+
+<body>
+    <div id="banner"></div>
+    <div id="menu"></div>
+    
+    <main class="container mb-0">
+        
+        <h1>Rubik's Cube</h1>
+        <h2>Understanding and Solving the Rubik's Cube Without Algorithms</h2>
+
+        <div class="row align-items-start">
+
+            <div class="container px-3">
+                <h3>6.b. Solving 3 corners of the 1<sup>st</sup> layer</h3>
+                <p>
+                The second step involves solving only 3 out of the 4 corners in the layer that contains the cross, which, in our example, is the white face.
+                </p>
+                <p>
+                To accomplish this step, we can rely on the "go, swap, and back" move, making it relatively easy to achieve. Here's how you can proceed:
+                </p>
+                <p>
+                1. Using the "go, swap  and back" move or any other suitable moves, solve 3 of the corners in the layer that contains the white face. The goal is to position these corners correctly, even if their colors are not in the correct orientation.
+                </p>
+                <p>
+                2. If any of the corners are correctly positioned but have their colors oriented incorrectly, you can use the "go, swap, and back" move to take the corner to the bottom layer and then put it back in place. This time, ensure that the colors are in the correct orientation.
+                </p>
+                <p>
+                3. If the desired corner is on the bottom layer but has its white facelet facing downwards, you can make any "go, swap, and back" move while leaving the corner exactly on the layer chosen for the back and forth movement. This will force the corner's rotation, making it easier to solve in subsequent moves. Utilize the "free" corner, which is the unsolved corner mentioned earlier, to achieve this.
+                </p>
+                <p>
+                4. It's crucial to preserve the upper layer with the white face during this step. Perform swaps only using the bottom layer to solve the corners.
+                </p>
+                <p>
+                5. By the end of this step, your cube should resemble Figure 6.2, with 3 out of the 4 corners in the first layer solved.
+                </p>
+                <p>
+                6. The unsolved corner (pink) will be part of the "free space" that will be utilized in the "go, swap and back" movements during the solution of the remaining edges in the subsequent layers.
+                </p>
+                
+                <div class="row justify-content-center">
+                    <div class="col-md-4 my-3 px-3">
+                        <p>
+                        Refer to Figure 6.2 or any other visual resources to get a clearer visualization of the expected cube configuration at the end of this step. 
+                        </p>
+                    </div>
+                    <div class="col-md-4 text-center my-3 px-3">
+                        <div class="img-wrapper img-cubo">
+                            <script>
+                                var movimento="{Figure 6.2}x2 y'";
+                                AnimCube3("initmove=y' &move="+movimento+
+                                            "&movetext=0\
+                                            &yz=1\
+                                            &fonttype=0\
+                                            &textsize=15\
+                                            &facelets=wwwwwwwwmLLLLLLLLLolloolollmLLRRLRLLggglgllllBLLBBLmLL\
+                                            &buttonheight=20\
+                                            &bgcolor=f0f0f0\
+                                            &butbgcolor=009999\
+                                            &snap=0\
+                                            &repeat=0\
+                                            &edit=0\
+                                            &speed=0\
+                                            &gabbacolors=1")
+                            </script>
+                        </div>
+                    </div>
+                </div>                
+            </div>
+
+            </div>           
+        </div>
+
+        <nav class="nav nav-justified my-0">
+            <a class="nav-link virapagina" href="rubiks-cube/6-frey-and-singmasters-strategy/6-a-making-the-cross.html">⇦</a>
+            <a class="nav-link virapagina" href="rubiks-cube/6-frey-and-singmasters-strategy/6-c-solving-3-edges-of-the-2nd-layer.html">⇨</a>
+        </nav>
+        
+    </main>
+        
+    <div id="footer"></div>
+    
+    <script src="js/load-components.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+</body>
+
+</html>

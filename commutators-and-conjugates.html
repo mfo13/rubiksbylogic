@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="icon" href="favicon.ico">
+
+    <title>Cubo Mágico sem Decoreba | Comutadores e Conjugados</title>
+    <meta name="description" content="Aprenda comutadores e conjugados no cubo mágico: conceitos fundamentais, exemplos práticos e como criar seus próprios movimentos sem depender de algoritmos decorados.">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <script src="js/AnimCube3wca.js"></script>
+
+</head>
+
+<body>
+    <div id="banner"></div>
+    <div id="menu"></div>
+    
+    <main class="container mb-0">
+        
+        <h1>Comutadores e Conjugados</h1>
+        
+        <div class="row align-items-start">
+            
+            <div class="col-md-4 text-center my-3 px-3">
+                <div class="img-wrapper">
+                    <img src="img/comuta_rubik.png" class="img-fluid">                    
+                </div>
+            </div>
+
+            <div class="col-md-8 my-3 px-3">
+                <p>
+                Somente usando comutadores e conjugados é possível resolver qualquer quebra-cabeças similar ao cubo mágico.
+                </p>
+                <p>
+                Seja qual for a estratégia ou método usado na solução, sempre ocorre a necessidade do uso de comutadores e conjugados, principalmente no final, quando há muitas restrições de movimentos.
+                </p>
+                <p>
+                Nessa página são apresentados os conceitos fundamentais desses dois tipos de movimentos.
+                </p>
+                <p>
+                Para melhor entender e assim construir seus próprios comutadores e conjugados é aconselhável que você aprenda primeiro a resolver o cubo de Rubik de acordo com o guia apresentado em <a href="cubo-3x3x3.html">Cubo 3x3x3</a>.
+                </p>
+            </div>
+        
+            <h3 class="mt-3">Comutadores</h3>
+            <p>
+            Um comutador é simplesmente a sobreposição de dois movimentos do tipo "vai e volta" com camadas que se cruzam em certo ponto.
+            </p>
+            <p>
+            Um movimento de "vai e volta" consiste numa seqüência de movimentos que depois é desfeita seguindo exatamente o sentido contrário. Por exemplo, R R' é um movimento de "vai e volta". Outro exemplo seria R U U' R'. Note que o "vai e volta" é sempre composto por um número par de movimentos.
+            </p>
+            <p>
+            Podemos dizer que a primeira metade ("vai") é representada por uma letra, por exemplo, A. Então a outra metade é simplesmente representada por A<sup>-1</sup>, ou seja, o inverso de A. Assim, no último exemplo de "vai e volta" R U corresponderia a A e U' R' seria A<sup>-1</sup>.
+            </p>
+            <p>
+            Fazendo a sobreposição de dois movimentos do tipo "vai e volta" temos um comutador: A B A<sup>-1</sup> B<sup>-1</sup>. Nesse caso A A<sup>-1</sup> e B B<sup>-1</sup> são movimentos de "vai e volta" diferentes. Note que é preciso que esses movimentos diferentes possuam camadas que se cruzam em certo ponto, eles não podem ocorrer entre camadas paralelas como, por exemplo, U U' e D D' porque nada seria mudado no cubo.
+            </p>
+            <p>
+            Veja abaixo alguns exemplos de comutadores para o cubo 3x3x3:
+            </p>
+
+            <div class="row justify-content-center">
+                <div class="col-md-4 my-3 px-3">
+                    <div class="row">
+                        <div class="row mb-2">
+                            <b><span style="font-size: 15px;">Exemplo 1, permutação de 3 cantos:</span></b>
+                        </div>
+                        <div class="col-md-4 col-4">
+                            A = L D' L' 
+                        </div>
+                        <div class="col-md-8 col-8">
+                            A<sup>-1</sup> = L D L'
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-md-4 col-4">
+                            B = U
+                        </div>
+                        <div class="col-md-8 col-8">
+                             B<sup>-1</sup> = U'
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div clas="row mb-1">
+                            Comutador:
+                        </div>
+                        <div class="col">
+                            A B A<sup>-1</sup> B<sup>-1</sup> = (L D' L') U (L D L') U'
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center my-3 px-3">
+                    <div class="img-wrapper">
+                        <div class="img-fluid img-cubo">
+                            <script>
+                                var movimento="{Exemplo 1}L D' L'.U.L D L'.U'";
+                                AnimCube3("initmove=x2 &move="+movimento+
+                                            "&movetext=1\
+                                            &fonttype=0\
+                                            &textsize=12\
+                                            &buttonheight=20\
+                                            &bgcolor=f0f0f0\
+                                            &butbgcolor=009999\
+                                            &snap=0\
+                                            &repeat=0\
+                                            &edit=1\
+                                            &speed=0\
+                                            &gabbacolors=1")
+                            </script>
+                        </div>               
+                    </div>
+                </div>
+            </div>
+
+            <p class="mt-3">
+            Esta sobreposição de movimentos de "vai e volta" na verdade é resultado da intersecção de dois movimentos escondidos de "vai e volta". Você pode ver os detalhes de como este comutador emerge a partir desses movimentos escondidos de "vai e volta" no <a href="cubo-3x3x3/9-comutadores-e-conjugados-e-so-o-que-voce-precisa.html">capítulo 9</a> do guia para resolver o <a href="cubo-3x3x3.html">Cubo mágico sem decoreba</a>. No mesmo capítulo você pode aprender o básico sobre como projetar seus próprios comutadores. Todos os exemplos desta página foram projetados partindo da mesma lógica básica.
+            </p>
+            
+            <div class="row justify-content-center">
+                <div class="col-md-4 my-3 px-3">
+                    <div class="row">
+                        <div class="row mb-2">
+                            <b><span style="font-size: 15px;">Exemplo 2, permutação de 3 lados:</span></b>
+                        </div>
+                        <div class="col-md-5 col-5">
+                            A = M D' M' 
+                        </div>
+                        <div class="col-md-7 col-7">
+                            A<sup>-1</sup> = M' D M
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-md-5 col-5">
+                            B = U
+                        </div>
+                        <div class="col-md-7 col-7">
+                             B<sup>-1</sup> = U'
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div clas="row mb-1">
+                            Comutador:
+                        </div>
+                        <div class="col">
+                            A B A<sup>-1</sup> B<sup>-1</sup> = (M D' M') U (M D M') U'
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center my-3 px-3">
+                    <div class="img-wrapper">
+                        <div class="img-fluid img-cubo">
+                            <script>
+                                var movimento="{Exemplo 2}M D' M'.U.M D M'.U'";
+                                AnimCube3("initmove=x2 &move="+movimento+
+                                            "&movetext=5\
+                                            &fonttype=0\
+                                            &textsize=12\
+                                            &buttonheight=20\
+                                            &bgcolor=f0f0f0\
+                                            &butbgcolor=009999\
+                                            &snap=0\
+                                            &repeat=0\
+                                            &edit=1\
+                                            &speed=0\
+                                            &gabbacolors=1")
+                            </script>
+                        </div>               
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row justify-content-center">
+                <div class="col-md-5 my-3 px-3">
+                    <div class="row">
+                        <div class="row mb-2">
+                            <b><span style="font-size: 15px;">Exemplo 3, rotação de dois cantos:</span></b>
+                        </div>
+                        <div class="col-md-6 col-6 px-2">
+                            A = R B' R' B R B' R'
+                        </div>
+                        <div class="col-md-6 col-6 px-0">
+                            A<sup>-1</sup> = R B R' B' R B R'
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-md-6 col-6">
+                            B = F
+                        </div>
+                        <div class="col-md-6 col-6 px-0">
+                             B<sup>-1</sup> = F'
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div clas="row mb-1">
+                            Comutador:
+                        </div>
+                        <div class="col">
+                            A B A<sup>-1</sup> B<sup>-1</sup> =  (R B' R' B R B' R') F (R B R' B' R B R') F'
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 my-3 px-3">
+                    <div class="img-wrapper">
+                        <div class="img-fluid img-cubo">
+                            <script>
+                                var movimento="{Exemplo 3}R B' R' B R B' R'.F.R B R' B' R B R'.F'";
+                                AnimCube3("initmove=x2 &move="+movimento+
+                                            "&movetext=5\
+                                            &fonttype=0\
+                                            &textsize=12\
+                                            &buttonheight=20\
+                                            &bgcolor=f0f0f0\
+                                            &butbgcolor=009999\
+                                            &snap=0\
+                                            &repeat=0\
+                                            &edit=1\
+                                            &speed=0\
+                                            &gabbacolors=1")
+                            </script>
+                        </div>               
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-md-5 my-3 px-3">
+                    <div class="row">
+                        <div class="row mb-2">
+                            <b><span style="font-size: 15px;">Exemplo 4, inversão de dois lados:</span></b>
+                        </div>
+                        <div class="col-md-6 col-6">
+                            A = M' B2 M B' M' B M
+                        </div>
+                        <div class="col-md-6 col-6">
+                            A<sup>-1</sup> = M' B' M B M' B2 M
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-md-6 col-6">
+                            B = F'
+                        </div>
+                        <div class="col-md-6 col-6">
+                             B<sup>-1</sup> = F
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div clas="row mb-1">
+                            Comutador:
+                        </div>
+                        <div class="col">
+                            A B A<sup>-1</sup> B<sup>-1</sup> = (M' B2 M B' M' B M) F' (M' B' M B M' B2 M) F
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 my-3 px-3">
+                    <div class="img-wrapper">
+                        <div class="img-fluid img-cubo">
+                            <script>
+                                var movimento="{Exemplo 4}M' B2 M B' M' B M.F'.M' B' M B M' B2 M.F";
+                                AnimCube3("initmove=x2 &move="+movimento+
+                                            "&movetext=5\
+                                            &fonttype=0\
+                                            &textsize=12\
+                                            &buttonheight=20\
+                                            &bgcolor=f0f0f0\
+                                            &butbgcolor=009999\
+                                            &snap=0\
+                                            &repeat=0\
+                                            &edit=1\
+                                            &speed=0\
+                                            &gabbacolors=1")
+                            </script>
+                        </div>               
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-md-5 my-3 px-3">
+                    <div class="row">
+                        <div class="row mb-2">
+                            <b><span style="font-size: 15px;">Exemplo 5, permutação de 3 blocos (canto + lado):</span></b>
+                        </div>
+                        <div class="col-md-5 col-5">
+                            A = Lw D' Lw'
+                        </div>
+                        <div class="col-md-7 col-7">
+                            A<sup>-1</sup> = Lw D Lw'
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-md-5 col-5">
+                            B = U
+                        </div>
+                        <div class="col-md-7 col-7">
+                             B<sup>-1</sup> = U'
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div clas="row mb-1">
+                            Comutador:
+                        </div>
+                        <div class="col">
+                            A B A<sup>-1</sup> B<sup>-1</sup> = (Lw D' Lw') U (Lw D Lw') U'
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 my-3 px-3">
+                    <div class="img-wrapper">
+                        <div class="img-fluid img-cubo">
+                            <script>
+                                var movimento="{Exemplo 5}Lw D' Lw'.U.Lw D Lw'.U'";
+                                AnimCube3("initmove=x2 &move="+movimento+
+                                            "&movetext=1\
+                                            &yz=1\
+                                            &fonttype=0\
+                                            &textsize=12\
+                                            &buttonheight=20\
+                                            &bgcolor=f0f0f0\
+                                            &butbgcolor=009999\
+                                            &snap=0\
+                                            &repeat=0\
+                                            &edit=0\
+                                            &speed=0\
+                                            &gabbacolors=1")
+                            </script>
+                        </div>               
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-md-5 my-3 px-3">
+                    <div class="row">
+                        <div class="row mb-2">
+                            <b><span style="font-size: 15px;">Exemplo 6, permutação de 3 arestas inteiras:</span></b>
+                        </div>
+                        <div class="col-md-6 col-6">
+                            A = L2 D2 L2
+                        </div>
+                        <div class="col-md-6 col-6">
+                            A<sup>-1</sup> = L2 D2 L2
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-md-6 col-6">
+                            B = U2
+                        </div>
+                        <div class="col-md-6 col-6">
+                             B<sup>-1</sup> = U2
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div clas="row mb-1">
+                            Comutador:
+                        </div>
+                        <div class="col">
+                            A B A<sup>-1</sup> B<sup>-1</sup> = (L2 D2 L2) U2 (L2 D2 L2) U2
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 my-3 px-3">
+                    <div class="img-wrapper">
+                        <div class="img-fluid img-cubo">
+                            <script>
+                                var movimento="{Exemplo 6}L2 D2 L2.U2.L2 D2 L2.U2";
+                                AnimCube3("initmove=x2 &move="+movimento+
+                                            "&movetext=1\
+                                            &yz=1\
+                                            &fonttype=0\
+                                            &textsize=12\
+                                            &buttonheight=20\
+                                            &bgcolor=f0f0f0\
+                                            &butbgcolor=009999\
+                                            &snap=0\
+                                            &repeat=0\
+                                            &edit=0\
+                                            &speed=0\
+                                            &gabbacolors=1")
+                            </script>
+                        </div>               
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="mt-3">Conjugados</h3>
+            <p>
+            Um conjugado nada mais é do que qualquer movimento "englobado" por um movimento do tipo "vai e volta". Considere que o "vai e volta" é representado por A A<sup>-1</sup> enquanto Z representa um movimento qualquer, que pode ser um ou mais comutadores ou até mesmo outro conjugado. Então o conjugado de A A<sup>-1</sup> com Z será A Z A<sup>-1</sup>.
+            </p>
+            <p>
+            Note que o conjugado nada mais é que um "reposicionamento" feito antes de uma seqüência de movimentos e que ao final dessa seqüência é desfeito.
+            </p>
+            <p>
+            O conjugado é muito útil quando se quer aplicar um comutador mas as peças não estão nas posições inicias corretas.
+            </p>
+            <p>
+            Veja abaixo um exemplo de uso de conjugado feito com um comutador que permuta 3 cantos. Diferente do exemplo 1, acima, nesse caso é possível permutar 3 cantos sem alterar suas orientações.
+            </p>
+
+            <div class="row justify-content-center">
+                <div class="col-md-5 my-3 px-3">
+                    <div class="row">
+                        <div class="row mb-2">
+                            <b><span style="font-size: 15px;">Exemplo 7, permutação de 3 cantos mantendo as orientações:</span></b>
+                        </div>
+                         <div class="col mt-2 mb-1">
+                            Comutador: Z = (R D2 R') U' (R D2 R') U
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-md-7 col-7">
+                                "Vai e Volta": A = L
+                            </div>
+                            <div class="col-md-5 col-5">
+                                A<sup>-1</sup> = L'
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-md-12 mb-1">
+                            Conjugado:
+                        </div>
+                        <div class="col-md-12">
+                            A Z A<sup>-1</sup> = L [(R D2 R') U' (R D2 R') U] L'
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 my-3 px-3">
+                    <div class="img-wrapper">
+                        <div class="img-fluid img-cubo">
+                            <script>
+                                var movimento="{Exemplo 7}L.R D2 R' U' R D2 R' U.L'";
+                                AnimCube3("initmove=x2 &move="+movimento+
+                                            "&movetext=1\
+                                            &yz=1\
+                                            &fonttype=0\
+                                            &textsize=12\
+                                            &buttonheight=20\
+                                            &bgcolor=f0f0f0\
+                                            &butbgcolor=009999\
+                                            &snap=0\
+                                            &repeat=0\
+                                            &edit=0\
+                                            &speed=0\
+                                            &gabbacolors=1")
+                            </script>
+                        </div>               
+                    </div>
+                </div>
+            </div>
+
+            <p class="mt-3">
+            Conclui-se, assim, que os comutadores, vistos no início, são sobreposições de conjugados vazios. O movimento de "vai e volta" nada mais é do que um conjugado vazio, isto é, não há nada dentro dele. Podemos escrever que o movimento de "vai e volta", U U' equivale a U () U', onde () representa um vazio. Fazendo, portanto, a sobreposição de dois conjugados deste tipo temos um comutador, como visto no início desta página. 
+            </p>
+            <p>
+            Por exemplo, veja a sobreposição de (L D' L') () (L D L') com U () U':
+            </p>
+            <p>
+            (L D' L') (&nbsp; ) (L D L')<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; U (&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) U'<br>
+            _________________________<br>
+            (L D' L') (U) (L D L') U'
+            </p>
+            <p>
+            Chegamos ao mesmo comutador do exemplo 1.
+            </p>
+
+        </div>
+
+        <!--
+        <nav class="nav nav-justified my-0">
+            <a class="nav-link virapagina" href="cubo-3x3x3/1-introducao.html">⇦</a>
+            <a class="nav-link virapagina" href="cubo-3x3x3/3-movimentos-no-cubo.html">⇨</a>
+        </nav>
+        -->
+        
+    </main>
+        
+    <div id="footer"></div>
+    
+    <script src="js/load-components.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+</body>
+
+</html>
