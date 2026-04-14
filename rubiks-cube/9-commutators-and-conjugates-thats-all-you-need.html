@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -8,8 +8,8 @@
     
     <link rel="icon" href="favicon.ico">
 
-    <title>Cubo Mágico sem Decoreba | Cubo 3x3x3 - Comutadores e Conjugados (E mais nada!)</title>
-    <meta name="description" content="Entenda como usar comutadores e conjugados para resolver o cubo mágico com lógica, trocando peças sem afetar o resto do cubo.">
+    <title>Rubik's Cube by Logic | Rubik's Cube - Commutators and Conjugates (That's all you need!)</title>
+    <meta name="description" content="Understand how to use commutators and conjugates to solve the Rubik’s Cube logically, swapping pieces without affecting the rest of the cube.">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
@@ -25,56 +25,47 @@
     
     <main class="container mb-0">
         
-        <h1>Cubo 3x3x3</h1>
-        <h2>Entendendo e Resolvendo o Cubo de Rubik sem Decorar</h2>
+        <h1>Rubik's Cube</h1>
+        <h2>Understanding and Solving the Rubik's Cube Without Algorithms</h2>
 
         <div class="row align-items-start">
 
             <div class="container px-3">
-                <h3>9. Comutadores e Conjugados (É só o que você precisa!)</h3>
+                <h3>9. Commutators and Conjugates (That's all you need!)</h3>
                 <p>
-                Vamos agora aprender dois conceitos poderosos, sim, poderosos porque somente com esses dois conceitos você resolve todo o cubo!
+                The concept of commutators is a powerful tool for solving the remaining corners of the Rubik's Cube. Actually you could solve the entire cube with commutators.  However, they are particularly effective when we have limited freedom of movement or when we need to target specific transformations on the cube. Commutators allow us to manipulate certain pieces or groups of pieces while keeping the rest of the cube unaffected. They are especially useful for performing swaps, rotations, or rearrangements without disturbing the already solved parts of the cube.
                 </p>
                 <p>
-                Então porque não vimos isso logo no início?
+                At this point, there are up to 5 corners left to be solved, but it's possible that you have fewer remaining.
                 </p>
                 <p>
-                Por dois motivos: i) porque esses conceitos exigem justamente um bom conhecimento dos conceitos vistos até agora e ii) porque o uso exclusivo de comutadores e de conjugados na solução do cubo exige muito mais trabalho do que a estratégia vista até agora, então é melhor usá-los só no final.
-                </p>
-                <p>
-                Primeiramente veremos o conceito mais complexo, o de movimentos comutadores.
-                </p>
-                <p>
-                Restam, nesse ponto, até 5 cantos para serem resolvidos, se você tiver mais sorte restarão menos. Vamos resolvê-los em duas etapas:
+                To solve the corners, we will follow two steps:
                 </p>
                 <ol>
-                    <li>Colocar os cantos nos locais corretos.</li>
-                    <li>“Girar” os cantos para que suas cores fiquem nas orientações corretas.</li>
+                    <li>Place the corners in the correct positions.</li>
+                    <li>"Twist" the corners so their colors are in the correct orientations.</li>
                 </ol>
                 <p>
-                Para isso usaremos comutadores e conjugados, mas antes vamos aprender mais algumas “leis” do cubo.
+                To accomplish this, we will utilize commutators and conjugates. However, before diving into commutators, let's learn some additional "laws" of the cube.
                 </p>
-                <p>
-                Existem algumas situações que são matematicamente impossíveis. 
-                </p>
-                                             
+                                                             
                 <div class="row justify-content-center">
                     <div class="col-md-4 my-3 px-3">
                         <p>
-                        Você já viu que é impossível ter apenas um <i>edge</i> invertido no cubo, como na Figura 9.1. Essa configuração é matematicamente <b>impossível!</b> Contudo, é possível ter <i>edges</i>, aos pares, com as cores invertidas.
+                        You've already seen that it's impossible to have just one inverted edge on the cube, as in Figure 9.1. This configuration is mathematically impossible.
                         </p>
                         <p>
-                        Também é impossível ter somente dois cantos trocados, como ilustra a Figura 9.2. O mesmo vale para os <i>edges</i>. Tanto os cantos quanto os <i>edges</i> só podem ser trocados em trios.
+                        Another important rule to remember is that it is also mathematically impossible to have only two swapped corners like in Figure 9.2. Corners will always be swapped in trios, as well as the edges.
                         </p>
                     </div>
                     <div class="col-md-4 text-center my-3 px-3">
                         <div class="img-wrapper img-cubo">
                             <script>
-                                var movimento="{Figura 9.1: Arranjo impossível!}x2 z'";
+                                var movimento="{Figure 9.1: Impossible pattern!}x2 z'";
                                 AnimCube3("initmove=x2 &move="+movimento+
                                             "&movetext=0\
                                             &fonttype=0\
-                                            &textsize=13\
+                                            &textsize=15\
                                             &facelets=wwwwwwwwwYYYYYYYBYoooooooooRRRRRRRRRgggggggggBBBBBYBBB\
                                             &buttonheight=20\
                                             &bgcolor=f0f0f0\
@@ -90,11 +81,11 @@
                     <div class="col-md-4 text-center my-3 px-3">
                         <div class="img-wrapper img-cubo">
                             <script>
-                                var movimento="{Figura 9.2: Arranjo impossível!}z'";
+                                var movimento="{Figure 9.2: Impossible pattern!}z'";
                                 AnimCube3("initmove=x2 &move="+movimento+
                                             "&movetext=0\
                                             &fonttype=0\
-                                            &textsize=13\
+                                            &textsize=15\
                                             &facelets=wwwwwwwwwyyyyyyyyyooooooooorrgrrrrrbggggggggrbbbbbbbbr\
                                             &buttonheight=20\
                                             &bgcolor=f0f0f0\
@@ -113,46 +104,46 @@
                     <div class="col-md-8 my-3 px-3">
                         <p class="bg-warning py-2 px-2 mb-2">
                         <b>
-                        <u>Conhecimento importante:</u> é impossível ter apenas 2 cantos trocados. Os cantos sempre estarão trocados em trios, o mesmo ocorre para os lados.
+                        <u>Key Knowledge:</u> it is impossible to have only 2 swapped corners. Corners will always be swapped in trios, the same goes for the edges.
                         </b>
                         </p>
                         <p>
-                        Isso significa que existem seqüências de movimentos capazes de trocar apenas 3 cantos de lugar entre si. É isso mesmo! É possível trocar apenas 3 cantos de lugar sem desmanchar qualquer outra parte do cubo!
+                        This means that there are specific sequences of movements capable of interchanging only 3 corners with each other. This type of movement is called <i>commutator</i>.
                         </p>
                         <p>
                         Esse tipo de movimento, no qual apenas algumas peças trocam de lugar, sem alterar qualquer outra parte do cubo, é conhecido como movimento comutador.
                         </p>
                         <p>
-                        Um comutador usa, basicamente, a combinação correta de movimentos de “vai e volta” (<a href="cubo-3x3x3/4-o-movimento-de-vai-e-volta.html">capítulo 4</a>) e “vai, troca e volta” (<a href="cubo-3x3x3/5-o-movimento-de-vai-troca-e-volta.html">capítulo 5</a>) de tal maneira que ocorra apenas uma comutação de peças.
+                        A commutator involves intersecting procedures in such a way that the movements of one procedure partially "cancels" the movements of the other procedure, resulting in only a few specific parts being interchanged. By understanding commutators, we can interchange corners without affecting any other part of the cube. We can use the right combination of  “back and forth” (<a href="rubiks-cube/4-back-and-forth.html">chapter 4</a>) and “go, swap and back” (<a href="rubiks-cube/5-go-swap-and-back.html">chapter 5</a>) movementes in such a way that only 3 cubelets are interchanged.
                         </p>
                         <p>
-                        Para isso fazemos a intersecção de procedimentos, de tal forma que os movimentos de um procedimento “cancelem” parcialmente os movimentos do outro procedimento, fazendo com que grande parte das peças volte à condição original.
+                        For example:
                         </p>
                         <p>
-                        Por exemplo:
+                        Procedure 1:  go down - swap - back - go down - undo swap - back (see Figure 9.3a)
                         </p>
                         <p>
-                        Procedimento 1:  desce - troca - volta - desce - destroca - volta (veja a Figura 9.3a)
-                        </p>
-                        <p>
-                        Procedimento 2:  sobe - troca - volta - sobe - destroca - volta (veja a Figura 9.3b)
+                        Procedure 2:  go up - swap - back - go up - undo swap - back (see Figure 9.3b)
                         </p>
                         <p>
                         <i>
-                        Obs.: você pode alternar entre os procedimentos 1 e 2 na Figura 9.3 usando as setas (◁▷) no canto superior direito.
+                        p.s.: you can choose between procedures 1 or 2 by the arrows (◁▷) in the upper right corner of Figure 9.3
                         </i>
+                        </p>
+                        <p>
+                        Note that procedures 1 and 2, separately, are back and forth movements, everything that is done is undone. 
                         </p>
                     </div>
                     <div class="col-md-4 text-center my-3 px-3">
                         <div class="img-wrapper img-cubo">
                             <script>
-                                var movimento="{Figura 9.3a: Procedimento 1}{Figura 9.3a: F(desce)}F.{Figura 9.3a: D'(troca)}D'.{Figura 9.3a: F'(volta)}F'.{Figura 9.3a: F(desce)}F.{Figura 9.3a: D(destroca)}D.{Figura 9.3a: F'(volta)}F';{Figura 9.3b: Procedimento 2}{Figura 9.3b: F'(sobe)}F'.{Figura 9.3b: U(troca)}U.{Figura 9.3b: F(volta)}F.{Figura 9.3b: F'(sobe)}F'.{Figura 9.3b: U'(destroca)}U'.{Figura 9.3b: F(volta)}F";
+                                var movimento="{Figure 9.3a: Procedure 1}{Figure 9.3a: F(go down)}F.{Figure 9.3a: D'(swap)}D'.{Figure 9.3a: F'(back)}F'.{Figure 9.3a: F(go down)}F.{Figure 9.3a: D(undo swap)}D.{Figure 9.3a: F'(back)}F';{Figure 9.3b: Procedure 2}{Figure 9.3b: F'(go up)}F'.{Figure 9.3b: U(swap)}U.{Figure 9.3b: F(back)}F.{Figure 9.3b: F'(go up)}F'.{Figure 9.3b: U'(undo swap)}U'.{Figure 9.3b: F(back)}F";
                                     setup="x2;x2",
                                 AnimCube3("initmove="+setup+"&move="+movimento+
                                             "&movetext=1\
                                             &yz=1\
                                             &fonttype=0\
-                                            &textsize=13\
+                                            &textsize=15\
                                             &facelets=wwmwwwwwwYYYYYYnYLoooooomonRRLRRRRRRgggggggggmBnBBBBBL\
                                             &buttonheight=20\
                                             &bgcolor=f0f0f0\
@@ -168,48 +159,42 @@
                 </div>
                 
                 <p>
-                Note que os procedimentos 1 e 2 separados são movimentos de “vai e volta”, tudo o que é feito é desfeito.
-                </p>
-                <p>
-                Porém, há movimentos nos dois procedimentos que são equivalentes. Fazendo então a intersecção abaixo (movimentos equivalentes destacados em vermelho) o resultado é bem diferente. Devido a esta intersecção algumas trocas são mantidas enquanto o resto do cubo volta ao estado original.
+                However, there are movements in the two procedures that are equivalent. By doing the intersection below (equivalent movements highlighted in red) the final result is going to be quite interesting. Because of this intersection part of the swaps are kept while the rest of the cube comes back to its original state.
                 </p>
                 <div class="row justify-content-center">
                     <div class="col-md-8">
-                        <img src="img/procedimentos.png" class="img-fluid">
+                        <img src="img/procedures.png" class="img-fluid">
                     </div>
                 </div>
                 <div class="row justify-content-center">
                     <div class="col-md-8 my-3 px-3">
                         <p>
-                        Para entender melhor veja o exemplo na Figura 9.4. Nesse caso queremos que o canto rosa tome o lugar do canto cinza. Como sabemos que os cantos são sempre trocados em trios, isso significa que, necessariamente, o canto cinza ocupará o lugar de outro, por exemplo, o verde, e este por sua vez o lugar do rosa.
+                        Let's take a look at an example to better understand the concept. Figure 9.4 shows the case where we want to move the pink corner to the position of the gray corner. Since corners are always interchanged in trios, this means that the gray corner will take the place of another corner (let's say the green corner), and the green corner will take the place of the pink corner.
                         </p>
                         <p>
-                        Vamos usar as camadas superior (U) e inferior (D) para as trocas, e a camada da frente (F) para o “vai e volta”. Essa camada F é que fará a intersecção entre os dois procedimentos. Os movimentos de “vai e volta” serão, necessariamente, F e F’ pois sabemos que a camada do “vai e volta” não pode conter a peça desejada. A cada passo da seqüência abaixo clique em avançar (<span style="font-size: 25px;">⧐</span>) na Figura 9.4 para observar o que ocorre:
+                        We will use the upper (U) and down (D) layers for the swaps, and the front layer (F) for the back and forth movements. The back and forth moves will be F and F' because the desired cubelet cannot be in the back and forth layer. Let's go through the sequence step-by-step, you can click on forward (<span style="font-size: 25px;">⧐</span>) in Figure 9.4, at each step:
                         </p>
                         <ul>
-                            <li>F (é o "vai" do procedimento 1)</li>
-                            <li>D’ (é a “troca” do procedimento 1)</li>
-                            <li>F’ (é a “volta” do procedimento 1 e ao mesmo tempo o “vai” do procedimento 2)</li>
-                            <li>U (é a “troca” do procedimento 2)</li>
-                            <li>F (é o “volta” do procedimento 2 e ao mesmo tempo a repetição do “vai” do procedimento 1)</li>
-                            <li>D (é a “destroca” do procedimento 1)</li>
-                            <li>F’ (é “volta” do procedimento 1 e ao mesmo tempo a repetição do “vai” do procedimento 2)</li>
-                            <li> U’ (é a “destroca” do procedimento 2)</li>
+                            <li>F ("go" of procedure 1)</li>
+                            <li>D' ("swap" of procedure 1)</li>
+                            <li>F' ("back" of procedure 1 and "go" of procedure 2)</li>
+                            <li>U ("swap" of procedure 2)</li>
+                            <li>F ("back" of procedure 2 and "go" repetition of procedure 1)</li>
+                            <li>D ("undo swap" of procedure 1)</li>
+                            <li>F' ("back" of procedure 1 and "go" repetition of procedure 2)</li>
+                            <li>U' ("undo swap" of procedure 2)</li>
                         </ul>
-                        <p>
-                        Obs.: note que outra “volta” do procedimento 2 não é necessária.
-                        </p>
                     </div>
                     <div class="col-md-4 text-center my-3 px-3">
                         <div class="img-wrapper img-cubo">
                             <script>
-                                var movimento="{Figura 9.4: Comutador de 3 cantos}{Figura 9.4:   F(vai)}F.{Figura 9.4:   D'(troca)}D'.{Figura 9.4:   F'(volta)}F'.{Figura 9.4:   U(troca)}U.{Figura 9.4:   F(vai)}F.{Figura 9.4:   D(destroca)}D.{Figura 9.4:   F'(volta)}F'.{Figura 9.4:   U'(destroca)}U'";
+                                var movimento="{Figure 9.4: A commutator for 3 corners}{Figure 9.4:   F(go)}F.{Figure 9.4:   D'(swap)}D'.{Figure 9.4:   F'(back)}F'.{Figure 9.4:   U(swap)}U.{Figure 9.4:   F(go)}F.{Figure 9.4:   D(undo swap)}D.{Figure 9.4:   F'(back)}F'.{Figure 9.4:   U'(undo swap)}U'";
                                     setup="x2",
                                 AnimCube3("initmove="+setup+"&move="+movimento+
                                             "&movetext=1\
                                             &yz=1\
                                             &fonttype=0\
-                                            &textsize=13\
+                                            &textsize=15\
                                             &facelets=wwmwwwwwwYYYYYYnYLoooooomonRRLRRRRRRgggggggggmBnBBBBBL\
                                             &buttonheight=20\
                                             &bgcolor=f0f0f0\
@@ -225,40 +210,37 @@
                 </div>
 
                 <p class="mt-3">
-                Resumindo: F ("vai") D' ("troca") F'("volta") U("troca") F ("vai") D ("destroca") F'("volta") U' ("destroca")  ou, simplesmente, F D' F' U F D F' U'  (vai - troca - volta - troca --- vai - destroca - volta - destroca)
+                In short, the sequence is: F D' F' U F D F' U' (go - swap - back - swap --- go - undo swap - back - undo swap).
                 </p>
                 <p>
-                Para ver a sequência completa clique em iniciar (|◁) na Figura 9.4 e depois em <i>play</i> (▷).
+                Click on reset (∣◁) in Figure 9.4, and then click play (▷) to see the complete sequence in action.
                 </p>
                 <p>
-                Perceba que não importa quais são os 3 cantos escolhidos. Você só precisa identificar quais são as <u>camadas paralelas para "troca/destroca"</u> e qual será a camada <u>perpendicular entre elas para os movimentos de “vai e volta”</u>. Sem decorar qualquer algoritmo.
+                It's important to note that the specific choice of corners does not matter. You just need to <u>identify which parallel layers will be used for the swaps and which perpendicular layer in between them will be used for the back and forth movements</u>. Also note that the first cubelet to go to its destination place is alone in a swap layer. The other swap layer contains the other two cubelets. This defines which perpendicular layer will be used for the back and forth movements.
                 </p>
-                <p>
-                Note também que a primeira peça a ir para o lugar de destino fica sozinha em uma camada de troca. A outra camada de troca contém as outras duas peças. Isso define qual será a camada perpendicular usada para os movimentos de “vai e volta”.
-                </p>
-
+                
                 <div class="row justify-content-center">
                     <div class="col-md-6 my-3 px-3">
                         <p>
-                        O primeiro lugar a receber a troca é o lugar da peça cinza (2a peça), na Figura 9.5, enquanto que a primeira peça a trocar de lugar é a peça rosa (1a peça).
+                        The first place receiving a cubelet is the gray corner (2nd cubelet) in Figure 9.5, while the first cubelet to swap is the pink one (1st cubelet).
                         </p>
                         <p>
-                        As camadas paralelas para as trocas são a superior (U) e a inferior (D), ou seja, as camadas coloridas na Figura 9.5.
+                        The parallel layers for the swaps are the upper (U) and down (D), i.e. the colored layers in Figure 9.5.
                         </p>
                         <p>
-                        A camada usada para o "vai e volta" e que, ao mesmo tempo, faz a intersecção com as camadas paralelas, é a camada da frente (F), marcada com o centro branco na Figura 9.5.
+                        The layer used for the back and forth and which, at the same time, intersects the parallel layers of the swaps, is the front layer (F), marked with the white center in Figure 9.5.
                         </p>
                     </div>
                     <div class="col-md-4 text-center my-3 px-3">
                         <div class="img-wrapper img-cubo">
                             <script>
-                                var movimento="{Figura 9.5}{Figura 9.5:   F(vai)}F {Figura 9.5:   D'(troca)}D' {Figura 9.5:   F'(volta)}F' {Figura 9.5:   U(troca)}U {Figura 9.5:   F(vai)}F {Figura 9.5:   D(destroca)}D {Figura 9.5:   F'(volta)}F' {Figura 9.5:   U'(destroca)}U'";
+                                var movimento="{Figure 9.5}{Figure 9.5:   F(go)}F {Figure 9.5}{Figure 9.5:   D'(swap)}D' {Figure 9.5}{Figure 9.5:   F'(back)}F' {Figure 9.5}{Figure 9.5:   U(swap)}U {Figure 9.5}{Figure 9.5:   F(go)}F {Figure 9.5}{Figure 9.5:   D(undo swap)}D {Figure 9.5}{Figure 9.5:   F'(back)}F' {Figure 9.5}{Figure 9.5:   U'(undo swap)}U'";
                                     setup="x2",
                                 AnimCube3("initmove="+setup+"&move="+movimento+
                                             "&movetext=1\
                                             &yz=1\
                                             &fonttype=0\
-                                            &textsize=13\
+                                            &textsize=15\
                                             &facelets=wwmwwwwwwYYYYYYnYLodoodomdnRdLRwRRdRgggdddgggMDNBDBBDL\
                                             &buttonheight=20\
                                             &bgcolor=f0f0f0\
@@ -267,33 +249,32 @@
                                             &repeat=0\
                                             &edit=0\
                                             &speed=0\
-                                            &gabbacolors=1\
-                                            &speed=20")
+                                            &gabbacolors=1")
                             </script>
                         </div>
                     </div>
                 </div>
 
                 <p class="bg-warning mt-3 mb-0 py-2 px-2">
-                <b>Resumo da idealização e aplicação de um comutador para 3 peças:</b>
+                <b>Summary of the designing and application of a 3-cubelet commutator :</b>
                 </p>
-                <ul class="bg-warning mt-0 pb-2">
-                    <li>escolha as 3 peças que serão trocadas de lugar</li>
-                    <li>defina qual lugar (2<sup>a</sup> peça) receberá a 1<sup>a</sup> peça</li>
-                    <li>a 3<sup>a</sup> peça deve ficar na mesma camada da 2<sup>a</sup> que é paralela à camada da 1<sup>a</sup> (faça um reposicionamento se necessário)</li>
-                    <li>identifique a camada perpendicular para o “vai e volta”, ela só deve conter a 2<sup>a</sup> peça</li>
-                    <li>comece o comutador com a 2<sup>a</sup> peça (destino inicial) “indo” para a camada da 1<sup>a</sup> peça</li>
-                    <li>os movimentos são: vai – troca – volta – troca --- vai – destroca – volta – destroca</li>
-                    <li>desfaça qualquer reposicionamento feito no início, antes do comutador</li>
-                </ul>   
+                <ol class="bg-warning mt-0 pb-2">
+                    <li>Choose any 3 cubelets that will be swapped.</li>
+                    <li>Determine which position (2<sup>nd</sup> cubelet) will receive the 1<sup>st</sup> cubelet.</li>
+                    <li>Ensure that the 3<sup>rd</sup> cubelet is on the same layer as the 2<sup>nd</sup> cubelet, which should be parallel to the layer of the 1<sup>st</sup> cubelet. If needed, perform a setup move to align them.</li>
+                    <li>Identify the perpendicular layer for the back and forth movements, which should only contain the 2<sup>nd</sup> cubelet.</li>
+                    <li>Begin the commutator with the 2<sup>nd</sup> cubelet (the first destination) "going" to the layer of the 1<sup>st</sup> cubelet.</li>
+                    <li>The movements are: go – swap – back – swap --- go – undo swap – back – undo swap</li>
+                    <li>Undo any setup moves performed at the beginning, before the commutator.</li>
+                </ol>   
                     
             </div>
         
         </div>
 
         <nav class="nav nav-justified my-0">
-            <a class="nav-link virapagina" href="cubo-3x3x3/8-resolvendo-os-lados-da-ultima-camada.html">⇦</a>
-            <a class="nav-link virapagina" href="cubo-3x3x3/9-comutadores-e-conjugados-e-so-o-que-voce-precisa/exercicios-com-comutadores.html">⇨</a>
+            <a class="nav-link virapagina" href="rubiks-cube/8-solving-the-edges-of-the-last-layer.html">⇦</a>
+            <a class="nav-link virapagina" href="rubiks-cube/9-commutators-and-conjugates-thats-all-you-need/commutators-exercises.html">⇨</a>
         </nav>
         
     </main>

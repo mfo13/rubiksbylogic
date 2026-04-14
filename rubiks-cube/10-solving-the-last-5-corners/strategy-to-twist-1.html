@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -8,7 +8,8 @@
     
     <link rel="icon" href="favicon.ico">
 
-    <title>Cubo Mágico sem Decoreba | Cubo 3x3x3 - Virando os cantos (1)</title>
+    <title>Rubik's Cube by Logic | Rubik's Cube - Strategy to twist corners (1)</title>
+    <meta name="description" content="Understand the strategy for turning the corners using go–swap-back moves with conjugates.">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
@@ -24,44 +25,34 @@
     
     <main class="container mb-0">
         
-        <h1>Cubo 3x3x3</h1>
-        <h2>Entendendo e Resolvendo o Cubo de Rubik sem Decorar</h2>
+        <h1>Rubik's Cube</h1>
+        <h2>Understanding and Solving the Rubik's Cube Without Algorithms</h2>
 
         <div class="row align-items-start">
 
             <div class="container px-3">
-                <p>
-                Primeiro definimos uma camada a ser preservada e que contenha os dois cantos que queremos virar, como ilustra a Figura 10.5.
-                </p>
-                                               
+                                                               
                 <div class="row justify-content-center">
                     <div class="col-md-7 mt-3 mb-3 px-3">
-                        <ul>
-                            <li>Cantos a serem virados: amarelo e vermelho.</li>
-                            <li>Camada a ser preservada: F (colorida).</li>
-                        </ul>
                         <p>
-                        Depois usamos a camada perpendicular, R, para fazer movimentos de “vai, troca e volta” com a camada de trás, B. Podemos fazer quantos movimentos quisermos até virar o canto superior direito. O importante é preservar a camada F!
+                        Next, we utilize the perpendicular layer, R, to perform back and forth movements with the back layer, B. The number of movements can vary as we strive to twist the upper right corner. It is crucial to maintain the integrity of the F layer while executing these movements.
                         </p>
                         <p>
-                        Mas isso não vai desarrumar todo o restante do cubo?! Sim, vai, mas se fizermos o inverso dos movimentos a parte de trás voltará ao normal.
+                        Now, you might wonder, won't these actions disrupt the rest of the cube? Indeed, they will. However, the key lies in reversing the movements, which restores the cube to its normal state.
                         </p>
                         <p>
-                        E de que isso adianta?! Não queremos virar os cantos?
-                        </p>
-                        <p>
-                        Aí é que vem o “pulo do gato”, antes de executar o inverso dos movimentos reposicionamos a camada da frente, colocando outro canto no lugar do primeiro. Assim, quando fizermos os movimentos na ordem inversa não só arrumamos o restante do cubo como também viramos outro canto, e no sentido inverso do primeiro!
+                        But what is the advantage of preserving the front layer at all costs if we ultimately want to twist the corner? Here comes the secret weapon! By prioritizing the preservation of the front layer, we have an opportunity to rotate the preserved layer before executing the reverse movements. This involves placing another corner in the position of the first one. As a result, when we reverse the movements, not only does the cube realign itself, but we also twist another corner, and exactly, in the opposite direction from the first one!
                         </p>
                     </div>
                     <div class="col-md-4 mt-3 mb-3 px-3">
                         <div class="img-wrapper img-cubo">
                             <script>
-                                var movimento="{Figura 10.5}x2 z'";
+                                var movimento="{Figure 10.5}x2 z'";
                                 AnimCube3("initmove=x2 y' &move="+movimento+
                                             "&movetext=0\
                                             &yz=1\
                                             &fonttype=0\
-                                            &textsize=12\
+                                            &textsize=15\
                                             &facelets=nddnddnddYN1DDDDDDnnyddddddDDDDDDNN1nnnnnnyn1DDDDDDDDD\
                                             &buttonheight=20\
                                             &bgcolor=f0f0f0\
@@ -80,29 +71,33 @@
                     <div class="col-md-7 mt-3 mb-3 px-3">
                         <div class="bg-warning px-2 pt-2 pb-1">
                             <p>
-                            <b>Quadro com o resumo da estratégia para virar os cantos:</b>
+                            <b>Summary of the Corner Twist Strategy:</b>
                             </p>
                             <ul>
-                                <li>Definir a camada a ser preservada com os cantos que deverão ser virados. Obs.: Os cantos não precisam estar na mesma linha ou coluna, podem ser, inclusive, diagonalmente opostos.</li>
-                                <li>Fazer movimentos de “vai, troca e volta” com a camada paralela, até o canto virar.</li>
-                                <li>Reposicionar a camada preservada para que outro canto ocupe o lugar do primeiro.</li>
-                                <li>Desfazer os movimentos utilizados para virar o primeiro canto. Eles devem ser exatamente contrários e na ordem inversa.</li>
-                                <li>Desfazer o reposicionamento da camada preservada.</li>
+                                <li>Select the layer that contains the corners to be twisted and designate it as the preserved layer. It's important to note that the corners don't have to be in the same row or column and can even be diagonally opposite.</li>
+                                <li>Perform "go, swap, and back" movements using the parallel layer until the first corner is twisted.</li>
+                                <li>Rotate the preserved layer in such a way that the second corner takes the place of the first corner.</li>
+                                <li>Reverse and undo the exact opposite moves used to twist the first corner, ensuring they are performed in the exactly reverse order.</li>
+                                <li>Undo the setup of the preserved layer, restoring it to its original position.</li>
                             </ul>
                         </div>
+                        <p></p>
                         <p class="mt-3">
-                        A Figura 10.6 ilustra esse processo, clique em <i>play</i> (▷) para uma simples animação da estratégia. Abaixo veremos um exemplo detalhado.
+                        Figure 10.6 provides a visual representation of this process. To see a simple animation of the strategy, click the play button (▷).
+                        </p>
+                        <p>
+                        In the following section, we will delve into a detailed example to illustrate the strategy further.
                         </p>
                     </div>
                     <div class="col-md-4 mt-3 mb-3 px-3">
                         <div class="img-wrapper img-cubo">
                             <script>
-                                var movimento="{Figura 10.6}{Figura 10.6: vai-troca-volta}R B R'.{Figura 10.6: vira o canto}B'.{Figura 10.6: vai-troca-volta}R B R'.{Figura 10.6: reposiciona}F.{Figura 10.6: inverte movimentos da virada}R B' R' B R B' R'.{Figura 10.6: desfaz reposicionamento}F'";
+                                var movimento="{Figure 10.6}{Figure 10.6: go-swap-back}R B R'.{Figure 10.6: corner twist}B'.{Figure 10.6: go-swap-back}R B R'.{Figure 10.6: setup}F.{Figura 10.6: reverse twist moves}R B' R' B R B' R'.{Figura 10.6: undo setup}F'";
                                 AnimCube3("initmove=x2 y' &move="+movimento+
                                             "&movetext=0\
                                             &yz=1\
                                             &fonttype=0\
-                                            &textsize=12\
+                                            &textsize=15\
                                             &facelets=ndlndlndlYN1DDDLLLnnydddlllLLLDDDNN1nnnnnnyn1LLLLLLLLL\
                                             &buttonheight=20\
                                             &bgcolor=f0f0f0\
@@ -119,62 +114,50 @@
 
                 <hr class="border-primary">
                 <p class="mt-3 px-3 pt-2 pb-1" style="background-color: lightgray;">
-                <u>Curiosidade (pode pular se preferir):</u> Note que estamos fazendo a sobreposição de conjugados. O primeiro procedimento é a combinação de movimentos para virar o canto (chamaremos de <b>A</b>) e o segundo procedimento é o reposicionamento (chamaremos de <b>B</b>) da camada preservada. Os conjugados são, portanto, <b>A( )A<sup>-1</sup></b> e <b>B( )B<sup>-1</sup></b>. A sobreposição desses conjugados é que nos permite virar somente dois cantos em sentidos opostos. Assim, executamos <b>A(B)(A<sup>-1</sup>)B<sup>-1</sup></b>. Essa operação, é, na verdade, também um comutador, mas não troca peças de lugar; este comutador apenas gira as peças em seus lugares. Para mais detalhes sobre comutadores e conjugados <a href="comutadores-e-conjugados.html">clique aqui</a>.
+                <u>Curiosity (skip it if you prefer):</u> Indeed, it's fascinating to observe the overlap of conjugates in this strategy. The first procedure involves a combination of movements to twist the corner, which we'll refer to as A. The second procedure focuses on the setup of the preserved layer, which we'll denote as B. Consequently, the conjugates utilized in this context are A () A-1 and B () B-1. It is the overlapping of these conjugates that enables us to twist only two corners in opposite directions. Therefore, we execute A B A-1 B-1 as the operation. Interestingly, this operation can be seen as a commutator as well. However, unlike commutators that swap cubelets around, this particular commutator exclusively swaps orientations. If you desire further information on commutators and conjugates <a href="commutators-and-conjugates.html">click here</a>.
                 </p>
                 <hr class="border-primary">
                 <p>
-                Apesar da quantidade de movimentos usados para virar um canto não fazer diferença, é desejável que estes sejam em um número mínimo possível. Isso porque teremos que nos lembrar deles para fazer a operação inversa!
+                When it comes to twisting a corner, the number of moves used is not necessarily important, but it is advantageous to minimize the number of moves. This is because we need to remember these moves in order to execute the reverse sequence effectively.
                 </p>
                 <p>
-                O mínimo número possível consiste em dois movimentos de “vai, troca e volta” com um reposicionamento da camada oposta à preservada. É possível também determinar o sentido de rotação do canto de interesse durante essa operação.
+                The minimum possible number of moves for twisting a corner consists of two "go, swap, and back" movements with a setup in between. The setup involves using the opposite layer in relation to the preserved layer, and it also allows us to determine the direction of the corner twist during the procedure.
                 </p>
                 <p>
-                Será apresentada aqui uma maneira particular de se ver esses movimentos. Você deve, contudo, enxergar os procedimentos da maneira que é mais confortável a você. O que realmente importa é seguir a estratégia geral, já apresentada no quadro acima, e só o que precisaremos é do velho e conhecido “vai, troca e volta” e mais um reposicionamento.
+                In the following section, we will delve into the detailed movement of "go, swap and back" for the corner we wish to twist. It's important to note that while a particular explanation will be provided, it is crucial to adapt and interpret the movements in a way that feels comfortable and intuitive for you. The essence lies in following the general strategy outlined earlier, which revolves around the "go, swap, and back" sequence combined with a setup.
                 </p>
                 <p>
-                Vamos ver em detalhes o movimento de “vai, troca e volta” para o canto que queremos virar:
+                If you're ready, let's proceed with a detailed explanation of the "go, swap and back" movement for twisting the corner.
                 </p>
 
                 <div class="row justify-content-center">
                     <div class="col-md-8 mt-3 mb-3 px-3">
                         <p>
-                        Clique em avançar (<span style="font-size: 25px;">⧐</span>) na Figura 10.7, é o movimento de "vai" (R).
+                        If you click forward (<span style="font-size: 25px;">⧐</span>) in Figure 10.7, you will initiate the "go" move (R). Pay attention to the red facelet of our corner, which will be facing upwards immediately after the "go" move. This indicates that when we perform the final swap and place the corner back in the same position before the "back" move, the facelet pointing upwards will be the one in front of the cube. Let's use this as a reference point. Therefore, the color we desire to be in front of the cube should be facing upwards just before the last "back" movement.
                         </p>
                         <p>
-                        Observe que a face vermelha fica para cima no final do movimento de “vai”. Isso significa que quando você fizer a última troca e colocar o canto nesse mesmo local, antes da “volta”, a face que está para cima será aquela que ficará na frente do cubo. <u>Vamos usar isso como referência</u>. Sabemos então que a cor que queremos que fique na frente do cubo deve estar voltada para cima antes do último movimento de “volta”.
-                        </p>
-                        <p>
-                        Continuando o “vai, troca e volta” o próximo passo é a “troca”. Temos duas opções nesse caso:
+                        Continuing with the "go, swap, and back" sequence, the next move is the "swap". In this case, we have two options:
                         </p>
                         <ul>
-                            <li>Fazemos a troca tirando o canto da camada do “vai e volta”, ou</li>
-                            <li>Fazemos a troca mantendo o canto na camada do “vai e volta”.</li>
+                            <li>We can perform the swap by taking the corner out of the back and forth layer, or</li>
+                            <li>We can perform the swap while keeping the corner within the back and forth layer.</li>
                         </ul>
                         <p>
-                        Vamos ver primeiro o que acontecerá se mantivermos o canto na camada do “vai e volta”, então a “troca” só pode ser feita por B':
+                        For now, let's explore the scenario where we keep the corner in the back and forth layer, and the swap can only be done by B'. If you click forward again (<span style="font-size: 25px;">⧐</span>) in Figure 10.7, you will observe that our corner on the back layer (B) is also maintained within the back and forth layer (R).
                         </p>
                         <p>
-                        Clique novamente em avançar (<span style="font-size: 25px;">⧐</span>) na Figura 10.7. 
-                        </p>
-                        <p>
-                        Observe que o canto na camada de trás (B) é mantido na camada do "vai e volta" (R).
-                        </p>
-                        <p>
-                        Terminando o movimento do “vai, troca e volta” só é possível fazer R':
-                        </p>
-                        <p>
-                        Clique mais uma vez em avançar (<span style="font-size: 25px;">⧐</span>) na Figura 10.7. 
+                        To conclude the "go, swap, and back" movement, the only available move is R'. Click forward once more (<span style="font-size: 25px;">⧐</span>) in Figure 10.7.
                         </p>
                     </div>
                     <div class="col-md-4 mt-3 mb-3 px-3">
                         <div class="img-wrapper img-cubo">
                             <script>
-                                var movimento="{Figura 10.7}{Figura 10.7:   R(vai)}R.{Figura 10.7:   B'(troca)}B'.{Figura 10.7:   R'(volta)}R'";
+                                var movimento="{Figure 10.7}{Figure 10.7:   R(go)}R.{Figure 10.7:   B'(swap)}B'.{Figure 10.7:   R'(back)}R'";
                                 AnimCube3("initmove=x2 &move="+movimento+
                                             "&movetext=5\
                                             &yz=1\
                                             &fonttype=0\
-                                            &textsize=12\
+                                            &textsize=15\
                                             &facelets=llllllwwwLLYLLYLLYlllllllllRRRRRRRRRllgllgllgLLLLLLBBB\
                                             &buttonheight=20\
                                             &bgcolor=f0f0f0\
@@ -190,49 +173,40 @@
                 </div>
 
                 <p>
-                Observe que o canto ficou com a face amarela para cima. Isso significa que se você fizer outro movimento de “vai, troca e volta” para colocar o canto no lugar inicial ele ficará com a cor amarela voltada para frente. Essa cor estava atrás do cubo antes de fazer o “volta”. Concluímos que sempre que fizermos o primeiro movimento de “vai” a cor que ficar atrás do cubo ficará na frente se a “troca” for feita mantendo o canto na camada do “vai e volta”. <b>Você não precisa decorar isso! Basta observar os movimentos e ver o que vai acontecer.</b>
+                It's important to observe that our corner has now rotated, with the yellow facelet facing upwards. This indicates that if we perform another "go, swap and back" movement to return the corner to its original position, the yellow facelet will be facing forward. Initially, the yellow facelet was behind the cube immediately after the "go" move. Therefore, every time after the first "go" movement, if we choose to keep our corner in the back and forth layer during the "swap", the color initially behind the cube will end up in front. <b>It's not necessary to memorize this; simply anticipate the movements and understand what will happen.</b>
                 </p>
                 <p>
-                Supondo que é exatamente isso o que queremos, colocar a cor amarela na face da frente, resta fazer outro movimento de “vai, troca e volta”. Mas antes precisamos de um reposicionamento para tirar o canto que está na camada do “vai e volta”:
+                Assuming that our goal is to place the yellow color on the front face of the cube, we need to perform another "go, swap and back" movement. However, before that, we require a setup to move our corner out of the back and forth layer.
                 </p>
 
                 <div class="row justify-content-center">
                     <div class="col-md-6 mt-3 mb-3 px-3">
                         <p>
-                        Podemos fazer, por exemplo, B.
+                        We have performed the B move as the setup in this case. By clicking forward (<span style="font-size: 25px;">⧐</span>) in Figure 10.8, you can observe the movement. It's worth mentioning that we could have chosen to do B2 for the setup, but there's no need to complicate things when a single B move suffices.
                         </p>
                         <p>
-                        Clique em avançar (<span style="font-size: 25px;">⧐</span>) na Figura 10.8.
+                        To complete the process, we execute the last "go, swap and back" movement: R B' R'. You can click play (▷) in Figure 10.8 to see the entire sequence in action.
                         </p>
                         <p>
-                        Note que poderíamos ter feito B2 para o reposicionamento, mas, por que complicar se B já serve?
-                        </p>
-                        <p>
-                        Fazendo agora o último “vai, troca e volta”: R B' R'
-                        </p>
-                        <p>
-                        Clique em play (▷) na Figura 10.8.
-                        </p>
-                        <p>
-                        Vamos anotar toda a seqüência de movimentos que virou o canto:
+                        Let's take note of the complete sequence of movements that twisted the corner:
                         </p>
                         <p>
                         R B' R' B R B' R'
                         </p>
                         <p>
-                        Só para mais tarde compará-la com a outra possibilidade.
+                        Later on, we will compare this sequence with another possibility.
                         </p>
                     </div>
                     <div class="col-md-4 mt-3 mb-3 px-3">
                         <div class="img-wrapper img-cubo">
                             <script>
-                                var movimento="{Figura 10.8}{Figura 10.8:   B(reposiciona)}B.{Figura 10.8:   R B' R'(vai-troca-volta)}R B' R'";
+                                var movimento="{Figure 10.8}{Figure 10.8:   B(setup)}B.{Figure 10.8:   R B' R'(go-swap-back)}R B' R'";
                                     setup="x2 R B' R'"
                                 AnimCube3("initmove="+setup+"&move="+movimento+
                                             "&movetext=5\
                                             &yz=1\
                                             &fonttype=0\
-                                            &textsize=12\
+                                            &textsize=15\
                                             &facelets=llllllwwwLLYLLYLLYlllllllllRRRRRRRRRllgllgllgLLLLLLBBB\
                                             &buttonheight=20\
                                             &bgcolor=f0f0f0\
@@ -252,8 +226,8 @@
         </div>
 
         <nav class="nav nav-justified my-0">
-            <a class="nav-link virapagina" href="cubo-3x3x3/10-resolvendo-os-ultimos-cinco-cantos.html">⇦</a>
-            <a class="nav-link virapagina" href="cubo-3x3x3/10-resolvendo-os-ultimos-cinco-cantos/estrategia-para-virar-os-cantos-2.html">⇨</a>
+            <a class="nav-link virapagina" href="rubiks-cube/10-solving-the-last-5-corners.html">⇦</a>
+            <a class="nav-link virapagina" href="rubiks-cube/10-solving-the-last-5-corners/strategy-to-twist-2.html">⇨</a>
         </nav>
         
     </main>

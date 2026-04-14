@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -8,7 +8,8 @@
     
     <link rel="icon" href="favicon.ico">
 
-    <title>Cubo Mágico sem Decoreba | Cubo 3x3x3 - Exercícios com comutadores</title>
+    <title>Rubik's Cube by Logic| Rubik's Cube - Commutators exercises</title>
+    <meta name="description" content="Do commutator construction exercises on the 3x3x3 Rubik’s Cube to assimilate this powerful concept.">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
@@ -25,8 +26,8 @@
     
     <main class="container mb-0">
         
-        <h1>Cubo 3x3x3</h1>
-        <h2>Entendendo e Resolvendo o Cubo de Rubik sem Decorar</h2>
+        <h1>Rubik's Cube</h1>
+        <h2>Understanding and Solving the Rubik's Cube Without Algorithms</h2>
 
         <div class="row align-items-start">
 
@@ -34,29 +35,26 @@
 
                 <div class="bg-info py-2 px-2 mb-3">
                     <p>
-                    Agora é sua vez de treinar, faça movimentos comutadores com os exercícios propostos abaixo.
+                    Now it's your turn to practice designing commutators with the exercises proposed below. With careful observation and practice, you will become proficient in performing any 3-corner or 3-edge swap, regardless of their positions on the cube!
                     </p>
                     <p>
-                    Com um pouco de observação e prática você será capaz de efetuar qualquer troca entre 3 cantos ou entre 3 lados (edges), não importando a posição deles no cubo!
-                    </p>
-                    <p>
-                    Para facilitar você pode girar todo o cubo, sempre mantendo as camadas de troca numa orientação mais confortável, por exemplo, superior e inferior.
+                    To simplify the process, feel free to rotate the entire cube while keeping the swap layers in a more comfortable position for your viewing and thinking. For instance, you can focus on the upper layer and the down layer, making it easier to visualize and plan your moves.
                     </p>
                 </div>
                                                              
                 <div class="row justify-content-center">
                     <div class="col-md-6 my-3 px-3">
                         <p>
-                        <b>Exercício (a)</b>
+                        <b>Exercise (a)</b>
                         </p>
                         <p>
-                        Coloque o canto rosa no lugar do ciano, o ciano no lugar do verde e o verde no lugar do rosa.
+                        Place the pink corner in place of cyan, the cyan in place of green, and the green in place of pink.
                         </p>
                         <p>
-                        Você pode interagir com a imagem girando o cubo e as camadas. Se precisar recomeçar basta clicar em iniciar (|◁).
+                        You can interact with the image by rotating the cube and layers. If you need to start over just click reset (∣◁).
                         </p>
                         <p>
-                        Para ver uma possível solução exponha a aba oculta, clicando na seta.
+                        To see a possible solution expose the hidden tab by clicking on the arrow.
                         </p>
                         <hr class="my-0 border-primary">
                         <p class="my-0 text-center">
@@ -67,10 +65,10 @@
                             <b>B' D B U' B' D' B U</b>
                             </p>
                             <p>
-                            Clique em iniciar (|◁) e depois em <i>play</i> (▷) para ver essa seqüência.
+                            Click reset (∣◁) then play (▷) to see this sequence.
                             </p>
                             <p>
-                            Lembre-se, essa é só uma possível solução. Se você encontrou outra, parabéns!
+                            Please note that this is just one of the possible solutions. If you have discovered an alternative solution, congratulations on your achievement! 
                             </p>
                         </div>
                         <hr class="my-0 border-primary">                          
@@ -78,13 +76,13 @@
                     <div class="col-md-4 text-center my-3 px-3">
                         <div class="img-wrapper img-cubo">
                             <script>
-                                var movimento="{Exerc\u00edcio (a)}{Exerc\u00edcio (a): (vai) B'}B'.{Exerc\u00edcio (a): (troca) D}D.{Exerc\u00edcio (a): (volta) B}B.{Exerc\u00edcio (a): (troca) U'}U'.{Exerc\u00edcio (a): (vai) B'}B'.{Exerc\u00edcio (a): (destroca) D'}D'.{Exerc\u00edcio (a): (volta) B}B.{Exerc\u00edcio (a): (destroca) U}U";
+                                var movimento="{Exercise (a)}{Exercise (a): (go) B'}B'.{Exercise (a): (swap) D}D.{Exercise (a): (back) B}B.{Exercise (a): (swap) U'}U'.{Exercise (a): (go) B'}B'.{Exercise (a): (undo swap) D'}D'.{Exercise (a): (back) B}B.{Exercise (a): (undo swap) U}U";
                                     setup="x2";
                                 AnimCube3("initmove="+setup+"&move="+movimento+
                                             "&movetext=0\
                                             &yz=1\
                                             &fonttype=0\
-                                            &textsize=12\
+                                            &textsize=15\
                                             &facelets=wwwwwwwwCYYYYYYNYMoooooomonCRMRRRRRRgggggggggBBNBBBCBM\
                                             &buttonheight=20\
                                             &bgcolor=f0f0f0\
@@ -102,16 +100,16 @@
                 <div class="row justify-content-center">
                     <div class="col-md-6 my-3 px-3">
                         <p>
-                        <b>Exercício (b)</b>
+                        <b>Exercise (b)</b>
                         </p>
                         <p>
-                        Coloque o canto rosa no lugar do verde, o verde no lugar do ciano e o ciano no lugar do rosa.
+                        Place the pink corner in place of green, green in place of cyan, and cyan in place of pink.
                         </p>
                         <p>
-                        Você pode interagir com a imagem girando o cubo e as camadas. Se precisar recomeçar basta clicar em iniciar (|◁).
+                        You can interact with the image by rotating the cube and layers. If you need to start over just click reset (∣◁).
                         </p>
                         <p>
-                        Para ver uma possível solução exponha a aba oculta, clicando na seta.
+                        To see a possible solution expose the hidden tab by clicking on the arrow.
                         </p>
                         <hr class="my-0 border-primary">
                         <p class="my-0 text-center">
@@ -122,10 +120,10 @@
                             <b>B L' B' R2 B L B' R2</b>
                             </p>
                             <p>
-                            Clique em iniciar (|◁) e depois em <i>play</i> (▷) para ver essa seqüência.
+                            Click reset (∣◁) then play (▷) to see this sequence.
                             </p>
                             <p>
-                            Lembre-se, essa é só uma possível solução. Se você encontrou outra, parabéns!
+                            Please note that this is just one of the possible solutions. If you have discovered an alternative solution, congratulations on your achievement!
                             </p>
                         </div>
                         <hr class="my-0 border-primary">                          
@@ -133,13 +131,13 @@
                     <div class="col-md-4 text-center my-3 px-3">
                         <div class="img-wrapper img-cubo">
                             <script>
-                                var movimento="{Exerc\u00edcio (b)}{Exerc\u00edcio (b): (vai) B}B.{Exerc\u00edcio (b): (troca) L'}L'.{Exerc\u00edcio (b): (volta) B'}B'.{Exerc\u00edcio (b): (troca) R2}R2.{Exerc\u00edcio (b): (vai) B}B.{Exerc\u00edcio (b): (destroca) L}L.{Exerc\u00edcio (b): (volta) B'}B'.{Exerc\u00edcio (b): (destroca) R2}R2";
+                                var movimento="{Exercise (b)}{Exercise (b): (go) B}B.{Exercise (b): (swap) L'}L'.{Exercise (b): (back) B'}B'.{Exercise (b): (swap) R2}R2.{Exercise (b): (go) B}B.{Exercise (b): (undo swap) L}L.{Exercise (b): (back) B'}B'.{Exercise (b): (undo swap) R2}R2";
                                     setup="x2";
                                 AnimCube3("initmove="+setup+"&move="+movimento+
                                             "&movetext=0\
                                             &yz=1\
                                             &fonttype=0\
-                                            &textsize=12\
+                                            &textsize=15\
                                             &facelets=wwwwwwwwcYYMYYYNYYoooooooonCRRRRRRRMggggggggmBBNBBBCBB\
                                             &buttonheight=20\
                                             &bgcolor=f0f0f0\
@@ -157,16 +155,16 @@
                 <div class="row justify-content-center">
                     <div class="col-md-6 my-3 px-3">
                         <p>
-                        <b>Exercício (c)</b>
+                        <b>Exercise (c)</b>
                         </p>
                         <p>
-                        Coloque o canto rosa no lugar do ciano, o ciano no lugar do verde e o verde no lugar do rosa.
+                        Place the pink corner in place of cyan, the cyan in place of green, and the green in place of pink.
                         </p>
                         <p>
-                        Você pode interagir com a imagem girando o cubo e as camadas. Se precisar recomeçar basta clicar em iniciar (|◁).
+                        You can interact with the image by rotating the cube and layers. If you need to start over just click reset (∣◁).
                         </p>
                         <p>
-                        Para ver uma possível solução exponha a aba oculta, clicando na seta.
+                        To see a possible solution expose the hidden tab by clicking on the arrow.
                         </p>
                         <hr class="my-0 border-primary">
                         <p class="my-0 text-center">
@@ -177,10 +175,10 @@
                             <b>L' B L F2 L' B' L F2</b>
                             </p>
                             <p>
-                            Clique em iniciar (|◁) e depois em <i>play</i> (▷) para ver essa seqüência.
+                            Click reset (∣◁) then play (▷) to see this sequence.
                             </p>
                             <p>
-                            Lembre-se, essa é só uma possível solução. Se você encontrou outra, parabéns!
+                            Please note that this is just one of the possible solutions. If you have discovered an alternative solution, congratulations on your achievement!
                             </p>
                         </div>
                         <hr class="my-0 border-primary">                          
@@ -188,13 +186,13 @@
                     <div class="col-md-4 text-center my-3 px-3">
                         <div class="img-wrapper img-cubo">
                             <script>
-                                var movimento="{Exerc\u00edcio (c)}{Exerc\u00edcio (c): (vai) L'}L'.{Exerc\u00edcio (c): (troca) B}B.{Exerc\u00edcio (c): (volta) L}L.{Exerc\u00edcio (c): (troca) F2}F2.{Exerc\u00edcio (c): (vai) L'}L'.{Exerc\u00edcio (c): (destroca) B'}B'.{Exerc\u00edcio (c): (volta) L}L.{Exerc\u00edcio (c): (destroca) F2}F2";
+                                var movimento="{Exercise (c)}{Exercise (c): (go) L'}L'.{Exercise (c): (swap) B}B.{Exercise (c): (back) L}L.{Exercise (c): (swap) F2}F2.{Exercise (c): (go) L'}L'.{Exercise (c): (undo swap) B'}B'.{Exercise (c): (back) L}L.{Exercise (c): (undo swap) F2}F2";
                                     setup="x2";
                                 AnimCube3("initmove="+setup+"&move="+movimento+
                                             "&movetext=0\
                                             &yz=1\
                                             &fonttype=0\
-                                            &textsize=12\
+                                            &textsize=15\
                                             &facelets=wwwwwwwwcYYMYYYNYYoooooooonCRRRRRRRMggggggggmBBNBBBCBB\
                                             &buttonheight=20\
                                             &bgcolor=f0f0f0\
@@ -212,16 +210,16 @@
                 <div class="row justify-content-center">
                     <div class="col-md-6 mt-3 mb-3 px-3">
                         <p>
-                        <b>Exercício (d)</b>
+                        <b>Exercise (d)</b>
                         </p>
                         <p>
-                        Coloque o <i>edge</i> rosa no lugar do verde, o verde no lugar do ciano e o ciano no lugar do rosa.
+                        Place the pink edge in place of green, green in place of cyan and cyan in place of pink.
                         </p>
                         <p>
-                        Você pode interagir com a imagem girando o cubo e as camadas. Se precisar recomeçar basta clicar em iniciar (|◁).
+                        You can interact with the image by rotating the cube and layers. If you need to start over just click reset (∣◁).
                         </p>
                         <p>
-                        Para ver uma possível solução exponha a aba oculta, clicando na seta.
+                        To see a possible solution expose the hidden tab by clicking on the arrow
                         </p>
                         <hr class="my-0 border-primary">
                         <p class="my-0 text-center">
@@ -232,10 +230,10 @@
                             <b>M D' M' U M D M' U'</b>
                             </p>
                             <p>
-                            Clique em iniciar (|◁) e depois em <i>play</i> (▷) para ver essa seqüência.
+                            Click reset (∣◁) then play (▷) to see this sequence.
                             </p>
                             <p>
-                            Lembre-se, essa é só uma possível solução. Se você encontrou outra, parabéns!
+                            Please note that this is just one of the possible solutions. If you have discovered an alternative solution, congratulations on your achievement!
                             </p>
                         </div>
                         <hr class="my-0 border-primary">                          
@@ -243,13 +241,13 @@
                     <div class="col-md-4 text-center my-3 px-3">
                         <div class="img-wrapper img-cubo">
                             <script>
-                                var movimento="{Exerc\u00edcio (d)}{Exerc\u00edcio (d): (vai) M}M.{Exerc\u00edcio (d): (troca) D'}D'.{Exerc\u00edcio (d): (volta) M'}M'.{Exerc\u00edcio (d): (troca) U}U.{Exerc\u00edcio (d): (vai) M}M.{Exerc\u00edcio (d): (destroca) D}D.{Exerc\u00edcio (d): (volta) M'}M'.{Exerc\u00edcio (d): (destroca) U'}U'";
+                                var movimento="{Exercise (d)}{Exercise (d): (go) M}M.{Exercise (d): (swap) D'}D'.{Exercise (d): (back) M'}M'.{Exercise (d): (swap) U}U.{Exercise (d): (go) M}M.{Exercise (d): (undo swap) D}D.{Exercise (d): (back) M'}M'.{Exercise (d): (undo swap) U'}U'";
                                     setup="x2";
                                 AnimCube3("initmove="+setup+"&move="+movimento+
                                             "&movetext=0\
                                             &yz=1\
                                             &fonttype=0\
-                                            &textsize=12\
+                                            &textsize=15\
                                             &facelets=wwwwwcwwwYYYYYMYNYoooooooooRRRRRMRRRgggggggggBBBCBNBBB\
                                             &buttonheight=20\
                                             &bgcolor=f0f0f0\
@@ -269,8 +267,8 @@
         </div>
 
         <nav class="nav nav-justified my-0">
-            <a class="nav-link virapagina" href="cubo-3x3x3/9-comutadores-e-conjugados-e-so-o-que-voce-precisa.html">⇦</a>
-            <a class="nav-link virapagina" href="cubo-3x3x3/9-comutadores-e-conjugados-e-so-o-que-voce-precisa/conjugados.html">⇨</a>
+            <a class="nav-link virapagina" href="rubiks-cube/9-commutators-and-conjugates-thats-all-you-need.html">⇦</a>
+            <a class="nav-link virapagina" href="rubiks-cube/9-commutators-and-conjugates-thats-all-you-need/conjugates.html">⇨</a>
         </nav>
         
     </main>

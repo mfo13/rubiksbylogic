@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -8,7 +8,8 @@
     
     <link rel="icon" href="favicon.ico">
 
-    <title>Cubo Mágico sem Decoreba | Cubo 3x3x3 - Virando os cantos (1)</title>
+    <title>Rubik's Cube by Logic | Rubik's Cube - Strategy to twist corners (2)</title>
+    <meta name="description" content="See more details of the strategy of turning the corners and expand the concept to turning edges.">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
@@ -24,8 +25,8 @@
     
     <main class="container mb-0">
         
-        <h1>Cubo 3x3x3</h1>
-        <h2>Entendendo e Resolvendo o Cubo de Rubik sem Decorar</h2>
+        <h1>Rubik's Cube</h1>
+        <h2>Understanding and Solving the Rubik's Cube Without Algorithms</h2>
 
         <div class="row align-items-start">
 
@@ -34,43 +35,31 @@
                 <div class="row justify-content-center">
                     <div class="col-md-8 my-3 px-3">
                         <p>
-                        A outra possibilidade que tínhamos na primeira “troca” era tirar o canto da camada do “vai e volta”, lembra-se? Nesse caso há duas opções, B ou B2, vamos ficar com a mais simples, B:
+                        In the first "swap" movement, we explored the alternative of getting our corner out of the back and forth layer. If we choose this option, there are two possibilities for the setup: B or B2. Let's stick with the simpler one, B. By clicking forward (<span style="font-size: 25px;">⧐</span>) in Figure 10.9, you can observe the movement.
                         </p>
                         <p>
-                        Clique em avançar (<span style="font-size: 25px;">⧐</span>) na Figura 10.9.
+                        Notice that our corner is now positioned outside the back and forth layer. To complete the first "go, swap and back" movement, we simply perform R'. You can click forward (<span style="font-size: 25px;">⧐</span>) again, in Figure 10.9, to see the next step.
                         </p>
                         <p>
-                        Observe que o canto é mantido fora da camada do "vai e volta".
+                        We are left with the final "go, swap and back" movement, but this time we want our corner to twist during the "go" move. To achieve this, we need to set it up in such a way that it remains in the swap layer (B) after the "go" movement. The only possibility for the setup is to do B'. Click forward (<span style="font-size: 25px;">⧐</span>) once more, in Figure 10.9, to see the setup movement.
                         </p>
                         <p>
-                        Terminando o primeiro “vai, troca e volta” fazemos R'. Clique novamente em avançar (<span style="font-size: 25px;">⧐</span>) na Figura 10.9.
+                        Take note that the setup will force the corner to twist during the subsequent "go" move. Finally, we perform the last "go, swap" sequence: R B. If you double-click forward (<span style="font-size: 25px;">⧐</span>) in Figure 10.9, you can see the final result.
                         </p>
                         <p>
-                        Só nos resta mais um movimento de “vai, troca e volta”, mas veja que se o canto for mantido no lugar ele voltará exatamente com a mesma orientação que tinha. Precisamos fazer um reposicionamento de tal maneira que ele gire durante o movimento de “vai”. Só há uma opção, reposicioná-lo na camada do “vai e volta” e de tal maneira que ele continue na camada de “troca” depois do movimento de “vai”.
-                        </p>
-                        <p>
-                        A única possibilidade é fazer B'. Clique mais uma vez em avançar (<span style="font-size: 25px;">⧐</span>) na Figura 10.9.
-                        </p>
-                        <p>
-                        Note que o reposicionamento forçará o canto a girar no próximo movimento de "vai".
-                        </p>
-                        <p>
-                        Fazendo o último “vai e troca", R B, clique duas vezes em avançar (<span style="font-size: 25px;">⧐</span>) na Figura 10.9.
-                        </p>
-                        <p>
-                        Veja! Após o último movimento de “troca” a face que ficou para cima é a azul, isso significa que essa face ficará na frente do cubo depois da “volta”: R'. Clique uma última vez em avançar (<span style="font-size: 25px;">⧐</span>) na Figura 10.9 e observe.
+                        Observe that after the last "swap" movement, the facelet pointing upwards is the blue one. This means that this face will be in front of the cube immediately after the final "back" movement: R'. Click forward (<span style="font-size: 25px;">⧐</span>) one last time, in Figure 10.9, and observe the result.
                         </p>
                     </div>
                     <div class="col-md-4 my-3 px-3">
                         <div class="img-wrapper img-cubo">
                             <script>
-                                var movimento="{Figura 10.9}{Figura 10.9:   B(troca)}B.{Figura 10.9:   R'(volta)}R'.{Figura 10.9:   B'(resposiciona)}B'.{Figura 10.9:   R(vai)}R.{Figura 10.9:   B(troca)}B.{Figura 10.9:   R'(volta)}R'";
+                                var movimento="{Figure 10.9}{Figure 10.9:   B(swap)}B.{Figure 10.9:   R'(back)}R'.{Figure 10.9:   B'(setup)}B'.{Figure 10.9:   R(go)}R.{Figure 10.9:   B(swap)}B.{Figure 10.9:   R'(back)}R'";
                                     setup="x2 R"
                                 AnimCube3("initmove="+setup+"&move="+movimento+
                                             "&movetext=5\
                                             &yz=1\
                                             &fonttype=0\
-                                            &textsize=12\
+                                            &textsize=15\
                                             &facelets=llllllwwwLLYLLYLLYlllllllllRRRRRRRRRllgllgllgLLLLLLBBB\
                                             &buttonheight=20\
                                             &bgcolor=f0f0f0\
@@ -86,76 +75,70 @@
                 </div>
             
                 <p>
-                Conseguimos um giro no sentido contrário ao anterior! Isso significa que, para esse caso, no primeiro movimento de “vai” a cor que está do lado direito do cubo é que acabará virada para cima antes do último movimento de “volta” e, conseqüentemente, terminará na face da frente. Novamente, você <b>não precisa decorar isso! Basta observar o que acontecerá com os movimentos.</b>
+                We obtained a twist in the opposite direction compared to the previous one! This means that, in this case, after the first "go" move, the color that was initially on the right side of the cube ended up facing upwards before the last "back" move, and as a result, it is now on the front face. <b>Again, there's no need to memorize this!</b> Just anticipate what will happen to the corner after the movements.
                 </p>
                 <p>
-                Uma maneira particular para se pensar nesse exemplo é:
+                One way to approach this example is as follows:
                 </p>
                 <p>
-                Pergunta: Qual a cor que eu quero que termine na frente?
+                Question: Which color do I want to end up on the front face of the cube?
                 </p>
                 <p>
-                Resposta: Se no primeiro movimento de “vai” ela estiver atrás do cubo reposiciono o canto na parte de baixo. Se a cor estiver na lateral direita do cubo reposiciono o canto à esquerda.
+                Answer: If, just after the first "go" movement, the color is behind the cube, then I'll set up the corner downwards. On the other hand, if the color is on the right side of the cube, then I'll set up the corner to the left.
                 </p>
                 <p>
-                <b>Novamente: Você não precisa decorar isso! Apenas observe os movimentos para saber o que fazer!</b>
-                </p>
-                <p>
-                Vamos anotar a seqüência completa de movimentos que giraram o canto no sentido contrário: 
+                <b>Once again, there's no need to memorize this!</b> Simply anticipate the moves, and you'll know what to do. Let's write down the complete sequence of movements that twisted the corner in the opposite direction:
                 </p>
                 <p>
                 R B R' B' R B R'
                 </p>
                 <p>
-                Agora vamos comparar as duas seqüências de movimentos:
+                Now, let's compare the two sequences of moves:
                 </p>
                 <p>
-                1<sup>o</sup> caso: R B' R' B R B' R'
+                1<sup>st</sup> case: R B' R' B R B' R'
                 </p>
                 <p>
-                2<sup>o</sup> caso: R B R' B' R B R'
+                2<sup>nd</sup> case: R B R' B' R B R'
                 </p>
                 <p>
-                Perceba que uma é exatamente o inverso da outra! Para conferir isso basta pegar uma delas, da direita para a esquerda, e inverter os movimentos, por exemplo, R passa a ser R' e R' passa a ser R.
+                Note that one case is the exact reverse of the other! To check this, take one of them and reverse the movements from right to left. For example, R becomes R' and R' becomes R. If we reverse the first case, we will have: R B' R' B R B' R' >> reversing >> R B R' B' R B R', which is precisely the second case!
                 </p>
                 <p>
-                Para o primeiro caso teremos: R B' R' B R B' R' >> invertendo >> R B R' B' R B R' que é justamente o segundo caso!
+                Try doing the same with the second case, and you will see that reversing the movements gives you back the first case. This is exactly what we wanted - for the procedure of twisting one corner in a given direction to be the reverse of the procedure for twisting another corner in the opposite direction, according to the proposed strategy!
                 </p>
                 <p>
-                Tente fazer com o segundo caso e você verá que a inversão será igual ao primeiro. É justamente isso que queríamos! Que um procedimento de girar o canto num sentido fosse o inverso do procedimento de girar o canto no sentido contrário! Conforme a estratégia proposta.
+                <b>Remember, this is the chosen solution for this guide.</b> You could use, for example, B2 for the setup in the back layer, which would result in different procedures, but ultimately they should cancel each other out. Similarly, it is not necessary to use the R layer for the back and forth movement; you can choose the layer that suits you best. The layer to preserve doesn't have to be the front layer either - you have the flexibility to choose!
                 </p>
                 <p>
-                <b>Lembre que essa é a solução escolhida para esse guia.</b> Você poderia usar, por exemplo, B2 para o reposicionamento na camada de trás, o que daria procedimentos diferentes, mas no final eles teriam que se cancelar mutuamente. Da mesma maneira, não é necessário que você use a camada R para o “vai, troca e volta”, você escolhe aquela que mais lhe agradar. A camada a ser preservada também não precisa ser a da frente, você escolhe!
+                The tip is to always keep in mind the "laws" of the cube and the general strategy presented in the <a href="rubiks-cube/10-solving-the-last-5-corners/strategy-to-twist-1.html">summary of the corner twisting strategy</a>. The rest is up to you!
                 </p>
                 <p>
-                A dica é lembrar sempre das “leis” do cubo e da estratégia geral apresentada no <a href="cubo-3x3x3/10-resolvendo-os-ultimos-cinco-cantos/estrategia-para-virar-os-cantos-1.html">quadro resumo da estratégia para virar os cantos</a>. O resto é com você!
+                If the corners are not on the same layer, you already know what to do, setup, twist the corners normally and then undo the initial setup i.e. use a conjugate.
                 </p>
                 <p>
-                Caso os cantos não estejam numa mesma camada você já sabe o que fazer, <i>reposicionamento</i>; gire os cantos normalmente e depois desfaça o reposicionamento inicial, ou seja, use um conjugado.
+                Just for comparison, here are the algorithms that you should memorize for a 2-corner twist, considering only the case presented here:
                 </p>
                 <p>
-                A título de comparação veja os algoritmos que você deveria decorar para girar os cantos, só para o caso do exemplo aqui apresentado:
+                R B' R' B R B' R' F R B R' B' R B R' F' to twist corners in one direction
                 </p>
                 <p>
-                R B' R' B R B' R' F R B R' B' R B R' F' para girar os cantos num sentido e
+                R B R' B' R B R' F R B' R' B R B' R' F' to twist corners in the opposite direction
                 </p>
                 <p>
-                R B R' B' R B R' F R B' R' B R B' R' F' para girar os cantos no outro sentido.
-                </p>
-                <p>
-                E isso entendendo pouco ou não fazendo a mínima idéia do que está acontecendo e nem o porquê de cada passo dessas seqüências.
+                And all of this even without the slightest idea of what is happening or why each step of these sequences is being performed.
                 </p>
                 <p class="bg-info px-2 py-2">
-                Para terminar esse capítulo, aí vai um desafio. Usando a estratégia geral de virar os cantos encontre uma maneira de resolver o cubo abaixo, invertendo as cores dos dois lados (<i>edges</i>) que estão virados. Dica: é possível virar um lado somente com dois movimentos de “vai, troca e volta” e mais um reposicionamento.
+                To conclude this chapter, here's a challenge: Using the general strategy of twisting corners, find a way to solve the cube below by flipping the edges that are not in the correct position.  Tip: It is possible to flip one edge by applying two "go, swap, and back" movements, with a setup in between.
                 </p>
 
                 <div class="row justify-content-center">
                     <div class="col-md-6 my-3 px-3">
                         <p>
-                        Você pode interagir com a imagem girando o cubo e as camadas. Se precisar recomeçar basta clicar em iniciar (|◁).
+                        Feel free to interact with the image by rotating the cube and its layers. If you want to start over, simply click the reset button (∣◁). 
                         </p>
                         <p>
-                        Para ver uma possível solução exponha a aba oculta, clicando na seta.
+                        To view a possible solution, click on the arrow bellow to reveal the hidden tab.
                         </p>
                         <hr class="my-0 border-primary">
                         <p class="my-0 text-center">
@@ -166,16 +149,16 @@
                             <b>(x' z') (M' B2 M B' M' B M) F' (M' B' M B M' B2 M) F (z x)</b>
                             </p>
                             <p>
-                            Os parênteses servem apenas para destacar os conjugados. Note dentro do segundo e terceiro parênteses os 2 movimentos de "vai, troca e volta" intercalados por um reposicionamento. Note também que esses dois parênteses são inversos um do outro.
+                            The parentheses serve only to highlight the conjugates. Note within the second and third parentheses the two "go, swap and back" movements with a setup in between. Also notice that these two parentheses have reverse movements regarding each other.
                             </p>
                             <p>
-                            Obs.: O primeiro e último parênteses são apenas giros do cubo inteiro no espaço.
+                            Note: The first and last parentheses are just rotations of the whole cube in space.
                             </p>
                             <p>
-                            Clique em em iniciar (|◁) e depois em play (▷) para ver essa seqüência.
+                            Click reset (∣◁) then play (▷) to see this sequence.
                             </p>
                             <p>
-                            Lembre-se, essa é só uma possível solução. Se você encontrou outra, parabéns!
+                            Remember, this is just one possible solution. If you have found another one, congratulations!
                             </p>
                         </div>
                         <hr class="my-0 border-primary">                          
@@ -183,13 +166,13 @@
                     <div class="col-md-4 text-center my-3 px-3">
                         <div class="img-wrapper img-cubo">
                             <script>
-                                var movimento="{Desafio final}{Desafio final: Reposiciona o cubo (x' z')}(x' z').{Desafio final: vai-troca-volta (M' B2 M)}(M' B2 M).{Desafio final: reposiciona (B')}B'.{Desafio final: vai-troca-volta (M' B M)}(M' B M).{Desafio final: reposiciona (F')}F'.{Desafio final: inverte (M' B' M).B.(M' B2 M)}(M' B' M).B.(M' B2 M).{Desafio final: desfaz reposicionamento (F)}F.{Desafio final: Desfaz giro do cubo (z x)}(z x)";
+                                var movimento="{Final challenge}{Final challenge: cube rotation (x' z')}(x' z').{Final challenge: go-swap-back (M' B2 M)}(M' B2 M).{Final challenge: setup (B')}B'.{Final challenge: go-swap-back (M' B M)}(M' B M).{Final challenge: setup (F')}F'.{Final challenge: reverse(M' B' M).B.(M' B2 M)}(M' B' M).B.(M' B2 M).{Final challenge: undo setup (F)}F.{Final challenge: undo cube rotation (z x)}(z x)";
                                     setup="x2 (x' z').((M' B2 M).B'.(M' B M)).F'.((M' B' M).B.(M' B2 M)).F.(z x)"
                                 AnimCube3("initmove="+setup+"&move="+movimento+
                                             "&movetext=0\
                                             &yz=1\
                                             &fonttype=0\
-                                            &textsize=12\
+                                            &textsize=15\
                                             &facelets=\
                                             &buttonheight=20\
                                             &bgcolor=f0f0f0\
@@ -205,10 +188,13 @@
                 </div>
 
                 <p class="mt-3">
-                Se você terminou esse capítulo na prática, parabéns! Você resolveu o cubo de Rubik sem decorar qualquer algoritmo, apenas usando a lógica!
+                Congratulations on completing this chapter! By solving the Rubik's Cube without relying on memorized algorithms and using logical reasoning, you have demonstrated a great achievement.
                 </p>
                 <p>
-                Mesmo que você fique muito tempo sem resolver o cubo e se esqueça da execução de alguns movimentos, basta se lembrar das “leis” do cubo, das estratégias gerais e usar seu raciocínio lógico. No final das contas tudo se resume à combinação adequada de movimentos bem simples como o “vai, troca e volta”.
+                Even if you haven't solved the cube in a long time and may have forgotten some specific move sequences, remember that understanding the fundamental principles and "laws" of the cube, along with general strategies, is key. By combining these principles with simple movements like the "go, swap and back," you can navigate through the solving process.
+                </p>
+                <p>
+                Keep practicing and applying your logical reasoning skills, and you'll continue to improve your ability to solve the Rubik's Cube efficiently. Well done!
                 </p>
                                
             </div>
@@ -216,8 +202,8 @@
         </div>
 
         <nav class="nav nav-justified my-0">
-            <a class="nav-link virapagina" href="cubo-3x3x3/10-resolvendo-os-ultimos-cinco-cantos/estrategia-para-virar-os-cantos-1.html">⇦</a>
-            <a class="nav-link virapagina" href="cubo-3x3x3/11-referencias.html">⇨</a>
+            <a class="nav-link virapagina" href="rubiks-cube/10-solving-the-last-5-corners/strategy-to-twist-1.html">⇦</a>
+            <a class="nav-link virapagina" href="rubiks-cube/11-references.html">⇨</a>
         </nav>
         
     </main>

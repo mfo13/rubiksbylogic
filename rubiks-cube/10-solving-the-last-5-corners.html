@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -8,8 +8,8 @@
     
     <link rel="icon" href="favicon.ico">
 
-    <title>Cubo Mágico sem Decoreba | Cubo 3x3x3 - Os últimos cinco cantos</title>
-    <meta name="description" content="Resolva os cinco cantos finais do cubo mágico com lógica e estratégia, posicionando e orientando peças sem decoreba.">
+    <title>Rubik's Cube by Logic | Rubik's Cube - Solving the last five corners</title>
+    <meta name="description" content="Solve the final five corners of the Rubik’s Cube using logic and strategy, positioning and orienting pieces without memorization.">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
@@ -25,56 +25,53 @@
     
     <main class="container mb-0">
         
-        <h1>Cubo 3x3x3</h1>
-        <h2>Entendendo e Resolvendo o Cubo de Rubik sem Decorar</h2>
+        <h1>Rubik's Cube</h1>
+        <h2>Understanding and Solving the Rubik's Cube Without Algorithms</h2>
 
         <div class="row align-items-start">
 
             <div class="container px-3">
-                <h3>10. Resolvendo os últimos cinco cantos</h3>
+                <h3>10. Solving the 5 last corners</h3>
                 <p>
-                Conhecendo comutadores e conjugados só resta resolver os últimos 5 cantos. Fazemos isso em dois estágios:
+                With a grasp of commutators and conjugates, the remaining task is to solve the last 5 corners. This can be achieved through two steps:
                 </p>
                 <ol>
-                    <li>Colocar os cantos nos locais corretos usando comutadores, a orientação das cores não importa.</li>
-                    <li>“Girar” os cantos para que suas cores fiquem nas orientações corretas.</li>
+                    <li>Placing the corners in their correct positions using commutators, disregarding the color orientations.</li>
+                    <li>Adjusting the corners' orientations to ensure the colors are correctly aligned.</li>
                 </ol>
                 <p>
-                O 1<sup>o</sup> estágio você pode fazer facilmente agora que conhece comutadores e conjugados.
+                The first step becomes straightforward once you understand commutators and conjugates.
                 </p>
                 <p>
-                O 2<sup>o</sup> estágio pode ser resolvido com conjugados, mas, nesse caso, como os movimentos são bem restritos, é difícil descobrir a combinação adequada sem conhecer mais duas “leis” do cubo e sem ter uma estratégia. Novamente, basta conhecer as “leis” do cubo e uma estratégia, sem ter que decorar algoritmos.
+                For the second step, conjugates come into play, but due to the limited range of possible moves, it can be challenging to find the right combination without knowing two additional "laws" of the cube and lacking a strategy. However, there's no need to memorize algorithms as long as you understand the cube's "laws" and have a strategy.
                 </p>
                 <p>
-                Vamos ver essa última etapa em mais detalhes.
-                </p>
-                <p>
-                Como vimos antes, existem algumas situações impossíveis para o cubo, como, por exemplo, um único edge virado. Veja mais duas dessas “leis”:
+                Now, let's delve into the second step in more detail. As we explored earlier, there are certain impossible configurations for the cube, such as a single edge flipped over. Here are two more of these "laws":
                 </p>
                 <p class="bg-warning py-2 px-2 mb-2">
                 <b>
-                <u>Conhecimento importante:</u> é impossível ter apenas 1 canto virado. Os cantos sempre estarão virados aos pares e, ao mesmo tempo, em sentidos opostos.
+                <u>Key Knowledge:</u> It is impossible to have only one twisted corner. The corners will always be twisted in pairs, with opposite directions of twisting.
                 </b>
                 </p>
                 <p class="mt-3">
-                Veja os exemplos abaixo:
+                See the examples below:
                 </p>
                 <ul>
-                    <li>Figura 10.1: Configuração <b>impossível!</b> Só um canto virado.</li>
-                    <li>Figura 10.2: Configuração <b>impossível!</b> Dois cantos virados no mesmo sentido.</li>
-                    <li>Figura 10.3: OK! Configuração permitida. Dois cantos virados em sentidos opostos.</li>
-                    <li>Figura 10.4: OK! Configuração permitida. Três cantos virados, um deles 2 vezes no mesmo sentido e os outros dois 1 vez no sentido oposto cada um.</li>
+                    <li>Figure 10.1: <b>Impossible</b> configuration! Only one corner twisted.</li>
+                    <li>Figure 10.2: <b>Impossible</b> configuration! Two twisted corners, both twisted in the same direction.</li>
+                    <li>Figure 10.3: Allowed configuration! Two twisted corners, twisted in opposite directions.</li>
+                    <li>Figure 10.4: Allowed configuration! Three twisted corners, one twisted twice in one direction and the other two twisted once each in the opposite direction to the first.</li>
                 </ul>
 
                 <div class="row justify-content-center">
-                    <div class="col-md-3 my-3 px-3">
+                    <div class="col-md-3 text-center my-3 px-3">
                         <div class="img-wrapper img-cubo">
                             <script>
-                                var movimento="{Figura 10.1: Arranjo impossível!}x2 z'";
+                                var movimento="{Figure 10.1}x2 z'";
                                 AnimCube3("initmove=x2 &move="+movimento+
                                             "&movetext=0\
                                             &fonttype=0\
-                                            &textsize=12\
+                                            &textsize=15\
                                             &facelets=wwwwwwwwwYYYYYYYYRoooooooooRRBRRRRRRgggggggggBBBBBBBBY\
                                             &buttonheight=20\
                                             &bgcolor=f0f0f0\
@@ -90,11 +87,11 @@
                     <div class="col-md-3 text-center my-3 px-3">
                         <div class="img-wrapper img-cubo">
                             <script>
-                                var movimento="{Figura 10.2: Arranjo impossível!}x2 z'";
+                                var movimento="{Figure 10.2}x2 z'";
                                 AnimCube3("initmove=x2 &move="+movimento+
                                             "&movetext=0\
                                             &fonttype=0\
-                                            &textsize=12\
+                                            &textsize=15\
                                             &facelets=wwwwwwwwwYYYYYYBYRooooooooyRRBRRRRRRgggggggggBBOBBBBBY\
                                             &buttonheight=20\
                                             &bgcolor=f0f0f0\
@@ -110,11 +107,11 @@
                     <div class="col-md-3 text-center my-3 px-3">
                         <div class="img-wrapper img-cubo">
                             <script>
-                                var movimento="{Figura 10.3: OK!}x2 z'";
+                                var movimento="{Figure 10.3}x2 z'";
                                 AnimCube3("initmove=x2 &move="+movimento+
                                             "&movetext=0\
                                             &fonttype=0\
-                                            &textsize=12\
+                                            &textsize=15\
                                             &facelets=wwwwwwwwwYYYYYYOYRoooooooobRRBRRRRRRgggggggggBBYBBBBBY\
                                             &buttonheight=20\
                                             &bgcolor=f0f0f0\
@@ -130,11 +127,11 @@
                     <div class="col-md-3 text-center my-3 px-3">
                         <div class="img-wrapper img-cubo">
                             <script>
-                                var movimento="{Figura 10.4: OK!}x2 z'";
+                                var movimento="{Figure 10.4}x2 z'";
                                 AnimCube3("initmove=x2 &move="+movimento+
                                             "&movetext=0\
                                             &fonttype=0\
-                                            &textsize=12\
+                                            &textsize=15\
                                             &facelets=wwwwwwwwwYYRYYYOYBoooooooobRRYRRRRRGggggggggyBBYBBBBBR\
                                             &buttonheight=20\
                                             &bgcolor=f0f0f0\
@@ -150,13 +147,10 @@
                 </div>
                 
                 <p class="mt-3">
-                Isso significa que é possível fazer uma combinação de movimentos que vire apenas 2 cantos em sentidos opostos!
+                Indeed, it is possible to find a combination of movements that twists only two corners in opposite directions. This can be achieved through the proper combination of conjugates.
                 </p>
                 <p>
-                Realmente, basta fazer a combinação adequada de movimentos conjugados.
-                </p>
-                <p>
-                Vamos ver como é a estratégia usando um exemplo.
+                Now, let's take a look at the strategy using an example to better understand the process.
                 </p>
                     
             </div>
@@ -164,8 +158,8 @@
         </div>
 
         <nav class="nav nav-justified my-0">
-            <a class="nav-link virapagina" href="cubo-3x3x3/9-comutadores-e-conjugados-e-so-o-que-voce-precisa/conjugados.html">⇦</a>
-            <a class="nav-link virapagina" href="cubo-3x3x3/10-resolvendo-os-ultimos-cinco-cantos/estrategia-para-virar-os-cantos-1.html">⇨</a>
+            <a class="nav-link virapagina" href="rubiks-cube/9-commutators-and-conjugates-thats-all-you-need/conjugates.html">⇦</a>
+            <a class="nav-link virapagina" href="rubiks-cube/10-solving-the-last-5-corners/strategy-to-twist-1.html">⇨</a>
         </nav>
         
     </main>
