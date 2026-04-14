@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -8,8 +8,8 @@
     
     <link rel="icon" href="favicon.ico">
 
-    <title>Cubo Mágico sem Decoreba | Cubo 3x3x3 - Um pouco sobre ciclos</title>
-    <meta name="description" content="Aprenda sobre ciclos no cubo mágico e como a repetição de movimentos pode ajudar na resolução da última camada.">
+    <title>Rubik's Cube by Logic | Rubik's Cube - A bit about cicles</title>
+    <meta name="description" content="Learn about cycles in the Rubik’s Cube and how repeating moves can help solve the last layer.">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
@@ -25,38 +25,38 @@
     
     <main class="container mb-0">
         
-        <h1>Cubo 3x3x3</h1>
-        <h2>Entendendo e Resolvendo o Cubo de Rubik sem Decorar</h2>
+        <h1>Rubik's Cube</h1>
+        <h2>Understanding and Solving the Rubik's Cube Without Algorithms</h2>
 
         <div class="row align-items-start">
 
             <div class="container px-3">
-                <h3>7. Um pouco sobre ciclos</h3>
+                <h3>7. A bit about cycles</h3>
                 <p>
-                Antes de acertar os lados que faltam é preciso conhecer um conceito útil, o dos movimentos cíclicos.
+                Before proceeding with the solution for the remaining edges, it's important to understand a concept called "cycles." Due to the cube's geometrical properties, it always returns to its initial state when a specific sequence of moves is continuously repeated, regardless of the complexity of the sequence. Let's explore some examples:
                 </p>
-                <p>
-                Devido às suas características geométricas o cubo sempre acaba voltando à sua condição original se uma determinada seqüência de movimentos for continuamente repetida, seja essa seqüência simples ou complexa. Vamos ver alguns exemplos:
-                </p>
-                               
+                                               
                 <div class="row justify-content-center">
                     <div class="col-md-4 my-3 px-3">
                         <p>
-                        Repetindo o movimento R quatro vezes:
+                        Example 1:
                         </p>
                         <p>
-                        Clique em <i>play</i> (▷) na Figura 7.1 e veja. Há uma pausa (.) entre as repetições.
+                        Repeating the R move four times.
+                        </p>
+                        <p>
+                        Figure 7.1 demonstrates this cycle. You can click play (▷) to observe the sequence. Note the pause (.) between repetitions.
                         </p>
                     </div>
                     <div class="col-md-4 text-center my-3 px-3">
                         <div class="img-wrapper img-cubo">
                             <script>
-                                var movimento="{Figura 7.1}{Figura 7.1: Repetição 1}R.{Figura 7.1: Repetição 2}R.{Figura 7.1: Repetição 3}R.{Figura 7.1: Repetição 4}R";
+                                var movimento="{Figure 7.1}{Figura 7.1: Repetition 1}R.{Figure 7.1: Repetition 2}R.{Figure 7.1: Repetition 3}R.{Figure 7.1: Repetition 4}R";
                                 AnimCube3("initmove=x2 &move="+movimento+
                                             "&movetext=5\
                                             &yz=1\
                                             &fonttype=0\
-                                            &textsize=12\
+                                            &textsize=15\
                                             &facelets=#\
                                             &buttonheight=20\
                                             &bgcolor=f0f0f0\
@@ -74,27 +74,28 @@
                 <div class="row justify-content-center">
                     <div class="col-md-7 my-3 px-3">
                         <p>
-                        Esse ciclo foi óbvio? Então vamos tentar a seguinte seqüência:
+                        Example 2:
                         </p>
                         <p>
-                        M2 E2 S2. Se você repetir a mesma seqüência o cubo volta exatamente à condição inicial. Clique em <i>play</i> (▷) na Figura 7.2 e veja. Há uma pausa (.) entre as repetições.
+                        Now let's try a different sequence: M2 E2 S2. If you repeat this sequence, the cube will return to its original state. Figure 7.2 showcases this cycle. You can click play (▷) to see it in action. Once again, there is a pause (.) between repetitions. Interestingly, this sequence is equivalent to Rw2 R2 Dw2 D2 Bw2 B2. You can change the sequence in Figure 7.2 by clicking the arrow in the upper right corner (▷) and then click play (▷) to observe the equivalent moves. 
+                        </p>
+                        <p>&nbsp;</p>
+                        <p>
+                        Example 3:
                         </p>
                         <p>
-                        Essa seqüência é equivalente a Rw2 R2 Dw2 D2 Bw2 B2. Clique na seta à direita, no canto superior da Figura 7.2 (▷) para mudar de seqüência e depois clique em <i>play</i> (▷). Novamente há uma pausa (.) entre as repetições.
-                        </p>
-                        <p>
-                        Exatamente o mesmo acontece para a seqüência R2 L2 U2 D2 F2 B2, feita duas vezes. Mas neste caso os centros ficam fixos no espaço e as camadas externas é que se movem. Mude de seqüência mais uma vez na Figura 7.2 clicando em (▷) e depois clique em <i>play</i> (▷) para conferir. 
+                        Similarly, the sequence R2 L2 U2 D2 F2 B2, repeated twice, results in the cube returning to its initial state. However, in this case, the centers remain fixed while the outer layers move. You can change the sequence in Figure 7.2 by clicking the arrow (▷) in the upper right corner and then click play (▷) to observe the cycle.
                         </p>
                     </div>
                     <div class="col-md-4 text-center my-3 px-3">
                         <div class="img-wrapper img-cubo">
                             <script>
-                                var movimento="{Figura 7.2}{Figura 7.2: Repetição 1}M2 E2 S2 . {Figura 7.2: Repetição 2}M2 E2 S2;{Figura 7.2}{Figura 7.2: Repetição 1}Rw2 R2 Dw2 D2 Bw2 B2 . {Figura 7.2: Repetição 2}Rw2 R2 Dw2 D2 Bw2 B2;{Figura 7.2} {Figura 7.2: Repetição 1}R2 L2 U2 D2 F2 B2 . {Figura 7.2: Repetição 2}R2 L2 U2 D2 F2 B2";
+                                var movimento="{Figure 7.2}{Figure 7.2: Repetition 1}M2 E2 S2 . {Figure 7.2: Repetition 2}M2 E2 S2;{Figure 7.2}{Figure 7.2: Repetition 1}Rw2 R2 Dw2 D2 Bw2 B2 . {Figure 7.2: Repetition 2}Rw2 R2 Dw2 D2 Bw2 B2;{Figure 7.2} {Figure 7.2: Repetition 1}R2 L2 U2 D2 F2 B2 . {Figure 7.2: Repetition 2}R2 L2 U2 D2 F2 B2";
                                 AnimCube3("initmove=x2;x2;x2 &move="+movimento+
                                             "&movetext=1\
                                             &yz=1\
                                             &fonttype=0\
-                                            &textsize=12\
+                                            &textsize=15\
                                             &facelets=#\
                                             &buttonheight=20\
                                             &bgcolor=f0f0f0\
@@ -112,21 +113,21 @@
                 <div class="row justify-content-center">
                     <div class="col-md-4 my-3 px-3">
                         <p>
-                        Outro exemplo: repetindo a seqüência R2 U2 D2, por quatro vezes, faz com que o cubo volte à situação inicial. Tente!
-                       </p>
-                       <p>
-                        Clique em <i>play</i> (▷) na Figura 7.3 e veja. 
-                       </p>
+                        Example 4:
+                        </p>
+                        <p>
+                        Repeating the sequence R2 U2 D2 four times also brings the cube back to its initial condition. Figure 7.3 demonstrates this cycle. Click play (▷) to see it in action.
+                        </p>
                     </div>
                     <div class="col-md-4 text-center my-3 px-3">
                         <div class="img-wrapper img-cubo">
                             <script>
-                                var movimento="{Figura 7.3}{Figura 7.3: Repetição 1}R2 U2 D2 . {Figura 7.3: Repetição 2}R2 U2 D2 . {Figura 7.3: Repetição 3}R2 U2 D2 . {Figura 7.3: Repetição 4}R2 U2 D2";
+                                var movimento="{Figure 7.3}{Figure 7.3: Repetition 1}R2 U2 D2 . {Figure 7.3: Repetition 2}R2 U2 D2 . {Figure 7.3: Repetition 3}R2 U2 D2 . {Figure 7.3: Repetition 4}R2 U2 D2";
                                 AnimCube3("initmove=x2 &move="+movimento+
                                             "&movetext=1\
                                             &yz=1\
                                             &fonttype=0\
-                                            &textsize=12\
+                                            &textsize=15\
                                             &facelets=#\
                                             &buttonheight=20\
                                             &bgcolor=f0f0f0\
@@ -144,24 +145,21 @@
                 <div class="row justify-content-center">
                     <div class="col-md-6 my-3 px-3">
                         <p>
-                        Qualquer seqüência que você imaginar, se repetida um número suficiente de vezes, irá levar o cubo ao seu estado original. Pode não parecer à primeira vista, mas se você repetir a seqüência R U, por 105 vezes, o cubo voltará exatamente à condição original!
-                       </p>
-                       <p>
-                        Clique em <i>play</i> (▷) na Figura 7.4 e veja!
-                       </p>
-                       <p>
-                        Esse conhecimento sobre ciclos poderá ser muito útil para a solução dos lados da última camada, a seguir.
-                       </p>
+                        The key takeaway from these examples is that any sequence, when repeated enough times, will result in the cube returning to its original state. It may seem improbable at first, but even a simple sequence like R U, repeated 105 times, will restore the cube to its initial configuration. Figure 7.4 illustrates this. You can click play (▷) to observe the sequence.
+                        </p>
+                        <p>
+                        This knowledge about cycles becomes highly useful when solving the final edges of the cube, as we will explore in the following steps.
+                        </p>
                     </div>
                     <div class="col-md-4 text-center my-3 px-3">
                         <div class="img-wrapper img-cubo">
                             <script>
-                                var movimento="{Figura 7.4}{Figura 7.4: Repetição 1}R U.{Figura 7.4: Repetição 2}R U.{Figura 7.4: Repetição 3}R U.{Figura 7.4: Repetição 4}R U.{Figura 7.4: Repetição 5}R U.{Figura 7.4: Repetição 6}R U.{Figura 7.4: Repetição 7}R U.{Figura 7.4: Repetição 8}R U.{Figura 7.4: Repetição 9}R U.{Figura 7.4: Repetição 10}R U.{Figura 7.4: Repetição 11}R U.{Figura 7.4: Repetição 12}R U.{Figura 7.4: Repetição 13}R U.{Figura 7.4: Repetição 14}R U.{Figura 7.4: Repetição 15}R U.{Figura 7.4: Repetição 16}R U.{Figura 7.4: Repetição 17}R U.{Figura 7.4: Repetição 18}R U.{Figura 7.4: Repetição 19}R U.{Figura 7.4: Repetição 20}R U.{Figura 7.4: Repetição 21}R U.{Figura 7.4: Repetição 22}R U.{Figura 7.4: Repetição 23}R U.{Figura 7.4: Repetição 24}R U.{Figura 7.4: Repetição 25}R U.{Figura 7.4: Repetição 26}R U.{Figura 7.4: Repetição 27}R U.{Figura 7.4: Repetição 28}R U.{Figura 7.4: Repetição 29}R U.{Figura 7.4: Repetição 30}R U.{Figura 7.4: Repetição 31}R U.{Figura 7.4: Repetição 32}R U.{Figura 7.4: Repetição 33}R U.{Figura 7.4: Repetição 34}R U.{Figura 7.4: Repetição 35}R U.{Figura 7.4: Repetição 36}R U.{Figura 7.4: Repetição 37}R U.{Figura 7.4: Repetição 38}R U.{Figura 7.4: Repetição 39}R U.{Figura 7.4: Repetição 40}R U.{Figura 7.4: Repetição 41}R U.{Figura 7.4: Repetição 42}R U.{Figura 7.4: Repetição 43}R U.{Figura 7.4: Repetição 44}R U.{Figura 7.4: Repetição 45}R U.{Figura 7.4: Repetição 46}R U.{Figura 7.4: Repetição 47}R U.{Figura 7.4: Repetição 48}R U.{Figura 7.4: Repetição 49}R U.{Figura 7.4: Repetição 50}R U.{Figura 7.4: Repetição 51}R U.{Figura 7.4: Repetição 52}R U.{Figura 7.4: Repetição 53}R U.{Figura 7.4: Repetição 54}R U.{Figura 7.4: Repetição 55}R U.{Figura 7.4: Repetição 56}R U.{Figura 7.4: Repetição 57}R U.{Figura 7.4: Repetição 58}R U.{Figura 7.4: Repetição 59}R U.{Figura 7.4: Repetição 60}R U.{Figura 7.4: Repetição 61}R U.{Figura 7.4: Repetição 62}R U.{Figura 7.4: Repetição 63}R U.{Figura 7.4: Repetição 64}R U.{Figura 7.4: Repetição 65}R U.{Figura 7.4: Repetição 66}R U.{Figura 7.4: Repetição 67}R U.{Figura 7.4: Repetição 68}R U.{Figura 7.4: Repetição 69}R U.{Figura 7.4: Repetição 70}R U.{Figura 7.4: Repetição 71}R U.{Figura 7.4: Repetição 72}R U.{Figura 7.4: Repetição 73}R U.{Figura 7.4: Repetição 74}R U.{Figura 7.4: Repetição 75}R U.{Figura 7.4: Repetição 76}R U.{Figura 7.4: Repetição 77}R U.{Figura 7.4: Repetição 78}R U.{Figura 7.4: Repetição 79}R U.{Figura 7.4: Repetição 80}R U.{Figura 7.4: Repetição 81}R U.{Figura 7.4: Repetição 82}R U.{Figura 7.4: Repetição 83}R U.{Figura 7.4: Repetição 84}R U.{Figura 7.4: Repetição 85}R U.{Figura 7.4: Repetição 86}R U.{Figura 7.4: Repetição 87}R U.{Figura 7.4: Repetição 88}R U.{Figura 7.4: Repetição 89}R U.{Figura 7.4: Repetição 90}R U.{Figura 7.4: Repetição 91}R U.{Figura 7.4: Repetição 92}R U.{Figura 7.4: Repetição 93}R U.{Figura 7.4: Repetição 94}R U.{Figura 7.4: Repetição 95}R U.{Figura 7.4: Repetição 96}R U.{Figura 7.4: Repetição 97}R U.{Figura 7.4: Repetição 98}R U.{Figura 7.4: Repetição 99}R U.{Figura 7.4: Repetição 100}R U.{Figura 7.4: Repetição 101}R U.{Figura 7.4: Repetição 102}R U.{Figura 7.4: Repetição 103}R U.{Figura 7.4: Repetição 104}R U.{Figura 7.4: Repetição 105}R U";
+                                var movimento="{Figure 7.4}{Figure 7.4: Repetition 1}R U.{Figure 7.4: Repetition 2}R U.{Figure 7.4: Repetition 3}R U.{Figure 7.4: Repetition 4}R U.{Figure 7.4: Repetition 5}R U.{Figure 7.4: Repetition 6}R U.{Figure 7.4: Repetition 7}R U.{Figure 7.4: Repetition 8}R U.{Figure 7.4: Repetition 9}R U.{Figure 7.4: Repetition 10}R U.{Figure 7.4: Repetition 11}R U.{Figure 7.4: Repetition 12}R U.{Figure 7.4: Repetition 13}R U.{Figure 7.4: Repetition 14}R U.{Figure 7.4: Repetition 15}R U.{Figure 7.4: Repetition 16}R U.{Figure 7.4: Repetition 17}R U.{Figure 7.4: Repetition 18}R U.{Figure 7.4: Repetition 19}R U.{Figure 7.4: Repetition 20}R U.{Figure 7.4: Repetition 21}R U.{Figure 7.4: Repetition 22}R U.{Figure 7.4: Repetition 23}R U.{Figure 7.4: Repetition 24}R U.{Figure 7.4: Repetition 25}R U.{Figure 7.4: Repetition 26}R U.{Figure 7.4: Repetition 27}R U.{Figure 7.4: Repetition 28}R U.{Figure 7.4: Repetition 29}R U.{Figure 7.4: Repetition 30}R U.{Figure 7.4: Repetition 31}R U.{Figure 7.4: Repetition 32}R U.{Figure 7.4: Repetition 33}R U.{Figure 7.4: Repetition 34}R U.{Figure 7.4: Repetition 35}R U.{Figure 7.4: Repetition 36}R U.{Figure 7.4: Repetition 37}R U.{Figure 7.4: Repetition 38}R U.{Figure 7.4: Repetition 39}R U.{Figure 7.4: Repetition 40}R U.{Figure 7.4: Repetition 41}R U.{Figure 7.4: Repetition 42}R U.{Figure 7.4: Repetition 43}R U.{Figure 7.4: Repetition 44}R U.{Figure 7.4: Repetition 45}R U.{Figure 7.4: Repetition 46}R U.{Figure 7.4: Repetition 47}R U.{Figure 7.4: Repetition 48}R U.{Figure 7.4: Repetition 49}R U.{Figure 7.4: Repetition 50}R U.{Figure 7.4: Repetition 51}R U.{Figure 7.4: Repetition 52}R U.{Figure 7.4: Repetition 53}R U.{Figure 7.4: Repetition 54}R U.{Figure 7.4: Repetition 55}R U.{Figure 7.4: Repetition 56}R U.{Figure 7.4: Repetition 57}R U.{Figure 7.4: Repetition 58}R U.{Figure 7.4: Repetition 59}R U.{Figure 7.4: Repetition 60}R U.{Figure 7.4: Repetition 61}R U.{Figure 7.4: Repetition 62}R U.{Figure 7.4: Repetition 63}R U.{Figure 7.4: Repetition 64}R U.{Figure 7.4: Repetition 65}R U.{Figure 7.4: Repetition 66}R U.{Figure 7.4: Repetition 67}R U.{Figure 7.4: Repetition 68}R U.{Figure 7.4: Repetition 69}R U.{Figure 7.4: Repetition 70}R U.{Figure 7.4: Repetition 71}R U.{Figure 7.4: Repetition 72}R U.{Figure 7.4: Repetition 73}R U.{Figure 7.4: Repetition 74}R U.{Figure 7.4: Repetition 75}R U.{Figure 7.4: Repetition 76}R U.{Figure 7.4: Repetition 77}R U.{Figure 7.4: Repetition 78}R U.{Figure 7.4: Repetition 79}R U.{Figure 7.4: Repetition 80}R U.{Figure 7.4: Repetition 81}R U.{Figure 7.4: Repetition 82}R U.{Figure 7.4: Repetition 83}R U.{Figure 7.4: Repetition 84}R U.{Figure 7.4: Repetition 85}R U.{Figure 7.4: Repetition 86}R U.{Figure 7.4: Repetition 87}R U.{Figure 7.4: Repetition 88}R U.{Figure 7.4: Repetition 89}R U.{Figure 7.4: Repetition 90}R U.{Figure 7.4: Repetition 91}R U.{Figure 7.4: Repetition 92}R U.{Figure 7.4: Repetition 93}R U.{Figure 7.4: Repetition 94}R U.{Figure 7.4: Repetition 95}R U.{Figure 7.4: Repetition 96}R U.{Figure 7.4: Repetition 97}R U.{Figure 7.4: Repetition 98}R U.{Figure 7.4: Repetition 99}R U.{Figure 7.4: Repetition 100}R U.{Figure 7.4: Repetition 101}R U.{Figure 7.4: Repetition 102}R U.{Figure 7.4: Repetition 103}R U.{Figure 7.4: Repetition 104}R U.{Figure 7.4: Repetition 105}R U";
                                 AnimCube3("initmove=x2;x2;x2 &move="+movimento+
                                             "&movetext=1\
                                             &yz=1\
                                             &fonttype=0\
-                                            &textsize=12\
+                                            &textsize=15\
                                             &facelets=#\
                                             &buttonheight=20\
                                             &bgcolor=f0f0f0\
@@ -182,8 +180,8 @@
         </div>
 
         <nav class="nav nav-justified my-0">
-            <a class="nav-link virapagina" href="cubo-3x3x3/6-o-metodo-de-frey-e-singmaster/6-c-os-3-lados-da-camada-central.html">⇦</a>
-            <a class="nav-link virapagina" href="cubo-3x3x3/8-resolvendo-os-lados-da-ultima-camada.html">⇨</a>
+            <a class="nav-link virapagina" href="rubiks-cube/6-frey-and-singmasters-strategy/6-c-solving-3-edges-of-the-2nd-layer.html">⇦</a>
+            <a class="nav-link virapagina" href="rubiks-cube/8-solving-the-edges-of-the-last-layer.html">⇨</a>
         </nav>
         
     </main>

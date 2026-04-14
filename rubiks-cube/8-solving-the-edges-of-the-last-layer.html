@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -8,8 +8,8 @@
     
     <link rel="icon" href="favicon.ico">
 
-    <title>Cubo Mágico sem Decoreba | Cubo 3x3x3 - Os lados da última camada</title>
-    <meta name="description" content="Resolva os edges da última camada do cubo mágico com lógica e movimentos simples, usando o método de vai, troca e volta.">
+    <title>Rubik's Cube by Logic | Rubik's Cube - Solving the edges of the last layer</title>
+    <meta name="description" content="Solve the edges of the last layer of the Rubik’s Cube with logic and simple moves, using the 'go, swap and bakc' method.">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
@@ -25,49 +25,46 @@
     
     <main class="container mb-0">
         
-        <h1>Cubo 3x3x3</h1>
-        <h2>Entendendo e Resolvendo o Cubo de Rubik sem Decorar</h2>
+        <h1>Rubik's Cube</h1>
+        <h2>Understanding and Solving the Rubik's Cube Without Algorithms</h2>
 
         <div class="row align-items-start">
 
             <div class="container px-3">
-                <h3>8. Resolvendo os lados da última camada</h3>
+                <h3>8. Solving the edges of the last layer</h3>
                 <p>
-                Nessa fase resolveremos todos os lados (<i>edges</i>) restantes usando o mesmo princípio visto no <a href="cubo-3x3x3/5-o-movimento-de-vai-troca-e-volta.html">capítulo 5</a>. A diferença é que agora a camada do meio deve ser preservada e, portanto, não sofrerá qualquer rotação. Apenas faremos o movimento de “vai e volta” da coluna auxiliar (R e R’ ou F’ e F) para trocar o seu lado (<i>edge</i>) com a camada superior. O objetivo é resolver todos os lados (<i>edges</i>) da camada superior, quando isso for feito o lado (<i>edge</i>) que faltava na camada do meio estará automaticamente resolvido. (obs.: o cubo não pode ter todos os <i>edges</i> resolvidos e só um deles com a orientação errada das cores, é matematicamente impossível.)
+                In this step, we will solve the remaining edges of the Rubik's Cube using a similar principle to what we learned in <a href="rubiks-cube/5-go-swap-and-back.html">Chapter 5</a>. However, there is one key difference: we need to preserve the equator layer (E), which means it won't undergo any rotation. Instead, we'll focus on the back and forth movement of the auxiliary column (R and R' or F' and F) to swap its edge with the upper layer. The goal is to solve all the edges of the top layer, and by doing so, the missing edge in the equator layer (E) will also be solved. It's important to note that having all the edges solved except one with flipped colors is mathematically impossible.
                 </p>
                 <p>
-                Dois cuidados devem ser tomados nessa fase:
+                There are a couple of precautions to keep in mind during this stage:
                 </p>
                 <ol>
-                    <li>Sempre que se faz o movimento de “vai” da coluna vertical é obrigatório fazer o movimento de “volta”.</li>
-                    <li>Como o movimento de “volta” é obrigatório deve-se evitar a troca, na camada superior, com uma peça que já estava resolvida.</li>
+                    <li>Whenever you perform the "go" movement of the vertical column, it is mandatory to follow it with the "back" movement.</li>
+                    <li>Since the "back" movement is mandatory, you should avoid swapping with an edge that has already been solved in the upper layer.</li>
                 </ol>
                                
                 <div class="row justify-content-center">
                     <div class="col-md-7 my-3 px-3">
                         <p>
-                        Como nenhum <i>edge</i> da camada superior está no lugar podemos começar com qualquer um deles. Nesse caso temos um deles na coluna vertical usada para o “vai e volta”. A única opção que temos é fazer R, “trocar” e “voltar”.
+                        Since none of the upper layer edges are solved, we can start with any one of them. In this case, we have one of the upper edges in the vertical column used for the back and forth movement. The only option we have is to apply R ("go"), then perform the "swap" and "back."
                         </p>
                         <p>
-                        Por exemplo: R ("vai") U' ("troca") R' ("volta")
+                        Example: R U' R'
                         </p>
                         <p>
-                        Clique em <i>play</i> (▷) na Figura 8.1 e veja.
-                        </p>
-                        <p>
-                        Note que a troca foi feita com qualquer outro <i>edge</i> com a cor amarela, a dica é justamente trocar com um <i>edge</i> com a cor amarela, apenas um deles não tem a face amarela, se você trocar com ele terá que trocar novamente para poder deixar um edge amarelo na coluna de “vai e volta”.
+                        Click play (▷) on Figure 8.1 to see the sequence.
                         </p>
                     </div>
                     <div class="col-md-4 text-center my-3 px-3">
                         <div class="img-wrapper img-cubo">
                             <script>
-                                var movimento="{Figura 8.1}{Figura 8.1:   (vai) R}R.{Figura 8.1:   (troca) U'}U'.{Figura 8.1:   (volta) R'}R'";
+                                var movimento="{Figure 8.1}{Figure 8.1:   (go) R}R.{Figure 8.1:   (swap) U'}U'.{Figure 8.1:   (back) R'}R'";
                                     setup="x2 F' U' F U2 R U' R' U F' U' F U' F' U F U2 R U R'",
                                 AnimCube3("initmove="+setup+"&move="+movimento+
                                             "&movetext=1\
                                             &yz=1\
                                             &fonttype=0\
-                                            &textsize=12\
+                                            &textsize=15\
                                             &facelets=wwwwwwwwlLYLYYYLYLoolooooolLRLRRRRRLgggggglglBBLBBBLBL\
                                             &buttonheight=20\
                                             &bgcolor=f0f0f0\
@@ -85,22 +82,22 @@
                 <div class="row justify-content-center">
                     <div class="col-md-4 my-3 px-3">
                         <p>
-                        Agora é só girar a camada superior para que fique na posição correta e facilite a decidir a próxima troca. Neste caso, U2.
+                        After the swap, rotate the upper layer so that the solved edge matches its side facelet with the corresponding cube face having the same color. This positioning makes it easier to decide on the next swap. In the example, we apply U2 to rotate the upper layer to the correct position.
                         </p>
                         <p>
-                        Clique em <i>play</i> (▷) na Figura 8.2 e veja.
+                        Click play (▷) on Figure 8.2 to observe the sequence.
                         </p>
                     </div>
                     <div class="col-md-4 text-center my-3 px-3">
                         <div class="img-wrapper img-cubo">
                             <script>
-                                var movimento="{Figura 8.2}U2";
+                                var movimento="{Figure 8.2}U2";
                                     setup="x2 F' U' F U2 R U' R' U F' U' F U' F' U F U2",
                                 AnimCube3("initmove="+setup+"&move="+movimento+
                                             "&movetext=1\
                                             &yz=1\
                                             &fonttype=0\
-                                            &textsize=12\
+                                            &textsize=15\
                                             &facelets=wwwwwwwwlLYLYYYLYLoolooooolLRLRRRRRLgggggglglBBLBBBLBL\
                                             &buttonheight=20\
                                             &bgcolor=f0f0f0\
@@ -118,34 +115,34 @@
                 <div class="row justify-content-center">
                     <div class="col-md-7 my-3 px-3">
                         <p>
-                        Dessa maneira é possível decidir o posicionamento da camada superior para o próximo movimento de “vai, troca e volta”. No nosso exemplo, como o <i>edge</i> na coluna de “vai e volta” tem uma face laranja significa que ele é oposto ao <i>edge</i> que já foi resolvido (no cubo a face laranja é oposta à vermelha). Assim fazemos U2 antes do próximo “vai, troca e volta”.
-                       </p>
-                       <p>
-                        Clique em avançar (<span style="font-size: 25px;">⧐</span>) na Figura 8.3 e veja.
-                       </p>
-                       <p>
-                        Agora basta fazer o “vai, troca e volta”, escolhendo outro edge com a face amarela para trocar, nesse caso escolhemos o edge amarelo/azul. Fazemos F' ("vai) U' ("troca") F ("volta").
-                       </p>
-                       <p>
-                        Clique 3 vezes em avançar (<span style="font-size: 25px;">⧐</span>) na Figura 8.3 e veja.
-                       </p>
-                       <p>
-                        De novo colocamos a camada superior na posição correta para decidir a próxima troca. Neste caso aplicamos U'.
-                       </p>
-                       <p>
-                        Clique novamente em avançar (<span style="font-size: 25px;">⧐</span>) na Figura 8.3 e veja.
-                       </p>
+                        With the upper layer in the correct position, we can now determine the next swap. In the example, since the edge in the back and forth column has an orange face (opposite to the solved edge's red face), we do U2 before the next "go, swap, and back" movement.
+                        </p>
+                        <p>
+                        Click forward (<span style="font-size: 25px;">⧐</span>) in Figure 8.3 to proceed.
+                        </p>
+                        <p>
+                        Repeat the "go, swap and back" process, selecting another edge with a yellow facelet to swap. In the example, we choose the yellow/blue edge. Therefore, we perform F' ("go"), U' ("swap") and F ("back").
+                        </p>
+                        <p>
+                        Click forward (<span style="font-size: 25px;">⧐</span>) 3 times on Figure 8.3 to see the sequence.
+                        </p>
+                        <p>
+                        Rotate the upper layer to the correct position again, determining the next swap. In the example, we apply U'.
+                        </p>
+                        <p>
+                        Click forward (<span style="font-size: 25px;">⧐</span>) again, in Figure 8.3 to proceed.
+                        </p>
                     </div>
                     <div class="col-md-4 text-center my-3 px-3">
                         <div class="img-wrapper img-cubo">
                             <script>
-                                var movimento="{Figura 8.3}{Figura 8.3:   (reposiciona) U2}U2.{Figura 8.3:   (vai) F'}F'.{Figura 8.3:   (troca) U'}U'.{Figura 8.3:   (volta) F}F.{Figura 8.3:   (reposiciona) U'}U'";
+                                var movimento="{Figure 8.3}{Figure 8.3:   (setup) U2}U2.{Figure 8.3:   (go) F'}F'.{Figure 8.3:   (swap) U'}U'.{Figure 8.3:   (back) F}F.{Figure 8.3:   (align) U'}U'";
                                     setup="x2 F' U' F U2 R U' R' U F' U' F U' F' U F",
                                 AnimCube3("initmove="+setup+"&move="+movimento+
                                             "&movetext=1\
                                             &yz=1\
                                             &fonttype=0\
-                                            &textsize=12\
+                                            &textsize=15\
                                             &facelets=wwwwwwwwlLYLYYYLYLoolooooolLRLRRRRRLgggggglglBBLBBBLBL\
                                             &buttonheight=20\
                                             &bgcolor=f0f0f0\
@@ -161,54 +158,51 @@
                 </div>
 
                 <p class="mt-3">
-                O processo se repete até restar apenas um <i>edge</i> de face amarela para resolver. Lembre-se sempre de não usar os <i>edges</i> já resolvidos para a fazer a troca.
+                Repeat the process until there is only one yellow-faced edge left to solve. Always remember not to use already solved edges in swaps.
                 </p>
                 <p>
-                No final teremos 3 possibilidades:
+                At the end of this step, you will have three possibilities:
                 </p>
                 <ol type="a">
-                    <li>você teve sorte e a última troca já deixa tudo certo (caso raro)</li>
-                    <li>você termina com 2 <i>edges</i> amarelos corretos e um deles com a face amarela para cima, mas em lugar errado, e o último deles na coluna de “vai e volta”</li>
-                    <li>você termina com 3 <i>edges</i> amarelos nos lugares corretos e nas orientações corretas e só o último deles na coluna de “vai e volta”</li>
+                    <li>You were lucky, and the last swap solved everything (a rare case).</li>
+                    <li>You end up with two solved yellow edges, one of them facing up but in the wrong position, along with the last unsolved edge in the back and forth column.</li>
+                    <li>You end up with three yellow edges in the correct places and orientations, along with the last unsolved edge in the back and forth column.</li>
                 </ol>
-                <p>
-                Veja abaixo, as possibilidades b e c:
-                </p>
-
+               
                 <div class="row justify-content-center">
                     <div class="col-md-7 my-3 px-3">
                         <p>
-                        Para o caso b basta proceder como antes, reposicionar a camada superior e fazer o “vai, troca e volta”. A única opção de troca será o <i>edge</i> sem a face amarela porque os outros já foram resolvidos antes. Assim, neste caso, faremos:
+                        For case b, proceed as before: set up the upper layer and perform the "go, swap, and back" movement. The only available option for swapping will be the edge without the yellow facelet since the others have already been solved. In this case, we will do:
                         </p>
                         <p>
-                        U' ("reposicionamento")
+                        U' ("setup")
                         </p>
                         <p>
-                        R ("vai")
+                        R ("go")
                         </p>
                         <p>
-                        U ("troca")
+                        U ("swap")
                         </p>
                         <p>
-                        R' ("volta")
+                        R' ("back")
                         </p>
                         <p>
-                        Clique em <i>play</i> (▷) na Figura 8.4 e veja.
+                        Click play (▷) on Figure 8.4 to see the sequence.
                         </p>
                         <p>
-                        Terminado o movimento de “vai, troca e volta” todos os <i>edges</i> amarelos estarão corretos, juntamente com o <i>edge</i> da coluna de “vai e volta”. Talvez seja necessário, apenas, girar a camada superior para a posição correta.
+                        Once the "go, swap, and back" movement is completed, all the yellow edges will be correct, along with the edge in the back and forth column. It may be necessary to rotate the upper layer to the correct position.
                         </p>
                     </div>
                     <div class="col-md-4 text-center my-3 px-3">
                         <div class="img-wrapper img-cubo">
                             <script>
-                                var movimento="{Figura 8.4: Caso b}{Figura 8.4: Caso b   (reposiciona) U'}U'.{Figura 8.4: Caso b   (vai) R}R.{Figura 8.4: Caso b   (troca) U}U.{Figura 8.4: Caso b   (volta) R'}R'";
+                                var movimento="{Figure 8.4: Case b}{Figure 8.4: Case b   (setup) U'}U'.{Figure 8.4: Case b   (go) R}R.{Figure 8.4: Case b   (swap) U}U.{Figure 8.4: Case b   (back) R'}R'";
                                     setup="x2 R U' R' U",
                                 AnimCube3("initmove="+setup+"&move="+movimento+
                                             "&movetext=1\
                                             &yz=1\
                                             &fonttype=0\
-                                            &textsize=12\
+                                            &textsize=15\
                                             &facelets=wwwwwwwwlLYLYYYLYLoolooooolLRLRRRRRLgggggglglBBLBBBLBL\
                                             &buttonheight=20\
                                             &bgcolor=f0f0f0\
@@ -226,28 +220,28 @@
                 <div class="row justify-content-center">
                     <div class="col-md-7 my-3 px-3">
                         <p>
-                        Para o caso c fica uma dúvida, assim que você fizer o movimento de “vai” todos os <i>edges</i> amarelos estarão corretos mas você é obrigado a fazer a troca e voltar, então o que fazer?
+                        For case c, there might be some uncertainty. As soon as you perform the "go" movement, all the yellow edges will be correct, but you are forced to perform the swap and come back. So what should you do?
                         </p>
                         <p>
-                        Vamos aplicar o conhecimento do <a href="cubo-3x3x3/7-um-pouco-sobre-ciclos.html">capítulo 7</a>, sobre ciclos. Sabemos que fazendo repetidamente um movimento tudo voltará à condição original. Nesse caso, como temos 4 lados, o ciclo deve envolver os quatro <i>edges</i> superiores. Podemos fazer a troca inicial com U ou U’ e depois da “volta” terminar com um giro da camada superior <u>na mesma direção</u> usada na troca. Basta depois ficar repetindo o mesmo procedimento de “vai, troca e volta” com um giro no final. Antes que tudo volte à condição original haverá um momento em que teremos todos <i>edges</i> amarelos resolvidos, basta parar nesse ponto e girar a camada superior para a posição correta, se for necessário.
+                        Let's apply the knowledge from <a href="rubiks-cube/7-a-bit-about-cicles.html">Chapter 7</a> about cycles. We know that by repeatedly making a specific movement, everything will return to its original condition. In this case, as we have 4 sides, the cycle must involve the upper four edges. We can initiate the swap by applying U or U' and then make an additional quarter turn of the upper layer in the same direction used in the swap. After that, keep repeating the same procedure of "go, swap and back" with an additional quarter turn at the end. Before everything returns to the original condition, there will be a moment when all the yellow edges are solved. Stop at that point and rotate the top layer to the correct position if necessary.
                         </p>
                         <p>
-                        Para o nosso exemplo, do caso c, basta aplicar R U' R' U' por 3 vezes ou então R U R' U, também por três vezes. Você verá que no final, quando fizer a terceira repetição, não será necessário terminá-la pois o movimento R U' R' ou R U R' irá resolver tudo.
+                        For our example in case c, apply R U' R' U' three times or R U R' U three times. You'll notice that in the end, when you do the third repetition, it won't be necessary to complete it as the movement R U' R' or R U R' will solve everything.
                         </p>
                         <p>
-                        Clique em <i>play</i> (▷) na Figura 8.5 e veja.
+                        Click play (▷) on Figure 8.5 to see the sequence.
                         </p>
                     </div>
                     <div class="col-md-4 text-center my-3 px-3">
                         <div class="img-wrapper img-cubo">
                             <script>
-                                var movimento="{Figura 8.5: Caso c}{Figura 8.5: Caso c  (vai-troca-volta) R U' R'}R U' R'.{Figura 8.5: Caso c  (reposiciona) U'}U'.{Figura 8.5: Caso c  (vai-troca-volta) R U' R'}R U' R'.{Figura 8.5: Caso c  (reposiciona) U'}U'.{Figura 8.5: Caso c  (vai-troca-volta) R U' R'}R U' R'";
+                                var movimento="{Figure 8.5: Case c}{Figure 8.5: Case c  (go-swap-back) R U' R'}R U' R'.{Figure 8.5: Case c  (setup) U'}U'.{Figure 8.5: Case c  (go-swap-back) R U' R'}R U' R'.{Figure 8.5: Case c  (setup) U'}U'.{Figure 8.5: Case c  (go-swap-back) R U' R'}R U' R'";
                                     setup="x2 R U' R' U' R U' R' U' R U' R'",
                                 AnimCube3("initmove="+setup+"&move="+movimento+
                                             "&movetext=1\
                                             &yz=1\
                                             &fonttype=0\
-                                            &textsize=12\
+                                            &textsize=15\
                                             &facelets=wwwwwwwwlLYLYYYLYLoolooooolLRLRRRRRLgggggglglBBLBBBLBL\
                                             &buttonheight=20\
                                             &bgcolor=f0f0f0\
@@ -263,10 +257,10 @@
                 </div>
 
                 <p class="mt-3">
-                Nesse ponto você já resolveu 80% do cubo! O mais interessante: apenas conhecendo algumas “leis” do cubo e usando raciocínio lógico com movimentos simples, sem ter que decorar qualquer seqüência complexa de movimentos.
+                At this point, you have solved 80% of the Rubik's Cube! The most fascinating aspect is that you've achieved this by understanding the cube's "laws" and using logical reasoning with simple moves, without the need to memorize complex sequences.
                 </p>
                 <p>
-                Restam agora os 5 últimos cantos. Como os movimentos ficam muito restritos é preciso conhecer dois conceitos importantes para resolvê-los, que são os conceitos de movimentos <i>comutadores</i> e de movimentos <i>conjugados</i>.
+                Now, only the last 5 corners remain. Solving them requires knowledge of two important concepts: <i>commutators</i> and <i>conjugates</i>.
                 </p>
                 
             </div>
@@ -275,8 +269,8 @@
         </div>
 
         <nav class="nav nav-justified my-0">
-            <a class="nav-link virapagina" href="cubo-3x3x3/7-um-pouco-sobre-ciclos.html">⇦</a>
-            <a class="nav-link virapagina" href="cubo-3x3x3/9-comutadores-e-conjugados-e-so-o-que-voce-precisa.html">⇨</a>
+            <a class="nav-link virapagina" href="rubiks-cube/7-a-bit-about-cicles.html">⇦</a>
+            <a class="nav-link virapagina" href="rubiks-cube/9-commutators-and-conjugates-thats-all-you-need.html">⇨</a>
         </nav>
         
     </main>
