@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -8,8 +8,8 @@
     
     <link rel="icon" href="favicon.ico">
 
-    <title>Cubo Mágico sem Decoreba | Comutadores e Conjugados</title>
-    <meta name="description" content="Aprenda comutadores e conjugados no cubo mágico: conceitos fundamentais, exemplos práticos e como criar seus próprios movimentos sem depender de algoritmos decorados.">
+    <title>Rubik's Cube by logic | Commutators and Conjugates</title>
+    <meta name="description" content="Learn commutators and conjugates on the Rubik’s Cube: fundamental concepts, practical examples, and how to create your own moves without relying on memorized algorithms.">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
@@ -25,7 +25,7 @@
     
     <main class="container mb-0">
         
-        <h1>Comutadores e Conjugados</h1>
+        <h1>Commutators and Conjugates</h1>
         
         <div class="row align-items-start">
             
@@ -37,41 +37,41 @@
 
             <div class="col-md-8 my-3 px-3">
                 <p>
-                Somente usando comutadores e conjugados é possível resolver qualquer quebra-cabeças similar ao cubo mágico.
+                Only by using commutators and conjugates it is possible to solve any puzzle similar to the Rubik's Cube.
                 </p>
                 <p>
-                Seja qual for a estratégia ou método usado na solução, sempre ocorre a necessidade do uso de comutadores e conjugados, principalmente no final, quando há muitas restrições de movimentos.
+                Whatever the strategy or method used in the solution, there is always the need to use commutators and conjugates, especially in the end, when there are too much movement restrictions.
                 </p>
                 <p>
-                Nessa página são apresentados os conceitos fundamentais desses dois tipos de movimentos.
+                This page presents the fundamental concepts of these two special types of movements.
                 </p>
                 <p>
-                Para melhor entender e assim construir seus próprios comutadores e conjugados é aconselhável que você aprenda primeiro a resolver o cubo de Rubik de acordo com o guia apresentado em <a href="cubo-3x3x3.html">Cubo 3x3x3</a>.
+                To better understand and thus build your own commutators and conjugates it is advisable that you first learn how to solve the Rubik's Cube according to the guide presented in <a href="rubiks-cube.html">Rubik's Cube</a>.
                 </p>
             </div>
         
-            <h3 class="mt-3">Comutadores</h3>
+            <h3 class="mt-3">Commutators</h3>
             <p>
-            Um comutador é simplesmente a sobreposição de dois movimentos do tipo "vai e volta" com camadas que se cruzam em certo ponto.
+            A commutator is simply the overlapping of two back-and-forth movements that intersect layers at a certain point.
             </p>
             <p>
-            Um movimento de "vai e volta" consiste numa seqüência de movimentos que depois é desfeita seguindo exatamente o sentido contrário. Por exemplo, R R' é um movimento de "vai e volta". Outro exemplo seria R U U' R'. Note que o "vai e volta" é sempre composto por um número par de movimentos.
+            A back-and-forth movement consists of a sequence of movements that is then undone following exactly the opposite order and direction. For example, R R' is a back-and-forth move. Another example would be R U U' R'. Note that the back-and-forth is always composed of an even number of moves.
             </p>
             <p>
-            Podemos dizer que a primeira metade ("vai") é representada por uma letra, por exemplo, A. Então a outra metade é simplesmente representada por A<sup>-1</sup>, ou seja, o inverso de A. Assim, no último exemplo de "vai e volta" R U corresponderia a A e U' R' seria A<sup>-1</sup>.
+            We can say that the first half of moves is represented by a letter, for example A. Then the other half is simply represented by A<sup>-1</sup>, that is, the inverse of A. So in the last back-and-forth given example, R U would correspond to A and U' R' would be A<sup>-1</sup>.
             </p>
             <p>
-            Fazendo a sobreposição de dois movimentos do tipo "vai e volta" temos um comutador: A B A<sup>-1</sup> B<sup>-1</sup>. Nesse caso A A<sup>-1</sup> e B B<sup>-1</sup> são movimentos de "vai e volta" diferentes. Note que é preciso que esses movimentos diferentes possuam camadas que se cruzam em certo ponto, eles não podem ocorrer entre camadas paralelas como, por exemplo, U U' e D D' porque nada seria mudado no cubo.
+            By overlapping two movements of the type back-and-forth we have a commutator: A B A<sup>-1</sup> B<sup>-1</sup>. In this case A A<sup>-1</sup> and B B<sup>-1</sup> are different back-and-forth moves. Note that these different moves must have layers that intersect at a certain point, they cannot be in parallel layers like for example U U' and D D' because nothing would change in the cube.
             </p>
             <p>
-            Veja abaixo alguns exemplos de comutadores para o cubo 3x3x3:
+            See below some examples of commutators for the Rubik's cube:
             </p>
 
             <div class="row justify-content-center">
                 <div class="col-md-4 my-3 px-3">
                     <div class="row">
                         <div class="row mb-2">
-                            <b><span style="font-size: 15px;">Exemplo 1, permutação de 3 cantos:</span></b>
+                            <b><span style="font-size: 15px;">Example 1, permutation of 3 corners:</span></b>
                         </div>
                         <div class="col-md-4 col-4">
                             A = L D' L' 
@@ -90,7 +90,7 @@
                     </div>
                     <div class="row mt-3">
                         <div clas="row mb-1">
-                            Comutador:
+                            Commutator: 
                         </div>
                         <div class="col">
                             A B A<sup>-1</sup> B<sup>-1</sup> = (L D' L') U (L D L') U'
@@ -101,11 +101,11 @@
                     <div class="img-wrapper">
                         <div class="img-fluid img-cubo">
                             <script>
-                                var movimento="{Exemplo 1}L D' L'.U.L D L'.U'";
+                                var movimento="{Example 1}L D' L'.U.L D L'.U'";
                                 AnimCube3("initmove=x2 &move="+movimento+
                                             "&movetext=1\
                                             &fonttype=0\
-                                            &textsize=12\
+                                            &textsize=15\
                                             &buttonheight=20\
                                             &bgcolor=f0f0f0\
                                             &butbgcolor=009999\
@@ -121,14 +121,14 @@
             </div>
 
             <p class="mt-3">
-            Esta sobreposição de movimentos de "vai e volta" na verdade é resultado da intersecção de dois movimentos escondidos de "vai e volta". Você pode ver os detalhes de como este comutador emerge a partir desses movimentos escondidos de "vai e volta" no <a href="cubo-3x3x3/9-comutadores-e-conjugados-e-so-o-que-voce-precisa.html">capítulo 9</a> do guia para resolver o <a href="cubo-3x3x3.html">Cubo mágico sem decoreba</a>. No mesmo capítulo você pode aprender o básico sobre como projetar seus próprios comutadores. Todos os exemplos desta página foram projetados partindo da mesma lógica básica.
+            This overlapping of back-and-forth moves actually results from the intersection of two hidden back-and-forth moves. You can dive into the details on how this commutator emerges from these hidden back-and-forth moves in the <a href="rubiks-cube/9-commutators-and-conjugates-thats-all-you-need.html">chapter 9</a> of the guide for <a href="rubiks-cube/1-introduction.html">solving the Rubik's cube by logic</a>. In the same chapter you can learn the basics on how to design your own commutadors.  All examples you see in the current page were designed following the same logic.
             </p>
             
             <div class="row justify-content-center">
                 <div class="col-md-4 my-3 px-3">
                     <div class="row">
                         <div class="row mb-2">
-                            <b><span style="font-size: 15px;">Exemplo 2, permutação de 3 lados:</span></b>
+                            <b><span style="font-size: 15px;">Example 2, permutation of 3 edges:</span></b>
                         </div>
                         <div class="col-md-5 col-5">
                             A = M D' M' 
@@ -147,7 +147,7 @@
                     </div>
                     <div class="row mt-3">
                         <div clas="row mb-1">
-                            Comutador:
+                            Commutator:
                         </div>
                         <div class="col">
                             A B A<sup>-1</sup> B<sup>-1</sup> = (M D' M') U (M D M') U'
@@ -158,11 +158,11 @@
                     <div class="img-wrapper">
                         <div class="img-fluid img-cubo">
                             <script>
-                                var movimento="{Exemplo 2}M D' M'.U.M D M'.U'";
+                                var movimento="{Example 2}M D' M'.U.M D M'.U'";
                                 AnimCube3("initmove=x2 &move="+movimento+
                                             "&movetext=5\
                                             &fonttype=0\
-                                            &textsize=12\
+                                            &textsize=15\
                                             &buttonheight=20\
                                             &bgcolor=f0f0f0\
                                             &butbgcolor=009999\
@@ -181,7 +181,7 @@
                 <div class="col-md-5 my-3 px-3">
                     <div class="row">
                         <div class="row mb-2">
-                            <b><span style="font-size: 15px;">Exemplo 3, rotação de dois cantos:</span></b>
+                            <b><span style="font-size: 15px;">Example 3, twist of 2 corners:</span></b>
                         </div>
                         <div class="col-md-6 col-6 px-2">
                             A = R B' R' B R B' R'
@@ -200,7 +200,7 @@
                     </div>
                     <div class="row mt-3">
                         <div clas="row mb-1">
-                            Comutador:
+                            Commutator:
                         </div>
                         <div class="col">
                             A B A<sup>-1</sup> B<sup>-1</sup> =  (R B' R' B R B' R') F (R B R' B' R B R') F'
@@ -211,11 +211,11 @@
                     <div class="img-wrapper">
                         <div class="img-fluid img-cubo">
                             <script>
-                                var movimento="{Exemplo 3}R B' R' B R B' R'.F.R B R' B' R B R'.F'";
+                                var movimento="{Example 3}R B' R' B R B' R'.F.R B R' B' R B R'.F'";
                                 AnimCube3("initmove=x2 &move="+movimento+
-                                            "&movetext=5\
+                                            "&movetext=1\
                                             &fonttype=0\
-                                            &textsize=12\
+                                            &textsize=15\
                                             &buttonheight=20\
                                             &bgcolor=f0f0f0\
                                             &butbgcolor=009999\
@@ -234,7 +234,7 @@
                 <div class="col-md-5 my-3 px-3">
                     <div class="row">
                         <div class="row mb-2">
-                            <b><span style="font-size: 15px;">Exemplo 4, inversão de dois lados:</span></b>
+                            <b><span style="font-size: 15px;">Example 4, flip of 2 edges:</span></b>
                         </div>
                         <div class="col-md-6 col-6">
                             A = M' B2 M B' M' B M
@@ -253,7 +253,7 @@
                     </div>
                     <div class="row mt-3">
                         <div clas="row mb-1">
-                            Comutador:
+                            Commutator:
                         </div>
                         <div class="col">
                             A B A<sup>-1</sup> B<sup>-1</sup> = (M' B2 M B' M' B M) F' (M' B' M B M' B2 M) F
@@ -264,11 +264,11 @@
                     <div class="img-wrapper">
                         <div class="img-fluid img-cubo">
                             <script>
-                                var movimento="{Exemplo 4}M' B2 M B' M' B M.F'.M' B' M B M' B2 M.F";
+                                var movimento="{Example 4}M' B2 M B' M' B M.F'.M' B' M B M' B2 M.F";
                                 AnimCube3("initmove=x2 &move="+movimento+
-                                            "&movetext=5\
+                                            "&movetext=1\
                                             &fonttype=0\
-                                            &textsize=12\
+                                            &textsize=15\
                                             &buttonheight=20\
                                             &bgcolor=f0f0f0\
                                             &butbgcolor=009999\
@@ -287,7 +287,7 @@
                 <div class="col-md-5 my-3 px-3">
                     <div class="row">
                         <div class="row mb-2">
-                            <b><span style="font-size: 15px;">Exemplo 5, permutação de 3 blocos (canto + lado):</span></b>
+                            <b><span style="font-size: 15px;">Example 5, permutation of 3 blocks (corner + edge):</span></b>
                         </div>
                         <div class="col-md-5 col-5">
                             A = Lw D' Lw'
@@ -306,7 +306,7 @@
                     </div>
                     <div class="row mt-3">
                         <div clas="row mb-1">
-                            Comutador:
+                            Commutator:
                         </div>
                         <div class="col">
                             A B A<sup>-1</sup> B<sup>-1</sup> = (Lw D' Lw') U (Lw D Lw') U'
@@ -317,12 +317,12 @@
                     <div class="img-wrapper">
                         <div class="img-fluid img-cubo">
                             <script>
-                                var movimento="{Exemplo 5}Lw D' Lw'.U.Lw D Lw'.U'";
+                                var movimento="{Example 5}Lw D' Lw'.U.Lw D Lw'.U'";
                                 AnimCube3("initmove=x2 &move="+movimento+
                                             "&movetext=1\
                                             &yz=1\
                                             &fonttype=0\
-                                            &textsize=12\
+                                            &textsize=15\
                                             &buttonheight=20\
                                             &bgcolor=f0f0f0\
                                             &butbgcolor=009999\
@@ -341,7 +341,7 @@
                 <div class="col-md-5 my-3 px-3">
                     <div class="row">
                         <div class="row mb-2">
-                            <b><span style="font-size: 15px;">Exemplo 6, permutação de 3 arestas inteiras:</span></b>
+                            <b><span style="font-size: 15px;">Example 6, permutation of 3 whole edges: </span></b>
                         </div>
                         <div class="col-md-6 col-6">
                             A = L2 D2 L2
@@ -360,7 +360,7 @@
                     </div>
                     <div class="row mt-3">
                         <div clas="row mb-1">
-                            Comutador:
+                            Commutator:
                         </div>
                         <div class="col">
                             A B A<sup>-1</sup> B<sup>-1</sup> = (L2 D2 L2) U2 (L2 D2 L2) U2
@@ -371,12 +371,12 @@
                     <div class="img-wrapper">
                         <div class="img-fluid img-cubo">
                             <script>
-                                var movimento="{Exemplo 6}L2 D2 L2.U2.L2 D2 L2.U2";
+                                var movimento="{Example 6}L2 D2 L2.U2.L2 D2 L2.U2";
                                 AnimCube3("initmove=x2 &move="+movimento+
                                             "&movetext=1\
                                             &yz=1\
                                             &fonttype=0\
-                                            &textsize=12\
+                                            &textsize=15\
                                             &buttonheight=20\
                                             &bgcolor=f0f0f0\
                                             &butbgcolor=009999\
@@ -391,32 +391,32 @@
                 </div>
             </div>
 
-            <h3 class="mt-3">Conjugados</h3>
+            <h3 class="mt-3">Conjugates</h3>
             <p>
-            Um conjugado nada mais é do que qualquer movimento "englobado" por um movimento do tipo "vai e volta". Considere que o "vai e volta" é representado por A A<sup>-1</sup> enquanto Z representa um movimento qualquer, que pode ser um ou mais comutadores ou até mesmo outro conjugado. Então o conjugado de A A<sup>-1</sup> com Z será A Z A<sup>-1</sup>.
+            A conjugate is nothing more than any movement "encompassed" by a back-and-forth movement. Consider that the back-and-forth is represented by A A<sup>-1</sup> while Z represents any movement, which can be one or more commutators or even another conjugate. So the conjugate of A A<sup>-1</sup> with Z will be A Z A<sup>-1</sup>.
             </p>
             <p>
-            Note que o conjugado nada mais é que um "reposicionamento" feito antes de uma seqüência de movimentos e que ao final dessa seqüência é desfeito.
+            Note that the conjugate is nothing else than a "setup move" done before a sequence of movements and then undone at the end of that sequence.
             </p>
             <p>
-            O conjugado é muito útil quando se quer aplicar um comutador mas as peças não estão nas posições inicias corretas.
+            The conjugate is very useful when you want to apply a commutator but the cubelets are not in the correct starting positions.
             </p>
             <p>
-            Veja abaixo um exemplo de uso de conjugado feito com um comutador que permuta 3 cantos. Diferente do exemplo 1, acima, nesse caso é possível permutar 3 cantos sem alterar suas orientações.
+            See below an example of using a conjugate with a commutator that swaps 3 corners. Differently from the example 1 above, in this case it is possible to swap 3 corners however without changing their color orientation.
             </p>
 
             <div class="row justify-content-center">
                 <div class="col-md-5 my-3 px-3">
                     <div class="row">
                         <div class="row mb-2">
-                            <b><span style="font-size: 15px;">Exemplo 7, permutação de 3 cantos mantendo as orientações:</span></b>
+                            <b><span style="font-size: 15px;">Example 7, permutation of 3 corners keeping color orientation</span></b>
                         </div>
                          <div class="col mt-2 mb-1">
-                            Comutador: Z = (R D2 R') U' (R D2 R') U
+                            Commutator: Z = (R D2 R') U' (R D2 R') U
                         </div>
                         <div class="row mt-2">
                             <div class="col-md-7 col-7">
-                                "Vai e Volta": A = L
+                                back-and-forth: A = L
                             </div>
                             <div class="col-md-5 col-5">
                                 A<sup>-1</sup> = L'
@@ -425,7 +425,7 @@
                     </div>
                     <div class="row mt-3">
                         <div class="col-md-12 mb-1">
-                            Conjugado:
+                            Conjugate:
                         </div>
                         <div class="col-md-12">
                             A Z A<sup>-1</sup> = L [(R D2 R') U' (R D2 R') U] L'
@@ -436,12 +436,12 @@
                     <div class="img-wrapper">
                         <div class="img-fluid img-cubo">
                             <script>
-                                var movimento="{Exemplo 7}L.R D2 R' U' R D2 R' U.L'";
+                                var movimento="{Example 7}L.R D2 R' U' R D2 R' U.L'";
                                 AnimCube3("initmove=x2 &move="+movimento+
                                             "&movetext=1\
                                             &yz=1\
                                             &fonttype=0\
-                                            &textsize=12\
+                                            &textsize=15\
                                             &buttonheight=20\
                                             &bgcolor=f0f0f0\
                                             &butbgcolor=009999\
@@ -457,10 +457,10 @@
             </div>
 
             <p class="mt-3">
-            Conclui-se, assim, que os comutadores, vistos no início, são sobreposições de conjugados vazios. O movimento de "vai e volta" nada mais é do que um conjugado vazio, isto é, não há nada dentro dele. Podemos escrever que o movimento de "vai e volta", U U' equivale a U () U', onde () representa um vazio. Fazendo, portanto, a sobreposição de dois conjugados deste tipo temos um comutador, como visto no início desta página. 
+            It is concluded, therefore, that the commutators, seen at the beginning, are overlappings of empty conjugates. The back-and-forth movement is nothing else than an empty conjugate, that is, there is nothing inside it. We can write that the back-and-forth movement, U U' is equivalent to U ( ) U', where ( ) represents an empty space. Therefore, by overlapping two conjugates we have a commutator, as seen at the beginning of this page.
             </p>
             <p>
-            Por exemplo, veja a sobreposição de (L D' L') () (L D L') com U () U':
+            For example, overlapping (L D' L') ( ) (L D L') with U ( ) U':
             </p>
             <p>
             (L D' L') (&nbsp; ) (L D L')<br>
@@ -469,15 +469,15 @@
             (L D' L') (U) (L D L') U'
             </p>
             <p>
-            Chegamos ao mesmo comutador do exemplo 1.
+            We end up with the same commutator seen in the Example 1.
             </p>
 
         </div>
 
         <!--
         <nav class="nav nav-justified my-0">
-            <a class="nav-link virapagina" href="cubo-3x3x3/1-introducao.html">⇦</a>
-            <a class="nav-link virapagina" href="cubo-3x3x3/3-movimentos-no-cubo.html">⇨</a>
+            <a class="nav-link virapagina" href="#">⇦</a>
+            <a class="nav-link virapagina" href="#">⇨</a>
         </nav>
         -->
         

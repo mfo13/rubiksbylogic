@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -8,8 +8,8 @@
     
     <link rel="icon" href="favicon.ico">
 
-    <title>Cubo Mágico sem Decoreba | Cubos grandes - Erro de paridade PLL (permutação de pares de lados)</title>
-    <meta name="description" content="Entenda o erro de paridade PLL em cubos 4x4x4, com troca de pares de edges, e veja como resolvê-lo com lógica e comutadores, sem algoritmos decorados.">
+    <title>Rubik's Cube by logic | Rubik's Revenge and beyond - PLL parity error (permutation of edge pairs)</title>
+    <meta name="description" content="Understand the PLL parity error in 4x4x4 cubes, involving swapped edge pairs, and see how to solve it using logic and commutators, without memorized algorithms.">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
@@ -25,27 +25,27 @@
     
     <main class="container mb-0">
         
-        <h1>Cubo 4x4x4 e maiores</h1>
-        <h2>Entendendo a Origem dos Erros de Paridade e Resolvendo sem Decorar</h2>
+        <h1>Rubik's Revenge and beyond</h1>
+        <h2>Understanding the Origin of Parity Errors and Solving by Logic</h2>
 
         <div class="row align-items-start">
 
             <div class="container px-3">
-                <h3>2. Caso 1: Erro de paridade PLL (permutação de pares de <i>edges</i>)</h3>
+                <h3>2. Case 1: PLL Parity Error (permutation of edge pairs)</h3>
                 <p>
-                Esse erro de paridade parece absurdo. Se os <i>edges</i> fossem “colados” formando uma única peça, como num 3x3x3, seria impossível a troca de dois edges sem que nada mais fosse alterado.
+                This parity error may initially seem absurd. In a 3x3x3 cube it would be impossible to swap two edges without affecting anything else.
                 </p>
                 <p>
-                Mesmo considerando que se trata de quatro peças, e não duas, ainda parece absurdo que elas tenham permutado aos pares, pois sabemos que não é possível construir um comutador que troque apenas duas peças de lugar, o mínimo são três. As setas da Figura 2.1 mostram o que aparentemente aconteceu. Duas permutações <b>aparentemente</b> absurdas!
+                Even when considering that these are four separate parts, it still appears strange that they have swapped in pairs. After all, we know that it is not possible to construct a commutator that swaps only two pieces; the minimum requirement is three. The arrows in Figure 2.1 depict the seemingly illogical permutations that have taken place.
                 </p>
                 <p>
-                Esse erro na verdade é resultado da sobreposição de dois erros, trata-se de duas comutações envolvendo três edges cada uma. Vamos partir de um cubo perfeito e ver como o erro é gerado. Primeiramente faremos uma comutação de 3 <i>edges</i>, como ilustra a Figura 2.2. Como você já conhece comutadores fica fácil. Vamos precisar usar um conjugado para acertar o posicionamento inicial do comutador. Uma possibilidade é fazer F2 Bm, assim usamos as camadas U e D para as “trocas” e a camada Fm para os movimentos de “vai e volta”. A Figura 2.3 mostra esta comutação completa, passo a passo, clique em <i>play</i> (▷).
+                However, this error is actually the result of the convergence of two separate errors. These errors involve overlapping commutators, each involving three edges. To understand how this error is generated, let's begin with a perfect cube and observe the process. First, we will perform a 3-edge commutation, as demonstrated in Figure 2.2. Designing commutators should be familiar to you by now, making it relatively straightforward. We will need to set up the cube properly to facilitate the execution of the commutator. One possible setup is to perform F2 Bm, which allows us to utilize the U and D layers for the swaps and the Fm layer for the back and forth movements. Figure 2.3 presents a step-by-step illustration of such a commutator. Feel free to click the play button (▷) to view the animation.
                 </p>
                 
                 <div class="row justify-content-center">
                     <div class="col-md-3 mt-3 mb-3 px-3">
                         <p>
-                        <b><span style="font-size: 13px;">Figura 2.1</span></b>
+                        <b><span style="font-size: 13px;">Figure 2.1</span></b>
                         </p>
                         <div class="img-wrapper">
                             <img src="img/figura_2_1.png" class="img-fluid text-center">
@@ -53,7 +53,7 @@
                     </div>
                     <div class="col-md-3 mt-3 mb-3 px-3">
                         <p>
-                        <b><span style="font-size: 13px;">Figura 2.2</span></b>
+                        <b><span style="font-size: 13px;">Figure 2.2</span></b>
                         </p>
                         <div class="img-wrapper">
                             <img src="img/figura_2_2.png" class="img-fluid text-center">
@@ -62,12 +62,12 @@
                     <div class="col-md-4 text-center mt-3 mb-3 px-3">
                         <div class="img-wrapper img-cubo">
                             <script>
-                                var movimento="{Figura 2.3}{Figura 2.3: Reposicionamento F2 Bm}F2 Bm.{Figura 2.3: Vai Fm}Fm.{Figura 2.3: Troca D}D.{Figura 2.3: Volta Fm'}Fm'.{Figura 2.3: Troca U2}U2.{Figura 2.3: Vai Fm}Fm.{Figura 2.3: Destroca D'}D'.{Figura 2.3: Volta Fm'}Fm'.{Figura 2.3: Destroca U2}U2.{Figura 2.3: Desfaz repos. Bm' F2}Bm' F2";
+                                var movimento="{Figure 2.3}{Figure 2.3: setup F2 Bm}F2 Bm.{Figure 2.3: go Fm}Fm.{Figure 2.3: swap D}D.{Figure 2.3: back Fm'}Fm'.{Figure 2.3: swap U2}U2.{Figure 2.3: go Fm}Fm.{Figure 2.3: undo swap D'}D'.{Figure 2.3: back Fm'}Fm'.{Figure 2.3: undo swap U2}U2.{Figure 2.3: undo setup Bm' F2}Bm' F2";
                                 AnimCube4("initmove= &move="+movimento+
                                             "&movetext=1\
                                             &yz=1\
                                             &fonttype=0\
-                                            &textsize=12\
+                                            &textsize=15\
                                             &facelets=bbbbbbbbbbbbbbbbGGGGGGGGGGGGGGGGrrrrrrrrrrrrrrrrOOOOOOOOOOOOOOOOwwwwwwwwwwwwwwwwYYYYYYYYYYYYYYYY\
                                             &buttonbar=1\
                                             &buttonheight=20\
@@ -84,13 +84,13 @@
                 </div>
 
                 <p>
-                Note que dois <i>edges</i> além de trocar de lugar ficaram com as cores “viradas”. Agora vamos fazer outra comutação, como indicado na Figura 2.4, para que a troca se complete. Novamente fica bem fácil. A Figura 2.5 mostra uma possibilidade, fazemos um reposicionamento inicial, giramos o cubo para ver melhor, aplicamos o comutador e depois desfazemos o giro e o reposicionamento. Clique em <i>play</i> (▷) para ver em detalhes. 
+                Note that two edges, in addition to changing places, have "flipped colors". Now let's perform another commutator, as depicted in Figure 2.4, to complete the parity error. Once again, this commutation is relatively straightforward. Figure 2.5 illustrates one possible sequence of moves: we start with an initial setup, rotate the cube for better visualization, apply the commutator, and then reverse the rotation and setup. To observe the process in detail, click play (▷).
                 </p>
 
                 <div class="row justify-content-center">
                     <div class="col-md-4 mt-3 mb-3 px-3">
                         <p>
-                        <b><span style="font-size: 13px;">Figura 2.4</span></b>
+                        <b><span style="font-size: 13px;">Figure 2.4</span></b>
                         </p>
                         <div class="img-wrapper">
                             <img src="img/figura_2_4.png" class="img-fluid text-center">
@@ -99,12 +99,12 @@
                     <div class="col-md-4 mt-3 mb-3 px-3">
                         <div class="img-wrapper img-cubo">
                             <script>
-                                var movimento="{Figura 2.5}{Figura 2.5: Reposicionamento F2 Fm'}F2 Fm'.{Figura 2.5: Giro para ver melhor y'}y'.{Figura 2.5: Vai Rm'}Rm'.{Figura 2.3: Troca D'}D'.{Figura 2.3: Volta Rm}Rm.{Figura 2.5: Troca U2}U2.{Figura 2.5: Vai Rm'}Rm'.{Figura 2.5: Destroca D}D.{Figura 2.3: Volta Rm}Rm.{Figura 2.5: Destroca U2}U2.{Figura 2.5: Desfaz o giro y}y.{Figura 2.5: Desfaz repos. Fm F2}Fm F2";
+                                var movimento="{Figure 2.5}{Figure 2.5: setup F2 Fm'}F2 Fm'.{Figure 2.5: rotation for a better view y'}y'.{Figure 2.5: go Rm'}Rm'.{Figure 2.3: swap D'}D'.{Figure 2.3: back Rm}Rm.{Figure 2.5: swap U2}U2.{Figure 2.5: go Rm'}Rm'.{Figure 2.5: undo swap D}D.{Figure 2.3: back Rm}Rm.{Figure 2.5: undo swap U2}U2.{Figure 2.5: undo rotation y}y.{Figure 2.5: undo setup Fm F2}Fm F2";
                                 AnimCube4("initmove=F2 Bm Fm D Fm' U2 Fm D' Fm' U2 Bm' F2 &move="+movimento+
                                             "&movetext=1\
                                             &yz=1\
                                             &fonttype=0\
-                                            &textsize=12\
+                                            &textsize=15\
                                             &facelets=bbbbbbbbbbbbbbbbGGGGGGGGGGGGGGGGrrrrrrrrrrrrrrrrOOOOOOOOOOOOOOOOwwwwwwwwwwwwwwwwYYYYYYYYYYYYYYYY\
                                             &buttonbar=1\
                                             &buttonheight=20\
@@ -123,18 +123,18 @@
                 <div class="row justify-content-center">
                     <div class="col-md-7 mt-3 mb-3 px-3">
                         <p>
-                        As setas da Figura 2.6 indicam as reais comutações sofridas pelas peças.
+                        The arrows depicted in Figure 2.6 represent the actual commutations of the edges.
                         </p>
                         <p>
-                        Note que a sobreposição da segunda comutação (setas verdes) acabou anulando o erro de orientação dos <i>edges</i> que foi causado pela primeira comutação (setas laranjas). O resultado final é a <b>ilusão</b> de que houve apenas duas permutações simples, entre pares de <i>edges</i>.
+                        It is important to note that the overlapping of the second commutator (indicated by the green arrows) effectively cancels out the edge orientation error caused by the first commutator (indicated by the orange arrows). As a result, it creates the <b>illusion</b> of only two simple permutations between pairs of edges.
                         </p>
                         <p>
-                        Como resolver esse erro de paridade? Bem, agora que você conhece a origem fica muito fácil. Basta fazer duas comutações, aquela indicada pelas setas laranjas e depois pelas verdes na Figura 2.6. A sobreposição desses comutadores resolverá o erro de paridade.
+                        To resolve this parity error, the solution is quite simple now that you understand its origin. You just need to perform two commutations: first, the one indicated by the orange arrows, and then another one indicated by the green arrows in Figure 2.6. By overlapping these commutations, you will successfully solve the parity error.
                         </p>
                     </div>
                     <div class="col-md-4 mt-3 mb-3 px-3">
                         <p>
-                        <b><span style="font-size: 13px;">Figura 2.6</span></b>
+                        <b><span style="font-size: 13px;">Figure 2.6</span></b>
                         </p>
                         <div class="img-wrapper">
                             <img src="img/figura_2_6.png" class="img-fluid text-center">
@@ -143,16 +143,16 @@
                 </div>
 
                 <p>
-                E se os <i>edges</i> trocados não estiverem na mesma configuração vista aqui? Bem, você já sabe o que fazer, monte os seus próprios comutadores. Mas, se quiser usar os comutadores mostrados aqui faça um reposicionamento inicial para que a configuração seja a mesma do exemplo aqui apresentado.
+                What if the swapped edges aren't in the same configuration as shown here? Well, in that case, you can design your own commutators to address the specific configuration. However, if you prefer to use the same commutators demonstrated in this guide, you can simply perform an initial setup to align the configuration with the example.
                 </p>
                 <p>
-                É interessante notar também que esse erro de paridade ocorre para cubos maiores que o 4x4x4, mas somente para os <i>edges</i> que possuem um par equidistante do centro da aresta, isto é, o erro não ocorre para os edges que se encontram no centro das arestas de cubos ímpares, como o 3x3x3, 5x5x5, 7x7x7, etc. Veja na Figura 2.7 alguns exemplos desse erro de paridade em cubos maiores que o 4x4x4.
+                It is worth noting that this parity error can also occur in cubes larger than 4x4x4, but only for edges that have a pair equidistant from the center of a side border. In other words, this error does not occur for edges located in the border centers of odd-sized cubes, such as 3x3x3, 5x5x5, 7x7x7, and so on. Figure 2.7 provides some examples of this parity error in cubes larger than 4x4x4.
                 </p>
 
                 <div class="row justify-content-center">
                     <div class="col-md-7 mt-3 mb-3 px-3">
                         <p>
-                        <b><span style="font-size: 13px;">Figura 2.7</span></b>
+                        <b><span style="font-size: 13px;">Figure 2.7</span></b>
                         </p>
                         <div class="img-wrapper">
                             <img src="img/figura_2_7.png" class="img-fluid">
@@ -164,8 +164,8 @@
         </div>
 
         <nav class="nav nav-justified my-0">
-            <a class="nav-link virapagina" href="cubo-4x4x4-e-maiores/erros-de-paridade/1-introducao.html">⇦</a>
-            <a class="nav-link virapagina" href="cubo-4x4x4-e-maiores/erros-de-paridade/3-caso-2-erro-de-paridade-pll-permutacao-de-dois-cantos.html">⇨</a>
+            <a class="nav-link virapagina" href="rubiks-revenge-and-beyond/parity-errors/1-introduction.html">⇦</a>
+            <a class="nav-link virapagina" href="rubiks-revenge-and-beyond/parity-errors/3-case-2-pll-parity-error-2-corner-permutation.html">⇨</a>
         </nav>
         
     </main>

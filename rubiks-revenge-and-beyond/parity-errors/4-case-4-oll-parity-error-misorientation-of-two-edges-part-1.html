@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -8,8 +8,8 @@
     
     <link rel="icon" href="favicon.ico">
 
-    <title>Cubo Mágico sem Decoreba | Cubos grandes - Erro de paridade OLL (Parte 1)</title>
-    <meta name="description" content="Entenda a origem do erro de paridade OLL no cubo 4x4x4 (dois edges “virados”) e por que ele é, na verdade, um caso de permutação, resolvido sem algoritmos decorados.">
+    <title>Rubik's Cube by logic | Rubik's Revenge and beyond - OLL parity error (Part 1)</title>
+    <meta name="description" content="Understand the origin of the OLL parity error on the 4x4x4 cube (two “flipped” edges) and why it is, in fact, a permutation case, solved without memorized algorithms.">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
@@ -26,39 +26,39 @@
     
     <main class="container mb-0">
         
-        <h1>Cubo 4x4x4 e maiores</h1>
-        <h2>Entendendo a Origem dos Erros de Paridade e Resolvendo sem Decorar</h2>
+        <h1>Rubik's Revenge and beyond</h1>
+        <h2>Understanding the Origin of Parity Errors and Solving by Logic</h2>
 
         <div class="row align-items-start">
 
             <div class="container px-3">
-                <h3>4. Caso 4: Erro de paridade OLL (desorientação de dois <i>edges</i>)</h3>
+                <h3>4. Case 4: OLL Parity Error (misorientation of two edges)</h3>
                 <p>
-                E o caso 3?
+                What about case 3?
                 </p>
                 <p>
-                Calma... você verá que o caso 3 se confunde com o caso 4. Não parece! Mas é verdade..., por isso partiremos direto para o caso 4.
+                Don't worry, let me clarify the situation. Case 3 is actually mixed up with case 4, although it may not appear that way at first. We'll focus on case 4, but we'll address case 3 along the way.
                 </p>
                 <p>
-                Esse é, sem dúvida, o erro de paridade mais interessante, e, de longe, o que tem as suas origens mais “camufladas”.
+                Undoubtedly, case 4 is the most intriguing parity error, and it's also the one that is most deceptively concealed in its origins.
                 </p>
                 <p>
-                Para quem conhece comutadores e conjugados parece fácil resolvê-lo, pois se tem a impressão de que os lados estão apenas virados, o que não é verdade. Apesar da denominação, OLL, não se trata de um erro de orientação, mas de permutação. Sim! Os lados foram trocados e não só eles, peças centrais também foram permutadas, mas não vemos isso porque elas são todas iguais.
+                For those familiar with commutators and conjugates, solving case 4 might seem straightforward, as it gives the impression that the two edges are simply flipped. However, that's not the case. Despite being called OLL (Orientation of the Last Layer), this error is not about the orientation but rather the permutation of the edges. Yes, the edges have been swapped, and not only that, some center pieces have also been exchanged, but this fact eludes us because they all appear identical.
                 </p>
                 <p>
-                Pode não parecer, mas a origem fundamental desse erro é igual à origem do erro apresentado no caso 2.
+                Surprisingly, the fundamental origin of this error is the same as the one presented in case 2.
                 </p>
                 <p>
-                No caso 2 começamos com a comutação de 3 cantos de uma mesma camada. Para o erro OLL vamos começar com a comutação de 3 <i>edges</i> de uma mesma camada.
+                In case 2, we started with the commutation of three corners within the same outer layer. Similarly, for the OLL error, we'll begin by commuting three edges within the same inner layer.
                 </p>
                 <p>
-                Vamos fazer isso com a segunda camada vertical do lado esquerdo do 4x4x4 (camada Lm) como mostra a Figura 4.1. As setas laranjas indicam a comutação de <i>edges</i> que se pretende realizar. Nesse caso é preciso fazer um reposicionamento inicial, por exemplo, B2 Rm' D, assim poderemos usar as camadas U e D para as trocas e a camada Lm para os movimentos de “vai e volta”. A Figura 4.2 mostra em detalhes o reposicionamento e a comutação, clique em <i>play</i> (▷).
+                Let's focus on the second vertical layer on the left side of the 4x4x4 cube (referred to as the Lm layer) as shown in Figure 4.1. The orange arrows indicate the desired exchange of edges. To facilitate this, we need to perform an initial setup, such as B2 Rm' D, allowing us to utilize the U and D layers for the swaps, while the Lm layer will be used for the back and forth movements. For a more detailed illustration of the setup and commutation, simply click play (▷) on Figure 4.2.
                 </p>
                                 
                 <div class="row justify-content-center">
                     <div class="col-4 col-md-3 mt-3 mb-3 px-3">
                         <p>
-                        <span style="font-size: 13px;"><b>Figura 4.1</b></span>
+                        <span style="font-size: 13px;"><b>Figure 4.1</b></span>
                         </p>
                         <div class="img-wrapper">
                             <img src="img/figura_4_1.png" class="img-fluid">
@@ -67,12 +67,12 @@
                     <div class="col-8 col-md-4 text-center mt-3 mb-3 px-3">
                         <div class="img-wrapper img-cubo">
                             <script>
-                                var movimento="{Figura 4.2}{Figura 4.2: Reposicionamento B2 Rm' D}B2 Rm' D.{Figura 4.2: Vai Lm}Lm.{Figura 4.2: Troca D'}D'.{Figura 4.2: Volta Lm'}Lm'.{Figura 4.2: Troca U2}U2.{Figura 4.2: Vai Lm}Lm.{Figura 4.2: Destroca D}D.{Figura 4.2: Volta Lm'}Lm'.{Figura 4.2: Destroca U2}U2.{Figura 4.2: Desfaz repos. D' Rm B2}D' Rm B2";
+                                var movimento="{Figure 4.2}{Figure 4.2: setup B2 Rm' D}B2 Rm' D.{Figure 4.2: go Lm}Lm.{Figure 4.2: swap D'}D'.{Figure 4.2: back Lm'}Lm'.{Figure 4.2: swap U2}U2.{Figure 4.2: go Lm}Lm.{Figure 4.2: undo swap D}D.{Figure 4.2: back Lm'}Lm'.{Figure 4.2: undo swap U2}U2.{Figure 4.2: undo setup D' Rm B2}D' Rm B2";
                                 AnimCube4("initmove= &move="+movimento+
                                             "&movetext=1\
                                             &yz=1\
                                             &fonttype=0\
-                                            &textsize=12\
+                                            &textsize=15\
                                             &facelets=bbbbbbbbbbbbbbbbGGGGGGGGGGGGGGGGrrrrrrrrrrrrrrrrOOOOOOOOOOOOOOOOwwwwwwwwwwwwwwwwYYYYYYYYYYYYYYYY\
                                             &buttonbar=1\
                                             &buttonheight=20\
@@ -89,19 +89,19 @@
                 </div>
 
                 <p class="mt-3">
-                Ao final da animação na Figura 4.2 terminamos com 3 <i>edges</i> trocados na camada Lm, conforme planejado. Assim como no caso 2, vamos tentar “acertar” essa camada, mas sem fazer a comutação dos <i>edges</i>. Note ainda que, na camada Lm, apenas dois <i>edges</i> possuem a mesma cor em uma face, neste caso, são os <i>edges</i> com a cor vermelha no topo do cubo (gire o cubo ao redor do eixo x para verificar que isso não acontece nas outras faces). Vamos, então, girar somente a camada Lm para que as cores vermelhas fiquem na face correta. Nesse caso devemos aplicar Lm, clique em <i>play</i> (▷) na Figura 4.3.
+                At the end of the animation in Figure 4.2, we successfully accomplished the planned exchange of three edges on the Lm layer. Similar to case 2, our next step is to "solve" this layer, but without commuting the edges. It's important to note that, within the Lm layer, only two edges share the same color on one face. Specifically, these are the edges with the red color located on the top of the cube. To confirm this arrangement doesn't occur on the other faces, rotate the cube around the x-axis. Now, let's proceed by rotating only the Lm layer, aligning the red colors with the correct face. To observe this action, please click play (▷) on Figure 4.3.
                 </p>
 
                 <div class="row justify-content-center">
                     <div class="col-md-4 mt-3 mb-3 px-3">
                         <div class="img-wrapper img-cubo">
                             <script>
-                                var movimento="{Figura 4.3}{Figura 4.3: Ajustando a face vermelha Lm}Lm";
+                                var movimento="{Figure 4.3}{Figure 4.3: Matching the red edges Lm}Lm";
                                 AnimCube4("initmove=B2 Rm' D Lm D' Lm' U2 Lm D Lm' U2 D' Rm B2 &move="+movimento+
                                             "&movetext=1\
                                             &yz=1\
                                             &fonttype=0\
-                                            &textsize=12\
+                                            &textsize=15\
                                             &facelets=bbbbbbbbbbbbbbbbGGGGGGGGGGGGGGGGrrrrrrrrrrrrrrrrOOOOOOOOOOOOOOOOwwwwwwwwwwwwwwwwYYYYYYYYYYYYYYYY\
                                             &buttonbar=1\
                                             &buttonheight=20\
@@ -120,15 +120,15 @@
                 <div class="row justify-content-center">
                     <div class="col-md-6 mt-3 mb-3 px-3">
                         <p>
-                        Com esse último movimento notamos que somente 2 <i>edges</i> da camada Lm ficam trocados, além de alguns centros. Gire a Figura 4.3 com o mouse, ao final da animação, e observe. 
+                        By performing the last move, we can observe that only two edges within the Lm layer are swapped, along with some center pieces. Take a moment to rotate Figure 4.3 using your mouse and observe the result at the end of the animation.
                         </p>
                         <p>
-                        Se fizermos uma permutação dos centros que foram trocados, como ilustra a Figura 4.4 (com o cubo cortado, mostrando somente a metade esquerda), então o cubo ficará “certo” com exceção de dois <i>edges</i>.
+                        Now, if we focus on the centers that have been interchanged, as illustrated in Figure 4.4 (displaying only the left half of the cube), we can perform a permutation to restore them to their proper positions. By doing so, the cube will be considered "correct," except for the two remaining misaligned edges.
                         </p>
                     </div>
                     <div class="col-md-4 mt-3 mb-3 px-3">
                         <p>
-                        <b><span style="font-size: 13px;">Figura 4.4</span></b>
+                        <b><span style="font-size: 13px;">Figure 4.4</span></b>
                         </p>
                         <div class="img-wrapper">
                             <img src="img/figura_4_4.png" class="img-fluid">
@@ -137,19 +137,19 @@
                 </div>
 
                 <p class="mt-3">
-                Você pode permutar os centros da maneira que quiser usando comutadores e conjugados. A essa altura você já deve ter alguma experiência em comutar os centros de um 4x4x4.
+                You have the flexibility to interchange the centers in any desired manner using commutators and conjugates. By now, you may have gained some experience with center commutations in the 4x4x4 cube.
                 </p>
                 <p>
-                Para que o nosso exemplo fique bem simples faremos comutações envolvendo só duas cores, acertando uma face de cada vez. É um processo mais lento, porém mais simples.
+                To keep our example simple, we will focus on commutations involving only two colors at a time, allowing us to "solve" one face at a time. While this approach may be slower, it simplifies the process.
                 </p>
                 <p>
-                Vamos primeiro trocar de lugar os centros azuis com os vermelhos. Antes disso giramos o cubo 90ᐤ ao redor do eixo x para ver melhor, como na Figura 4.5, ou seja, aplicamos x. As setas laranjas indicam a comutação de centros que se pretende realizar. Podemos fazer um reposicionamento e usar as 3 camadas superiores para as trocas enquanto a camada Fm (atrás da F) será usada para os movimentos de “vai e volta”. A Figura 4.6 mostra essa comutação em detalhes, clique em <i>play</i> (▷).
+                Let's start by swapping the blue centers with the red ones. Before proceeding, we'll rotate the cube 90ᐤ around the x-axis for better visibility, as shown in Figure 4.5 (using the x rotation). The orange arrows indicate the intended commutation of the centers. To facilitate this, we'll set up the cube and utilize the top three layers for the "swaps," while the Fm layer (located just behind F) will be used for the back and forth movements. For a detailed demonstration of this commutation, please click play (▷) on Figure 4.6.
                 </p>
 
                 <div class="row justify-content-center">
                     <div class="col-md-4 mt-3 mb-3 px-3">
                         <p>
-                        <b><span style="font-size: 13px;">Figura 4.5</span></b>
+                        <b><span style="font-size: 13px;">Figure 4.5</span></b>
                         </p>
                         <div class="img-wrapper">
                             <img src="img/figura_4_5.png" class="img-fluid">
@@ -158,12 +158,12 @@
                     <div class="col-md-4 mt-3 mb-3 px-3">
                         <div class="img-wrapper img-cubo">
                             <script>
-                                var movimento="{Figura 4.6}{Figura 4.6: Reposicionamento U}U.{Figura 4.6: Vai Fm}Fm.{Figura 4.6: Troca Dm Um'}Dm Um'.{Figura 4.6: Volta Fm'}Fm'.{Figura 4.6: Troca U2}U2.{Figura 4.6: Vai Fm}Fm.{Figura 4.6: Destroca Dm' Um}Dm' Um.{Figura 4.6: Volta Fm'}Fm'.{Figura 4.6: Destroca U2}U2.{Figura 4.6: Desfaz reposicionamento U'}U'";
+                                var movimento="{Figure 4.6}{Figure 4.6: setup U}U.{Figure 4.6: go Fm}Fm.{Figure 4.6: swap Dm Um'}Dm Um'.{Figure 4.6: back Fm'}Fm'.{Figure 4.6: swap U2}U2.{Figure 4.6: go Fm}Fm.{Figure 4.6: undo swap Dm' Um}Dm' Um.{Figure 4.6: back Fm'}Fm'.{Figure 4.6: undo swap U2}U2.{Figure 4.6: undo setup U'}U'";
                                 AnimCube4("initmove=B2 Rm' D Lm D' Lm' U2 Lm D Lm' U2 D' Rm B2 Lm x &move="+movimento+
                                             "&movetext=1\
                                             &yz=1\
                                             &fonttype=0\
-                                            &textsize=12\
+                                            &textsize=15\
                                             &facelets=bbbbbbbbbbbbbbbbGGGGGGGGGGGGGGGGrrrrrrrrrrrrrrrrOOOOOOOOOOOOOOOOwwwwwwwwwwwwwwwwYYYYYYYYYYYYYYYY\
                                             &buttonbar=1\
                                             &buttonheight=20\
@@ -180,19 +180,19 @@
                 </div>
 
                 <p class="mt-3">
-                Giramos novamente o cubo 90<sup>o</sup> no eixo x (aplicando x) e reproduzimos o procedimento anterior para trocar de lugar os centros verdes com os azuis. Depois disso giramos o cubo novamente 90ᐤ no eixo x (aplicando x) e restará uma última troca a ser feita, entre os centros azuis e laranjas. A Figura 4.7 mostra todo esse procedimento, basta clicar em em <i>play</i> (▷).
+                To continue, we rotate the cube once again by 90ᐤ along the x-axis (applying x) and repeat the previous procedure to swap the green centers with the blue ones. Following that, we rotate the cube once more by 90ᐤ along the x-axis (applying x), and there remains one final swapping to be executed, this time between the blue and orange centers. Figure 4.7 provides a comprehensive demonstration of the entire procedure. Simply click play (▷) to observe the animation.
                 </p>
 
                 <div class="row justify-content-center">
                      <div class="col-md-4 mt-3 mb-3 px-3">
                         <div class="img-wrapper img-cubo">
                             <script>
-                                var movimento="{Figura 4.7}{Figura 4.7: Giro em x}x.{Figura 4.7: Reposicionamento U}U.{Figura 4.7: Vai Fm}Fm.{Figura 4.7: Troca Dm Um'}Dm Um'.{Figura 4.7: Volta Fm'}Fm'.{Figura 4.7: Troca U2}U2.{Figura 4.7: Vai Fm}Fm.{Figura 4.7: Destroca Dm' Um}Dm' Um.{Figura 4.7: Volta Fm'}Fm'.{Figura 4.7: Destroca U2}U2.{Figura 4.7: Desfaz reposicionamento U'}U'.{Figura 4.7: Giro em x}x.{Figura 4.7: Reposicionamento U}U.{Figura 4.7: Vai Fm}Fm.{Figura 4.7: Troca Dm Um'}Dm Um'.{Figura 4.7: Volta Fm'}Fm'.{Figura 4.7: Troca U2}U2.{Figura 4.7: Vai Fm}Fm.{Figura 4.7: Destroca Dm' Um}Dm' Um.{Figura 4.7: Volta Fm'}Fm'.{Figura 4.7: Destroca U2}U2.{Figura 4.7: Desfaz reposicionamento U'}U'";
+                                var movimento="{Figure 4.7}{Figure 4.7: Rotation in x}x.{Figure 4.7: setup U}U.{Figure 4.7: go Fm}Fm.{Figure 4.7: swap Dm Um'}Dm Um'.{Figure 4.7: back Fm'}Fm'.{Figure 4.7: swap U2}U2.{Figure 4.7: go Fm}Fm.{Figure 4.7: undo swap Dm' Um}Dm' Um.{Figure 4.7: back Fm'}Fm'.{Figure 4.7: undo swap U2}U2.{Figure 4.7: undo setup U'}U'.{Figure 4.7: Rotation in x}x.{Figure 4.7: setup U}U.{Figure 4.7: go Fm}Fm.{Figure 4.7: swap Dm Um'}Dm Um'.{Figure 4.7: back Fm'}Fm'.{Figure 4.7: swap U2}U2.{Figure 4.7: go Fm}Fm.{Figure 4.7: undo swap Dm' Um}Dm' Um.{Figure 4.7: back Fm'}Fm'.{Figure 4.7: undo swap U2}U2.{Figure 4.7: undo setup U'}U'";
                                 AnimCube4("initmove=B2 Rm' D Lm D' Lm' U2 Lm D Lm' U2 D' Rm B2 Lm x  U Fm Dm Um' Fm' U2 Fm Dm' Um Fm' U2 U' &move="+movimento+
                                             "&movetext=1\
                                             &yz=1\
                                             &fonttype=0\
-                                            &textsize=12\
+                                            &textsize=15\
                                             &facelets=bbbbbbbbbbbbbbbbGGGGGGGGGGGGGGGGrrrrrrrrrrrrrrrrOOOOOOOOOOOOOOOOwwwwwwwwwwwwwwwwYYYYYYYYYYYYYYYY\
                                             &buttonbar=1\
                                             &buttonheight=20\
@@ -209,16 +209,16 @@
                 </div>
 
                 <p class="mt-3">
-                Chegamos assim ao erro de paridade PLL de dois <i>edges</i> trocados, o <u>Caso 3</u>! Que até então estava aguardando.
+                And now, we have arrived at the PLL parity error involving the permutation of two edges, which we refer to as Case 3! This case has been waiting in the background until now.
                 </p>
                 <p>
-                Para que esse erro se torne o erro de paridade OLL, Caso 4, basta fazer uma última comutação de <i>edges</i>  como indicado na Figura 4.8. Há várias possibilidades de se montar um comutador para esse caso, um exemplo é mostrado na Figura 4.9, clique em <i>play</i> (▷).
+                To transform this error into the OLL parity error, wich we refer to as Case 4, we need to perform one final edge commutation, as depicted in Figure 4.8. There are multiple ways to design this commutator, and an example is provided in Figure 4.9. Feel free to click play (▷) to witness the animation and better understand the process.
                 </p>
 
                 <div class="row justify-content-center">
                     <div class="col-md-3 mt-3 mb-3 px-3">
                         <p>
-                        <b><span style="font-size: 13px;">Figura 4.8</span></b>
+                        <b><span style="font-size: 13px;">Figure 4.8</span></b>
                         </p>
                         <div class="img-wrapper">
                             <img src="img/figura_4_8.png" class="img-fluid">
@@ -227,12 +227,12 @@
                     <div class="col-md-4 mt-3 mb-3 px-3">
                         <div class="img-wrapper img-cubo">
                             <script>
-                                var movimento="{Figura 4.9}{Figura 4.9: Reposicionamento Lm'}Lm'.{Figura 4.9: Vai Rm'}Rm'.{Figura 4.9: Troca D2}D2.{Figura 4.9: Volta Rm}Rm.{Figura 4.9: Troca U2}U2.{Figura 4.9: Vai Rm'}Rm'.{Figura 4.9: Destroca D2}D2.{Figura 4.9: Volta Rm}Rm.{Figura 4.9: Destroca U2}U2.{Figura 4.9: Desfaz reposicionamento Lm}Lm";
+                                var movimento="{Figure 4.9}{Figure 4.9: setup Lm'}Lm'.{Figure 4.9: go Rm'}Rm'.{Figure 4.9: swap D2}D2.{Figure 4.9: back Rm}Rm.{Figure 4.9: swap U2}U2.{Figure 4.9: go Rm'}Rm'.{Figure 4.9: undo swap D2}D2.{Figure 4.9: back Rm}Rm.{Figure 4.9: undo swap U2}U2.{Figure 4.9: undo setup Lm}Lm";
                                 AnimCube4("initmove=B2 Rm' D Lm D' Lm' U2 Lm D Lm' U2 D' Rm B2 Lm x U Fm Dm Um' Fm' U2 Fm Dm' Um Fm' U2 U' x U Fm Dm Um' Fm' U2 Fm Dm' Um Fm' U2 U' x U Fm Dm Um' Fm' U2 Fm Dm' Um Fm' U2 U' &move="+movimento+
                                             "&movetext=1\
                                             &yz=1\
                                             &fonttype=0\
-                                            &textsize=12\
+                                            &textsize=15\
                                             &facelets=bbbbbbbbbbbbbbbbGGGGGGGGGGGGGGGGrrrrrrrrrrrrrrrrOOOOOOOOOOOOOOOOwwwwwwwwwwwwwwwwYYYYYYYYYYYYYYYY\
                                             &buttonbar=1\
                                             &buttonheight=20\
@@ -249,21 +249,21 @@
                 </div>
                 
                 <p class="mt-3">
-                E assim chegamos ao interessante erro de paridade OLL do cubo 4x4x4!
+                And now, we arrive at the intriguing OLL parity error in the 4x4x4 cube!
                 </p>
                 <p>
-                De maneira similar ao caso 2, esse erro é fundamentalmente provocado pela rotação de 90ᐤ de uma camada interna com relação à sua camada par e eqüidistante do centro do cubo. O arranjo final é decorrência de comutações de <i>edges</i> e centros que “anulam” grande parte das falhas. Como nos casos anteriores a aparente desorientação de somente dois <i>edges</i> é uma <b>ilusão</b>.
+                Similar to case 2, this error is primarily caused by a 90ᐤ rotation of an inner layer in relation to its equidistant "pair" layer from the center of the cube. The resulting configuration is a consequence of edge and center commutations that effectively "cancel out" the majority of the errors. Just like in the previous case, the apparent misorientation of only two edges is merely an illusion.
                 </p>
                 <p>
-                Como resolver esse erro de paridade? Veja na <a href="cubo-4x4x4-e-maiores/erros-de-paridade/4-caso-4-erro-de-paridade-oll-desorientacao-de-dois-edges-parte-2.html">parte 2</a>.
+                Curious about resolving this parity error through logical deduction? Please turn to the <a href="rubiks-revenge-and-beyond/parity-errors/4-case-4-oll-parity-error-misorientation-of-two-edges-part-2.html">next page</a> for additional tips and an illustrative example.
                 </p>
 
             </div>           
         </div>
 
         <nav class="nav nav-justified my-0">
-            <a class="nav-link virapagina" href="cubo-4x4x4-e-maiores/erros-de-paridade/3-caso-2-erro-de-paridade-pll-permutacao-de-dois-cantos.html">⇦</a>
-            <a class="nav-link virapagina" href="cubo-4x4x4-e-maiores/erros-de-paridade/4-caso-4-erro-de-paridade-oll-desorientacao-de-dois-edges-parte-2.html">⇨</a>
+            <a class="nav-link virapagina" href="rubiks-revenge-and-beyond/parity-errors/3-case-2-pll-parity-error-2-corner-permutation.html">⇦</a>
+            <a class="nav-link virapagina" href="rubiks-revenge-and-beyond/parity-errors/4-case-4-oll-parity-error-misorientation-of-two-edges-part-2.html">⇨</a>
         </nav>
         
     </main>
