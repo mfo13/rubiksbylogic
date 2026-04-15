@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -8,8 +8,8 @@
     
     <link rel="icon" href="favicon.ico">
 
-    <title>Cubo Mágico sem Decoreba | Cubos grandes - Notação de movimentos</title>
-    <meta name="description" content="Entenda a notação de movimentos em cubos grandes como 4x4x4 e superiores, com exemplos práticos e adaptações do padrão do 3x3x3.">
+    <title>Rubik's Cube by logic | Rubik's Revenge and beyond - Movement notation</title>
+    <meta name="description" content="Understand the notation of moves on larger cubes like 4x4x4 and above, with practical examples and adaptations from the 3x3x3 standard.">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
@@ -25,45 +25,42 @@
     
     <main class="container mb-0">
         
-        <h1>Cubo 4x4x4 e maiores</h1>
-        <h2>Resolvendo Cubos Grandes Sem Decorar</h2>
+        <h1>Rubik's Revenge and beyond</h1>
+        <h2>Solving Big Cubes by Logic</h2>
 
         <div class="row align-items-start">
 
             <div class="container px-3">
-                <h3>3. Notação de movimentos em cubos grandes</h3>
+                <h3>3. Movement notation</h3>
                 <p>
-                Segundo a WCA (<i>World Cube Association</i>) a notação de movimentos segue o padrão já empregado para o 3x3x3. A única diferença é que para girar mais do que 2 camadas simultaneamente coloca-se o número de camadas na frente da notação. Por exemplo, para movimentar as 3 camadas da direita no sentido de R usa-se 3Rw. Para duas camadas o uso do número 2 é opcional mas desnecessário.
+                According to the <a href="https://www.worldcubeassociation.org/regulations/#article-12-notation">World Cube Association (WCA)</a>, the notation for cube movements follows the existing pattern used for 3x3x3 cubes. The only difference is that when indicating the rotation of more than two layers simultaneously, we write the number of layers before the notation. For example, to indicate the rotation of the three right layers in the R direction, we write 3Rw. When rotating two layers, the use of the number 2 is optional and unnecessary.
                 </p>
                 <p>
-                O sentido de rotação continua empregando a mesma notação usada para o 3x3x3, com o uso de apóstrofo (') quando é contrário à regra da mão direita. O número 2 após cada tipo de movimento continua indicando um giro de 180<sup>o</sup>. A tabela abaixo mostra as notações utilizadas para todos os movimentos possíveis de acordo com a posição relativa das camadas.
+                The direction of rotation continues to follow the same notation used for 3x3x3 cubes, with the addition of an apostrophe (') to indicate a rotation contrary to the right-hand rule. The number 2 following each type of movement still signifies a 180-degree turn. The table below displays the notations used for all possible moves based on the relative position of the layers.
                 </p>
                 <p>
-                As notações usadas para girar todo o cubo também são indicadas na tabela. É importante saber que depois de girar todo o cubo a notação dos movimentos das camadas continua a mesma, como se o cubo não tivesse sofrido qualquer rotação.
+                The table also includes the notations used to rotate the entire cube. It is important to note that after a cube rotation, the notation for layer movements remains the same, as if the cube had not undergone any rotation.
                 </p>
                 
                 <div class="row justify-content-center">
                     <div class="col-md-6 text-center mt-3 mb-3 px-3">
                         <p>
-                        Tabela de notação de movimentos segundo a WCA.
+                        Table of movement notations according to the WCA.
                         </p>
                         <div class="img-wrapper">
-                            <img src="img/tabela_notacao.png" class="img-fluid">
+                            <img src="img/table_notation.png" class="img-fluid">
                         </div>
                     </div>
                 </div>
 
                 <p class="mt-3">
-                Assim, como no 3x3x3, a movimentação isolada de camadas internas exige o uso de duas notações.
+                Therefore, similar to the 3x3x3 cube, moving a single inner layer in the 6x6x6 and 7x7x7 cubes requires the use of two notations. For instance, to move only the layer indicated in Figure 3.1 of the 6x6x6 and 7x7x7 cubes in the same direction as R, it is necessary to write: 3Rw Rw' or 3Rw 2Rw'.
                 </p>
-                <p>
-                Por exemplo, para movimentar somente a camada indicada nos cubos 6x6x6 e 7x7x7 na Figura 3.1, no mesmo sentido de R, é preciso escrever: 3Rw Rw’ ou 3Rw 2Rw'
-                </p>
-                
+                                
                 <div class="row justify-content-center">
                     <div class="col-md-4 mt-3 mb-3 px-3">
                         <p>
-                        <b><span style="font-size: 13px;">Figura 3.1</span></b>
+                        <b><span style="font-size: 13px;">Figure 3.1</span></b>
                         </p>
                         <div class="img-wrapper">
                             <img src="img/camadas_internas.png" class="img-fluid">
@@ -72,27 +69,27 @@
                 </div>
 
                 <p class="mt-3">
-                Por questões de clareza, os exemplos usados neste guia farão uso do sistema de notação padrão R, L, U, D, F, B com os modificadores n, m e c:
+                To ensure clarity, the examples presented in this guide will employ the standard R, L, U, D, F, B notation system, accompanied by the modifiers <b>n</b>, <b>m</b>, and <b>c</b>:
                 </p>
                 <ul>
-                    <li>n significa que só a camada adjacente à externa indicada é que se movimenta</li>
-                    <li>m significa que só a camada do meio e mais próxima à externa indicada é que se movimenta</li>
-                    <li>c significa que todo o cubo se movimenta no sentido da camada indicada</li>
+                    <li>The modifier <b>n</b> indicates that only the layer adjacent to the indicated external layer moves.</li>
+                    <li>The modifier <b>m</b> signifies that only the middle layer closest to the indicated outer layer is in motion.</li>
+                    <li>The modifier <b>c</b> indicates that the entire cube moves in the direction of the indicated layer.</li>
                 </ul>
                 <p>
-                Este sistema permite que só um movimento seja realizado para a rotação de qualquer camada interna, tornando as animações dos exemplos deste guia mais simples. Veja o exemplo da Figura 3.2.
+                This notation system simplifies the animations of the examples in this guide as it requires only a single movement to rotate any internal layer. Please refer to the example in Figure 3.2 for a visual demonstration.
                 </p>
                 
                 <div class="row justify-content-center">
                     <div class="col-md-4 text-center mt-3 mb-3 px-3">
                         <div class="img-wrapper img-cubo">
                             <script>
-                                var movimento="{Figura 3.2}R.Rn.Rm.Lm'.Ln'.L'.Rc";
+                                var movimento="{Figure 3.2}R.Rn.Rm.Lm'.Ln'.L'.Rc";
                                 AnimCube6("initmove=x2 &move="+movimento+
                                             "&movetext=1\
                                             &yz=1\
                                             &fonttype=0\
-                                            &textsize=12\
+                                            &textsize=15\
                                             &facelets=*\
                                             &buttonheight=20\
                                             &bgcolor=f0f0f0\
@@ -111,8 +108,8 @@
         </div>
 
         <nav class="nav nav-justified my-0">
-            <a class="nav-link virapagina" href="cubo-4x4x4-e-maiores/2-estrutura-dos-cubos-grandes.html">⇦</a>
-            <a class="nav-link virapagina" href="cubo-4x4x4-e-maiores/4-estrategia-de-solucao.html">⇨</a>
+            <a class="nav-link virapagina" href="rubiks-revenge-and-beyond/2-big-cubes-structure.html">⇦</a>
+            <a class="nav-link virapagina" href="rubiks-revenge-and-beyond/4-solution-strategy.html">⇨</a>
         </nav>
         
     </main>

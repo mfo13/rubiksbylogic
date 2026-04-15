@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -8,8 +8,8 @@
     
     <link rel="icon" href="favicon.ico">
 
-    <title>Cubo Mágico sem Decoreba | Cubos grandes - Os centros das 2 últimas faces</title>
-    <meta name="description" content="Aprenda a resolver os centros das duas últimas faces em cubos 4x4x4 e maiores usando comutadores simples, com explicação clara e sem necessidade de decorar algoritmos.">
+    <title>Rubik's Cube by logic | Rubik's Revenge and beyond - Solving the centers of the last 2 faces</title>
+    <meta name="description" content="Learn how to solve the centers of the last two faces on 4x4x4 and larger cubes using simple commutators, with a clear explanation and no need to memorize algorithms.">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
@@ -25,27 +25,27 @@
     
     <main class="container mb-0">
         
-        <h1>Cubo 4x4x4 e maiores</h1>
-        <h2>Resolvendo Cubos Grandes Sem Decorar</h2>
+        <h1>Rubik's Revenge and beyond</h1>
+        <h2>Solving Big Cubes by Logic</h2>
 
         <div class="row align-items-start">
 
             <div class="container px-3">
-                <h3>4.d. Resolvendo os centros das 2 últimas faces</h3>
+                <h3>4.d. Solving the centers of the last 2 faces</h3>
                 <p>
-                Nessa etapa é preciso fazer uso de comutadores. Usaremos a camada superior, U, e as camadas intermediárias paralelas para os movimentos de “troca” e “destroca”. As camadas internas e perpendiculares a U serão usadas para os movimentos de “vai e volta”.
+                At this stage, commutators are required to solve the centers of the last two faces. We will utilize the up layer (U) and the parallel middle layers for the "swap" and "undo swap" movements. The inner layers and the layers perpendicular to U will be utilized for the "back and forth" movements.
                 </p>
                 <p>
-                Veja o exemplo da Figura 4.9. Nesse caso há apenas 2 peças centrais a serem trocadas. Mas como um comutador sempre movimenta 3 peças uma das trocas deve envolver peças de mesma cor. As setas indicam a comutação que se pretende realizar. Um possível comutador para esse caso é apresentado na figura 4.10, bata clicar em <i>play</i> (▷).
+                Refer to the example in Figure 4.9. In this scenario, there are only 2 center pieces that need to be swapped. However, since a commutator always moves 3 pieces, one of the swaps must involve pieces of the same color. The arrows indicate the specific commutation to be performed. A possible commutator for this situation is demonstrated in Figure 4.10. Simply click on the play button (▷) to observe the animation.
                 </p>
                 <p>
-                Se existirem peças agrupadas é possível comutar um conjunto de peças, como se estivessem “coladas”, é só prestar atenção à simetria e aos movimentos.
+                If there are grouped pieces, it is possible to commute a block of pieces as if they were "glued" together. Just ensure to maintain symmetry and carefully execute the movements.
                 </p>                 
                                
                 <div class="row justify-content-center">
                     <div class="col-md-4 my-3 px-3 mx-3">
                         <p>
-                        <b><span style="font-size: 13px;">Figura 4.9</span></b>
+                        <b><span style="font-size: 13px;">Figure 4.9</span></b>
                         </p>
                         <div class="img-wrapper">
                             <img src="img/figura_4_9.png" class="img-fluid">
@@ -54,12 +54,12 @@
                     <div class="col-md-4 text-center mt-3 mb-3 px-3">
                         <div class="img-wrapper img-cubo">
                             <script>
-                                var movimento="{Figura 4.10}{Figura 4.10: Vai Fn}Fn.{Figura 4.10: Troca Dn}Dn.{Figura 4.10: Volta Fn'}Fn'.{Figura 4.10: Troca U'}U'.{Figura 4.10: Vai Fn}Fn.{Figura 4.10: Destroca Dn'}Dn'.{Figura 4.10: Volta Fn'}Fn'.{Figura 4.10: Destroca U}U";
+                                var movimento="{Figure 4.10}{Figure 4.10: go Fn}Fn.{Figure 4.10: swap Dn}Dn.{Figure 4.10: back Fn'}Fn'.{Figure 4.10: swap U'}U'.{Figure 4.10: go Fn}Fn.{Figure 4.10: undo swap Dn'}Dn'.{Figure 4.10: back Fn'}Fn'.{Figure 4.10: undo swap U}U";
                                 AnimCube5("initmove=y x2 &move="+movimento+
                                             "&movetext=1\
                                             &yz=1\
                                             &fonttype=0\
-                                            &textsize=12\
+                                            &textsize=15\
                                             &facelets=zwwwzzwwwwzwwwwzwwwwzwwwzZZZZZZGYYZZYYYZZYYYZZZZZZzzzzzrrrrzrrrrzrrrrzzzzzzZZZZZOOOOZOOOOZOOOOZZZZZZzzzzzzyggzzgggzzgggzzzzzzZZZZZBBBBZBBBBZBBBBZZZZZZ\
                                             &buttonheight=20\
                                             &bgcolor=f0f0f0\
@@ -78,8 +78,8 @@
         </div>
 
         <nav class="nav nav-justified my-0">
-            <a class="nav-link virapagina" href="cubo-4x4x4-e-maiores/4-estrategia-de-solucao/4-c-resolvendo-os-centros-de-3-faces-laterais.html">⇦</a>
-            <a class="nav-link virapagina" href="cubo-4x4x4-e-maiores/4-estrategia-de-solucao/4-e-resolvendo-os-edges-que-faltam-na-primeira-camada.html">⇨</a>
+            <a class="nav-link virapagina" href="rubiks-revenge-and-beyond/4-solution-strategy/4-c-solving-the-centers-of-3-side-faces.html">⇦</a>
+            <a class="nav-link virapagina" href="rubiks-revenge-and-beyond/4-solution-strategy/4-e-solving-the-remaining-edges-of-the-first-layer.html">⇨</a>
         </nav>
         
     </main>

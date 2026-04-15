@@ -47,40 +47,40 @@
     "children":[
     {"title":"Solving Big Cubes by Logic",
         "children":[
-        {"title":"1. Introduction", "link":"solving-big-cubes-by-logic/1-introduction.html"},
-        {"title":"2. Big cubes' structure", "link":"solving-big-cubes-by-logic/2-big-cubes-structure.html"},
-        {"title":"3. Movement notation", "link":"solving-big-cubes-by-logic/3-movement-notation.html"},
-        {"title":"4. Solution strategy", "link":"solving-big-cubes-by-logic/4-solution-strategy.html",
+        {"title":"1. Introduction", "link":"rubiks-revenge-and-beyond/1-introduction.html"},
+        {"title":"2. Big cubes' structure", "link":"rubiks-revenge-and-beyond/2-big-cubes-structure.html"},
+        {"title":"3. Movement notation", "link":"rubiks-revenge-and-beyond/3-movement-notation.html"},
+        {"title":"4. Solution strategy", "link":"rubiks-revenge-and-beyond/4-solution-strategy.html",
             "children":[
-            {"title":"4.a. Solving the first face centers", "link":"solving-big-cubes-by-logic/4-solution-strategy/4-a-solving-the-first-face-centers.html"},
-            {"title":"4.b. Solving the edges of 3 sides in the first layer", "link":"solving-big-cubes-by-logic/4-solution-strategy/4-b-solving-the-edges-of-3-sides-in-the-first-layer.html"},
-            {"title":"4.c. Solving the centers of 3 side faces", "link":"solving-big-cubes-by-logic/4-solution-strategy/4-c-solving-the-centers-of-3-side-faces.html"},
-            {"title":"4.d. Solving the centers of the last 2 faces", "link":"solving-big-cubes-by-logic/4-solution-strategy/4-d-solving-the-centers-of-the-last-2-faces.html"},
-            {"title":"4.e. Solving the remaining edges of the first layer", "link":"solving-big-cubes-by-logic/4-solution-strategy/4-e-solving-the-remaining-edges-of-the-first-layer.html"},
-            {"title":"4.f. Solving up to 3 corners of the first layer and leaving one \"free\"", "link":"solving-big-cubes-by-logic/4-solution-strategy/4-f-solving-up-to-3-corners-of-the-first-layer-and-leaving-one-free.html"},
-            {"title":"4.g. Solving the edges of the middle layers by means of the \"free column\"", "link":"solving-big-cubes-by-logic/4-solution-strategy/4-g-solving-the-edges-of-the-middle-layers-by-means-of-the-free-column.html"},
-            {"title":"4.h. Solving the center edges of the remaining borders", "link":"solving-big-cubes-by-logic/4-solution-strategy/4-h-solving-the-center-edges-of-the-remaining-borders.html"},
-            {"title":"4.i. Solving the remaining 5 corners", "link":"solving-big-cubes-by-logic/4-solution-strategy/4-i-solving-the-remaining-5-corners.html"},
-            {"title":"4.j. Solving the last edges", "link":"solving-big-cubes-by-logic/4-solution-strategy/4-j-solving-the-last-edges.html"},
-            {"title":"4.k. Solving the parity errors", "link":"solving-big-cubes-by-logic/4-solution-strategy/4-k-solving-the-parity-errors.html"}
+            {"title":"4.a. Solving the first face centers", "link":"rubiks-revenge-and-beyond/4-solution-strategy/4-a-solving-the-first-face-centers.html"},
+            {"title":"4.b. Solving the edges of 3 sides in the first layer", "link":"rubiks-revenge-and-beyond/4-solution-strategy/4-b-solving-the-edges-of-3-sides-in-the-first-layer.html"},
+            {"title":"4.c. Solving the centers of 3 side faces", "link":"rubiks-revenge-and-beyond/4-solution-strategy/4-c-solving-the-centers-of-3-side-faces.html"},
+            {"title":"4.d. Solving the centers of the last 2 faces", "link":"rubiks-revenge-and-beyond/4-solution-strategy/4-d-solving-the-centers-of-the-last-2-faces.html"},
+            {"title":"4.e. Solving the remaining edges of the first layer", "link":"rubiks-revenge-and-beyond/4-solution-strategy/4-e-solving-the-remaining-edges-of-the-first-layer.html"},
+            {"title":"4.f. Solving up to 3 corners of the first layer and leaving one \"free\"", "link":"rubiks-revenge-and-beyond/4-solution-strategy/4-f-solving-up-to-3-corners-of-the-first-layer-and-leaving-one-free.html"},
+            {"title":"4.g. Solving the edges of the middle layers by means of the \"free column\"", "link":"rubiks-revenge-and-beyond/4-solution-strategy/4-g-solving-the-edges-of-the-middle-layers-by-means-of-the-free-column.html"},
+            {"title":"4.h. Solving the center edges of the remaining borders", "link":"rubiks-revenge-and-beyond/4-solution-strategy/4-h-solving-the-center-edges-of-the-remaining-borders.html"},
+            {"title":"4.i. Solving the remaining 5 corners", "link":"rubiks-revenge-and-beyond/4-solution-strategy/4-i-solving-the-remaining-5-corners.html"},
+            {"title":"4.j. Solving the last edges", "link":"rubiks-revenge-and-beyond/4-solution-strategy/4-j-solving-the-last-edges.html"},
+            {"title":"4.k. Solving the parity errors", "link":"rubiks-revenge-and-beyond/4-solution-strategy/4-k-solving-the-parity-errors.html"}
             ]
         },
-        {"title":"5. References", "link":"solving-big-cubes-by-logic/5-references.html" }
+        {"title":"5. References", "link":"rubiks-revenge-and-beyond/5-references.html" }
         ]
     },
     {"title":"Parity Errors",
         "children":[
-        {"title":"1. Introduction", "link":"solving-big-cubes-by-logic/parity-errors/1-introduction.html"},
-        {"title":"2. Case 1: PLL Parity Error (permutation of edge pairs)", "link":"solving-big-cubes-by-logic/parity-errors/2-case-1-pll-parity-error-permutation-of-edge-pairs.html"},
-        {"title":"3. Case 2: PLL Parity Error (2-corner permutation)", "link":"solving-big-cubes-by-logic/parity-errors/3-case-2-pll-parity-error-2-corner-permutation.html"},
+        {"title":"1. Introduction", "link":"rubiks-revenge-and-beyond/parity-errors/1-introduction.html"},
+        {"title":"2. Case 1: PLL Parity Error (permutation of edge pairs)", "link":"rubiks-revenge-and-beyond/parity-errors/2-case-1-pll-parity-error-permutation-of-edge-pairs.html"},
+        {"title":"3. Case 2: PLL Parity Error (2-corner permutation)", "link":"rubiks-revenge-and-beyond/parity-errors/3-case-2-pll-parity-error-2-corner-permutation.html"},
         {"title":"4. Case 4: OLL Parity Error (misorientation of two edges)",
             "children":[
-            {"title":"Part 1", "link":"solving-big-cubes-by-logic/parity-errors/4-case-4-oll-parity-error-misorientation-of-two-edges-part-1.html"},
-            {"title":"Part 2", "link":"solving-big-cubes-by-logic/parity-errors/4-case-4-oll-parity-error-misorientation-of-two-edges-part-2.html"}
+            {"title":"Part 1", "link":"rubiks-revenge-and-beyond/parity-errors/4-case-4-oll-parity-error-misorientation-of-two-edges-part-1.html"},
+            {"title":"Part 2", "link":"rubiks-revenge-and-beyond/parity-errors/4-case-4-oll-parity-error-misorientation-of-two-edges-part-2.html"}
             ]
         },
-        {"title":"5. Interested in speedcubing?", "link":"solving-big-cubes-by-logic/parity-errors/5-interested-in-speedcubing.html"},
-        {"title":"6. References", "link":"solving-big-cubes-by-logic/parity-errors/6-references.html"}
+        {"title":"5. Interested in speedcubing?", "link":"rubiks-revenge-and-beyond/parity-errors/5-interested-in-speedcubing.html"},
+        {"title":"6. References", "link":"rubiks-revenge-and-beyond/parity-errors/6-references.html"}
         ]
     }
     ]

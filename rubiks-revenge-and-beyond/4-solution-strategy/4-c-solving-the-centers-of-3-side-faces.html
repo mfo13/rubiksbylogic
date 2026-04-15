@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -8,8 +8,8 @@
     
     <link rel="icon" href="favicon.ico">
 
-    <title>Cubo Mágico sem Decoreba | Cubos grandes - Os centros de 3 faces laterais</title>
-    <meta name="description" content="Passo a passo para montar os centros das faces laterais em cubos grandes, usando camadas livres e lógica, sem necessidade de decorar algoritmos.">
+    <title>Rubik's Cube by logic | Rubik's Revenge and beyond - Solving the centers of 3 side faces</title>
+    <meta name="description" content="Step by step to assemble the centers of the lateral faces on big cubes, using free layers and logic, without the need to memorize algorithms.">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
@@ -25,32 +25,35 @@
     
     <main class="container mb-0">
         
-        <h1>Cubo 4x4x4 e maiores</h1>
-        <h2>Resolvendo Cubos Grandes Sem Decorar</h2>
+        <h1>Rubik's Revenge and beyond</h1>
+        <h2>Solving Big Cubes by Logic</h2>
 
         <div class="row align-items-start">
 
             <div class="container px-3">
-                <h3>4.c. Resolvendo os centros de 3 faces laterais</h3>                  
+                <h3>4.c. Solving the centers of 3 side faces</h3>                  
                                
                 <div class="row justify-content-center">
                     <div class="col-md-7 my-3 px3">
                         <p>
-                        De maneira similar ao método de Frey e Singmaster, usado no 3x3x3, vamos usar “espaços livres” para fazermos movimentos de “vai, troca e volta”. Reposicionamentos serão também necessários. O método é basicamente o mesmo já visto para a solução dos edges intermediários do 3x3x3. A diferença é que no lugar de uma “aresta livre” na lateral, usada para os movimentos de “vai e volta”, teremos toda uma “camada livre”. A camada superior continuará sendo usada para as “trocas”. Viramos então o cubo com os centros já resolvidos para baixo, deixando a aresta não resolvida na primeira camada à nossa frente.
+                        In a manner similar to the method devised by Frey and Singmaster for the 3x3x3 cube, we will utilize "free spaces" to execute "go, swap, and back" movements. Setups will also be necessary.
                         </p>
                         <p>
-                        Veja o esquema na Figura 4.7. A "camada de trocas" e a "camada livre" estão pintadas de rosa. Clique em <i>play</i> (▷) para ver animações da "camada de trocas" e das camadas usadas para movimentos de "vai e volta" com a "camada livre".
+                        The approach is essentially the same as that used for solving the equator edges of the 3x3x3 cube. The difference lies in the fact that instead of a "free edge" on the side, which is employed for the "back and forth" movements, we will have an entire "free layer." The upper layer will continue to be utilized for "swaps." Consequently, we rotate the cube with the centers already solved downwards, positioning the unsolved edge of the first layer in front of us.
+                        </p>
+                        <p>
+                        Refer to the schematic in Figure 4.7, where the "swap layer" and the "free layer" are indicated in pink. Click the play button (▷) to observe animations showcasing the "swap layer" and the layers employed for the "back and forth" movements involving the "free layer."
                         </p>
                     </div>
                     <div class="col-md-4 text-center mt-3 mb-3 px-3">
                         <div class="img-wrapper img-cubo">
                             <script>
-                                var movimento="{Figura 4.7}{Figura 4.7: \"Camada de trocas\"}U.U.U.U.{Figura 4.7: Camadas para \"vai e volta\"}Rn Rn'.Rm Rm'.Ln' Ln{Figura 4.7}";
+                                var movimento="{Figure 4.7}{Figure 4.7: \"Swap layer\"}U.U.U.U.{Figure 4.7: Layers for \"back and forth\"}Rn Rn'.Rm Rm'.Ln' Ln{Figure 4.7}";
                                 AnimCube5("initmove=y x2 &move="+movimento+
                                             "&movetext=0\
                                             &yz=1\
                                             &fonttype=0\
-                                            &textsize=12\
+                                            &textsize=15\
                                             &facelets=mwwwzmwwwwmwwwwmwwwwmwwwzMMMMMMMMMMMMMMMMMMMMMMMMMmmmmmrzzzmrzrzmrzzzmzzzzmZZZZMOZZZMOZOZMOZZZMMMMMMmmmmmmmmmmmmmmmmmmmmmmmmmZZZZMBZZZMBZBZMBZZZMZZZZM\
                                             &buttonheight=20\
                                             &bgcolor=f0f0f0\
@@ -68,27 +71,27 @@
                 <div class="row justify-content-center">
                     <div class="col-md-7 my-3 px3">
                         <p>
-                        Veja um exemplo de uso do “espaço livre” para resolver os centros das faces laterais na Figura 4.8 clicando em <i>play</i> (▷).
+                        Take a look at Figure 4.8 for an example of utilizing the "free space" to solve the center of a side face.
                         </p>
                         <p>
-                        O mesmo método pode ser usado para retirar uma peça de uma face lateral e colocá-la na camada superior para depois ser colocada na face correta.
+                        The same approach can be applied to remove a piece from a side face and relocate it to the top face, followed by swapping it with the correct position on another side face.
                         </p>
                         <p>
-                        Se houver peças de uma mesma cor agrupadas em linhas ou colunas é possível fazer mais de uma troca simultaneamente.
+                        If there are multiple pieces of the same color grouped in rows or columns, it is possible to execute more than one swap simultaneously.
                         </p>
                         <p>
-                        Terminada essa etapa restarão apenas duas faces com alguns dos centros trocados.
+                        Upon completing this step, only two faces will have some of the centers swapped, while the rest will be correctly positioned.
                         </p>
                     </div>
                     <div class="col-md-4 text-center mt-3 mb-3 px-3">
                         <div class="img-wrapper img-cubo">
                             <script>
-                                var movimento="{Figura 4.8}{Figura 4.8: Reposicionamento Dn'}Dn'.{Figura 4.8: Vai Rm}Rm.{Figura 4.8: Troca U'}U'.{Figura 4.8: Volta Rm'}Rm'.{Figura 4.8: Desfaz reposicionamento Dn}Dn";
+                                var movimento="{Figure 4.8}{Figure 4.8: setup Dn'}Dn'.{Figure 4.8: go Rm}Rm.{Figure 4.8: swap U'}U'.{Figure 4.8: back Rm'}Rm'.{Figure 4.8: undo setup Dn}Dn";
                                 AnimCube5("initmove=y x2 &move="+movimento+
                                             "&movetext=1\
                                             &yz=1\
                                             &fonttype=0\
-                                            &textsize=12\
+                                            &textsize=15\
                                             &facelets=zwwwzzwwwwzwwwwzwwwwzwwwzZZZZZZZZZZZOZZZZZZZZZZZZZzzzzzrzzzzrzrzzrzzzzzzzzzZZZZZOOOOZOYOOZOOOOZZZZZZzzzzzzzzzzzzzzzzzzzzzzzzzZZZZZBZZZZBZBZZBZZZZZZZZZ\
                                             &buttonheight=20\
                                             &bgcolor=f0f0f0\
@@ -107,8 +110,8 @@
         </div>
 
         <nav class="nav nav-justified my-0">
-            <a class="nav-link virapagina" href="cubo-4x4x4-e-maiores/4-estrategia-de-solucao/4-b-resolvendo-os-edges-de-3-arestas-da-primeira-camada.html">⇦</a>
-            <a class="nav-link virapagina" href="cubo-4x4x4-e-maiores/4-estrategia-de-solucao/4-d-resolvendo-os-centros-das-2-ultimas-faces.html">⇨</a>
+            <a class="nav-link virapagina" href="rubiks-revenge-and-beyond/4-solution-strategy/4-b-solving-the-edges-of-3-sides-in-the-first-layer.html">⇦</a>
+            <a class="nav-link virapagina" href="rubiks-revenge-and-beyond/4-solution-strategy/4-d-solving-the-centers-of-the-last-2-faces.html">⇨</a>
         </nav>
         
     </main>

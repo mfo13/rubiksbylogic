@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -8,8 +8,8 @@
     
     <link rel="icon" href="favicon.ico">
 
-    <title>Cubo Mágico sem Decoreba | Cubos grandes - Os lados de 3 arestas da primeira camada</title>
-    <meta name="description" content="Aprenda como resolver os edges de 3 arestas da primeira camada em cubos 4x4x4 e maiores, com movimentos simples e sem decorar algoritmos.">
+    <title>Rubik's Cube by logic | Rubik's Revenge and beyond - Solving the edges of 3 sides in the first layer</title>
+    <meta name="description" content="Learn how to solve the edges of 3 sides of the first layer on 4x4x4 and larger cubes, with simple moves and without memorizing algorithms.">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
@@ -26,35 +26,35 @@
     
     <main class="container mb-0">
         
-        <h1>Cubo 4x4x4 e maiores</h1>
-        <h2>Resolvendo Cubos Grandes Sem Decorar</h2>
+        <h1>Rubik's Revenge and beyond</h1>
+        <h2>Solving Big Cubes by Logic</h2>
 
         <div class="row align-items-start">
 
             <div class="container px-3">
-                <h3>4.b. Resolvendo os <i>edges</i> de 3 arestas da primeira camada</h3>                  
+                <h3>4.b. Solving the edges of 3 sides in the first layer</h3>                  
                                
                 <div class="row justify-content-center">
                     <div class="col-md-7 my-3 px3">
                         <p>
-                        Novamente basta usar o movimento de “vai, troca e volta” com reposicionamentos se necessário.
+                        Once again, utilize the "go, swap, and back" movement with necessary setups, if required.
                         </p>
                         <p>
-                        Às vezes os <i>edges</i> de mesmas cores estão agrupados, ou então é possível agrupá-los com movimentos de camadas paralelas à primeira. Nesses casos é possível fazer a troca de duas ou mais peças simultaneamente, é só uma questão de observação.
+                        At times, you may come across edges of the same color grouped together, or it may be possible to group them by performing inner layer movements parallel to the upper layer. In such situations, it becomes feasible to swap blocks consisting of two or more edges simultaneously. It merely requires careful observation.
                         </p>
                         <p>
-                        Quando os <i>edges</i> de interesse se encontram nas arestas laterais é bem fácil visualizar e realizar a troca. Veja o exemplo da Figura 4.3, clicando em play (▷).
+                        When the edges of interest are located on the sides, visualizing and executing the swap becomes quite straightforward. Refer to the example provided in Figure 4.3 for further clarification.
                         </p>
                     </div>
                     <div class="col-md-4 text-center mt-3 mb-3 px-3">
                         <div class="img-wrapper img-cubo">
                             <script>
-                                var movimento="{Figura 4.3}{Figura 4.3: Reposicionamento Dn'}Dn'.{Figura 4.3: Vai R'}R'.{Figura 4.3: Troca Dn}Dn.{Figura 4.3: Volta R}R";
+                                var movimento="{Figure 4.3}{Figure 4.3: setup Dn'}Dn'.{Figure 4.3: go R'}R'.{Figure 4.3: swap Dn}Dn.{Figure 4.3: back R}R";
                                 AnimCube5("initmove=y &move="+movimento+
                                             "&movetext=1\
                                             &yz=1\
                                             &fonttype=0\
-                                            &textsize=12\
+                                            &textsize=15\
                                             &facelets=zwwwzwwwwzwwwwzwwwwzzwwzzZZZZZZZZZZZZZZZZZZZZZZZZZzzzzzozzzzozzzzozzzzzzzzzZZZRZZZZZZRZZZZRZZZZZZZZZzgggzzzzzzzzzzzzzzzzzzzzzZZZZZZZZZZZZZZZZZZZZZZZWZ\
                                             &buttonheight=20\
                                             &bgcolor=f0f0f0\
@@ -72,18 +72,18 @@
                 <div class="row justify-content-center">
                     <div class="col-md-4 my-3 px3">
                         <p>
-                        Se o <i>edge</i> estiver na camada D e numa posição desfavorável use a "camada livre” para colocá-lo numa aresta lateral. Veja o exemplo da Figura 4.4, clicando em play (▷), onde a "camada livre" está indicada em rosa e o edge desejado está numa posição desfavorável.
+                        If an edge piece is located on layer D and has an unfavorable orientation, utilize the "free layer" to reposition it onto a side border. Refer to the example illustrated in Figure 4.4, where the "free layer" is highlighted in pink and the desired edge piece is shown with a misaligned orientation.
                         </p>
                     </div>
                     <div class="col-md-4 text-center mt-3 mb-3 px-3">
                         <div class="img-wrapper img-cubo">
                             <script>
-                                var movimento="{Figura 4.4}{Figura 4.4: vai p/ a camada livre D'}D'.{Figura 4.4: Reposiciona F}F.{Figura 4.4: Vai R'}R'.{Figura 4.4: Troca Dm}Dm.{Figura 4.4: Volta R}R";
+                                var movimento="{Figure 4.4}{Figure 4.4: go to the free layer D'}D'.{Figure 4.4: setup F}F.{Figure 4.4: go R'}R'.{Figure 4.4: swap Dm}Dm.{Figure 4.4: back R}R";
                                 AnimCube5("initmove=y &move="+movimento+
                                             "&movetext=1\
                                             &yz=1\
                                             &fonttype=0\
-                                            &textsize=12\
+                                            &textsize=15\
                                             &facelets=zwwwmwwwwmwwwwmwwwwmzwzwmZZZZZZZZZZZZZZWZZZZZMMMMMzzzzzozzzzozzzzozzzzmmmmmMMMMMRZZZZZZZZRRZZZZZZZZZzgggzzzzzzzzzzzzzzzzzzzzzMMMMMMMMMMMMMMMMMMMMMMMMM\
                                             &buttonheight=20\
                                             &bgcolor=f0f0f0\
@@ -99,22 +99,22 @@
                 </div>
 
                 <p class="mt-3">
-                Para saber as cores corretas nas faces laterais basta seguir a peça central no caso dos cubos ímpares, como ocorre no 3x3x3 (as peças centrais sempre conservam suas posições relativas no espaço). Veja na Figura 4.5 o caso do 5x5x5.
+                To determine the correct colors on the side faces, follow the central piece in the case of odd cubes, similar to the 3x3x3 cube (where the central pieces always maintain their relative positions in space). Refer to the example depicted in Figure 4.5, which illustrates this concept for the case of a 5x5x5 cube.
                 </p>
                 <p>
-                No caso de cubos pares, antes de resolver os <i>edges</i> das 3 primeiras arestas convém resolver dois cantos vizinhos na primeira camada, assim teremos as indicações das cores corretas para 3 faces laterais, veja na Figura 4.6 o caso do 6x6x6. Esses dois cantos podem ser resolvidos com o movimento de “vai, troca e volta” como já visto no guia sobre a solução do cubo 3x3x3.
+                For even cubes, it is advisable to first solve two neighboring corners in the first layer before proceeding with the edges of the 3 upper borders. This approach provides indications of the correct colors for the 3 lateral faces. Refer to Figure 4.6, which demonstrates this technique for a 6x6x6 cube. These two corners can be solved using the "go, swap and back" movement, as previously covered in the <a href="rubiks-cube/1-introduction.html">guide for solving the 3x3x3 cube</a>.
                 </p>
                
                 <div class="row justify-content-center">
                     <div class="col-md-4 text-center mt-3 mb-3 px-3">
                         <div class="img-wrapper img-cubo">
                             <script>
-                                var movimento="{Figura 4.5}y'.y'.y'.y'";
+                                var movimento="{Figure 4.5}y'.y'.y'.y'";
                                 AnimCube5("initmove=y &move="+movimento+
                                             "&movetext=0\
                                             &yz=1\
                                             &fonttype=0\
-                                            &textsize=12\
+                                            &textsize=15\
                                             &facelets=zwwwzzwwwwzwwwwzwwwwzwwwzZZZZZZZZZZZZZZZZZZZZZZZZZzzzzzozzzzozozzozzzzzzzzzZZZZZRZZZZRZRZZRZZZZZZZZZzzzzzzzzzzzzzzzzzzzzzzzzzZZZZZBZZZZBZBZZBZZZZZZZZZ\
                                             &buttonheight=20\
                                             &bgcolor=f0f0f0\
@@ -130,12 +130,12 @@
                     <div class="col-md-4 text-center mt-3 mb-3 px-3">
                         <div class="img-wrapper img-cubo">
                             <script>
-                                var movimento="{Figura 4.6}y'.y'.y'.y'";
+                                var movimento="{Figure 4.6}y'.y'.y'.y'";
                                 AnimCube6("initmove=0 &move="+movimento+
                                             "&movetext=0\
                                             &yz=1\
                                             &fonttype=0\
-                                            &textsize=12\
+                                            &textsize=15\
                                             &facelets=wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwzzzzzzZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZbzzzzzbzzzzzbzzzzzbzzzzzbzzzzzbzzzzzZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZooooozzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzRZZZZZRZZZZZRZZZZZRZZZZZRZZZZZZZZZZZ\
                                             &buttonheight=20\
                                             &bgcolor=f0f0f0\
@@ -154,8 +154,8 @@
         </div>
 
         <nav class="nav nav-justified my-0">
-            <a class="nav-link virapagina" href="cubo-4x4x4-e-maiores/4-estrategia-de-solucao/4-a-resolvendo-os-centros-da-primeira-face.html">⇦</a>
-            <a class="nav-link virapagina" href="cubo-4x4x4-e-maiores/4-estrategia-de-solucao/4-c-resolvendo-os-centros-de-3-faces-laterais.html">⇨</a>
+            <a class="nav-link virapagina" href="rubiks-revenge-and-beyond/4-solution-strategy/4-a-solving-the-first-face-centers.html">⇦</a>
+            <a class="nav-link virapagina" href="rubiks-revenge-and-beyond/4-solution-strategy/4-c-solving-the-centers-of-3-side-faces.html">⇨</a>
         </nav>
         
     </main>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -8,8 +8,8 @@
     
     <link rel="icon" href="favicon.ico">
 
-    <title>Cubo Mágico sem Decoreba | Cubos grandes - Terminando os lados da primeira camada</title>
-    <meta name="description" content="Passo a passo para finalizar os edges da primeira camada em cubos grandes, utilizando aresta livre e lógica em vez de algoritmos decorados.">
+    <title>Rubik's Cube by logic | Rubik's Revenge and beyond - Solving the remaining edges of the first layer</title>
+    <meta name="description" content="Step by step to finish the edges of the first layer on large cubes, using free edges and logic instead of memorized algorithms.">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
@@ -25,29 +25,29 @@
     
     <main class="container mb-0">
         
-        <h1>Cubo 4x4x4 e maiores</h1>
-        <h2>Resolvendo Cubos Grandes Sem Decorar</h2>
+        <h1>Rubik's Revenge and beyond</h1>
+        <h2>Solving Big Cubes by Logic</h2>
 
         <div class="row align-items-start">
 
             <div class="container px-3">
-                <h3>4.e. Resolvendo os edges que faltam na primeira camada</h3>
+                <h3>4.e. Solving the remaining edges of the first layer</h3>
                                      
                 <div class="row justify-content-center">
                     <div class="col-md-6 my-3 px-3 mx-3">
                         <p>
-                        Para resolver os <i>edges</i> que faltam na primeira camada, e depois também nas arestas laterais, usaremos os “espaços livres” assim como é feito na solução do 3x3x3. Veja o esqumea na Figura 4.11. A camada superior (rosa escuro) é usada para as "trocas" e a "aresta livre" (rosa claro) é usada para os movimentos de "vai e volta". Clique em <i>play</i> (▷) para ver uma animação desse esquema.
+                        To solve the remaining edges in the first layer, as well as the side edges, we will employ the same technique of utilizing "free spaces" as seen in the <a href="rubiks-cube/1-introduction.html">solution for the 3x3x3 cube</a>. Please refer to the diagram in Figure 4.11 for a visual representation of the process. The upper layer (depicted in dark pink) will be utilized for the "swaps," while the "free edge" (depicted in light pink) will be employed for the "back and forth" movements. For a more comprehensive understanding of this approach, you can click the play button (▷) to view an animation of the technique.
                         </p>
                     </div>
                     <div class="col-md-4 text-center mt-3 mb-3 px-3">
                         <div class="img-wrapper img-cubo">
                             <script>
-                                var movimento="{Figura 4.11}{Figura 4.11: Camada para trocas}U.U.U'.U'.{Figura 4.11: \"Vai e volta\" com F}F'.F.{Figura 4.11: \"Vai e volta\" com R}R.R'.{Figura 4.11}";
+                                var movimento="{Figure 4.11}{Figure 4.11: Swap layer}U.U.U'.U'.{Figure 4.11: \"back and forth\" with F}F'.F.{Figure 4.11: \"back and forth\" with R}R.R'.{Figure 4.11}";
                                 AnimCube5("initmove=y x2 &move="+movimento+
                                             "&movetext=0\
                                             &yz=1\
                                             &fonttype=0\
-                                            &textsize=12\
+                                            &textsize=15\
                                             &facelets=zzzzzzzzzzzzzzzzzzzzpzzzzMMMMMMMMMMMMMMMMMMMMMMMMMzzzzmzzzzmzzzzmzzzzmzzzzmZZZZMZZZZMZZZZMZZZZMPPPPMzzzzpzzzzpzzzzpzzzzpmmmmmZZZZMZZZZMZZZZMZZZZMZZZZM\
                                             &buttonheight=20\
                                             &bgcolor=f0f0f0\
@@ -65,18 +65,18 @@
                 <div class="row justify-content-center">
                     <div class="col-md-6 my-3 px-3 mx-3">
                         <p>
-                        Para resolver a aresta que falta na primeira camada usamos a aresta vizinha à “aresta livre”. Depois de resolvida basta girar a camada F em 90<sup>o</sup> para colocar a aresta no lugar correto. O uso da “aresta livre” segue o mesmo método já apresentado para o cubo 3x3x3. Veja um exemplo na Figura 4.12, clicando em <i>play</i> (▷), onde o <i>edge</i> verde/branco deve ir para o lugar do <i>edge</i> marcado em rosa claro. Perceba o uso da "aresta livre" e da "camada de trocas" como ilustrado anteriormente.
+                        To solve the vacant edge in the first layer, we utilize the adjacent side of the "free column." Once resolved, simply rotate the F layer by 90° to position the edge in its correct place. The utilization of the "free column" follows the same method as demonstrated for the 3x3x3 cube. Refer to Figure 4.12 for an example where the green/white edge needs to be placed in the location indicated by the light pink edge. Take note of the application of the "free column" and the "swap layer" as previously illustrated.
                         </p>
                     </div>
                     <div class="col-md-4 text-center mt-3 mb-3 px-3">
                         <div class="img-wrapper img-cubo">
                             <script>
-                                var movimento="{Figura 4.12}{Figura 4.12: Reposicionamento Dm}Dm.{Figura 4.12: Vai F'}F'.{Figura 4.12: Troca U}U.{Figura 4.12: Volta F}F.{Figura 4.12: Desfaz reposicionamento Dm'}Dm'.{Figura 4.12: Leva a aresta para baixo F'}F'";
+                                var movimento="{Figure 4.12}{Figure 4.12: setup Dm}Dm.{Figure 4.12: go F'}F'.{Figure 4.12: swap U}U.{Figure 4.12: back F}F.{Figure 4.12: undo swap Dm'}Dm'.{Figure 4.12: place the border down F'}F'";
                                 AnimCube5("initmove=y x2 &move="+movimento+
                                             "&movetext=1\
                                             &yz=1\
                                             &fonttype=0\
-                                            &textsize=12\
+                                            &textsize=15\
                                             &facelets=zwwwzzwwwwzwwwwzwwwwzwwwzZZZZZZYYYZZYYYGZYYYZZZZZZzwpwzrrrrzrrrrzrrrrzzzzzzZZZZZOOOOZOOOOWOOOOZZZZZZzzzzzggggzpgggzggggzzzzzzZZZZZBBBBZBBBBZBBBBZZZZZZ\
                                             &buttonheight=20\
                                             &bgcolor=f0f0f0\
@@ -95,8 +95,8 @@
         </div>
 
         <nav class="nav nav-justified my-0">
-            <a class="nav-link virapagina" href="cubo-4x4x4-e-maiores/4-estrategia-de-solucao/4-d-resolvendo-os-centros-das-2-ultimas-faces.html">⇦</a>
-            <a class="nav-link virapagina" href="cubo-4x4x4-e-maiores/4-estrategia-de-solucao/4-f-resolvendo-ate-3-cantos-da-primeira-camada-deixando-um-livre.html">⇨</a>
+            <a class="nav-link virapagina" href="rubiks-revenge-and-beyond/4-solution-strategy/4-d-solving-the-centers-of-the-last-2-faces.html">⇦</a>
+            <a class="nav-link virapagina" href="rubiks-revenge-and-beyond/4-solution-strategy/4-f-solving-up-to-3-corners-of-the-first-layer-and-leaving-one-free.html">⇨</a>
         </nav>
         
     </main>
