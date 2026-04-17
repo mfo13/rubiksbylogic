@@ -1,5 +1,5 @@
 [
-{"title":"Home", "link":"index.html"},
+{"title":"Home", "link":"/"},
 {"title":"Rubik's Cube", "link":"rubiks-cube.html",
     "children":[
     {"title":"1. Introduction", "link":"rubiks-cube/1-introduction.html"},
