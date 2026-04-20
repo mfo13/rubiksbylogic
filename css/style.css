@@ -1,8 +1,47 @@
+/* definir local das fontes */
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/inter-v20-latin-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/inter-v20-latin-italic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/inter-v20-latin-600.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/inter-v20-latin-600italic.woff2') format('woff2');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* definir o semibold como padrão para bold */
+b, strong {
+    font-weight: 600;
+}
+
+
 /* corpo geral */
 body{
     padding-bottom: 40px;
     margin:0;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* fallbacks mais parecidos com inter */
     font-size: 16px;
     line-height: 1.6;
 }
@@ -45,7 +84,6 @@ body{
 /* barra lateral */
 #sidebar{
     font-family: 'Inter', sans-serif;
-    font-weight: 400;
     position:fixed;
     top:0;
     left:0; /* ou pode remover */
@@ -155,7 +193,7 @@ body{
 .menu a.active,
 .menu a.hover {
     color:#c084fc;
-    font-weight:bold;
+    font-weight: bold;
 }
 
 .menu-link{
@@ -186,7 +224,7 @@ body{
     transform:rotate(45deg); */
 
     /* seta nova */
-    font-weight:bold;
+    font-weight: bold;
     font-size: 17px;
     transform: rotate(-180deg);
 
@@ -236,7 +274,6 @@ body{
 h1 {
     font-size: 2rem;
     letter-spacing: +0.5px;
-    font-weight: 300;
     color: #9c22c2; /* roxo (combina com seu hover) */
     margin-top: 20px;
     margin-bottom: 40px;
@@ -255,7 +292,6 @@ h1 {
 /* subtítulos das páginas */
 h2 {
     font-size: 1.5rem;
-    font-weight: 100;
     margin-bottom: 40px;
     text-align: center;
 }
@@ -263,7 +299,6 @@ h2 {
 /* títulos do texto */
 h3 {
     font-size: 1.2rem;
-    font-weight: 500;
     margin-bottom: 15px;
 }
 
@@ -272,7 +307,7 @@ h3 {
     transform: rotate(-180deg);
     transition: transform 0.3s;
     font-size: 18px;
-    font-weight: bolder;
+    font-weight: bold;
     color:#9c22c2;
 }
 
@@ -344,8 +379,8 @@ a:hover {
 }
 
 .img-cubo > * {
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 /* Parágrafos com abas retráteis */
