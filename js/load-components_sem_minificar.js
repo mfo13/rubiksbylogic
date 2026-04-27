@@ -37,6 +37,7 @@ async function initMenu(){
     menuBtn.onclick=()=>{
         sidebar.classList.add("open");
         overlay.style.display="block";
+        localStorage.setItem("menuOpen", "true");
     }
 
     closeBtn.onclick=closeMenu;
@@ -45,18 +46,8 @@ async function initMenu(){
     function closeMenu(){
         sidebar.classList.remove("open");
         overlay.style.display="none";
+        localStorage.setItem("menuOpen", "false");
     }
-
-    /* fechar menu ao clicar em link no celular */
-    document.querySelectorAll(".menu a").forEach(link => {
-        link.addEventListener("click", () => {
-            if (window.innerWidth < 768) {
-                closeMenu();
-            }
-
-        });
-
-    });
 
     /* submenus */
     document.querySelectorAll(".has-submenu .menu-link")
@@ -216,6 +207,13 @@ async function initMenu(){
             localStorage.setItem("menuScroll", sidebar.scrollTop);
         }
     });
+
+    // manter estado do menu atual, aberto ou fechado
+    const wasOpen = localStorage.getItem("menuOpen") === "true";
+    if(wasOpen){
+        sidebar.classList.add("open");
+        overlay.style.display="block";
+    }
 }
 
 // função para criar o menu
