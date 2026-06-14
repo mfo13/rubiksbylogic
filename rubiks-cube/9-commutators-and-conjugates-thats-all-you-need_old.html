@@ -66,7 +66,7 @@
                         You've already seen that it's impossible to have just one inverted edge on the cube, as in Figure 9.1. This configuration is mathematically impossible.
                         </p>
                         <p>
-                        Another important rule to remember is that it is also mathematically impossible to have only two swapped corners like in Figure 9.2. Corners will always be swapped in groups of three, as well as the edges.
+                        Another important rule to remember is that it is also mathematically impossible to have only two swapped corners like in Figure 9.2. Corners will always be swapped in trios, as well as the edges.
                         </p>
                     </div>
                     <div class="col-md-4 text-center my-3 px-3">
@@ -117,24 +117,23 @@
                     <div class="col-md-8 my-3 px-3">
                         <p class="bg-warning py-2 px-2 mb-2">
                         <b>
-                        <u>Key Knowledge:</u> it is impossible to have only two swapped corners. Corners will always be swapped in groups ot three, the same goes for the edges.
+                        <u>Key Knowledge:</u> it is impossible to have only 2 swapped corners. Corners will always be swapped in trios, the same goes for the edges.
                         </b>
                         </p>
                         <p>
                         This means that there are specific sequences of movements capable of interchanging only 3 corners with each other. This type of movement is called <i>commutator</i>.
                         </p>
                         <p>
-                        A commutator involves intersecting "back-and-forth" procedures in such a way that everything that is done is subsequently undone, except for a few specific parts that end up being interchanged.
-                        By understanding commutators, we can interchange corners without affecting any other part of the cube. We can use the right combination of  “back and forth” (<a href="rubiks-cube/4-back-and-forth.html">chapter 4</a>) and “go, swap and back” (<a href="rubiks-cube/5-go-swap-and-back.html">chapter 5</a>) movementes in such a way that only three cubelets are interchanged.
+                        A commutator involves intersecting procedures in such a way that the movements of one procedure partially "cancels" the movements of the other procedure, resulting in only a few specific parts being interchanged. By understanding commutators, we can interchange corners without affecting any other part of the cube. We can use the right combination of  “back and forth” (<a href="rubiks-cube/4-back-and-forth.html">chapter 4</a>) and “go, swap and back” (<a href="rubiks-cube/5-go-swap-and-back.html">chapter 5</a>) movementes in such a way that only 3 cubelets are interchanged.
                         </p>
                         <p>
                         For example:
                         </p>
                         <p>
-                        Procedure 1:  go - swap - back - go - undo swap - back (see Figure 9.3a)
+                        Procedure 1:  go down - swap - back - go down - undo swap - back (see Figure 9.3a)
                         </p>
                         <p>
-                        Procedure 2:  setup - undo setup (see Figure 9.3b)
+                        Procedure 2:  go up - swap - back - go up - undo swap - back (see Figure 9.3b)
                         </p>
                         <p>
                         <i>
@@ -142,13 +141,13 @@
                         </i>
                         </p>
                         <p>
-                        Note that procedures 1 and 2, separately, are back-and-forth movements, everything that is done is undone. 
+                        Note that procedures 1 and 2, separately, are back and forth movements, everything that is done is undone. 
                         </p>
                     </div>
                     <div class="col-md-4 text-center my-3 px-3">
                         <div class="img-wrapper img-cubo">
                             <script>
-                                var movimento="{Figure 9.3a: Procedure 1}{Figure 9.3a: F (go)}F.{Figure 9.3a: D' (swap)}D'.{Figure 9.3a: F' (back)}F'.{Figure 9.3a: F (go)}F.{Figure 9.3a: D (undo swap)}D.{Figure 9.3a: F' (back)}F';{Figure 9.3b: Procedure 2}{Figure 9.3b: U (setup)}U.{Figure 9.3b: U' (undo setup)}U'";
+                                var movimento="{Figure 9.3a: Procedure 1}{Figure 9.3a: F(go down)}F.{Figure 9.3a: D'(swap)}D'.{Figure 9.3a: F'(back)}F'.{Figure 9.3a: F(go down)}F.{Figure 9.3a: D(undo swap)}D.{Figure 9.3a: F'(back)}F';{Figure 9.3b: Procedure 2}{Figure 9.3b: F'(go up)}F'.{Figure 9.3b: U(swap)}U.{Figure 9.3b: F(back)}F.{Figure 9.3b: F'(go up)}F'.{Figure 9.3b: U'(undo swap)}U'.{Figure 9.3b: F(back)}F";
                                     setup="x2;x2",
                                 AnimCube3("initmove="+setup+"&move="+movimento+
                                             "&movetext=1\
@@ -171,49 +170,36 @@
                 </div>
                 
                 <p>
-                Let's carefully check the first procedure. Click Reset (∣◁) in Figure 9.3a and play it again, step by step, pressing forward (<span class="forward_arrow">⧐</span>) each time. 
-                We already knew (from <a href="rubiks-cube/5-go-swap-and-back.html">chapter 5</a>) that the go-swap-and-back does not affect the upper layer, except for the corner that was intentionally swapped. 
-                Unfortunately, the two bottom layers become scrambled. Of course, we can fix that by reversing the go-swap-and-back procedure.
+                However, there are movements in the two procedures that are equivalent. By doing the intersection below (equivalent movements highlighted in red) the final result is going to be quite interesting. Because of this intersection part of the swaps are kept while the rest of the cube comes back to its original state.
                 </p>
-                <p>
-                So what's the point, since everything returns to its original position?
-                </p>
-                <p>
-                Now comes the trick! Before reversing the go-swap-and-back procedure, we change the upper corner by applying a setup move. But not just any setup move—a specific one that preserves the two bottom layers. 
-                In other words, a setup move using a rotation of the upper layer, as shown in Figure 9.3b. With this setup, we place another upper corner into the position of the first one and then reverse the go-swap-and-back procedure. 
-                By doing this, everything in the two bottom layers returns to its original position except for the first corner. Notice that the reversed go-swap-and-back procedure does not affect the upper layer. 
-                Finally, we reverse the setup move, and the upper layer returns exactly to its original state except for the two corners affected by the setup.
-                </p>
-                <p>
-                Abracadabra! We have found a way to interchange only three corners and nothing else.
-                </p>
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <img src="img/procedures.webp" alt="Intersections of moves in concurrent procedures" class="img-fluid">
+                    </div>
+                </div>
                 <div class="row justify-content-center">
                     <div class="col-md-8 my-3 px-3">
                         <p>
-                        Let's take a look at a detailed example to better understand the concept. Figure 9.4 shows the case in which we want to move the pink corner into the position of the gray corner. Since corners are always interchanged in groups of three, this means that the gray corner will take the place of another corner (let's say the green corner), and the green corner will take the place of the pink corner.
+                        Let's take a look at an example to better understand the concept. Figure 9.4 shows the case where we want to move the pink corner to the position of the gray corner. Since corners are always interchanged in trios, this means that the gray corner will take the place of another corner (let's say the green corner), and the green corner will take the place of the pink corner.
                         </p>
                         <p>
-                        We will use the upper (U) layer for the setup and the down (D) layer for the swap. The front layer (F) will provide the "go" and "back" moves between the upper and the down layer.
-                        Let's go through the sequence step by step. You can click forward (<span class="forward_arrow">⧐</span>) in Figure 9.4, at each step: 
+                        We will use the upper (U) and down (D) layers for the swaps, and the front layer (F) for the back and forth movements. The back and forth moves will be F and F' because the desired cubelet cannot be in the back and forth layer. Let's go through the sequence step-by-step, you can click on forward (<span class="forward_arrow">⧐</span>) in Figure 9.4, at each step:
                         </p>
                         <ul>
                             <li>F ("go" of procedure 1)</li>
                             <li>D' ("swap" of procedure 1)</li>
-                            <li>F' ("back" of procedure 1)</li>
-                            <li>U ("setup" of procedure 2)</li>
-                            <li>F ("go" repetition of procedure 1, since we want to reverse it)</li>
-                            <li>D ("undo swap" of procedure 1 to reverse it)</li>
-                            <li>F' ("back" repetition of procedure 1)</li>
-                            <li>U' ("undo setup" of procedure 2 to reverse it)</li>
+                            <li>F' ("back" of procedure 1 and "go" of procedure 2)</li>
+                            <li>U ("swap" of procedure 2)</li>
+                            <li>F ("back" of procedure 2 and "go" repetition of procedure 1)</li>
+                            <li>D ("undo swap" of procedure 1)</li>
+                            <li>F' ("back" of procedure 1 and "go" repetition of procedure 2)</li>
+                            <li>U' ("undo swap" of procedure 2)</li>
                         </ul>
-                        <p>
-                        Click reset (∣◁) in Figure 9.4, and then click play (▷) to see the complete sequence in action.
-                        </p>
                     </div>
                     <div class="col-md-4 text-center my-3 px-3">
                         <div class="img-wrapper img-cubo">
                             <script>
-                                var movimento="{Figure 9.4: A commutator for 3 corners}{Figure 9.4:   F (go)}F.{Figure 9.4:   D' (swap)}D'.{Figure 9.4:   F' (back)}F'.{Figure 9.4:   U (setup)}U.{Figure 9.4:   F(go)}F.{Figure 9.4:   D (undo swap)}D.{Figure 9.4:   F' (back)}F'.{Figure 9.4:   U' (undo setup)}U'";
+                                var movimento="{Figure 9.4: A commutator for 3 corners}{Figure 9.4:   F(go)}F.{Figure 9.4:   D'(swap)}D'.{Figure 9.4:   F'(back)}F'.{Figure 9.4:   U(swap)}U.{Figure 9.4:   F(go)}F.{Figure 9.4:   D(undo swap)}D.{Figure 9.4:   F'(back)}F'.{Figure 9.4:   U'(undo swap)}U'";
                                     setup="x2",
                                 AnimCube3("initmove="+setup+"&move="+movimento+
                                             "&movetext=1\
@@ -235,14 +221,14 @@
                     </div>
                 </div>
 
-                <p>
-                If you look carefully, you will notice that the upper layer (U) and the down layer (D) are actually used to perform and undo swaps. The front layer (F) is used to make back-and-forth movements between these parallel U and D layers.
-                </p>
-                <p>
+                <p class="mt-3">
                 In short, the sequence is: F D' F' U F D F' U' (go - swap - back - swap --- go - undo swap - back - undo swap).
                 </p>
                 <p>
-                It's important to note that the specific choice of corners does not matter. You just need to <u>identify which parallel layers will be used for the swaps and which perpendicular layer in between them will be used for the back-and-forth movements</u>. Also note that the first cubelet to go to its destination place is alone in a swap layer. The other swap layer (that one used for the setup) contains the other two cubelets. This defines which perpendicular layer will be used for the back-and-forth movements.
+                Click on reset (∣◁) in Figure 9.4, and then click play (▷) to see the complete sequence in action.
+                </p>
+                <p>
+                It's important to note that the specific choice of corners does not matter. You just need to <u>identify which parallel layers will be used for the swaps and which perpendicular layer in between them will be used for the back and forth movements</u>. Also note that the first cubelet to go to its destination place is alone in a swap layer. The other swap layer contains the other two cubelets. This defines which perpendicular layer will be used for the back and forth movements.
                 </p>
                 
                 <div class="row justify-content-center">
@@ -256,14 +242,11 @@
                         <p>
                         The layer used for the back and forth and which, at the same time, intersects the parallel layers of the swaps, is the front layer (F), marked with the white center in Figure 9.5.
                         </p>
-                        <p>
-                        Click on play (▷) in Figure 9.5 to see, once again, the complete and detailed sequence in action.
-                        </p>
                     </div>
                     <div class="col-md-4 text-center my-3 px-3">
                         <div class="img-wrapper img-cubo">
                             <script>
-                                var movimento="{Figure 9.5}{Figure 9.5:   F (go)}F.{Figure 9.5}{Figure 9.5:   D' (swap)}D'.{Figure 9.5}{Figure 9.5:   F' (back)}F'.{Figure 9.5}{Figure 9.5:   U (swap)}U.{Figure 9.5}{Figure 9.5:   F (go)}F.{Figure 9.5}{Figure 9.5:   D (undo swap)}D.{Figure 9.5}{Figure 9.5:   F' (back)}F'.{Figure 9.5}{Figure 9.5:   U' (undo swap)}U'";
+                                var movimento="{Figure 9.5}{Figure 9.5:   F(go)}F {Figure 9.5}{Figure 9.5:   D'(swap)}D' {Figure 9.5}{Figure 9.5:   F'(back)}F' {Figure 9.5}{Figure 9.5:   U(swap)}U {Figure 9.5}{Figure 9.5:   F(go)}F {Figure 9.5}{Figure 9.5:   D(undo swap)}D {Figure 9.5}{Figure 9.5:   F'(back)}F' {Figure 9.5}{Figure 9.5:   U'(undo swap)}U'";
                                     setup="x2",
                                 AnimCube3("initmove="+setup+"&move="+movimento+
                                             "&movetext=1\
