@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://rubiksbylogic.com.br/sitemap.xml
+Sitemap: https://rubiksbylogic.com/sitemap.xml
