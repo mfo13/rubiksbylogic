@@ -19,6 +19,21 @@ async function init(){
     await loadComponent("footer","components/footer.html");
     await loadMenuData(); // carrega estrutura do menu aqui
     initMenu(); // chama só aqui
+    // Inicializa o GoatCounter após tudo estar carregado
+    initGoatCounter();
+}
+
+// Função para implantar o script do goatcounter
+function initGoatCounter() {
+    // Evita carregar em duplicidade
+    if (document.querySelector('script[data-goatcounter]')) return;
+
+    const script = document.createElement("script");
+    script.dataset.goatcounter = "https://rubiksbylogic.goatcounter.com/count";
+    script.async = true;
+    script.src = "//gc.zgo.at/count.js";
+
+    document.head.appendChild(script);
 }
 
 init();
