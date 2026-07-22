@@ -25,6 +25,10 @@ async function init(){
 
 // Função para implantar o script do goatcounter
 function initGoatCounter() {
+    // Evita carregar no localhost / desenvolvimento
+    if (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1") {
+        return;
+    }
     // Evita carregar em duplicidade
     if (document.querySelector('script[data-goatcounter]')) return;
 
